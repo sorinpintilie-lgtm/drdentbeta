@@ -156,18 +156,45 @@ import Button from '@/components/ui/Button'
 
 ## 🚀 Deployment
 
-### Vercel (Recommended)
+### Netlify (Recommended & Configured)
+
+This project is fully configured for Netlify deployment with:
+- ✅ `netlify.toml` configuration file
+- ✅ `_redirects` file for client-side routing
+- ✅ `.nvmrc` for Node.js version specification
+- ✅ Security headers and caching optimization
+
+**Quick Deploy Options:**
+
+1. **Via Git Integration** (Recommended):
+   ```bash
+   git add .
+   git commit -m "Deploy to Netlify"
+   git push origin main
+   ```
+   Then connect your repository in [Netlify Dashboard](https://app.netlify.com)
+
+2. **Via Netlify CLI**:
+   ```bash
+   npm install -g netlify-cli
+   netlify login
+   netlify deploy --prod
+   ```
+
+3. **Via Drag & Drop**:
+   ```bash
+   npm run build
+   # Drag the 'dist' folder to https://app.netlify.com/drop
+   ```
+
+📖 **See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment instructions**
+
+### Vercel
 
 1. Push your code to GitHub
 2. Import project in Vercel
 3. Vercel will auto-detect Vite and configure build settings
 4. Deploy!
-
-### Netlify
-
-1. Build the project: `npm run build`
-2. Deploy the `dist/` directory to Netlify
-3. Configure redirects for client-side routing
 
 ### Manual Deployment
 

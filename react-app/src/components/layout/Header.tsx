@@ -3,7 +3,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Calendar, Phone, Mail } from 'lucide-react';
 import { cn } from '@/utils/cn';
-import { scrollToSection } from '@/utils/scroll';
 import ScrollProgress from '@/components/ui/ScrollProgress';
 
 /**
