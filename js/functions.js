@@ -2,6 +2,13 @@ jQuery.noConflict();
 (function($){
 
 	var scroll;
+	var touchStartY = 0;
+	var touchEndY = 0;
+	var isSwipeUp = false;
+	var touchStartX = 0;
+	var touchEndX = 0;
+	var swipeThreshold = 50;
+
 	$(document).ready(function(){
 		background_image_breakpoints();
 		mobile_heights();
@@ -22,15 +29,533 @@ jQuery.noConflict();
 		page_transition();
 		init_scroll_animations();
 		init_image_animations();
+		
+		// Mobile-Native Functions
+		initMobileNative();
+		initMobileHeroGestures();
+		initBottomNavigation();
+		initMobileTouchOptimization();
+		initMobile916Optimizations();
+		initMobileMicroInteractions();
  	})
+	
 	$(window).resize(function () {
-        background_image_breakpoints();
+	       background_image_breakpoints();
 		swiper_sliders();
+		if(typeof mobile916Responsive === 'function'){
+			mobile916Responsive();
+		}
 	})
+	
 	$(window).scroll(function () {
         sticky_header();
 		windowAppearance();
+		handleMobileScrollEffects();
 	})
+	
+	// Mobile-Native Interface System
+	function initMobileNative(){
+		// Detect mobile devices and 9:16 format support
+		const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+		const isPortrait = window.innerHeight > window.innerWidth;
+		const is916Format = isPortrait && (window.innerHeight / window.innerWidth >= 1.5);
+		
+		if(isMobile){
+			$('body').addClass('mobile-device');
+		}
+		
+		if(is916Format){
+			$('body').addClass('mobile-916-format');
+		}
+		
+		// Initialize mobile-specific features
+		$(document.body).on('touchstart', handleTouchStart, { passive: true });
+		$(document.body).on('touchmove', handleTouchMove, { passive: true });
+		$(document.body).on('touchend', handleTouchEnd, { passive: true });
+		
+		// Prevent zoom on double tap for better UX
+		let lastTouchEnd = 0;
+		$(document.body).on('touchend', function(e){
+			const now = (new Date()).getTime();
+			if(now - lastTouchEnd <= 300){
+				e.preventDefault();
+			}
+			lastTouchEnd = now;
+		}, { passive: false });
+	}
+	
+	// Mobile Hero Gestures for 9:16 Format
+	function initMobileHeroGestures(){
+		const heroSection = $('.hero-mobile-native');
+		
+		if(heroSection.length === 0) return;
+		
+		// Swipe down to refresh/reset hero
+		heroSection.on('touchstart', function(e){
+			if($(window).scrollTop() === 0){
+				touchStartY = e.originalEvent.touches[0].clientY;
+			}
+		}, { passive: true });
+		
+		heroSection.on('touchmove', function(e){
+			if(touchStartY > 0){
+				touchEndY = e.originalEvent.touches[0].clientY;
+				const pullDistance = touchEndY - touchStartY;
+				
+				if(pullDistance > 100){
+					// Pull to refresh effect
+					showPullToRefreshIndicator();
+					heroSection.addClass('pull-refresh-active');
+				}
+			}
+		}, { passive: true });
+		
+		heroSection.on('touchend', function(){
+			if(heroSection.hasClass('pull-refresh-active')){
+				hidePullToRefreshIndicator();
+				heroSection.removeClass('pull-refresh-active');
+				
+				// Trigger refresh action
+				refreshHeroContent();
+			}
+			
+			touchStartY = 0;
+			touchEndY = 0;
+		});
+		
+		// Swipe up to reveal next section
+		heroSection.on('touchend', function(e){
+			if(!heroSection.hasClass('pull-refresh-active')){
+				const swipeDistance = touchStartY - touchEndY;
+				
+				if(swipeDistance > swipeThreshold){
+					// Swipe up - navigate to next section
+					navigateToNextSection();
+				}
+			}
+		});
+		
+		// Long press for quick actions
+		let longPressTimer;
+		heroSection.on('touchstart', function(e){
+			if($(e.target).closest('.cta-primary-mobile-full').length){
+				longPressTimer = setTimeout(function(){
+					showQuickActionsMenu();
+				}, 800);
+			}
+		}, { passive: true });
+		
+		heroSection.on('touchend touchmove', function(){
+			if(longPressTimer){
+				clearTimeout(longPressTimer);
+			}
+		}, { passive: true });
+	}
+	
+	// Bottom Navigation System
+	function initBottomNavigation(){
+		const bottomNav = $('.bottom-navigation');
+		
+		if(bottomNav.length === 0){
+			// Create bottom navigation if it doesn't exist
+			createBottomNavigation();
+		}
+		
+		// Handle bottom navigation item clicks
+		$(document.body).on('click', '.bottom-nav-item', function(e){
+			const href = $(this).attr('href');
+			const isActive = $(this).hasClass('active');
+			
+			// Update active state
+			$('.bottom-nav-item').removeClass('active');
+			$(this).addClass('active');
+			
+			// Handle navigation
+			if(href && href !== '#' && !isActive){
+				e.preventDefault();
+				navigateToPage(href);
+			}
+		});
+		
+		// Handle CTA button in bottom nav
+		$(document.body).on('click', '.bottom-nav-cta', function(e){
+			e.preventDefault();
+			openBookingModal();
+		});
+		
+		// Keyboard support for bottom navigation
+		$(document.body).on('keydown', '.bottom-nav-item', function(e){
+			if(e.key === 'Enter' || e.key === ' '){
+				e.preventDefault();
+				$(this).trigger('click');
+			}
+		});
+	}
+	
+	// Mobile Touch Optimization
+	function initMobileTouchOptimization(){
+		// Enhance touch targets
+		$('button, .cta-button, .quick-contact-btn, .trust-item-mobile').each(function(){
+			if($(this).outerHeight() < 44){
+				$(this).css({
+					'min-height': '44px',
+					'display': 'flex',
+					'align-items': 'center',
+					'justify-content': 'center'
+				});
+			}
+		});
+		
+		// Add ripple effect for touch feedback
+		$(document.body).on('touchstart', '.cta-primary-mobile-full, .quick-contact-btn, .emergency-btn', function(e){
+			const ripple = $('<div class="touch-ripple"></div>');
+			const rect = this.getBoundingClientRect();
+			const size = Math.max(rect.width, rect.height);
+			const x = e.originalEvent.touches[0].clientX - rect.left - size / 2;
+			const y = e.originalEvent.touches[0].clientY - rect.top - size / 2;
+			
+			ripple.css({
+				'position': 'absolute',
+				'width': size + 'px',
+				'height': size + 'px',
+				'left': x + 'px',
+				'top': y + 'px',
+				'background': 'rgba(255, 255, 255, 0.3)',
+				'border-radius': '50%',
+				'pointer-events': 'none',
+				'animation': 'ripple 0.6s ease-out'
+			});
+			
+			$(this).css('position', 'relative').append(ripple);
+			
+			setTimeout(() => ripple.remove(), 600);
+		});
+		
+		// Optimize scrolling performance
+		let ticking = false;
+		function updateScrollElements(){
+			// Update elements based on scroll position
+			const scrollTop = $(window).scrollTop();
+			const windowHeight = window.innerHeight;
+			
+			// Hide/show gesture indicator
+			if(scrollTop > 100){
+				$('.gesture-indicator').addClass('hidden');
+			} else {
+				$('.gesture-indicator').removeClass('hidden');
+			}
+			
+			// Parallax effect for hero background
+			const heroHeight = $('.hero-mobile-native').outerHeight();
+			if(heroHeight && scrollTop < heroHeight){
+				const parallax = scrollTop * 0.5;
+				$('.hero-bg-image').css('transform', `translateY(${parallax}px)`);
+			}
+			
+			ticking = false;
+		}
+		
+		function requestScrollUpdate(){
+			if(!ticking){
+				requestAnimationFrame(updateScrollElements);
+				ticking = true;
+			}
+		}
+		
+		$(window).on('scroll', requestScrollUpdate);
+	}
+	
+	// 9:16 Format Optimizations
+	function initMobile916Optimizations(){
+		// Calculate optimal viewport for 9:16 format
+		function calculate916Optimal() {
+			const width = window.innerWidth;
+			const height = window.innerHeight;
+			
+			if(height / width >= 1.5){ // 9:16 ratio or taller
+				// Apply 9:16 specific optimizations
+				$('.hero-mobile-native').addClass('916-optimized');
+				
+				// Adjust content positioning for 9:16
+				$('.hero-content-native').css({
+					'padding-top': 'calc(env(safe-area-inset-top) + 20vh)',
+					'padding-bottom': 'calc(env(safe-area-inset-bottom) + 20vh)'
+				});
+				
+				// Optimize trust indicators for vertical layout
+				$('.trust-indicators-mobile').addClass('vertical-layout');
+			}
+		}
+		
+		calculate916Optimal();
+		
+		// Re-calculate on orientation change
+		$(window).on('orientationchange', function(){
+			setTimeout(calculate916Optimal, 100);
+		});
+		
+		// Responsive adjustments
+		function mobile916Responsive(){
+			const isSmallMobile = window.innerWidth <= 479;
+			
+			if(isSmallMobile){
+				$('.trust-indicators-mobile').removeClass('vertical-layout');
+				$('.quick-contact-row').removeClass('stacked').addClass('grid');
+			}
+		}
+		
+		// Call responsive function
+		mobile916Responsive();
+	}
+	
+	// Mobile Micro-Interactions
+	function initMobileMicroInteractions(){
+		// Breathing animation for emergency button
+		setInterval(function(){
+			if($('.emergency-btn').length && !$('.emergency-btn').is(':hover')){
+				$('.emergency-btn').addClass('breathing');
+				setTimeout(function(){
+					$('.emergency-btn').removeClass('breathing');
+				}, 2000);
+			}
+		}, 10000);
+		
+		// Pulse animation for primary CTA
+		$('.cta-primary-mobile-full').on('mouseenter touchstart', function(){
+			$(this).addClass('pulse-active');
+		}).on('mouseleave touchend', function(){
+			$(this).removeClass('pulse-active');
+		});
+		
+		// Floating animation for trust items
+		$('.trust-item-mobile').each(function(index){
+			$(this).css('animation-delay', (index * 0.2) + 's');
+		});
+		
+		// Loading state for hero elements
+		function showHeroLoadingState(){
+			$('.hero-content-native').addClass('loading-state');
+			
+			// Simulate loading time
+			setTimeout(function(){
+				$('.hero-content-native').removeClass('loading-state');
+				$('.animate-slide-up, .animate-fade-in').addClass('loaded');
+			}, 800);
+		}
+		
+		// Initialize loading state
+		if($('.hero-mobile-native').length){
+			showHeroLoadingState();
+		}
+	}
+	
+	// Helper Functions
+	function handleTouchStart(e){
+		touchStartY = e.originalEvent.touches[0].clientY;
+		touchStartX = e.originalEvent.touches[0].clientX;
+	}
+	
+	function handleTouchMove(e){
+		// Prevent default scrolling for specific gestures
+		const touch = e.originalEvent.touches[0];
+		const target = e.target;
+		
+		// Allow scrolling unless on specific elements
+		if(!$(target).closest('.hero-mobile-native, .mobile-menu-overlay').length){
+			return true;
+		}
+	}
+	
+	function handleTouchEnd(e){
+		touchEndY = e.originalEvent.changedTouches[0].clientY;
+		touchEndX = e.originalEvent.changedTouches[0].clientX;
+		
+		const deltaY = touchStartY - touchEndY;
+		const deltaX = touchStartX - touchEndX;
+		
+		// Horizontal swipe detection
+		if(Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > swipeThreshold){
+			if(deltaX > 0){
+				// Swipe left - next section
+				navigateToNextSection();
+			} else {
+				// Swipe right - previous section
+				navigateToPreviousSection();
+			}
+		}
+		
+		// Vertical swipe detection for hero section
+		if(Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > swipeThreshold){
+			if(deltaY > 0){
+				// Swipe up - show next content
+				revealNextContent();
+			}
+		}
+	}
+	
+	function handleMobileScrollEffects(){
+		const scrollTop = $(window).scrollTop();
+		const windowHeight = window.innerHeight;
+		
+		// Header hide/show on scroll
+		if(scrollTop > windowHeight * 0.1){
+			$('.site-header').addClass('scrolled');
+		} else {
+			$('.site-header').removeClass('scrolled');
+		}
+		
+		// Parallax effects for mobile
+		if($('.hero-mobile-native').length){
+			const heroElement = $('.hero-mobile-native');
+			const heroHeight = heroElement.outerHeight();
+			
+			if(scrollTop < heroHeight){
+				const parallaxSpeed = 0.5;
+				heroElement.find('.hero-bg-image').css('transform', `translateY(${scrollTop * parallaxSpeed}px)`);
+			}
+		}
+	}
+	
+	function createBottomNavigation(){
+		// This would create the bottom navigation HTML structure
+		// Implementation would depend on the specific design requirements
+	}
+	
+	function navigateToNextSection(){
+		// Smooth scroll to next section
+		const nextSection = $('.section:not(.hero-mobile-native)').first();
+		if(nextSection.length){
+			$('html, body').animate({
+				scrollTop: nextSection.offset().top - 80
+			}, 800);
+		}
+	}
+	
+	function navigateToPreviousSection(){
+		// Scroll to previous section
+		const heroSection = $('.hero-mobile-native');
+		if(heroSection.length && $(window).scrollTop() > 100){
+			$('html, body').animate({
+				scrollTop: heroSection.offset().top
+			}, 800);
+		}
+	}
+	
+	function revealNextContent(){
+		// Trigger animations for next content elements
+		$('.animate-on-scroll').each(function(){
+			if(!$(this).hasClass('animated') && $(this).is(':visible')){
+				$(this).addClass('animated');
+			}
+		});
+	}
+	
+	function openBookingModal(){
+		// Placeholder for booking modal functionality
+		console.log('Opening booking modal...');
+		// Would trigger the actual booking system
+	}
+	
+	function openLocationModal(){
+		// Placeholder for location modal functionality
+		console.log('Opening location modal...');
+		// Would show location information
+	}
+	
+	function showPullToRefreshIndicator(){
+		if(!$('.pull-refresh-indicator').length){
+			$('body').append('<div class="pull-refresh-indicator">Actualizare...</div>');
+		}
+	}
+	
+	function hidePullToRefreshIndicator(){
+		$('.pull-refresh-indicator').remove();
+	}
+	
+	function refreshHeroContent(){
+		// Placeholder for hero content refresh
+		console.log('Refreshing hero content...');
+		// Could reload dynamic content like testimonials, stats, etc.
+	}
+	
+	function showQuickActionsMenu(){
+		// Placeholder for quick actions menu
+		console.log('Showing quick actions menu...');
+	}
+	
+	// Add CSS for mobile animations (would be added to CSS file in production)
+	$(document.head).append(`
+		<style>
+		.touch-ripple {
+			position: absolute;
+			border-radius: 50%;
+			background: rgba(255, 255, 255, 0.3);
+			pointer-events: none;
+			animation: ripple 0.6s ease-out;
+		}
+		
+		@keyframes ripple {
+			0% {
+				transform: scale(0);
+				opacity: 0.7;
+			}
+			100% {
+				transform: scale(2);
+				opacity: 0;
+			}
+		}
+		
+		.breathing {
+			animation: breathing 2s ease-in-out infinite;
+		}
+		
+		@keyframes breathing {
+			0%, 100% { transform: scale(1); }
+			50% { transform: scale(1.05); }
+		}
+		
+		.pulse-active {
+			animation: pulse 0.6s ease-in-out;
+		}
+		
+		@keyframes pulse {
+			0% { transform: scale(1); }
+			50% { transform: scale(1.05); }
+			100% { transform: scale(1); }
+		}
+		
+		.loading-state {
+			opacity: 0.7;
+			pointer-events: none;
+		}
+		
+		.pull-refresh-active .hero-content-native {
+			transform: translateY(50px);
+		}
+		
+		.pull-refresh-indicator {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background: rgba(0, 0, 0, 0.8);
+			color: white;
+			padding: 12px 24px;
+			border-radius: 24px;
+			z-index: 9999;
+			font-weight: 600;
+		}
+		
+		.gesture-indicator.hidden {
+			opacity: 0;
+			visibility: hidden;
+		}
+		
+		.mobile-device .hero-bg-image {
+			will-change: transform;
+		}
+		</style>
+	`);
 
 	function page_transition(){
 		$('[data-scroll]').addClass('appearance');

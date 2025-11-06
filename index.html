@@ -93,25 +93,150 @@ SnazzyDataForSnazzyMaps={"id":24358,"name":"Blue","description":"Blue Color sche
 			</div>
 		</header>
 		<main id="main" class="site-content">
-			<!-- Hero Section -->
-			<section id="hero" class="hero-section">
-				<!-- Background Video -->
-				<div class="hero-video-container">
-					<video class="hero-video" autoplay muted loop playsinline poster="images/drdent-home-opt.jpg">
-						<source src="images/hero-video.mov" type="video/mp4">
-						<!-- Fallback image if video doesn't load -->
-					</video>
-					<div class="hero-video-overlay"></div>
+			<!-- Mobile-Native Hero Section for 9:16 Format -->
+			<section class="hero-mobile-native" id="hero">
+				<!-- Background Image Optimized for Mobile Portrait -->
+				<div class="hero-background">
+					<picture class="hero-bg-image">
+						<!-- Mobile portrait optimized images -->
+						<source media="(max-width: 479px) and (orientation: portrait)"
+								srcset="images/drdent-home-9x16.webp 480w, images/drdent-home-9x16@2x.webp 960w"
+								sizes="100vw" type="image/webp">
+						<source media="(max-width: 479px) and (orientation: portrait)"
+								srcset="images/drdent-home-9x16.jpg 480w, images/drdent-home-9x16@2x.jpg 960w"
+								sizes="100vw">
+						<!-- Fallback -->
+						<img src="images/drdent-home-opt.jpg"
+							 alt="DrDent - Cabinet Stomatologic Modern în București"
+							 class="bg-fallback">
+					</picture>
+					<div class="hero-overlay"></div>
 				</div>
-				<!-- Hero Content -->
-				<div class="hero-overlay">
-					<div class="hero-content">
-						<h1>Bun venit la Dr.Dent</h1>
-						<p>Îngrijire dentară blândă și compasională în inima Bucureștiului</p>
-						<a href="#contact" class="cta-button">Programați-vă vizita</a>
+				
+				<!-- Mobile-Native Hero Content -->
+				<div class="hero-content-native">
+					<!-- Trust Badge - Mobile Optimized -->
+					<div class="trust-badge-mobile animate-slide-up">
+						<div class="badge-icon">🏆</div>
+						<span class="badge-text-mobile">Cabinet Stomatologic Premium</span>
+					</div>
+					
+					<!-- Primary Headline - Mobile Typography -->
+					<h1 class="hero-title-mobile animate-slide-up">
+						<span class="title-line-1">Zâmbetul Tău</span>
+						<span class="title-line-2 gradient-text">Prioritatea Noastră</span>
+					</h1>
+					
+					<!-- Subtitle - Mobile Readable -->
+					<p class="hero-subtitle-mobile animate-fade-in">
+						Îngrijire dentară modernă și blândă<br>
+						în inima Bucureștiului
+					</p>
+					
+					<!-- Mobile-First CTA - Thumb Friendly -->
+					<div class="hero-actions-native">
+						<button class="cta-primary-mobile-full"
+								onclick="openBookingModal()"
+								aria-label="Programați consultația acum">
+							<div class="cta-content">
+								<span class="cta-icon">📅</span>
+								<span class="cta-text">Programați Acum</span>
+								<span class="cta-note">Consultație gratuită</span>
+							</div>
+						</button>
+						
+						<div class="quick-contact-row">
+							<a href="tel:+40213449317"
+							   class="quick-contact-btn"
+							   aria-label="Sunați la 021 344 9317">
+								<span class="contact-icon">📞</span>
+								<span class="contact-text">Sună</span>
+							</a>
+							
+							<button class="quick-contact-btn"
+									onclick="openLocationModal()"
+									aria-label="Vezi locația cabinetului">
+								<span class="contact-icon">📍</span>
+								<span class="contact-text">Locație</span>
+							</button>
+						</div>
+					</div>
+					
+					<!-- Trust Indicators - Mobile Optimized -->
+					<div class="trust-indicators-mobile animate-fade-in">
+						<div class="trust-item-mobile">
+							<div class="trust-icon">⭐</div>
+							<div class="trust-content">
+								<span class="trust-number">5.0</span>
+								<span class="trust-label">Rating Google</span>
+							</div>
+						</div>
+						
+						<div class="trust-item-mobile">
+							<div class="trust-icon">👥</div>
+							<div class="trust-content">
+								<span class="trust-number">290+</span>
+								<span class="trust-label">Pacienți Fericiți</span>
+							</div>
+						</div>
+						
+						<div class="trust-item-mobile">
+							<div class="trust-icon">🎓</div>
+							<div class="trust-content">
+								<span class="trust-number">15+</span>
+								<span class="trust-label">Ani Experiență</span>
+							</div>
+						</div>
 					</div>
 				</div>
+				
+				<!-- Mobile Gesture Indicator -->
+				<div class="gesture-indicator animate-bounce">
+					<div class="gesture-arrow">↓</div>
+					<span class="gesture-text">Glisați pentru servicii</span>
+				</div>
+				
+				<!-- Emergency Contact - Mobile Floating -->
+				<div class="emergency-contact-mobile">
+					<a href="tel:+40213449317" class="emergency-btn" aria-label="Contact de urgență">
+						<span class="emergency-icon">🚨</span>
+						<span class="emergency-text">Urgență</span>
+					</a>
+				</div>
 			</section>
+
+			<!-- Mobile-Native Bottom Navigation for 9:16 Format -->
+			<nav class="bottom-navigation" role="navigation" aria-label="Navigare principală mobilă">
+				<div class="bottom-nav-container">
+					<!-- Navigation Items -->
+					<div class="bottom-nav-items">
+						<a href="index.html" class="bottom-nav-item active" aria-label="Acasă">
+							<div class="nav-icon">🏠</div>
+							<span class="nav-label">Acasă</span>
+						</a>
+						
+						<a href="services.html" class="bottom-nav-item" aria-label="Servicii">
+							<div class="nav-icon">🦷</div>
+							<span class="nav-label">Servicii</span>
+						</a>
+						
+						<button class="bottom-nav-cta" onclick="openBookingModal()" aria-label="Programați consultația">
+							<div class="nav-icon">📅</div>
+							<span class="nav-label">Programare</span>
+						</button>
+						
+						<a href="location.html" class="bottom-nav-item" aria-label="Locație">
+							<div class="nav-icon">📍</div>
+							<span class="nav-label">Locație</span>
+						</a>
+						
+						<a href="tel:+40213449317" class="bottom-nav-item" aria-label="Sună acum">
+							<div class="nav-icon">📞</div>
+							<span class="nav-label">Sună</span>
+						</a>
+					</div>
+				</div>
+			</nav>
 
 			<!-- Philosophy Section -->
 			<section id="philosophy" class="philosophy-section">

@@ -1,0 +1,235 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Base styles */
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    scroll-padding-top: 80px; /* Account for fixed header */
+  }
+  
+  body {
+    @apply font-body text-gray-900 bg-white;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+  
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+  
+  /* Focus styles for accessibility */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary-500;
+  }
+}
+
+@layer components {
+  /* Container - Mobile optimized */
+  .container {
+    @apply mx-auto px-3 sm:px-4 md:px-6 lg:px-8 max-w-7xl;
+  }
+  
+  /* Section spacing - Reduced for mobile */
+  .section {
+    @apply py-8 sm:py-12 md:py-16 lg:py-24;
+  }
+  
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-500 to-primary-600 bg-clip-text text-transparent;
+  }
+  
+  /* Glass morphism effect */
+  .glass {
+    @apply bg-white/80 backdrop-blur-lg border border-white/20;
+  }
+  
+  /* Touch ripple effect */
+  .touch-ripple {
+    @apply absolute rounded-full bg-white/30 pointer-events-none;
+    animation: ripple 0.6s ease-out;
+  }
+  
+  @keyframes ripple {
+    0% {
+      transform: scale(0);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+  
+  /* Scroll reveal animation */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Section divider */
+  .section-divider {
+    @apply relative;
+  }
+  
+  .section-divider::after {
+    content: '';
+    @apply absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-transparent via-primary-500 to-transparent;
+  }
+}
+
+@layer utilities {
+  /* Safe area utilities for mobile devices */
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  .pt-safe {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  /* Line clamp utilities */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* Aspect ratio utilities */
+  .aspect-9-16 {
+    aspect-ratio: 9 / 16;
+  }
+  
+  /* Hardware acceleration for smooth animations */
+  .gpu-accelerated {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+  
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Mobile-specific utilities */
+  .text-mobile-xs {
+    @apply text-[0.7rem] leading-tight;
+  }
+  
+  .text-mobile-sm {
+    @apply text-[0.8rem] leading-snug;
+  }
+  
+  .text-mobile-base {
+    @apply text-[0.9rem] leading-normal;
+  }
+  
+  /* Compact spacing for mobile */
+  .space-y-compact > * + * {
+    margin-top: 0.75rem;
+  }
+  
+  .gap-compact {
+    gap: 0.75rem;
+  }
+  
+  /* Alternating grid - 1 or 2 columns on mobile */
+  .grid-mobile-alt {
+    @apply grid gap-3;
+  }
+  
+  @media (max-width: 640px) {
+    .grid-mobile-alt > *:nth-child(odd) {
+      grid-column: span 2;
+    }
+    .grid-mobile-alt > *:nth-child(even) {
+      grid-column: span 1;
+    }
+  }
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0066cc;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #004999;
+}
+
+/* Reduced motion support for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ThinkStack AI Chatbot positioning - Mobile optimization */
+@media (max-width: 768px) {
+  /* Hide the floating chatbot bubble on mobile - we use navbar button instead */
+  iframe[src*="thinkstack"]:not([style*="height"]),
+  div[id*="thinkstack"]:not([class*="chat-window"]),
+  div[class*="thinkstack-button"],
+  div[class*="chatbot-button"] {
+    display: none !important;
+  }
+  
+  /* Keep chat window visible when opened, but position it properly */
+  div[class*="chat-window"],
+  div[class*="thinkstack-chat"],
+  iframe[src*="thinkstack"][style*="height"] {
+    bottom: 80px !important;
+    max-height: calc(100vh - 160px) !important;
+  }
+}
+
+/* Desktop - keep default chatbot bubble */
+@media (min-width: 769px) {
+  iframe[src*="thinkstack"],
+  div[id*="thinkstack"],
+  div[class*="thinkstack"] {
+    bottom: 20px !important;
+  }
+}
