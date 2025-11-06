@@ -7,6 +7,7 @@ import Contact from './pages/Contact'
 import Fees from './pages/Fees'
 import FAQ from './pages/FAQ'
 import Resources from './pages/Resources'
+import Chat from './pages/Chat'
 
 /**
  * Main App component with routing configuration
@@ -23,6 +24,7 @@ function App() {
         <Route path="faq" element={<FAQ />} />
         <Route path="resources" element={<Resources />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="chat" element={<Chat />} />
       </Route>
     </Routes>
   )

@@ -42,8 +42,8 @@ function MobileNav() {
     {
       icon: <MessageCircle className="w-6 h-6" />,
       label: 'Chat',
-      path: '#',
-      isChatbot: true,
+      path: '/chat',
+      isChat: true,
     },
   ];
 
@@ -56,57 +56,17 @@ function MobileNav() {
         {navItems.map((item) => {
           const isActive = location.pathname === item.path;
 
-          if (item.isChatbot) {
-            return (
-              <button
-                key={item.label}
-                onClick={() => {
-                  // Wait for ThinkStack to load and trigger it
-                  const triggerChatbot = () => {
-                    // Try multiple selectors for ThinkStack chatbot
-                    const chatButton = document.querySelector(
-                      '[id*="thinkstack"], [class*="thinkstack"], [data-type="default"], iframe[src*="thinkstack"]'
-                    ) as HTMLElement;
-                    
-                    if (chatButton) {
-                      chatButton.click();
-                    } else {
-                      // If chatbot not found, try to trigger via window object
-                      if ((window as any).ThinkStack) {
-                        (window as any).ThinkStack.open();
-                      } else {
-                        // Fallback to phone call if chatbot unavailable
-                        window.location.href = 'tel:+40213449317';
-                      }
-                    }
-                  };
-                  
-                  // Small delay to ensure DOM is ready
-                  setTimeout(triggerChatbot, 100);
-                }}
-                className={cn(
-                  'flex flex-col items-center justify-center py-2.5 px-1 rounded-xl transition-all min-h-[64px]',
-                  'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-md'
-                )}
-              >
-                <motion.div
-                  whileTap={{ scale: 0.9 }}
-                  className="flex flex-col items-center"
-                >
-                  {item.icon}
-                  <span className="text-xs font-semibold mt-1">{item.label}</span>
-                </motion.div>
-              </button>
-            );
-          }
-
+          const isChat = 'isChat' in item && item.isChat;
+          
           return (
             <Link
               key={item.label}
               to={item.path}
               className={cn(
                 'flex flex-col items-center justify-center py-2.5 px-1 rounded-xl transition-all min-h-[64px]',
-                isActive
+                isChat
+                  ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-md'
+                  : isActive
                   ? 'bg-primary-50 text-primary-600'
                   : 'text-gray-600 hover:bg-gray-50 active:bg-gray-100'
               )}
