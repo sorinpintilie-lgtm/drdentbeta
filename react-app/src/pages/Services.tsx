@@ -198,8 +198,83 @@ function Services() {
         </div>
       </section>
 
+      {/* Philosophy Section - We care. We prevent. We treat */}
+      <section className="py-8 sm:py-12 bg-white">
+        <div className="container mx-auto px-3 sm:px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-center text-gray-900 mb-8 sm:mb-12">
+              We care. We prevent. We treat
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+              {/* Tratamente fără durere */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl sm:rounded-2xl p-6 sm:p-8"
+              >
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-blue-500 rounded-xl flex items-center justify-center text-white mb-4 sm:mb-6">
+                  <Heart className="w-6 h-6 sm:w-8 sm:h-8" />
+                </div>
+                <h3 className="text-lg sm:text-xl font-heading font-bold text-gray-900 mb-3 sm:mb-4">
+                  TRATAMENTE FĂRĂ DURERE
+                </h3>
+                <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                  Având în vedere specializarea şi experienţa vastă a medicilor noştri în stomatologie, sentimentul că te afli pe mâini bune îţi va fi imediat confirmat.
+                </p>
+              </motion.div>
+
+              {/* Aparatură ultramodernă */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl sm:rounded-2xl p-6 sm:p-8"
+              >
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-purple-500 rounded-xl flex items-center justify-center text-white mb-4 sm:mb-6">
+                  <Zap className="w-6 h-6 sm:w-8 sm:h-8" />
+                </div>
+                <h3 className="text-lg sm:text-xl font-heading font-bold text-gray-900 mb-3 sm:mb-4">
+                  APARATURĂ ULTRAMODERNĂ
+                </h3>
+                <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                  Credem cu tărie că prevenirea şi tratarea afecţiunilor ar fi dificile în lipsa unei pregătiri medicale superioare, a atenţiei acordate fiecărui pacient în parte şi a unui echipament medical performant.
+                </p>
+              </motion.div>
+
+              {/* Servicii */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+                className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl sm:rounded-2xl p-6 sm:p-8"
+              >
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-green-500 rounded-xl flex items-center justify-center text-white mb-4 sm:mb-6">
+                  <Shield className="w-6 h-6 sm:w-8 sm:h-8" />
+                </div>
+                <h3 className="text-lg sm:text-xl font-heading font-bold text-gray-900 mb-3 sm:mb-4">
+                  SERVICII
+                </h3>
+                <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                  Suntem încântaţi să vă ajutăm în obţinerea şi menţinerea sănătăţii orale. Pentru aceasta, vă punem la dispoziţie o gamă largă de servicii prin intermediul medicilor noştri specialişti.
+                </p>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Services Carousels - Mobile First */}
-      <section className="py-6 sm:py-8 md:py-12">
+      <section className="py-6 sm:py-8 md:py-12 bg-gray-50">
         <div className="space-y-8 sm:space-y-12">
           {serviceCategories.map((category, categoryIndex) => (
             <div key={categoryIndex} className="space-y-4">
