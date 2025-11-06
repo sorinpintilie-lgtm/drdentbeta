@@ -58,9 +58,32 @@ function MobileNav() {
 
           if (item.isChatbot) {
             return (
-              <a
+              <button
                 key={item.label}
-                href="tel:+40213449317"
+                onClick={() => {
+                  // Wait for ThinkStack to load and trigger it
+                  const triggerChatbot = () => {
+                    // Try multiple selectors for ThinkStack chatbot
+                    const chatButton = document.querySelector(
+                      '[id*="thinkstack"], [class*="thinkstack"], [data-type="default"], iframe[src*="thinkstack"]'
+                    ) as HTMLElement;
+                    
+                    if (chatButton) {
+                      chatButton.click();
+                    } else {
+                      // If chatbot not found, try to trigger via window object
+                      if ((window as any).ThinkStack) {
+                        (window as any).ThinkStack.open();
+                      } else {
+                        // Fallback to phone call if chatbot unavailable
+                        window.location.href = 'tel:+40213449317';
+                      }
+                    }
+                  };
+                  
+                  // Small delay to ensure DOM is ready
+                  setTimeout(triggerChatbot, 100);
+                }}
                 className={cn(
                   'flex flex-col items-center justify-center py-2.5 px-1 rounded-xl transition-all min-h-[64px]',
                   'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-md'
@@ -73,7 +96,7 @@ function MobileNav() {
                   {item.icon}
                   <span className="text-xs font-semibold mt-1">{item.label}</span>
                 </motion.div>
-              </a>
+              </button>
             );
           }
 
