@@ -98,7 +98,7 @@ function Home() {
       {/* CTA Section 1 - After Services */}
       <CTA
         title="Descoperă Diferența Dr.Dent"
-        description="Programează o consultație gratuită și află cum tehnologia noastră avansată și echipa dedicată pot transforma zâmbetul tău."
+        description="Programează o consultație (50 lei) și află cum tehnologia noastră avansată și echipa dedicată pot transforma zâmbetul tău."
         variant="gradient"
       />
 
@@ -165,7 +165,7 @@ function Home() {
       {/* CTA Section 2 - Before Contact */}
       <CTA
         title="Pregătit pentru un Zâmbet Perfect?"
-        description="Nu mai aștepta! Echipa noastră este gata să te ajute să obții zâmbetul pe care ți-l dorești. Programează acum consultația ta gratuită."
+        description="Nu mai aștepta! Echipa noastră este gata să te ajute să obții zâmbetul pe care ți-l dorești. Programează acum consultația ta."
         primaryButtonText="Programează Consultație"
         secondaryButtonText="Sună Acum"
         variant="gradient"

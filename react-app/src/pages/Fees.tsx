@@ -178,7 +178,7 @@ function Fees() {
   ];
 
   const importantInfo = [
-    'Consultația inițială este GRATUITĂ pentru evaluarea nevoilor dumneavoastră',
+    'Consultația costă 50 lei (Consultație Ortodonție: 100 lei)',
     'Prețurile sunt actualizate conform www.drdent.ro',
     'Garanție 5 ani pe toate lucrările efectuate',
     'Tehnologie CEREC pentru restaurări în aceeași zi',
@@ -214,12 +214,12 @@ function Fees() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
-              Oferim tarife competitive și transparente pentru toate serviciile noastre dentare. 
+              Oferim tarife competitive și transparente pentru toate serviciile noastre dentare.
               Prețurile sunt actualizate conform <a href="https://www.drdent.ro" target="_blank" rel="noopener noreferrer" className="text-primary-600 font-semibold hover:underline">www.drdent.ro</a>.
             </p>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 text-green-700 rounded-lg font-semibold">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 text-primary-700 rounded-lg font-semibold">
               <CheckCircle className="w-5 h-5" />
-              Consultația inițială este GRATUITĂ
+              Consultație: 50 lei
             </div>
           </div>
         </div>
@@ -332,7 +332,7 @@ function Fees() {
             Doriți o estimare personalizată?
           </h3>
           <p className="text-base md:text-lg text-white/90 mb-6 md:mb-8 max-w-2xl mx-auto">
-            Contactați-ne pentru o consultație gratuită și aflați costurile exacte pentru tratamentul dumneavoastră.
+            Contactați-ne pentru o consultație (50 lei) și aflați costurile exacte pentru tratamentul dumneavoastră.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

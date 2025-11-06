@@ -16,11 +16,11 @@ function Services() {
       color: 'from-blue-500 to-blue-600',
       icon: <Shield className="w-6 h-6" />,
       services: [
-        { 
-          icon: <Smile className="w-8 h-8" />, 
-          title: 'Consultație Gratuită', 
+        {
+          icon: <Smile className="w-8 h-8" />,
+          title: 'Consultație Dentară',
           description: 'Examen oral complet cu evaluare detaliată și plan de tratament personalizat',
-          price: 'Gratuit',
+          price: '50 lei',
           duration: '30 min',
           popular: true
         },
@@ -443,7 +443,7 @@ function Services() {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
               <Phone className="w-4 h-4" />
-              Consultație Gratuită
+              Programare Rapidă
             </div>
             
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold mb-3 sm:mb-4">
@@ -451,7 +451,7 @@ function Services() {
             </h2>
             
             <p className="text-sm sm:text-base text-white/90 mb-6 sm:mb-8 max-w-md mx-auto leading-relaxed">
-              Consultația inițială este gratuită. Vă așteptăm să discutăm despre nevoile dumneavoastră.
+              Programează o consultație (50 lei) și discutăm despre nevoile dumneavoastră.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">

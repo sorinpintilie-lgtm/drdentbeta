@@ -19,7 +19,7 @@ interface CTAProps {
 
 export function CTA({
   title = 'Pregătit pentru un Zâmbet Perfect?',
-  description = 'Programează o consultație gratuită și descoperă cum te putem ajuta să obții zâmbetul pe care ți-l dorești.',
+  description = 'Programează o consultație și descoperă cum te putem ajuta să obții zâmbetul pe care ți-l dorești.',
   primaryButtonText = 'Programează Acum',
   primaryButtonHref = 'tel:+40213449317',
   secondaryButtonText = 'Sună Acum',
@@ -151,7 +151,7 @@ export function CTA({
                   d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
-              <span className="text-sm font-medium">Consultație Gratuită</span>
+              <span className="text-sm font-medium">Consultație: 50 lei</span>
             </div>
             <div className="flex items-center gap-2">
               <svg

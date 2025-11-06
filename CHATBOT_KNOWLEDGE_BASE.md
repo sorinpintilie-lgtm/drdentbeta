@@ -247,7 +247,7 @@ O coroană acoperă întreaga suprafață a dintelui, restabilind-i forma și di
 
 ## Important Notes
 
-1. **Free Consultation**: First consultation is FREE (Consultație gratuită)
+1. **Consultation Fee**: Consultation costs 50 lei (Consultație: 50 lei)
 2. **Payment**: Prices are in Romanian Lei (RON) unless specified in EUR
 3. **Currency**: 1 EUR ≈ 5 RON (approximate exchange rate)
 4. **Warranty**: 5-year warranty on most treatments (Garanție 5 ani)
@@ -262,8 +262,8 @@ O coroană acoperă întreaga suprafață a dintelui, restabilind-i forma și di
 **Q: Do you offer payment plans?**
 A: Please contact us at +40 21 344 9317 to discuss payment options.
 
-**Q: Is the first consultation really free?**
-A: Yes! The initial consultation is completely free (Consultație gratuită).
+**Q: How much does the consultation cost?**
+A: The consultation costs 50 lei (Consultație: 50 lei). For orthodontic consultation, it's 100 lei.
 
 **Q: Do you accept insurance?**
 A: Please contact us to discuss insurance options.
@@ -283,7 +283,7 @@ A: We accept cash and card payments. Contact us for details.
 
 When answering questions:
 1. Always provide prices in the currency listed (RON or EUR)
-2. Mention that the first consultation is FREE
+2. Mention that consultation costs 50 lei (100 lei for orthodontics)
 3. Encourage users to call +40 21 344 9317 for appointments
 4. Refer to www.drdent.ro for more information
 5. Be friendly, professional, and helpful
