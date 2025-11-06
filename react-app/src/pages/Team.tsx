@@ -183,6 +183,61 @@ function Team() {
         </div>
       </section>
 
+      {/* Despre Dr. Dent Section */}
+      <section className="section bg-gradient-to-br from-blue-50 to-white py-8 sm:py-12 md:py-16">
+        <div className="container mx-auto px-3 sm:px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-gray-900 mb-4 sm:mb-6 text-center">
+              Despre Dr. Dent
+            </h2>
+            <div className="space-y-4 sm:space-y-5 text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
+              <p>
+                La Dr. Dent, fiecare zâmbet este o misiune — nu doar un rezultat. Am construit clinica noastră plecând de la dorinţa sinceră de a oferi pacienţilor o experienţă completă: ambienţă prietenoasă, tehnologie de ultimă generaţie şi o echipă de profesionişti care îşi asumă fiecare tratament cu responsabilitate și grijă.
+              </p>
+              <p>
+                Fondată de dr. Anca Ciomag în anul 2008, clinica Dr. Dent a crescut pe baza unui principiu simplu: fără compromisuri în ceea ce priveşte calitatea actului medical. Creăm un spaţiu unde tehnologia avansată se împleteşte cu empatia, iar fiecare pacient se simte în siguranţă.
+              </p>
+              <p>
+                Echipa noastră include specialişti în estetică dentară, protetică, chirurgie orală, ortodonţie, endodonţie, pedodonţie şi parodontologie. Fiecare medic, fiecare asistentă, fiecare colaborator aduce în cabinet nu doar competenţă, ci şi o atitudine atentă — ascultăm temerile, explicăm paşii, oferim cu claritate opţiunile.
+              </p>
+              
+              <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-md border border-gray-100 my-6 sm:my-8">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-heading font-bold text-primary-600 mb-3 sm:mb-4">
+                  În clinica Dr. Dent:
+                </h3>
+                <ul className="space-y-3 sm:space-y-4">
+                  <li className="flex items-start gap-2 sm:gap-3">
+                    <Heart className="w-5 h-5 sm:w-6 sm:h-6 text-primary-500 flex-shrink-0 mt-0.5" />
+                    <span><strong>Tehnologia de ultimă generaţie</strong> ne permite să oferim tratamente rapide, eficiente și mai puţin invazive.</span>
+                  </li>
+                  <li className="flex items-start gap-2 sm:gap-3">
+                    <Heart className="w-5 h-5 sm:w-6 sm:h-6 text-primary-500 flex-shrink-0 mt-0.5" />
+                    <span><strong>Confortul pacientului</strong> este prioritar; ne dorim ca fiecare vizită să se transforme în experienţă pozitivă.</span>
+                  </li>
+                  <li className="flex items-start gap-2 sm:gap-3">
+                    <Heart className="w-5 h-5 sm:w-6 sm:h-6 text-primary-500 flex-shrink-0 mt-0.5" />
+                    <span><strong>Transparanţa</strong> este fundamentală: comunicăm clar paşii, costurile și opţiunile fiecărui plan de tratament.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <p className="text-center text-base sm:text-lg md:text-xl font-semibold text-primary-600 italic">
+                Alegând Dr. Dent, alegi mai mult decât o intervenţie dentară — alegi o relaţie de încredere, susţinută de profesionalism și dedicare. Zâmbetul tău nu e doar obiectivul nostru, ci motivul pentru care ne dăruim zi de zi.
+              </p>
+              
+              <p className="text-center text-lg sm:text-xl md:text-2xl font-heading font-bold text-gray-900 mt-6 sm:mt-8">
+                Dr. Dent – Întâlneşte profesionalismul cu calmul, tehnologia cu omenia, rezultatul cu satisfacţia ta.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Team Grid - Alternating layout on mobile */}
       <section className="section bg-white py-8 sm:py-12 md:py-16">
         <div className="container mx-auto px-3 sm:px-4">

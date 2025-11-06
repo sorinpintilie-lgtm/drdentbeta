@@ -78,11 +78,11 @@ function Header() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center z-50">
+            <Link to="/" className="flex items-center z-50 -my-2 md:-my-4">
               <motion.img
                 src="/images/logo-color.svg"
                 alt="Dr.Dent Logo"
-                className="h-[80px] md:h-[100px] w-auto"
+                className="h-[60px] md:h-[80px] w-auto max-w-[120px] md:max-w-none"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               />

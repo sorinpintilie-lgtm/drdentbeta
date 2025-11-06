@@ -58,15 +58,9 @@ function MobileNav() {
 
           if (item.isChatbot) {
             return (
-              <button
+              <a
                 key={item.label}
-                onClick={() => {
-                  // Trigger chatbot open
-                  const chatbotButton = document.querySelector('[id*="thinkstack"], [class*="thinkstack"]') as HTMLElement;
-                  if (chatbotButton) {
-                    chatbotButton.click();
-                  }
-                }}
+                href="tel:+40213449317"
                 className={cn(
                   'flex flex-col items-center justify-center py-2.5 px-1 rounded-xl transition-all min-h-[64px]',
                   'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-md'
@@ -79,7 +73,7 @@ function MobileNav() {
                   {item.icon}
                   <span className="text-xs font-semibold mt-1">{item.label}</span>
                 </motion.div>
-              </button>
+              </a>
             );
           }
 
