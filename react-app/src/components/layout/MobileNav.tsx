@@ -2,7 +2,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
 import { cn } from '@/utils/cn';
-import { scrollToSection } from '@/utils/scroll';
 
 /**
  * Enhanced Mobile bottom navigation component
@@ -11,15 +10,6 @@ import { scrollToSection } from '@/utils/scroll';
  */
 function MobileNav() {
   const location = useLocation();
-
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string, section?: string) => {
-    if (section && location.pathname === '/') {
-      e.preventDefault();
-      scrollToSection(section);
-    } else if (section && path === '/') {
-      // Will navigate to home, then scroll handled by useEffect in Home component
-    }
-  };
 
   const navItems = [
     {

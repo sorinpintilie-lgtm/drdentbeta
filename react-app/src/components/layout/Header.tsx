@@ -49,14 +49,6 @@ function Header() {
     };
   }, [isMobileMenuOpen]);
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
-    if (location.pathname === '/') {
-      e.preventDefault();
-      scrollToSection(sectionId);
-      setIsMobileMenuOpen(false);
-    }
-  };
-
   const navItems = [
     { label: 'Acasă', path: '/' },
     { label: 'Servicii', path: '/services' },

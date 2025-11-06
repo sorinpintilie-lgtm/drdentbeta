@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Link as LinkIcon, Phone, Clock, Calendar } from 'lucide-react';
-import { scrollToTop, scrollToSection } from '@/utils/scroll';
+import { scrollToTop } from '@/utils/scroll';
 
 /**
  * Enhanced Footer component with comprehensive sections
@@ -12,13 +12,6 @@ function Footer() {
 
   const handleScrollToTop = () => {
     scrollToTop();
-  };
-
-  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, section?: string) => {
-    if (section) {
-      e.preventDefault();
-      scrollToSection(section);
-    }
   };
 
   return (

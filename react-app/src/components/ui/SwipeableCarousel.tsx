@@ -17,25 +17,8 @@ export const SwipeableCarousel = ({
 }: SwipeableCarouselProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [containerWidth, setContainerWidth] = useState(0);
   const x = useMotionValue(0);
   const [isDragging, setIsDragging] = useState(false);
-
-  // Calculate container width
-  useEffect(() => {
-    if (containerRef.current) {
-      setContainerWidth(containerRef.current.offsetWidth);
-    }
-
-    const handleResize = () => {
-      if (containerRef.current) {
-        setContainerWidth(containerRef.current.offsetWidth);
-      }
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
   const cardWithGap = cardWidth + gap;
 
@@ -68,7 +51,6 @@ export const SwipeableCarousel = ({
   const handleDragEnd = (_: any, info: PanInfo) => {
     setIsDragging(false);
     
-    const currentX = x.get();
     const velocity = info.velocity.x;
     const swipeThreshold = 50; // Minimum swipe distance
     const velocityThreshold = 500; // Minimum velocity for quick swipe
