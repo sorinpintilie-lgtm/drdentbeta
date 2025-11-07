@@ -258,17 +258,17 @@ function Team() {
                   transition={{ delay: index * 0.05 }}
                   onClick={() => setSelectedMember(member)}
                 >
-                  {/* Member Image - Smaller on mobile */}
+                  {/* Member Image - 9:16 Portrait Format */}
                   <div className={cn(
                     "relative overflow-hidden bg-gray-100",
-                    isFeatured ? "h-48 sm:h-56 md:h-64" : "h-40 sm:h-48 md:h-56"
+                    "aspect-[9/16]"
                   )}>
                   {member.image ? (
                     <>
                       <img
                         src={member.image}
                         alt={member.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-top"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                     </>
@@ -340,7 +340,7 @@ function Team() {
             Fiecare membru al echipei noastre este dedicat să vă ofere cea mai bună experiență dentară posibilă.
           </p>
           <a
-            href="tel:+40213449317"
+            href="tel:+40726530591"
             className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-lg sm:rounded-xl font-semibold text-sm sm:text-base md:text-lg hover:shadow-xl transition-all hover:-translate-y-1"
           >
             <Award className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -401,14 +401,14 @@ function Team() {
 
               {/* Modal Body - Responsive Layout */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-6 p-3 sm:p-4 md:p-6">
-                {/* Left Column - Image */}
+                {/* Left Column - Image - 9:16 Portrait */}
                 <div className="order-1">
-                  <div className="h-full min-h-[200px] sm:min-h-[250px] md:min-h-[400px] rounded-lg sm:rounded-xl overflow-hidden bg-gray-100 sticky top-20 sm:top-24">
+                  <div className="aspect-[9/16] md:max-h-[600px] rounded-lg sm:rounded-xl overflow-hidden bg-gray-100 md:sticky md:top-24">
                     {selectedMember.image ? (
                       <img
                         src={selectedMember.image}
                         alt={selectedMember.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-top"
                       />
                     ) : (
                       <div className="h-full bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">

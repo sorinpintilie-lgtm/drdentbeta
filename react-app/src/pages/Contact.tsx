@@ -29,9 +29,10 @@ function Contact() {
                 <MapPin className="w-12 h-12 text-primary-600" />
               </div>
               <h3 className="font-heading font-bold text-xl text-gray-900 mb-2">Locație</h3>
-              <p className="text-gray-600">
-                Calea Victoriei<br />
-                București, România
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Strada Arh. Ionescu Grigore Nr.100<br />
+                bl. 34, sc. 1, ap. 2, interfon 02<br />
+                sector 2, București
               </p>
             </div>
 
@@ -41,8 +42,8 @@ function Contact() {
                 <Phone className="w-12 h-12 text-primary-600" />
               </div>
               <h3 className="font-heading font-bold text-xl text-gray-900 mb-2">Telefon</h3>
-              <a href="tel:+40213449317" className="text-primary-600 hover:text-primary-700 font-semibold">
-                +40 21 344 9317
+              <a href="tel:+40726530591" className="text-primary-600 hover:text-primary-700 font-semibold">
+                0726 530 591
               </a>
             </div>
 
@@ -52,8 +53,8 @@ function Contact() {
                 <Mail className="w-12 h-12 text-primary-600" />
               </div>
               <h3 className="font-heading font-bold text-xl text-gray-900 mb-2">Email</h3>
-              <a href="mailto:contact@drdent.ro" className="text-primary-600 hover:text-primary-700 font-semibold">
-                contact@drdent.ro
+              <a href="mailto:programare@drdent.ro" className="text-primary-600 hover:text-primary-700 font-semibold">
+                programare@drdent.ro
               </a>
             </div>
 
@@ -63,9 +64,10 @@ function Contact() {
                 <Clock className="w-12 h-12 text-primary-600" />
               </div>
               <h3 className="font-heading font-bold text-xl text-gray-900 mb-2">Program</h3>
-              <p className="text-gray-600 text-sm">
-                Luni - Vineri: 9:00 - 18:00<br />
-                Sâmbătă: 10:00 - 14:00
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Luni - Vineri: 09:00 - 20:00<br />
+                Sâmbătă: 09:00 - 14:00<br />
+                Duminică: Închis
               </p>
             </div>
           </div>
@@ -156,11 +158,11 @@ function Contact() {
               Pentru urgențe dentare, sunați imediat la numărul nostru de telefon.
             </p>
             <a
-              href="tel:+40213449317"
+              href="tel:+40726530591"
               className="inline-flex items-center gap-2 px-8 py-4 bg-red-600 text-white rounded-xl font-semibold text-lg hover:bg-red-700 transition-all hover:-translate-y-1"
             >
               <Phone className="w-5 h-5" />
-              Sună Acum: +40 21 344 9317
+              Sună Acum: 0726 530 591
             </a>
           </div>
         </div>

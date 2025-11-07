@@ -456,7 +456,7 @@ function Services() {
             
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
               <a
-                href="tel:+40213449317"
+                href="tel:+40726530591"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-primary-600 rounded-xl font-semibold text-sm sm:text-base hover:shadow-2xl transition-all hover:-translate-y-1"
               >
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5" />

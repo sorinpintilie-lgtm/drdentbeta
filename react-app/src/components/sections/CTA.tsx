@@ -21,9 +21,9 @@ export function CTA({
   title = 'Pregătit pentru un Zâmbet Perfect?',
   description = 'Programează o consultație și descoperă cum te putem ajuta să obții zâmbetul pe care ți-l dorești.',
   primaryButtonText = 'Programează Acum',
-  primaryButtonHref = 'tel:+40213449317',
+  primaryButtonHref = 'tel:+40726530591',
   secondaryButtonText = 'Sună Acum',
-  secondaryButtonHref = 'tel:+40213449317',
+  secondaryButtonHref = 'tel:+40726530591',
   variant = 'gradient',
   backgroundImage,
 }: CTAProps) {

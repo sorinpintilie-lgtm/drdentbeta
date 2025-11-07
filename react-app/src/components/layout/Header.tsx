@@ -110,7 +110,7 @@ function Header() {
               
               {/* Desktop CTA Button */}
               <a
-                href="tel:+40213449317"
+                href="tel:+40726530591"
                 className="px-6 py-2.5 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all flex items-center gap-2"
               >
                 <Calendar className="w-4 h-4" />
@@ -234,14 +234,14 @@ function Header() {
                     transition={{ delay: 0.4 }}
                   >
                     <a
-                      href="tel:+40213449317"
+                      href="tel:+40726530591"
                       className="flex items-center justify-center gap-2 w-full px-6 py-3.5 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-xl font-semibold shadow-lg"
                     >
                       <Calendar className="w-5 h-5" />
                       <span>Programează Acum</span>
                     </a>
                     <a
-                      href="tel:+40213449317"
+                      href="tel:+40726530591"
                       className="flex items-center justify-center gap-2 w-full px-6 py-3.5 border-2 border-primary-500 text-primary-600 rounded-xl font-semibold hover:bg-primary-50 transition-all"
                     >
                       <Phone className="w-5 h-5" />
@@ -259,11 +259,11 @@ function Header() {
                     <p className="font-semibold text-gray-900 mb-2">Contact Direct</p>
                     <p className="flex items-center gap-2">
                       <Phone className="w-4 h-4" />
-                      +40 21 344 9317
+                      0726 530 591
                     </p>
                     <p className="flex items-center gap-2">
                       <Mail className="w-4 h-4" />
-                      contact@drdent.ro
+                      programare@drdent.ro
                     </p>
                   </motion.div>
               </nav>

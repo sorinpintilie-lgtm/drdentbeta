@@ -28,7 +28,7 @@ function Home() {
   }, []);
 
   const handleBookConsultation = () => {
-    window.location.href = 'tel:+40213449317';
+    window.location.href = 'tel:+40726530591';
   };
 
   const handleViewServices = () => {
@@ -47,7 +47,7 @@ function Home() {
           subheadline="Îngrijire dentară profesională cu tehnologie de ultimă generație și o echipă dedicată sănătății tale orale"
           primaryCTA={{
             text: "Programează Consultație",
-            href: "tel:+40213449317",
+            href: "tel:+40726530591",
             onClick: handleBookConsultation,
           }}
           secondaryCTA={{

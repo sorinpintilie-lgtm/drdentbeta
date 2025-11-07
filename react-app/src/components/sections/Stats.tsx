@@ -247,7 +247,7 @@ export const Stats = () => {
             Alătură-te miilor de pacienți mulțumiți
           </p>
           <a
-            href="tel:+40213449317"
+            href="tel:+40726530591"
             className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#0066cc] rounded-xl font-semibold text-lg hover:bg-gray-50 transition-all hover:shadow-2xl hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-white/30"
           >
             Programează Consultație

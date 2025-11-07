@@ -81,18 +81,18 @@ function Chat() {
                 </p>
                 <div className="space-y-3">
                   <a
-                    href="tel:+40213449317"
+                    href="tel:+40726530591"
                     className="flex items-center justify-center gap-2 w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all"
                   >
                     <Phone className="w-5 h-5" />
                     Sună: +40 21 344 9317
                   </a>
                   <a
-                    href="mailto:contact@drdent.ro"
+                    href="mailto:programare@drdent.ro"
                     className="flex items-center justify-center gap-2 w-full px-6 py-3 border-2 border-primary-500 text-primary-600 rounded-xl font-semibold hover:bg-primary-50 transition-all"
                   >
                     <Mail className="w-5 h-5" />
-                    Email: contact@drdent.ro
+                    Email: programare@drdent.ro
                   </a>
                 </div>
               </div>
@@ -129,7 +129,7 @@ function Chat() {
           </p>
           <p className="text-sm text-gray-600">
             Pentru urgențe, sună la{' '}
-            <a href="tel:+40213449317" className="text-primary-600 font-semibold hover:underline">
+            <a href="tel:+40726530591" className="text-primary-600 font-semibold hover:underline">
               +40 21 344 9317
             </a>
           </p>

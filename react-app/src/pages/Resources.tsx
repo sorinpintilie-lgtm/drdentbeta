@@ -256,14 +256,14 @@ function Resources() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+40213449317"
+              href="tel:+40726530591"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary-600 rounded-xl font-semibold text-lg hover:bg-gray-50 transition-all hover:scale-105 shadow-xl"
             >
               <Phone className="w-5 h-5" />
               Sunați: +40 21 344 9317
             </a>
             <a
-              href="mailto:contact@drdent.ro"
+              href="mailto:programare@drdent.ro"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-primary-600 rounded-xl font-semibold text-lg transition-all"
             >
               <Mail className="w-5 h-5" />

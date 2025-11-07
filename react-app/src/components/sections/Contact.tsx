@@ -31,8 +31,8 @@ export const Contact: React.FC = () => {
         </svg>
       ),
       label: 'Email',
-      value: 'contact@drdent.ro',
-      href: 'mailto:contact@drdent.ro',
+      value: 'programare@drdent.ro',
+      href: 'mailto:programare@drdent.ro',
     },
     {
       icon: (

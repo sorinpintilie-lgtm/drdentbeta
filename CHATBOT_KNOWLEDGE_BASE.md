@@ -234,14 +234,19 @@ O coroană acoperă întreaga suprafață a dintelui, restabilind-i forma și di
 
 ## Contact Information
 
-**Phone**: +40 21 344 9317
-**Email**: contact@drdent.ro
+**Phone**: 0726 530 591
+**Email**: programare@drdent.ro
 **Website**: www.drdent.ro
-**Address**: Calea Victoriei, București, România
+**Address**: Strada Arh. Ionescu Grigore Nr.100, bl. 34, sc. 1, ap. 2, interfon 02, sector 2, București
 
 **Program**:
-- Luni - Vineri: 9:00 - 18:00
-- Sâmbătă: 10:00 - 14:00
+- Luni: 09:00 - 20:00
+- Marți: 09:00 - 20:00
+- Miercuri: 09:00 - 20:00
+- Joi: 09:00 - 20:00
+- Vineri: 09:00 - 20:00
+- Sâmbătă: 09:00 - 14:00
+- Duminică: Închis
 
 ---
 
@@ -260,7 +265,7 @@ O coroană acoperă întreaga suprafață a dintelui, restabilind-i forma și di
 ## Common Questions & Answers
 
 **Q: Do you offer payment plans?**
-A: Please contact us at +40 21 344 9317 to discuss payment options.
+A: Please contact us at 0726 530 591 to discuss payment options.
 
 **Q: How much does the consultation cost?**
 A: The consultation costs 50 lei (Consultație: 50 lei). For orthodontic consultation, it's 100 lei.
@@ -269,7 +274,7 @@ A: The consultation costs 50 lei (Consultație: 50 lei). For orthodontic consult
 A: Please contact us to discuss insurance options.
 
 **Q: What are your emergency hours?**
-A: For dental emergencies, call +40 21 344 9317 immediately.
+A: For dental emergencies, call 0726 530 591 immediately.
 
 **Q: Do you treat children?**
 A: Yes, we have a pediatric dentistry specialist (Pedodonție).
@@ -284,7 +289,7 @@ A: We accept cash and card payments. Contact us for details.
 When answering questions:
 1. Always provide prices in the currency listed (RON or EUR)
 2. Mention that consultation costs 50 lei (100 lei for orthodontics)
-3. Encourage users to call +40 21 344 9317 for appointments
+3. Encourage users to call 0726 530 591 for appointments
 4. Refer to www.drdent.ro for more information
 5. Be friendly, professional, and helpful
 6. If unsure about specific details, suggest contacting the clinic directly
