@@ -362,7 +362,7 @@ function Services() {
       <section className="py-8 sm:py-12 bg-gradient-to-br from-primary-50 to-blue-50">
         <div className="container mx-auto px-3 sm:px-4">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-heading font-bold text-center text-gray-900 mb-6 sm:mb-8">
-            De Ce Să Ne Alegi?
+            De ce să ne alegi?
           </h2>
           
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto">

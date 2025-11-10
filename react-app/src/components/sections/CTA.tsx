@@ -179,7 +179,7 @@ export function CTA({
                   d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
-              <span className="text-sm font-medium">Răspuns Rapid</span>
+              <span className="text-sm font-medium">Răspuns rapid</span>
             </div>
           </motion.div>
         </motion.div>

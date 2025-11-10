@@ -208,7 +208,7 @@ export const Services = () => {
         >
           <div className="text-center mb-8 sm:mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-              Cu Ce Ne Ocupăm Zilnic
+              Cu ce ne ocupăm zilnic
             </h3>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               O privire în clinica noastră modernă și echipa dedicată

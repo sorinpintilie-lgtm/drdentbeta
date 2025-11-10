@@ -149,7 +149,7 @@ function StomatologiePediatrica() {
             {/* Cute badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold mb-4">
               <StarIcon className="w-4 h-4" />
-              Pentru Copiii Noștri Speciali
+              Pentru copii
             </div>
             
             {/* Rainbow title */}
@@ -634,7 +634,7 @@ function StomatologiePediatrica() {
             className="text-center mb-8"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
-              De Ce Îngrijire Specială pentru Copii?
+              De ce ingrijire specială pentru copii?
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Echipa noastră are răbdare și vorbește pe limba copiilor!
@@ -839,7 +839,7 @@ function StomatologiePediatrica() {
             className="text-center mb-8"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
-              Punem Accent pe Prevenție
+              Punem accent pe prevenție
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Formăm obiceiuri sănătoase pentru viitor
@@ -934,7 +934,7 @@ function StomatologiePediatrica() {
             </div>
             
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold mb-4">
-              Gata pentru o Aventură Dentară?
+              Gata pentru o aventură dentară?
             </h2>
             
             <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
