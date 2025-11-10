@@ -13,43 +13,43 @@ import type { Service } from '../../types/components';
 
 const services: Service[] = [
   {
-    id: 'implantologie',
-    icon: <Smile className="w-8 h-8" />,
-    title: 'Implantologie',
+    id: 'igienizari',
+    icon: <Shield className="w-8 h-8" />,
+    title: 'Igienizări și profilaxie',
     description:
-      'Soluții moderne de implant dentar pentru înlocuirea dinților lipsă. Tehnologie avansată pentru rezultate durabile și naturale.',
-    href: '#implantologie',
+      'Consultații periodice, detartraje și recomandări pentru sănătatea dinților tăi.',
+    href: '#igienizari',
   },
   {
     id: 'ortodontie',
     icon: <Sparkles className="w-8 h-8" />,
     title: 'Ortodonție',
     description:
-      'Corectarea alinierii dinților cu aparate dentare moderne. Zâmbetul perfect prin tratamente personalizate.',
+      'Tratamente personalizate pentru alinierea perfectă a dinților și un zâmbet armonios.',
     href: '#ortodontie',
   },
   {
     id: 'estetica',
     icon: <Sparkles className="w-8 h-8" />,
-    title: 'Estetică Dentară',
+    title: 'Estetică dentară',
     description:
-      'Transformări complete ale zâmbetului cu fațete, albire și restaurări estetice de ultimă generație.',
+      'Albire profesională, fațete și soluții estetice pentru încredere deplină.',
     href: '#estetica',
   },
   {
-    id: 'profilaxie',
+    id: 'prothetica',
     icon: <Shield className="w-8 h-8" />,
-    title: 'Profilaxie',
+    title: 'Protetică',
     description:
-      'Prevenție și igienă dentară profesională. Curățări periodice pentru menținerea sănătății orale.',
-    href: '#profilaxie',
+      'Coroane, punți și proteze moderne pentru redobândirea funcționalității și esteticii.',
+    href: '#protetica',
   },
   {
     id: 'chirurgie',
     icon: <Scissors className="w-8 h-8" />,
-    title: 'Chirurgie Orală',
+    title: 'Chirurgie orală',
     description:
-      'Intervenții chirurgicale dentare cu tehnici minim invazive. Experiență și precizie pentru confortul tău.',
+      'Intervenții sigure, minim invazive, realizate cu tehnologie de ultimă generație.',
     href: '#chirurgie',
   },
   {
@@ -57,7 +57,7 @@ const services: Service[] = [
     icon: <Baby className="w-8 h-8" />,
     title: 'Pedodonție',
     description:
-      'Îngrijire dentară specializată pentru copii. Mediu prietenos și abordare blândă pentru cei mici.',
+      'Îngrijire specializată pentru copii, de la primul dințișor, pentru dezvoltare sănătoasă.',
     href: '#pedodontie',
   },
 ];
@@ -153,6 +153,86 @@ export const Services = () => {
             <Stethoscope className="w-5 h-5" />
             Contactează-ne
           </a>
+        </motion.div>
+
+        {/* Clinic Gallery Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="mt-12 sm:mt-16"
+        >
+          <div className="text-center mb-8 sm:mb-12">
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+              Cu Ce Ne Ocupăm Zilnic
+            </h3>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              O privire în clinica noastră modernă și echipa dedicată
+            </p>
+          </div>
+
+          {/* Image Gallery Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                src: '/images/dentist-examining-the-mouth-of-a-patient-lying-on-2024-12-10-01-27-13-utc-min.jpg',
+                alt: 'Consultație dentară profesională',
+                title: 'Consultații Complete',
+                description: 'Examinări detaliate cu tehnologie modernă'
+              },
+              {
+                src: '/images/female-dentist-performing-dental-procedure-on-male-2025-04-03-21-15-19-utc-min.jpg',
+                alt: 'Procedură dentară în curs',
+                title: 'Tratamente Profesionale',
+                description: 'Proceduri realizate cu precizie și atenție'
+              },
+              {
+                src: '/images/in-the-dental-office-girl-doctor-examines-the-oral-2024-12-04-04-36-51-utc-min.jpg',
+                alt: 'Examinare dentară detaliată',
+                title: 'Diagnosticare Precisă',
+                description: 'Identificarea problemelor din timp'
+              },
+              {
+                src: '/images/dental-clinic-workers-with-a-patient-2024-10-16-08-17-47-utc-min.jpg',
+                alt: 'Echipa medicală cu pacientul',
+                title: 'Echipa Noastră',
+                description: 'Profesioniști dedicați îngrijirii tale'
+              },
+              {
+                src: '/images/patient-during-dentist-visit-2024-10-15-08-26-18-utc-min.jpg',
+                alt: 'Pacient la consultație',
+                title: 'Confort Pacienți',
+                description: 'Mediu prietenos și relaxant'
+              },
+              {
+                src: '/images/young-female-dentist-in-dental-office-dentist-at-2025-03-15-16-02-16-utc-min.jpg',
+                alt: 'Doctoriță în cabinetul dentar',
+                title: 'Medici Specializați',
+                description: 'Experiență și competență în domeniu'
+              }
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={inView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ duration: 0.5, delay: 0.9 + index * 0.1 }}
+                className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <div className="aspect-w-4 aspect-h-3">
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white">
+                  <h4 className="text-lg sm:text-xl font-bold mb-1">{item.title}</h4>
+                  <p className="text-sm sm:text-base text-white/90">{item.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>

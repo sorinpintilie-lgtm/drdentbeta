@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import Layout from './components/layout/Layout'
 import Home from './pages/Home'
 import Services from './pages/Services'
+import StomatologiePediatrica from './pages/StomatologiePediatrica'
 import Team from './pages/Team'
 import Contact from './pages/Contact'
 import Fees from './pages/Fees'
@@ -19,6 +20,7 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="services" element={<Services />} />
+        <Route path="stomatologie-pediatrica" element={<StomatologiePediatrica />} />
         <Route path="fees" element={<Fees />} />
         <Route path="team" element={<Team />} />
         <Route path="faq" element={<FAQ />} />

@@ -191,8 +191,7 @@ export const Testimonials = () => {
             Ce Spun Pacienții Noștri
           </h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-2">
-            Experiențele reale ale pacienților noștri vorbesc despre calitatea
-            serviciilor noastre
+            Descoperă experiențele pacienților și motivele pentru care recomandă DrDent.
           </p>
         </motion.div>
 

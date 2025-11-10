@@ -85,7 +85,7 @@ function Home() {
             },
           ]}
           videoSrc="/images/hero-video.mov"
-          fallbackImage="/images/drdent-home-opt.jpg"
+          fallbackImage="/images/young-female-dentist-in-dental-office-dentist-at-2025-03-15-16-02-16-utc-min.jpg"
           showScrollIndicator={true}
         />
       </section>
@@ -122,40 +122,32 @@ function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
-              Filozofia Noastră
+              Filosofia Noastră
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              La Dr.Dent, credem în stomatologia biomimetică – păstrarea zâmbetului natural cu grijă și compasiune.
+              La DrDent, credem în:
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                icon: <Heart className="w-12 h-12 text-primary-500" />,
-                title: 'Îngrijire Blândă',
-                description: 'Tehnici minim invazive pentru confortul dumneavoastră.'
+                title: 'Prioritizarea prevenției și sănătății dentare pe termen lung.'
               },
               {
-                icon: <Microscope className="w-12 h-12 text-primary-500" />,
-                title: 'Tehnologie Avansată',
-                description: 'CEREC și alte inovații pentru rezultate precise și rapide.'
+                title: 'Utilizarea celor mai bune tehnologii pentru intervenții sigure.'
               },
               {
-                icon: <Users className="w-12 h-12 text-primary-500" />,
-                title: 'Echipă Dedicată',
-                description: 'Profesioniști pasionați de sănătatea dumneavoastră orală.'
+                title: 'Crearea unei atmosfere relaxante și reconfortante pentru fiecare pacient.'
               }
             ].map((item, index) => (
               <div
                 key={index}
                 className="bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-all hover:-translate-y-2"
               >
-                <div className="mb-4">{item.icon}</div>
                 <h3 className="text-xl font-heading font-bold text-gray-900 mb-3">
                   {item.title}
                 </h3>
-                <p className="text-gray-600">{item.description}</p>
               </div>
             ))}
           </div>

@@ -13,44 +13,44 @@ import type { Feature } from '../../types/components';
 
 const features: Feature[] = [
   {
-    id: 'echipament',
+    id: 'echipamente',
     icon: <Microscope className="w-8 h-8" />,
-    title: 'Echipament Modern',
+    title: 'Echipamente moderne pentru tratamente precise și confortabile.',
     description:
       'Tehnologie dentară de ultimă generație pentru diagnosticare precisă și tratamente eficiente.',
   },
   {
     id: 'experienta',
     icon: <Award className="w-8 h-8" />,
-    title: 'Experiență 15+ Ani',
+    title: 'Peste 15 ani experiență oferind îngrijire stomatologică de calitate.',
     description:
       'Peste 15 ani de experiență în stomatologie, cu mii de pacienți mulțumiți și zâmbete transformate.',
   },
   {
     id: 'echipa',
     icon: <Users className="w-8 h-8" />,
-    title: 'Echipă Specializată',
+    title: 'Echipa noastră de specialiști pasionați pune pe primul loc sănătatea ta.',
     description:
       'Medici stomatologi cu specializări în diverse domenii, dedicați excelenței în îngrijirea dentară.',
   },
   {
     id: 'tehnologie',
     icon: <Zap className="w-8 h-8" />,
-    title: 'Tehnologie Avansată',
+    title: 'Tehnologii inovatoare pentru proceduri eficiente și fără durere.',
     description:
       'Utilizăm CEREC, scanere 3D și alte tehnologii moderne pentru rezultate rapide și precise.',
   },
   {
-    id: 'garantie',
+    id: 'transparenta',
     icon: <ShieldCheck className="w-8 h-8" />,
-    title: 'Garanție Servicii',
+    title: 'Servicii transparente și consiliere în fiecare etapă a tratamentului.',
     description:
       'Oferim garanție pentru toate serviciile noastre, asigurându-te de calitatea tratamentelor.',
   },
   {
-    id: 'preturi',
+    id: 'personalizate',
     icon: <DollarSign className="w-8 h-8" />,
-    title: 'Prețuri Transparente',
+    title: 'Soluții personalizate, adaptate nevoilor fiecărui pacient.',
     description:
       'Tarife clare și competitive, fără costuri ascunse. Planuri de plată flexibile disponibile.',
   },
@@ -203,6 +203,69 @@ export const Features = () => {
             >
               Sună Acum
             </a>
+          </div>
+        </motion.div>
+
+        {/* Technology Showcase Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="mt-12 sm:mt-16"
+        >
+          <div className="text-center mb-8 sm:mb-12">
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+              Tehnologie Modernă
+            </h3>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Echipamente de ultimă generație pentru diagnosticare și tratamente precise
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={inView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.9 }}
+              className="relative overflow-hidden rounded-2xl shadow-lg group"
+            >
+              <img
+                src="/images/young-female-dentist-in-dental-office-dentist-at-2025-03-18-14-08-17-utc-min.jpg"
+                alt="Doctoriță cu echipament dentar modern"
+                className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0066cc]/80 to-transparent" />
+              <div className="absolute inset-0 p-6 sm:p-8 flex flex-col justify-end text-white">
+                <h4 className="text-xl sm:text-2xl font-bold mb-2">
+                  Echipament Avansat
+                </h4>
+                <p className="text-sm sm:text-base text-white/90">
+                  Tehnologie de vârf pentru cele mai bune rezultate
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={inView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.6, delay: 1.0 }}
+              className="relative overflow-hidden rounded-2xl shadow-lg group"
+            >
+              <img
+                src="/images/portrait-of-senior-male-dentist-with-dental-instru-2025-01-16-22-34-30-utc-min.jpg"
+                alt="Doctor cu instrumente dentare profesionale"
+                className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-l from-[#0066cc]/80 to-transparent" />
+              <div className="absolute inset-0 p-6 sm:p-8 flex flex-col justify-end text-white">
+                <h4 className="text-xl sm:text-2xl font-bold mb-2">
+                  Experiență Profesională
+                </h4>
+                <p className="text-sm sm:text-base text-white/90">
+                  Medici cu ani de experiență și dedicare
+                </p>
+              </div>
+            </motion.div>
           </div>
         </motion.div>
       </div>

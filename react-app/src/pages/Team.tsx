@@ -336,7 +336,7 @@ function Team() {
             Filozofia Noastră
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2">
-            La Dr.Dent, credem în îngrijirea personalizată și în construirea de relații pe termen lung cu pacienții noștri. 
+            La Dr.Dent, credem în îngrijirea personalizată și în construirea de relații pe termen lung cu pacienții noștri.
             Fiecare membru al echipei noastre este dedicat să vă ofere cea mai bună experiență dentară posibilă.
           </p>
           <a
@@ -347,6 +347,69 @@ function Team() {
             <span className="hidden sm:inline">Programați o Consultație</span>
             <span className="sm:hidden">Programează</span>
           </a>
+        </div>
+      </section>
+
+      {/* Clinic Environment Section */}
+      <section className="section bg-white py-8 sm:py-12 md:py-16">
+        <div className="container mx-auto px-3 sm:px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-8 sm:mb-12"
+          >
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
+              Clinica Noastră în Acțiune
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              O privire în cabinetul nostru modern și echipa în timpul programului
+            </p>
+          </motion.div>
+
+          {/* Environment Photos Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {[
+              {
+                src: '/images/young-female-dentist-in-dental-office-dentist-at-2025-03-18-14-08-17-utc-min.jpg',
+                alt: 'Tânără doctoriță în cabinetul dentar',
+                title: 'Cabinet Modern',
+                description: 'Spații moderne și echipamente de ultimă generație'
+              },
+              {
+                src: '/images/portrait-of-senior-male-dentist-with-dental-instru-2025-01-16-22-34-30-utc-min.jpg',
+                alt: 'Doctor cu experiență și instrumente',
+                title: 'Experiență și Expertiză',
+                description: 'Medici cu ani de experiență și dedicare'
+              },
+              {
+                src: '/images/dentist-and-patient-at-modern-medical-center-doct-2025-02-21-07-25-59-utc.jpg',
+                alt: 'Doctor și pacient în centru medical',
+                title: 'Relația Medic-Pacient',
+                description: 'Comunicare deschisă și încredere reciprocă'
+              }
+            ].map((photo, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="relative overflow-hidden rounded-2xl shadow-lg group"
+              >
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  className="w-full h-64 sm:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white">
+                  <h3 className="text-lg sm:text-xl font-bold mb-1">{photo.title}</h3>
+                  <p className="text-sm sm:text-base text-white/90">{photo.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 

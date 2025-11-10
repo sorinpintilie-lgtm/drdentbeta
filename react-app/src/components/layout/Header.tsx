@@ -51,6 +51,7 @@ function Header() {
   const navItems = [
     { label: 'Acasă', path: '/' },
     { label: 'Servicii', path: '/services' },
+    { label: 'Stomatologie Pediatrică', path: '/stomatologie-pediatrica' },
     { label: 'Tarife', path: '/fees' },
     { label: 'Echipa', path: '/team' },
     { label: 'FAQ', path: '/faq' },
