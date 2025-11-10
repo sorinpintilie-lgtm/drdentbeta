@@ -221,10 +221,10 @@ function StomatologiePediatrica() {
 
             <div className="relative z-10">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Caută Dințisorul Magic! 🦷✨
+                Găsește Zana Măseluța! 🧚‍♀️✨
               </h3>
               <p className="text-gray-600 mb-6">
-                Găsește și apasă pe dințișorul zburător să îți dai seama!
+                Găsește și apasă pe Zana Măseluța să îți dai seama!
               </p>
 
               {/* Game area */}
@@ -411,8 +411,8 @@ function StomatologiePediatrica() {
                 >
                   <h4 className="text-xl font-bold mb-2">🎉 Felicitări! 🎉</h4>
                   <p className="text-sm">
-                    Ai găsit dințișorul magic! Ești un campion! 🏆<br />
-                    Scorul tău: {gameScore} puncte! Următorul dinte se ascunde... 👀
+                    Ai găsit Zana Măseluța! Ești un campion! 🏆<br />
+                    Scorul tău: {gameScore} puncte! Următoarea zană se ascunde... 👀
                   </p>
                 </motion.div>
               )}
