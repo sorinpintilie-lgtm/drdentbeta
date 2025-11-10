@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { Heart, Microscope, Users } from 'lucide-react';
 import { Hero } from '../components/sections/Hero';
 import { Services } from '../components/sections/Services';
 import { Features } from '../components/sections/Features';
