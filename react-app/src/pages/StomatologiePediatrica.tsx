@@ -17,6 +17,7 @@ function StomatologiePediatrica() {
   const [toothFairyPosition, setToothFairyPosition] = useState({ x: 0, y: 0 });
   const [showCongratulations, setShowCongratulations] = useState(false);
   const [gameScore, setGameScore] = useState(0);
+  const [showLearningPopup, setShowLearningPopup] = useState(false);
 
   // Random positions for tooth fairy to hide
   const possiblePositions = [
@@ -172,6 +173,7 @@ function StomatologiePediatrica() {
                 Vreau să mă joc! 🎮
               </motion.button>
               <motion.button
+                onClick={() => setShowLearningPopup(true)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-6 py-3 bg-white/20 backdrop-blur-sm border-2 border-white text-white rounded-full font-semibold text-sm hover:bg-white/30 transition-all"
@@ -420,6 +422,134 @@ function StomatologiePediatrica() {
                 className="px-6 py-3 bg-gray-400 hover:bg-gray-500 text-white rounded-full font-semibold transition-colors"
               >
                 Ies din joc ✕
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      )}
+
+      {/* Learning Popup */}
+      {showLearningPopup && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <motion.div
+            initial={{ scale: 0, opacity: 0, y: 50 }}
+            animate={{ scale: 1, opacity: 1, y: 0 }}
+            exit={{ scale: 0, opacity: 0, y: 50 }}
+            className="bg-gradient-to-br from-yellow-100 via-pink-100 to-blue-100 rounded-3xl p-6 sm:p-8 max-w-lg w-full max-h-[90vh] overflow-y-auto relative"
+          >
+            {/* Decorative floating elements */}
+            <div className="absolute top-4 right-4 w-8 h-8 bg-yellow-300/30 rounded-full animate-bounce" />
+            <div className="absolute top-12 left-4 w-6 h-6 bg-pink-300/30 rounded-full animate-pulse" />
+            <div className="absolute bottom-6 right-8 w-4 h-4 bg-blue-300/30 rounded-full animate-ping" />
+            
+            <div className="relative z-10 text-center">
+              {/* Cute header with images */}
+              <div className="mb-6">
+                <div className="flex justify-center items-center gap-3 mb-4">
+                  <img
+                    src="/images/childrenpart/iepuras.png"
+                    alt="Cute bunny"
+                    className="w-12 h-12 object-contain"
+                  />
+                  <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">
+                    🦷 Periuța Magică! ✨
+                  </h3>
+                  <img
+                    src="/images/childrenpart/inima.png"
+                    alt="Heart"
+                    className="w-12 h-12 object-contain"
+                  />
+                </div>
+              </div>
+
+              {/* Main content with cute images */}
+              <div className="space-y-4 text-left">
+                <div className="flex items-start gap-3">
+                  <img
+                    src="/images/childrenpart/fata.png"
+                    alt="Happy girl"
+                    className="w-10 h-10 object-contain flex-shrink-0 mt-1"
+                  />
+                  <div>
+                    <h4 className="font-bold text-lg text-gray-900 mb-2">
+                      De ce e bine să ne spălăm pe dinți în fiecare zi?
+                    </h4>
+                    <p className="text-gray-700 leading-relaxed">
+                      Știi de ce dinții tăi au nevoie de periuță și pastă în fiecare zi? Pentru că, atunci când mănânci, rămân mici bucățele de mâncare care se ascund între dinți. Dacă nu le spălăm, vin niște „monstruleti” mici, numiți bacterii, care fac găurele în dinți și pot să-i doară.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <img
+                    src="/images/childrenpart/unicorn.png"
+                    alt="Unicorn"
+                    className="w-10 h-10 object-contain flex-shrink-0 mt-1"
+                  />
+                  <div>
+                    <p className="text-gray-700 leading-relaxed">
+                      Când te speli pe dinți dimineața și seara, îi ajuți să fie curați, tari și strălucitori. Așa poți zâmbi cât vrei, fără frică de carii!
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <img
+                    src="/images/childrenpart/fluture.png"
+                    alt="Butterfly"
+                    className="w-10 h-10 object-contain flex-shrink-0 mt-1"
+                  />
+                  <div>
+                    <p className="text-gray-700 leading-relaxed">
+                      Și mai e ceva: dinții curați înseamnă și respirație proaspătă, iar periajul zilnic e ca un supereroi care te apără în fiecare zi.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <img
+                    src="/images/childrenpart/curcubeu peste nori.png"
+                    alt="Rainbow"
+                    className="w-10 h-10 object-contain flex-shrink-0 mt-1"
+                  />
+                  <div>
+                    <p className="text-gray-700 leading-relaxed font-bold">
+                      Așa că... ia periuța, pune puțină pastă și fă spumă! Zâmbetul tău merită! 😊
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Fun decorative elements */}
+              <div className="flex justify-center items-center gap-4 my-6 text-3xl">
+                <motion.span
+                  animate={{ rotate: [0, 10, -10, 0] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                >
+                  🪥
+                </motion.span>
+                <motion.span
+                  animate={{ scale: [1, 1.1, 1] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                >
+                  ✨
+                </motion.span>
+                <motion.span
+                  animate={{ y: [0, -5, 0] }}
+                  transition={{ duration: 1.8, repeat: Infinity }}
+                >
+                  😄
+                </motion.span>
+              </div>
+
+              {/* Close button */}
+              <motion.button
+                onClick={() => setShowLearningPopup(false)}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-3 bg-gradient-to-r from-pink-400 to-purple-400 text-white rounded-full font-bold text-lg hover:shadow-lg transition-all"
+              >
+                Mulțumesc! Vreau să mă spăl pe dinți! 🦷✨
               </motion.button>
             </div>
           </motion.div>
