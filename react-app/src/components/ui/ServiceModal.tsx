@@ -8,6 +8,7 @@ interface ServiceModalProps {
   service: {
     title: string;
     description: string;
+    detailedDescription?: string;
     icon: React.ReactNode;
   } | null;
 }
@@ -56,7 +57,7 @@ export const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, ser
             {/* Content */}
             <div className="p-6">
               <p className="text-gray-700 leading-relaxed text-base">
-                {service.description}
+                {service.detailedDescription || service.description}
               </p>
             </div>
             
