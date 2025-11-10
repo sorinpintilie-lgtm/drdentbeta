@@ -808,9 +808,7 @@ function StomatologiePediatrica() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto text-center"
           >
-            <h2 className="text-2xl sm:text-3xl font-heading font-bold text-gray-900 mb-6">
-              La Dr. Dent, copilul care zâmbește fără teamă devine un adult cu încredere!
-            </h2>
+
             
             <div className="bg-gradient-to-r from-yellow-100 via-pink-100 to-blue-100 rounded-2xl p-6 sm:p-8 mb-8">
               <p className="text-lg text-gray-700 leading-relaxed mb-4">
