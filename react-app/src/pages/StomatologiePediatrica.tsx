@@ -566,10 +566,10 @@ function StomatologiePediatrica() {
             className="text-center mb-8"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
-              Vedete reale cu copiii noștri!
+              Fotografii de la consultațiile pentru copii
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Iată cum ne jucăm și învățăm împreună cu cei mici!
+              Iată cum ne ocupăm cu profesionalism de cei mici!
             </p>
           </motion.div>
 
@@ -631,7 +631,7 @@ function StomatologiePediatrica() {
             className="text-center mb-8"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
-              De Ce Dragoste pentru Copii?
+              De Ce Îngrijire Specială pentru Copii?
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Echipa noastră are răbdare și vorbește pe limba copiilor!
