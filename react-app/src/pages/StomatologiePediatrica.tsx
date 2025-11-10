@@ -228,85 +228,158 @@ function StomatologiePediatrica() {
               </p>
 
               {/* Game area */}
-              <div className="relative w-80 h-60 mx-auto mb-6 bg-gradient-to-br from-blue-100 to-pink-100 rounded-2xl border-4 border-yellow-300 overflow-hidden">
-                {/* Multiple cloud layers - TOP LAYER (hides the tooth) */}
+              <div className="relative w-80 h-60 mx-auto mb-6 bg-gradient-to-br from-sky-100 to-green-100 rounded-2xl border-4 border-yellow-300 overflow-hidden">
+                {/* Beautiful scene with cartoon images - TOP LAYER (hides the zanamaseluta) */}
                 <div className="absolute top-0 left-0 w-full h-full">
-                  <div className="absolute top-2 left-2 w-16 h-10 bg-white/90 rounded-full shadow-lg z-30" />
-                  <div className="absolute top-1 right-6 w-14 h-8 bg-white/85 rounded-full shadow-lg z-30" />
-                  <div className="absolute top-8 right-2 w-12 h-6 bg-white/80 rounded-full shadow-lg z-30" />
-                  <div className="absolute bottom-6 left-8 w-18 h-11 bg-white/95 rounded-full shadow-lg z-30" />
-                  <div className="absolute bottom-2 right-12 w-15 h-9 bg-white/90 rounded-full shadow-lg z-30" />
+                  {/* Static cartoon clouds */}
+                  <div className="absolute top-2 left-2 z-30">
+                    <img
+                      src="/images/scene/cloud-cartoon.png"
+                      alt="Cloud"
+                      className="w-16 h-12 object-contain drop-shadow-lg opacity-80"
+                    />
+                  </div>
                   
-                  {/* Floating clouds that move */}
-                  {[...Array(3)].map((_, i) => (
+                  <div className="absolute top-1 right-6 z-30">
+                    <img
+                      src="/images/scene/cloud-cartoon.png"
+                      alt="Cloud"
+                      className="w-14 h-10 object-contain drop-shadow-lg opacity-85"
+                    />
+                  </div>
+                  
+                  <div className="absolute bottom-6 left-8 z-30">
+                    <img
+                      src="/images/scene/cloud-cartoon.png"
+                      alt="Cloud"
+                      className="w-18 h-12 object-contain drop-shadow-lg opacity-90"
+                    />
+                  </div>
+                  
+                  <div className="absolute bottom-2 right-12 z-30">
+                    <img
+                      src="/images/scene/cloud-cartoon.png"
+                      alt="Cloud"
+                      className="w-15 h-10 object-contain drop-shadow-lg opacity-85"
+                    />
+                  </div>
+                  
+                  {/* Floating cartoon clouds that move */}
+                  {[...Array(2)].map((_, i) => (
                     <motion.div
                       key={i}
-                      className="absolute w-8 h-5 bg-white/70 rounded-full shadow-md z-25"
+                      className="absolute z-25"
                       style={{
-                        top: `${20 + i * 15}%`,
-                        left: `${i * 25}%`
+                        top: `${10 + i * 25}%`,
+                        left: `${i * 40}%`
                       }}
                       animate={{
                         x: [0, 20, 0],
-                        y: [0, -5, 0]
+                        y: [0, -10, 0]
                       }}
                       transition={{
-                        duration: 4 + i,
+                        duration: 6 + i,
                         repeat: Infinity,
-                        delay: i * 0.5
+                        delay: i * 1
                       }}
-                    />
+                    >
+                      <img
+                        src="/images/scene/cloud-cartoon.png"
+                        alt="Floating Cloud"
+                        className="w-12 h-8 object-contain drop-shadow-md opacity-70"
+                      />
+                    </motion.div>
                   ))}
                   
-                  {/* Large bushes and rocks - FRONT LAYER */}
-                  <div className="absolute top-4 left-12 w-12 h-8 bg-green-400/80 rounded-lg shadow-md z-35" />
-                  <div className="absolute bottom-4 left-4 w-10 h-12 bg-green-500/75 rounded-lg shadow-md z-35" />
-                  <div className="absolute top-12 right-4 w-11 h-7 bg-gray-400/70 rounded-lg shadow-md z-35" />
-                  <div className="absolute bottom-8 right-8 w-9 h-10 bg-stone-400/65 rounded-lg shadow-md z-35" />
+                  {/* Cartoon bushes and trees - FRONT LAYER */}
+                  <div className="absolute top-4 left-12 z-35">
+                    <img
+                      src="/images/scene/bush-cartoon.png"
+                      alt="Bush"
+                      className="w-14 h-10 object-contain drop-shadow-lg"
+                    />
+                  </div>
                   
-                  {/* Tall grass - FRONT LAYER */}
-                  <div className="absolute bottom-0 left-0 w-full h-6 bg-gradient-to-t from-green-300/60 to-transparent z-35" />
+                  <div className="absolute bottom-4 left-4 z-35">
+                    <img
+                      src="/images/scene/colored-tree-icon-isolated-on-square-white-background-simple-flat-outlined-cartoon-icon-drawing-with-nature-botanical-theme-free-vector-removebg-preview.png"
+                      alt="Tree"
+                      className="w-12 h-16 object-contain drop-shadow-lg"
+                    />
+                  </div>
+                  
+                  <div className="absolute top-12 right-4 z-35">
+                    <img
+                      src="/images/scene/bush-cartoon.png"
+                      alt="Bush"
+                      className="w-10 h-8 object-contain drop-shadow-lg"
+                    />
+                  </div>
+                  
+                  <div className="absolute bottom-8 right-8 z-35">
+                    <img
+                      src="/images/scene/colored-tree-icon-isolated-on-square-white-background-simple-flat-outlined-cartoon-icon-drawing-with-nature-botanical-theme-free-vector-removebg-preview.png"
+                      alt="Tree"
+                      className="w-10 h-14 object-contain drop-shadow-lg"
+                    />
+                  </div>
+                  
+                  {/* Friendly giraffe for extra hiding spot */}
+                  <div className="absolute top-6 right-16 z-35">
+                    <img
+                      src="/images/scene/giraffe-cartoon-roughen-filled-outline-icon-free-vector-removebg-preview.png"
+                      alt="Giraffe"
+                      className="w-8 h-12 object-contain drop-shadow-lg opacity-90"
+                    />
+                  </div>
+                  
+                  {/* Grass at the bottom - FRONT LAYER */}
+                  <div className="absolute bottom-0 left-0 w-full h-8 z-35 bg-gradient-to-t from-green-200/40 to-transparent" />
                 </div>
 
-                {/* Clickable Tooth Fairy - HIDDEN LAYER (behind everything) */}
+                {/* Clickable Zanamaseluta - HIDDEN LAYER (behind everything) */}
                 <motion.div
                   className="absolute cursor-pointer group z-5"
                   style={{
                     left: `${toothFairyPosition.x}%`,
                     top: `${toothFairyPosition.y}%`
                   }}
-                  whileHover={{ scale: 1.2, rotate: 10 }}
-                  whileTap={{ scale: 0.9 }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
                   onClick={findToothFairy}
                 >
                   <motion.div
                     animate={{
-                      y: [0, -8, 0],
-                      rotate: [0, 3, -3, 0]
+                      y: [0, -6, 0],
+                      rotate: [0, 2, -2, 0]
                     }}
                     transition={{
-                      duration: 2.5,
+                      duration: 3,
                       repeat: Infinity
                     }}
                     className="relative"
                   >
-                    {/* Very subtle sparkly tooth - hard to see when hidden */}
-                    <div className="w-8 h-8 bg-gradient-to-br from-yellow-100/60 to-white/40 border border-yellow-300/40 rounded-lg relative shadow-sm opacity-60 group-hover:opacity-100 group-hover:scale-125 group-hover:border-yellow-500/80 transition-all duration-300">
-                      <Sparkles className="w-4 h-4 text-yellow-600/70 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:text-yellow-500" />
+                    {/* Zanamaseluta image - very subtle when hidden */}
+                    <div className="w-12 h-12 relative opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+                      <img
+                        src="/images/zanamaseluta/zanamaseluta.png"
+                        alt="Zana Măseluța"
+                        className="w-full h-full object-contain drop-shadow-sm"
+                      />
                       
-                      {/* Hidden sparkles - only show when very close */}
+                      {/* Subtle sparkles around the image when hovered */}
                       <motion.div
-                        className="absolute -top-0.5 -right-0.5 w-2 h-2 opacity-0 group-hover:opacity-80 transition-opacity"
+                        className="absolute -top-1 -right-1 w-2 h-2 opacity-0 group-hover:opacity-70 transition-opacity"
                         animate={{
-                          scale: [1, 1.4, 1],
-                          opacity: [0.4, 0.8, 0.4]
+                          scale: [1, 1.3, 1],
+                          opacity: [0.5, 0.8, 0.5]
                         }}
                         transition={{
-                          duration: 1.2,
+                          duration: 1.5,
                           repeat: Infinity
                         }}
                       >
-                        <Sparkles className="w-2 h-2 text-pink-500/60" />
+                        <Sparkles className="w-2 h-2 text-yellow-500" />
                       </motion.div>
                     </div>
                   </motion.div>
@@ -317,11 +390,11 @@ function StomatologiePediatrica() {
                   </div>
                 </motion.div>
                 
-                {/* Distraction elements - MORE hiding spots */}
-                <div className="absolute top-3 left-24 w-4 h-4 bg-pink-400/50 rounded-full z-20" />
-                <div className="absolute top-8 right-20 w-3 h-3 bg-yellow-400/50 rounded-full z-20" />
-                <div className="absolute bottom-10 left-6 w-5 h-5 bg-purple-400/50 rounded-full z-20" />
-                <div className="absolute bottom-6 right-4 w-4 h-4 bg-blue-400/50 rounded-full z-20" />
+                {/* Small decorative elements */}
+                <div className="absolute top-3 left-24 w-2 h-2 bg-yellow-400/40 rounded-full z-20" />
+                <div className="absolute top-8 right-20 w-1.5 h-1.5 bg-pink-400/40 rounded-full z-20" />
+                <div className="absolute bottom-10 left-6 w-2 h-2 bg-blue-400/40 rounded-full z-20" />
+                <div className="absolute bottom-6 right-4 w-1.5 h-1.5 bg-purple-400/40 rounded-full z-20" />
               </div>
 
               {showCongratulations && (
