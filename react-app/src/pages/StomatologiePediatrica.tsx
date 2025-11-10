@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import {
-  Heart, Star, Smile, Sun, Flower, Umbrella, Star as StarIcon,
-  Phone, Clock, CheckCircle, Users, Award, Sparkles, Rainbow,
-  HeartHandshake, Baby, Users2, Shield
+  Heart, Star as StarIcon,
+  Phone, Users, Sparkles, Rainbow,
+  HeartHandshake, Smile, Flower
 } from 'lucide-react';
 import { SwipeableCarousel } from '../components/ui/SwipeableCarousel';
 
@@ -15,7 +15,6 @@ function StomatologiePediatrica() {
   // Game state
   const [gameActive, setGameActive] = useState(false);
   const [toothFairyPosition, setToothFairyPosition] = useState({ x: 0, y: 0 });
-  const [gameFound, setGameFound] = useState(false);
   const [showCongratulations, setShowCongratulations] = useState(false);
   const [gameScore, setGameScore] = useState(0);
 
@@ -29,7 +28,6 @@ function StomatologiePediatrica() {
 
   const startGame = () => {
     setGameActive(true);
-    setGameFound(false);
     setShowCongratulations(false);
     
     // Randomly position the tooth fairy
@@ -38,14 +36,12 @@ function StomatologiePediatrica() {
   };
 
   const findToothFairy = () => {
-    setGameFound(true);
     setGameScore((prev: number) => prev + 1);
     setShowCongratulations(true);
     
     // Generate new tooth position after celebration
     setTimeout(() => {
       setShowCongratulations(false);
-      setGameFound(false);
       
       // New random position for next round
       const newPosition = possiblePositions[Math.floor(Math.random() * possiblePositions.length)];
