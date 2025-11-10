@@ -147,6 +147,12 @@ export const Services = () => {
           </p>
           <a
             href="tel:+40726530591"
+            onClick={() => {
+              const contactElement = document.getElementById('contact');
+              if (contactElement) {
+                contactElement.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
             className="inline-flex items-center gap-2 px-8 py-4 bg-[#0066cc] text-white rounded-xl font-semibold text-lg hover:bg-[#004999] transition-all hover:shadow-xl hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-[#0080ff]/30"
           >
             <Stethoscope className="w-5 h-5" />

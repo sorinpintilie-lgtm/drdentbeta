@@ -62,6 +62,9 @@ function MobileNav() {
             <Link
               key={item.label}
               to={item.path}
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
               className={cn(
                 'flex flex-col items-center justify-center py-2.5 px-1 rounded-xl transition-all min-h-[64px]',
                 isChat

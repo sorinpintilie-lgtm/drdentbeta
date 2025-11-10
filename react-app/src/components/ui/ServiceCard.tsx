@@ -16,11 +16,10 @@ export const ServiceCard = ({
         href,
         onClick: (e: React.MouseEvent) => {
           e.preventDefault();
-          // Smooth scroll to section or navigate
-          const targetId = href.replace('#', '');
-          const element = document.getElementById(targetId);
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+          // Scroll to contact section
+          const contactElement = document.getElementById('contact');
+          if (contactElement) {
+            contactElement.scrollIntoView({ behavior: 'smooth' });
           }
         },
       }
