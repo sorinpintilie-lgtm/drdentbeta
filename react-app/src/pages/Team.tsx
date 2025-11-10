@@ -78,7 +78,7 @@ function Team() {
       name: 'Dr. Vlad Petrescu',
       role: 'Medic Specialist Chirurgie OMF',
       specialty: 'Chirurgie Oro-Maxilo-Facială',
-      description: 'Dr Vlad Petrescu este medic specialist chirurgie Oro-Maxilo-Facială. Este vicepreședinte al Asociației Române de Implantologie și membru al European Association for Cranio-Maxillofacial Surgery. Pasiunea lui este spitalul și munca pe care o depune acolo. Dr Petrescu este căutat în primul rând pentru profesionalismul desăvârșit.',
+      description: 'Dr Vlad Petrescu este medic specialist chirurgie Oro-Maxilo-Facială. Este vicepreședinte al Asociației Române de Implantologie și membru al European Association for Cranio-Maxillofacial Surgery. Pasiunea lui este spitalul și munca pe care o depune acolo.',
       credentials: [
         'Specialist Chirurgie Oro-Maxilo-Facială',
         'Vicepreședinte Asociația Română de Implantologie',
@@ -227,11 +227,11 @@ function Team() {
               </div>
 
               <p className="text-center text-base sm:text-lg md:text-xl font-semibold text-primary-600 italic">
-                Alegând Dr. Dent, alegi mai mult decât o intervenţie dentară — alegi o relaţie de încredere, susţinută de profesionalism și dedicare. Zâmbetul tău nu e doar obiectivul nostru, ci motivul pentru care ne dăruim zi de zi.
+                Alegând Dr. Dent, alegi o echipă dedicată sănătății tale orale. Zâmbetul tău e obiectivul nostru și motivul pentru care ne străduim zi de zi.
               </p>
               
               <p className="text-center text-lg sm:text-xl md:text-2xl font-heading font-bold text-gray-900 mt-6 sm:mt-8">
-                Dr. Dent – Întâlneşte profesionalismul cu calmul, tehnologia cu omenia, rezultatul cu satisfacţia ta.
+                Dr. Dent – O echipă dedicată, echipamente moderne, servicii dentare de calitate.
               </p>
             </div>
           </motion.div>

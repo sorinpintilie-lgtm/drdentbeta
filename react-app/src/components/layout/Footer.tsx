@@ -32,7 +32,7 @@ function Footer() {
               <span className="font-heading font-bold text-2xl">Dr.Dent</span>
             </div>
             <p className="text-white/80 leading-relaxed">
-              Îngrijire dentară profesională cu tehnologie de ultimă generație și o echipă dedicată sănătății tale orale.
+              Îngrijire dentară profesională cu echipamente moderne și o echipă dedicată sănătății tale orale.
             </p>
             <div className="flex items-center space-x-4 pt-2">
               <a

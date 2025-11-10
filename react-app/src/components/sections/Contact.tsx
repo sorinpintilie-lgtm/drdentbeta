@@ -16,8 +16,8 @@ export const Contact: React.FC = () => {
         </svg>
       ),
       label: 'Telefon',
-      value: '+40 21 123 4567',
-      href: 'tel:+40211234567',
+      value: '0726 530 591',
+      href: 'tel:+40726530591',
     },
     {
       icon: (
@@ -52,13 +52,13 @@ export const Contact: React.FC = () => {
         </svg>
       ),
       label: 'Adresă',
-      value: 'Str. Exemplu 123, București',
-      href: 'https://maps.google.com/?q=Str.+Exemplu+123+București',
+      value: 'Strada Arh. Ionescu Grigore Nr.100, bl. 34, sc. 1, ap. 2, sector 2, București',
+      href: 'https://maps.google.com/?q=Strada+Arh.+Ionescu+Grigore+Nr.100+bl.+34+sc.+1+ap.+2+sector+2+București',
     },
   ];
 
   const workingHours = [
-    { day: 'Luni - Vineri', hours: '09:00 - 19:00' },
+    { day: 'Luni - Vineri', hours: '09:00 - 20:00' },
     { day: 'Sâmbătă', hours: '09:00 - 14:00' },
     { day: 'Duminică', hours: 'Închis' },
   ];
@@ -188,7 +188,7 @@ export const Contact: React.FC = () => {
 
             {/* Map Link */}
             <a
-              href="https://maps.google.com/?q=Str.+Exemplu+123+București"
+              href="https://maps.google.com/?q=Strada+Arh.+Ionescu+Grigore+Nr.100+bl.+34+sc.+1+ap.+2+sector+2+București"
               target="_blank"
               rel="noopener noreferrer"
               className="block bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow group"

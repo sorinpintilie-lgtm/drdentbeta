@@ -4,12 +4,31 @@ import {
   Phone, Star, Award, Zap, Heart, CheckCircle, ArrowRight, Clock, Users
 } from 'lucide-react';
 import { SwipeableCarousel } from '../components/ui/SwipeableCarousel';
+import { ServiceModal } from '../components/ui/ServiceModal';
+import { useState } from 'react';
 
 /**
  * Services Page Component - Mobile-First Design
  * Optimized for 9:16 vertical phone format with infinite carousels
  */
 function Services() {
+  const [selectedService, setSelectedService] = useState<{
+    title: string;
+    description: string;
+    icon: React.ReactNode;
+  } | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openServiceModal = (service: any) => {
+    setSelectedService(service);
+    setIsModalOpen(true);
+  };
+
+  const closeServiceModal = () => {
+    setIsModalOpen(false);
+    setSelectedService(null);
+  };
+
   const serviceCategories = [
     {
       category: 'Prevenție & Igienă',
@@ -20,6 +39,7 @@ function Services() {
           icon: <Smile className="w-8 h-8" />,
           title: 'Consultație Dentară',
           description: 'Examen oral complet cu evaluare detaliată și plan de tratament personalizat',
+          detailedDescription: 'O consultație dentară este primul pas către un zâmbet sănătos și frumos. În cadrul vizitei, medicul efectuează un examen complet al dinților, gingiilor și cavității bucale, identificând eventualele probleme ascunse. După evaluare, vei primi un plan de tratament personalizat, adaptat nevoilor tale, pentru ca fiecare etapă să fie clară, sigură și eficientă.',
           price: '50 lei',
           duration: '30 min',
           popular: true
@@ -28,6 +48,7 @@ function Services() {
           icon: <Sparkles className="w-8 h-8" />, 
           title: 'Detartraj Profesional', 
           description: 'Curățare profesională cu ultrasunete și periaj cu pastă specială',
+          detailedDescription: 'Detartrajul profesional îndepărtează placa bacteriană și tartrul depus pe dinți cu ajutorul ultrasunetelor, fără durere și fără a afecta smalțul. Procedura este urmată de un periaj cu pastă specială, care lasă dinții curați, netezi și strălucitori. Este recomandat să fie realizat periodic, pentru a menține sănătatea gingiilor și prospețimea zâmbetului.',
           price: 'De la 200 RON',
           duration: '45 min'
         },
@@ -35,6 +56,7 @@ function Services() {
           icon: <Shield className="w-8 h-8" />, 
           title: 'Sigilare Preventivă', 
           description: 'Protecție pentru dinții permanenți împotriva cariilor',
+          detailedDescription: 'Sigilarea dentară este o procedură simplă și nedureroasă prin care medicul aplică un strat subțire de material protector pe suprafața dinților permanenți, în special pe măselele de minte și măselele mari de pe spate. Acest strat acționează ca un scut împotriva resturilor alimentare și a bacteriilor care pot provoca carii. Este o metodă eficientă și sigură de a menține dinții sănătoși pe termen lung.',
           price: 'De la 150 RON',
           duration: '20 min'
         },
@@ -42,6 +64,7 @@ function Services() {
           icon: <Heart className="w-8 h-8" />, 
           title: 'Control Periodic', 
           description: 'Verificare semestrială pentru menținerea sănătății orale',
+          detailedDescription: 'Controlul periodic este esențial pentru menținerea sănătății orale pe termen lung. Printr-o verificare efectuată la fiecare șase luni, medicul poate depista din timp eventualele probleme dentare și le poate trata înainte să devină dureroase sau costisitoare. Este o vizită scurtă, dar importantă, care ajută la păstrarea unui zâmbet sănătos și curat în fiecare zi.',
           price: 'De la 100 RON',
           duration: '20 min'
         },
@@ -56,6 +79,7 @@ function Services() {
           icon: <Gem className="w-8 h-8" />, 
           title: 'Fațete Ceramice', 
           description: 'Transformare completă a zâmbetului cu fațete ultra-subțiri',
+          detailedDescription: 'Fațetele ceramice sunt soluția ideală pentru o transformare completă și naturală a zâmbetului. Aceste foițe ultra-subțiri din ceramică se aplică pe suprafața dinților pentru a corecta forma, culoarea sau micile imperfecțiuni. Rezultatul este un zâmbet alb, armonios și elegant, obținut fără durere și cu o durabilitate de lungă durată.',
           price: 'De la 1500 RON',
           duration: '2 ședințe',
           popular: true
@@ -64,6 +88,7 @@ function Services() {
           icon: <Circle className="w-8 h-8" />, 
           title: 'Albire Profesională', 
           description: 'Albire în cabinet cu tehnologie LED pentru rezultate rapide',
+          detailedDescription: 'Albirea profesională în cabinet redă dinților strălucirea naturală în doar o singură ședință. Cu ajutorul tehnologiei LED, procedura este sigură, rapidă și eficientă, îndepărtând petele cauzate de cafea, ceai sau fumat. Rezultatul: dinți vizibil mai albi și un zâmbet luminos care inspiră încredere.',
           price: 'De la 800 RON',
           duration: '60 min'
         },
@@ -71,6 +96,7 @@ function Services() {
           icon: <Palette className="w-8 h-8" />, 
           title: 'Restaurări Estetice', 
           description: 'Plombe albe invizibile cu materiale composite premium',
+          detailedDescription: 'Restaurările estetice redau forma și culoarea naturală a dinților afectați de carii sau mici fracturi. Folosim materiale composite premium, perfect adaptate nuanței dinților tăi, pentru un rezultat invizibil și durabil. Astfel, dinții își recapătă aspectul sănătos, iar zâmbetul tău rămâne natural și armonios.',
           price: 'De la 300 RON',
           duration: '45 min'
         },
@@ -78,6 +104,7 @@ function Services() {
           icon: <Star className="w-8 h-8" />, 
           title: 'Smile Makeover', 
           description: 'Transformare completă a zâmbetului cu plan personalizat',
+          detailedDescription: 'Smile Makeover înseamnă o transformare completă a zâmbetului, realizată printr-un plan personalizat, adaptat trăsăturilor și dorințelor tale. Combinând tratamente estetice precum fațete, albire și restaurări, medicul creează un zâmbet perfect echilibrat, natural și plin de încredere. Rezultatul: un zâmbet care te reprezintă în cel mai frumos mod posibil.',
           price: 'Consultație',
           duration: 'Variabil'
         },
@@ -92,6 +119,7 @@ function Services() {
           icon: <Anchor className="w-8 h-8" />, 
           title: 'Implant Dentar', 
           description: 'Soluție permanentă pentru dinți lipsă cu implant titan',
+          detailedDescription: 'Implantul dentar este cea mai sigură și durabilă soluție pentru înlocuirea dinților lipsă. Realizat din titan biocompatibil, implantul se integrează perfect în os și oferă o bază solidă pentru coroana dentară. Rezultatul este un dinte care arată, se simte și funcționează la fel ca unul natural, redând confortul, estetica și încrederea în propriul zâmbet.',
           price: 'De la 2500 RON',
           duration: '60 min',
           popular: true
@@ -100,6 +128,7 @@ function Services() {
           icon: <Crown className="w-8 h-8" />, 
           title: 'Coroană pe Implant', 
           description: 'Restaurare completă cu coroană ceramică pe implant',
+          detailedDescription: 'Coroana pe implant reprezintă finalizarea tratamentului cu implant dentar, oferind o restaurare completă și estetică. Realizată din ceramică de înaltă calitate, coroana se integrează perfect cu restul dinților, redând aspectul natural și funcționalitatea zâmbetului. Este o soluție durabilă, confortabilă și elegantă, care îți permite să zâmbești din nou cu încredere.',
           price: 'De la 1800 RON',
           duration: '2 ședințe'
         },
@@ -107,6 +136,7 @@ function Services() {
           icon: <Bone className="w-8 h-8" />, 
           title: 'Grefă Osoasă', 
           description: 'Reconstrucție osoasă pentru pregătirea implantului',
+          detailedDescription: 'Grefa osoasă este o procedură prin care se reface volumul osului maxilar pentru a crea o bază solidă în vederea inserării implantului dentar. Aceasta ajută osul să se regenereze natural, oferind stabilitate și rezistență pe termen lung. Este un pas esențial pentru succesul tratamentului cu implant și pentru un zâmbet sănătos și complet.',
           price: 'De la 1200 RON',
           duration: '90 min'
         },
@@ -114,6 +144,7 @@ function Services() {
           icon: <Zap className="w-8 h-8" />, 
           title: 'All-on-4', 
           description: 'Protezare completă pe 4 implanturi într-o singură zi',
+          detailedDescription: 'Sistemul All-on-4 oferă o soluție modernă și rapidă pentru înlocuirea completă a danturii, folosind doar 4 implanturi dentare. Într-o singură zi, pacientul primește o proteză fixă, stabilă și estetică, care redă confortul și funcționalitatea unui zâmbet natural. Este o opțiune ideală pentru cei care își doresc rezultate imediate și durabile, fără proceduri complexe și de lungă durată.',
           price: 'Consultație',
           duration: '1 zi'
         },
@@ -128,6 +159,7 @@ function Services() {
           icon: <Award className="w-8 h-8" />, 
           title: 'Aparat Dentar Fix', 
           description: 'Corectare precisă a alinierii cu aparate metalice sau ceramice',
+          detailedDescription: 'Aparatul dentar fix corectează cu precizie poziția dinților și aliniază zâmbetul pas cu pas. Poate fi metalic sau ceramic, în funcție de preferințe, oferind rezultate sigure și durabile. Tratamentul este personalizat pentru fiecare pacient, contribuind la o mușcătură corectă, un zâmbet armonios și o sănătate orală îmbunătățită.',
           price: 'De la 3500 RON',
           duration: '12-24 luni'
         },
@@ -135,6 +167,7 @@ function Services() {
           icon: <Circle className="w-8 h-8" />, 
           title: 'Invisalign', 
           description: 'Gutiere transparente invizibile pentru adulți',
+          detailedDescription: 'Invisalign este o metodă modernă și confortabilă de îndreptare a dinților, folosind gutiere transparente, aproape invizibile. Realizate special pentru fiecare pacient, acestea se poartă ușor, fără disconfort și fără restricții alimentare. Tratamentul oferă rezultate precise, estetice și discrete — ideal pentru adulții care își doresc un zâmbet perfect, fără aparate metalice.',
           price: 'De la 8000 RON',
           duration: '6-18 luni',
           popular: true
@@ -143,6 +176,7 @@ function Services() {
           icon: <Smile className="w-8 h-8" />, 
           title: 'Aparat Mobil', 
           description: 'Soluție pentru copii și corectări minore',
+          detailedDescription: 'Aparatul dentar mobil este o soluție ideală pentru copii și pentru corectarea problemelor dentare minore. Ușor de purtat și de curățat, acesta ajută la ghidarea creșterii corecte a dinților și a maxilarului. Fiind detașabil, oferă confort și flexibilitate, contribuind la formarea unui zâmbet sănătos încă din copilărie.',
           price: 'De la 1500 RON',
           duration: '6-12 luni'
         },
@@ -193,81 +227,6 @@ function Services() {
                   <span>{benefit.text}</span>
                 </div>
               ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Philosophy Section - We care. We prevent. We treat */}
-      <section className="py-8 sm:py-12 bg-white">
-        <div className="container mx-auto px-3 sm:px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
-          >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-center text-gray-900 mb-8 sm:mb-12">
-              We care. We prevent. We treat
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-              {/* Tratamente fără durere */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl sm:rounded-2xl p-6 sm:p-8"
-              >
-                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-blue-500 rounded-xl flex items-center justify-center text-white mb-4 sm:mb-6">
-                  <Heart className="w-6 h-6 sm:w-8 sm:h-8" />
-                </div>
-                <h3 className="text-lg sm:text-xl font-heading font-bold text-gray-900 mb-3 sm:mb-4">
-                  TRATAMENTE FĂRĂ DURERE
-                </h3>
-                <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-                  Având în vedere specializarea şi experienţa vastă a medicilor noştri în stomatologie, sentimentul că te afli pe mâini bune îţi va fi imediat confirmat.
-                </p>
-              </motion.div>
-
-              {/* Aparatură ultramodernă */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl sm:rounded-2xl p-6 sm:p-8"
-              >
-                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-purple-500 rounded-xl flex items-center justify-center text-white mb-4 sm:mb-6">
-                  <Zap className="w-6 h-6 sm:w-8 sm:h-8" />
-                </div>
-                <h3 className="text-lg sm:text-xl font-heading font-bold text-gray-900 mb-3 sm:mb-4">
-                  APARATURĂ ULTRAMODERNĂ
-                </h3>
-                <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-                  Credem cu tărie că prevenirea şi tratarea afecţiunilor ar fi dificile în lipsa unei pregătiri medicale superioare, a atenţiei acordate fiecărui pacient în parte şi a unui echipament medical performant.
-                </p>
-              </motion.div>
-
-              {/* Servicii */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-                className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl sm:rounded-2xl p-6 sm:p-8"
-              >
-                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-green-500 rounded-xl flex items-center justify-center text-white mb-4 sm:mb-6">
-                  <Shield className="w-6 h-6 sm:w-8 sm:h-8" />
-                </div>
-                <h3 className="text-lg sm:text-xl font-heading font-bold text-gray-900 mb-3 sm:mb-4">
-                  SERVICII
-                </h3>
-                <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-                  Suntem încântaţi să vă ajutăm în obţinerea şi menţinerea sănătăţii orale. Pentru aceasta, vă punem la dispoziţie o gamă largă de servicii prin intermediul medicilor noştri specialişti.
-                </p>
-              </motion.div>
             </div>
           </motion.div>
         </div>
@@ -333,7 +292,10 @@ function Services() {
                           </span>
                         </div>
                         
-                        <button className="w-full flex items-center justify-center gap-1 px-3 py-2 bg-primary-50 text-primary-600 rounded-lg font-semibold text-xs hover:bg-primary-100 transition-colors">
+                        <button 
+                          onClick={() => openServiceModal(service)}
+                          className="w-full flex items-center justify-center gap-1 px-3 py-2 bg-primary-50 text-primary-600 rounded-lg font-semibold text-xs hover:bg-primary-100 transition-colors"
+                        >
                           Detalii
                           <ArrowRight className="w-3 h-3" />
                         </button>
@@ -381,7 +343,10 @@ function Services() {
                         </span>
                       </div>
                       
-                      <button className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-primary-50 text-primary-600 rounded-lg font-semibold text-sm hover:bg-primary-100 transition-colors">
+                      <button 
+                        onClick={() => openServiceModal(service)}
+                        className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-primary-50 text-primary-600 rounded-lg font-semibold text-sm hover:bg-primary-100 transition-colors"
+                      >
                         Detalii
                         <ArrowRight className="w-4 h-4" />
                       </button>
@@ -474,6 +439,13 @@ function Services() {
           </motion.div>
         </div>
       </section>
+
+      {/* Service Modal */}
+      <ServiceModal
+        isOpen={isModalOpen}
+        onClose={closeServiceModal}
+        service={selectedService}
+      />
     </div>
   );
 }

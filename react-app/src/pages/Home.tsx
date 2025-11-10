@@ -43,7 +43,7 @@ function Home() {
       <section id="hero">
         <Hero
           headline="Zâmbetul Tău Perfect Începe Aici"
-          subheadline="Îngrijire dentară profesională cu tehnologie de ultimă generație și o echipă dedicată sănătății tale orale"
+          subheadline="Îngrijire dentară profesională cu echipamente moderne și o echipă dedicată sănătății tale orale"
           primaryCTA={{
             text: "Programează Consultație",
             href: "tel:+40726530591",

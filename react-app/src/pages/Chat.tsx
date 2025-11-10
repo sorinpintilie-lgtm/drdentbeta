@@ -85,7 +85,7 @@ function Chat() {
                     className="flex items-center justify-center gap-2 w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all"
                   >
                     <Phone className="w-5 h-5" />
-                    Sună: +40 21 344 9317
+                    Sună: 0726 530 591
                   </a>
                   <a
                     href="mailto:programare@drdent.ro"
@@ -130,7 +130,7 @@ function Chat() {
           <p className="text-sm text-gray-600">
             Pentru urgențe, sună la{' '}
             <a href="tel:+40726530591" className="text-primary-600 font-semibold hover:underline">
-              +40 21 344 9317
+              0726 530 591
             </a>
           </p>
         </motion.div>

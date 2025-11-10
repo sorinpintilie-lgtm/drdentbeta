@@ -48,7 +48,7 @@ const services: Service[] = [
     icon: <Scissors className="w-8 h-8" />,
     title: 'Chirurgie orală',
     description:
-      'Intervenții sigure, minim invazive, realizate cu tehnologie de ultimă generație.',
+      'Intervenții sigure, minim invazive, realizate cu echipamente moderne.',
     href: '#chirurgie',
   },
   {

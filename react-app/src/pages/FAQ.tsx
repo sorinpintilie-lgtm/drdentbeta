@@ -35,7 +35,7 @@ function FAQ() {
               <p className="mb-2">Puteți programa o programare în mai multe moduri convenabile:</p>
               <ul className="list-disc pl-5 space-y-1">
                 <li>Online prin sistemul nostru de programare</li>
-                <li>Sunați-ne la: <a href="tel:+40726530591" className="text-primary-600 hover:text-primary-700 font-semibold">+40 21 344 9317</a></li>
+                <li>Sunați-ne la: <a href="tel:+40726530591" className="text-primary-600 hover:text-primary-700 font-semibold">0726 530 591</a></li>
                 <li>Trimiteți-ne un email la: <a href="mailto:programare@drdent.ro" className="text-primary-600 hover:text-primary-700 font-semibold">programare@drdent.ro</a></li>
               </ul>
             </>
@@ -47,9 +47,8 @@ function FAQ() {
             <>
               <p className="mb-2">Programul nostru este conceput pentru a fi flexibil și accesibil:</p>
               <ul className="list-disc pl-5 space-y-1">
-                <li><strong>Luni & Vineri:</strong> 8:00 - 17:00</li>
-                <li><strong>Marți - Joi:</strong> 7:30 - 19:00</li>
-                <li><strong>Sâmbătă:</strong> 9:00 - 16:00</li>
+                <li><strong>Luni - Vineri:</strong> 09:00 - 20:00</li>
+                <li><strong>Sâmbătă:</strong> 09:00 - 14:00</li>
                 <li><strong>Duminică:</strong> Închis</li>
               </ul>
             </>
@@ -71,20 +70,14 @@ function FAQ() {
           ),
         },
         {
-          question: 'Acceptați asigurarea mea dentară?',
-          answer: 'Acceptăm majoritatea planurilor majore de asigurare dentară. Vă rugăm să ne contactați pentru a verifica dacă acceptăm planul dumneavoastră specific și pentru a afla detalii despre acoperire.',
-        },
-        {
           question: 'Ce metode de plată acceptați?',
           answer: (
             <>
-              <p className="mb-2">Oferim multiple opțiuni de plată pentru confortul dumneavoastră:</p>
+              <p className="mb-2">Oferim următoarele opțiuni de plată:</p>
               <ul className="list-disc pl-5 space-y-1">
                 <li>Numerar</li>
                 <li>Carduri de credit/debit (Visa, MasterCard)</li>
                 <li>Transfer bancar</li>
-                <li>Planuri de plată personalizate</li>
-                <li>Finanțare externă cu dobânzi reduse</li>
               </ul>
             </>
           ),
@@ -140,7 +133,7 @@ function FAQ() {
           question: 'Folosiți tehnologie avansată?',
           answer: (
             <>
-              <p className="mb-2">Da, cabinetul nostru este echipat cu tehnologie de ultimă generație:</p>
+              <p className="mb-2">Da, cabinetul nostru este echipat cu echipamente moderne:</p>
               <ul className="list-disc pl-5 space-y-1">
                 <li>CEREC® PrimeScan pentru scanări digitale precise</li>
                 <li>CEREC® PrimeMill pentru restaurări în aceeași zi</li>
@@ -282,7 +275,7 @@ function FAQ() {
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary-600 rounded-xl font-semibold text-lg hover:bg-gray-50 transition-all hover:scale-105 shadow-xl"
             >
               <Phone className="w-5 h-5" />
-              Sunați: +40 21 344 9317
+              Sunați: 0726 530 591
             </a>
             <a
               href="mailto:programare@drdent.ro"

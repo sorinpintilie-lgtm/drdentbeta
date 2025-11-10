@@ -260,7 +260,7 @@ function Resources() {
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary-600 rounded-xl font-semibold text-lg hover:bg-gray-50 transition-all hover:scale-105 shadow-xl"
             >
               <Phone className="w-5 h-5" />
-              Sunați: +40 21 344 9317
+              Sunați: 0726 530 591
             </a>
             <a
               href="mailto:programare@drdent.ro"

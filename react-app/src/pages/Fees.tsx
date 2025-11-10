@@ -167,19 +167,14 @@ function Fees() {
     },
     {
       icon: <Calendar className="w-6 h-6" />,
-      title: 'Rate Lunare',
-      description: 'Planuri de plată flexibile pentru tratamente extinse',
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: 'Asigurări de Sănătate',
-      description: 'Acceptăm majoritatea asigurărilor medicale și dentare private',
+      title: 'Plăți la Termen',
+      description: 'Opțiune de plată convenabilă pentru tratamente complexe',
     },
   ];
 
   const importantInfo = [
     'Consultația costă 50 lei (Consultație Ortodonție: 100 lei)',
-    'Prețurile sunt actualizate conform www.drdent.ro',
+    'Prețurile sunt actualizate lunar',
     'Garanție 5 ani pe toate lucrările efectuate',
     'Tehnologie CEREC pentru restaurări în aceeași zi',
     'Transparență totală - fără costuri ascunse',
@@ -215,7 +210,7 @@ function Fees() {
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
               Oferim tarife competitive și transparente pentru toate serviciile noastre dentare.
-              Prețurile sunt actualizate conform <a href="https://www.drdent.ro" target="_blank" rel="noopener noreferrer" className="text-primary-600 font-semibold hover:underline">www.drdent.ro</a>.
+              Prețurile sunt actualizate lunar pentru a vă oferi cele mai bune prețuri.
             </p>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 text-primary-700 rounded-lg font-semibold">
               <CheckCircle className="w-5 h-5" />
@@ -340,7 +335,7 @@ function Fees() {
               className="inline-flex items-center justify-center gap-2 px-6 md:px-8 py-3 md:py-4 bg-white text-primary-600 rounded-xl font-semibold text-base md:text-lg hover:bg-gray-50 transition-all hover:scale-105 shadow-xl"
             >
               <Phone className="w-5 h-5" />
-              Sunați: +40 21 344 9317
+              Sunați: 0726 530 591
             </a>
             <a
               href="/contact"

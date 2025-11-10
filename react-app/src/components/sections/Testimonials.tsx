@@ -10,7 +10,7 @@ const testimonials: Testimonial[] = [
     id: '1',
     name: 'Maria Popescu',
     rating: 5,
-    text: 'Am fost impresionată de profesionalismul echipei și de tehnologia modernă folosită. Implantul dentar a fost realizat fără durere și rezultatul este perfect. Recomand cu încredere!',
+    text: 'Am fost impresionată de echipa noastră și de echipamentele moderne folosite. Implantul dentar a fost realizat fără durere și rezultatul este excelent. Recomand cu încredere!',
     verified: true,
     service: 'Implant Dentar',
   },
