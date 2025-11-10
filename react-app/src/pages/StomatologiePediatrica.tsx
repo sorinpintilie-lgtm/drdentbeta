@@ -572,7 +572,7 @@ function StomatologiePediatrica() {
               Ne pasă de cei mici și avem grijă de zâmbetele lor!
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              La Dr. Dent, fiecare copil este întâmpinat cu răbdare, blândețe și zâmbete. Transformăm vizita la dentist într-o experiență plăcută și fără frică, pentru ca cei mici să învețe de la început cât de importantă este grija pentru dinți. Creăm încredere, obiceiuri sănătoase și... multe zâmbete fericite!
+              La Dr. Dent, grija începe cu zâmbetul copilului. Un copil care zâmbește fără teamă devine un adult încrezător și fericit!
             </p>
           </motion.div>
 
@@ -673,10 +673,10 @@ function StomatologiePediatrica() {
                 <Heart className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-heading font-bold text-gray-900 mb-3">
-                Tehnici Blânde
+                Tehnici blânde
               </h3>
               <p className="text-gray-700">
-                Folosim materiale sigure și o abordare jucăușă, astfel încât fiecare control să fie o aventură frumoasă.
+                Folosim materiale sigure și o abordare jucăușă, astfel încât fiecare interventie să fie o aventură frumoasă.
               </p>
             </motion.div>
 
@@ -712,7 +712,7 @@ function StomatologiePediatrica() {
             className="text-center mb-8"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
-              Serviciile Noastre Prietene
+              Serviciile noastre
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Fie că e vorba de sigilări dentare, tratamente pentru carii de lapte sau simple controale de rutină
@@ -849,26 +849,26 @@ function StomatologiePediatrica() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {[
               {
-                title: 'Învățăm prin Joacă',
+                title: 'Învățăm prin joacă',
                 description: 'Transformăm periajul dinților într-o activitate distractivă',
                 icon: 'joc',
                 color: 'from-purple-400 to-pink-400'
               },
               {
-                title: 'Ediție Specială',
+                title: 'Vizite distractive',
                 description: 'Fiecare vizită este o aventură nouă cu surprize',
                 icon: 'cadou',
                 color: 'from-yellow-400 to-orange-400'
               },
               {
-                title: 'Rezultate pe Termen Lung',
-                description: 'Construim obiceiuri sănătoase pentru o viață întreagă',
+                title: 'Rezultate pe termen lung',
+                description: 'Construim obiceiuri sănătoase pentru o dezvoltare armonioasă',
                 icon: 'plantă',
                 color: 'from-green-400 to-blue-400'
               },
               {
-                title: 'Sprijin pentru Părinți',
-                description: 'Ghiding și sfaturi pentru îngrijirea acasă',
+                title: 'Sprijin pentru părinți',
+                description: 'Sfaturi pentru îngrijirea acasă',
                 icon: 'familie',
                 color: 'from-pink-400 to-red-400'
               }
