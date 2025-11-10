@@ -115,7 +115,7 @@ export const Features = () => {
             id="features-heading"
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 sm:mb-3 md:mb-4 px-2"
           >
-            De Ce Să Ne Alegi?
+            De ce să ne alegi?
           </h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-2">
             Combinăm experiența, tehnologia și dedicarea pentru a-ți oferi cea
