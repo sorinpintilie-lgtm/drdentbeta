@@ -572,7 +572,7 @@ function StomatologiePediatrica() {
               Ne pasă de cei mici și avem grijă de zâmbetele lor!
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              La Dr. Dent, grija începe cu zâmbetul copilului. Un copil care zâmbește fără teamă devine un adult încrezător și fericit!
+              La Dr. Dent, grija începe cu zâmbetul copilului.
             </p>
           </motion.div>
 
@@ -952,14 +952,6 @@ function StomatologiePediatrica() {
                 Suna Acum!
               </motion.a>
               
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/20 backdrop-blur-sm border-2 border-white text-white rounded-full font-bold text-lg hover:bg-white/30 transition-all"
-              >
-                <StarIcon className="w-5 h-5" />
-                Vreau surprize!
-              </motion.button>
             </div>
           </motion.div>
         </div>
