@@ -228,113 +228,119 @@ function StomatologiePediatrica() {
               </p>
 
               {/* Game area */}
-              <div className="relative w-80 h-60 mx-auto mb-6 bg-gradient-to-br from-sky-100 to-green-100 rounded-2xl border-4 border-yellow-300 overflow-hidden">
-                {/* Beautiful scene with cartoon images - TOP LAYER (hides the zanamaseluta) */}
+              <div className="relative w-80 h-60 mx-auto mb-6 bg-gradient-to-b from-sky-200 via-sky-100 to-green-100 rounded-2xl border-4 border-yellow-300 overflow-hidden">
+                {/* Actual scene layout - TOP LAYER (hides the zanamaseluta) */}
                 <div className="absolute top-0 left-0 w-full h-full">
-                  {/* Static cartoon clouds */}
+                  {/* SKY SECTION - Clouds floating in the sky */}
                   <div className="absolute top-2 left-2 z-30">
                     <img
-                      src="/images/scene/cloud-cartoon.png"
-                      alt="Cloud"
-                      className="w-16 h-12 object-contain drop-shadow-lg opacity-80"
-                    />
-                  </div>
-                  
-                  <div className="absolute top-1 right-6 z-30">
-                    <img
-                      src="/images/scene/cloud-cartoon.png"
-                      alt="Cloud"
-                      className="w-14 h-10 object-contain drop-shadow-lg opacity-85"
-                    />
-                  </div>
-                  
-                  <div className="absolute bottom-6 left-8 z-30">
-                    <img
-                      src="/images/scene/cloud-cartoon.png"
-                      alt="Cloud"
+                      src="/images/scene/fluffy-cloud.png"
+                      alt="Fluffy Cloud"
                       className="w-18 h-12 object-contain drop-shadow-lg opacity-90"
                     />
                   </div>
                   
-                  <div className="absolute bottom-2 right-12 z-30">
+                  <div className="absolute top-1 right-4 z-30">
                     <img
-                      src="/images/scene/cloud-cartoon.png"
-                      alt="Cloud"
-                      className="w-15 h-10 object-contain drop-shadow-lg opacity-85"
+                      src="/images/scene/fluffy-cloud.png"
+                      alt="Fluffy Cloud"
+                      className="w-16 h-10 object-contain drop-shadow-lg opacity-85"
                     />
                   </div>
                   
-                  {/* Floating cartoon clouds that move */}
+                  <div className="absolute top-4 right-16 z-30">
+                    <img
+                      src="/images/scene/fluffy-cloud.png"
+                      alt="Fluffy Cloud"
+                      className="w-14 h-9 object-contain drop-shadow-lg opacity-80"
+                    />
+                  </div>
+                  
+                  {/* Floating fluffy clouds that move */}
                   {[...Array(2)].map((_, i) => (
                     <motion.div
                       key={i}
                       className="absolute z-25"
                       style={{
-                        top: `${10 + i * 25}%`,
-                        left: `${i * 40}%`
+                        top: `${8 + i * 20}%`,
+                        left: `${i * 30}%`
                       }}
                       animate={{
-                        x: [0, 20, 0],
-                        y: [0, -10, 0]
+                        x: [0, 25, 0],
+                        y: [0, -8, 0]
                       }}
                       transition={{
-                        duration: 6 + i,
+                        duration: 8 + i,
                         repeat: Infinity,
-                        delay: i * 1
+                        delay: i * 1.5
                       }}
                     >
                       <img
-                        src="/images/scene/cloud-cartoon.png"
+                        src="/images/scene/fluffy-cloud.png"
                         alt="Floating Cloud"
-                        className="w-12 h-8 object-contain drop-shadow-md opacity-70"
+                        className="w-12 h-8 object-contain drop-shadow-md opacity-75"
                       />
                     </motion.div>
                   ))}
                   
-                  {/* Cartoon bushes and trees - FRONT LAYER */}
-                  <div className="absolute top-4 left-12 z-35">
+                  {/* GROUND SECTION - Trees and bushes sitting on the ground */}
+                  <div className="absolute bottom-8 left-4 z-35">
+                    <img
+                      src="/images/scene/colored-tree-icon-isolated-on-square-white-background-simple-flat-outlined-cartoon-icon-drawing-with-nature-botanical-theme-free-vector-removebg-preview.png"
+                      alt="Tree on ground"
+                      className="w-16 h-20 object-contain drop-shadow-lg"
+                    />
+                  </div>
+                  
+                  <div className="absolute bottom-6 right-6 z-35">
                     <img
                       src="/images/scene/bush-cartoon.png"
-                      alt="Bush"
+                      alt="Bush on ground"
                       className="w-14 h-10 object-contain drop-shadow-lg"
                     />
                   </div>
                   
-                  <div className="absolute bottom-4 left-4 z-35">
-                    <img
-                      src="/images/scene/colored-tree-icon-isolated-on-square-white-background-simple-flat-outlined-cartoon-icon-drawing-with-nature-botanical-theme-free-vector-removebg-preview.png"
-                      alt="Tree"
-                      className="w-12 h-16 object-contain drop-shadow-lg"
-                    />
-                  </div>
-                  
-                  <div className="absolute top-12 right-4 z-35">
+                  <div className="absolute bottom-4 left-16 z-35">
                     <img
                       src="/images/scene/bush-cartoon.png"
-                      alt="Bush"
-                      className="w-10 h-8 object-contain drop-shadow-lg"
+                      alt="Bush on ground"
+                      className="w-12 h-9 object-contain drop-shadow-lg"
                     />
                   </div>
                   
-                  <div className="absolute bottom-8 right-8 z-35">
+                  <div className="absolute bottom-10 right-20 z-35">
                     <img
                       src="/images/scene/colored-tree-icon-isolated-on-square-white-background-simple-flat-outlined-cartoon-icon-drawing-with-nature-botanical-theme-free-vector-removebg-preview.png"
-                      alt="Tree"
-                      className="w-10 h-14 object-contain drop-shadow-lg"
+                      alt="Tree on ground"
+                      className="w-14 h-18 object-contain drop-shadow-lg"
                     />
                   </div>
                   
-                  {/* Friendly giraffe for extra hiding spot */}
-                  <div className="absolute top-6 right-16 z-35">
+                  {/* Giraffe sitting on the ground */}
+                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-35">
                     <img
                       src="/images/scene/giraffe-cartoon-roughen-filled-outline-icon-free-vector-removebg-preview.png"
-                      alt="Giraffe"
-                      className="w-8 h-12 object-contain drop-shadow-lg opacity-90"
+                      alt="Giraffe sitting on ground"
+                      className="w-10 h-14 object-contain drop-shadow-lg opacity-90"
                     />
                   </div>
                   
-                  {/* Grass at the bottom - FRONT LAYER */}
-                  <div className="absolute bottom-0 left-0 w-full h-8 z-35 bg-gradient-to-t from-green-200/40 to-transparent" />
+                  {/* Ground line */}
+                  <div className="absolute bottom-0 left-0 w-full h-12 z-35 bg-gradient-to-t from-green-300/60 to-green-200/30" />
+                  
+                  {/* Small grass details on ground */}
+                  <div className="absolute bottom-2 left-0 w-full z-36">
+                    {[...Array(15)].map((_, i) => (
+                      <div
+                        key={i}
+                        className="absolute bottom-0 w-0.5 h-2 bg-green-400/50"
+                        style={{
+                          left: `${i * 6.5}%`,
+                          height: `${1 + (i % 2)}px`
+                        }}
+                      />
+                    ))}
+                  </div>
                 </div>
 
                 {/* Clickable Zanamaseluta - HIDDEN LAYER (behind everything) */}
@@ -360,7 +366,7 @@ function StomatologiePediatrica() {
                     className="relative"
                   >
                     {/* Zanamaseluta image - very subtle when hidden */}
-                    <div className="w-12 h-12 relative opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+                    <div className="w-12 h-12 relative opacity-30 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
                       <img
                         src="/images/zanamaseluta/zanamaseluta.png"
                         alt="Zana Măseluța"
@@ -390,11 +396,11 @@ function StomatologiePediatrica() {
                   </div>
                 </motion.div>
                 
-                {/* Small decorative elements */}
-                <div className="absolute top-3 left-24 w-2 h-2 bg-yellow-400/40 rounded-full z-20" />
-                <div className="absolute top-8 right-20 w-1.5 h-1.5 bg-pink-400/40 rounded-full z-20" />
-                <div className="absolute bottom-10 left-6 w-2 h-2 bg-blue-400/40 rounded-full z-20" />
-                <div className="absolute bottom-6 right-4 w-1.5 h-1.5 bg-purple-400/40 rounded-full z-20" />
+                {/* Small decorative elements - floating in sky */}
+                <div className="absolute top-6 left-8 w-1.5 h-1.5 bg-yellow-300/30 rounded-full z-20" />
+                <div className="absolute top-12 right-12 w-1 h-1 bg-pink-300/30 rounded-full z-20" />
+                <div className="absolute top-8 left-20 w-1.5 h-1.5 bg-blue-300/30 rounded-full z-20" />
+                <div className="absolute top-10 right-8 w-1 h-1 bg-purple-300/30 rounded-full z-20" />
               </div>
 
               {showCongratulations && (
