@@ -103,13 +103,13 @@ export const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, ser
                   onClick={onClose}
                   className="px-6 py-3 bg-primary-600 text-white rounded-xl font-semibold hover:bg-primary-700 transition-colors"
                 >
-                  Înțeleg
+                  Inapoi
                 </button>
                 <a
                   href="tel:+40726530591"
                   className="px-6 py-3 border-2 border-primary-600 text-primary-600 rounded-xl font-semibold hover:bg-primary-50 transition-colors text-center"
                 >
-                  Programează Consultație
+                  Programează consultație
                 </a>
               </div>
             </div>
