@@ -158,7 +158,7 @@ function StomatologiePediatrica() {
             </h1>
             
             <p className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto mb-6 leading-relaxed">
-              Zâmbetele celor mici merită cea mai bună îngrijire! 🦷✨<br />
+              Zâmbetele celor mici merită cea mai bună îngrijire!<br />
               Transformăm vizita la dentist într-o experiență plăcută și distractivă!
             </p>
             
@@ -170,7 +170,7 @@ function StomatologiePediatrica() {
                 whileTap={{ scale: 0.95 }}
                 className="px-6 py-3 bg-white text-pink-500 rounded-full font-semibold text-sm hover:shadow-lg transition-all"
               >
-                Vreau să mă joc! 🎮
+                Vreau să mă joc!
               </motion.button>
               <motion.button
                 onClick={() => setShowLearningPopup(true)}
@@ -179,7 +179,7 @@ function StomatologiePediatrica() {
                 className="px-6 py-3 bg-white/20 backdrop-blur-sm border-2 border-white text-white rounded-full font-semibold text-sm hover:bg-white/30 transition-all"
                 disabled={gameActive}
               >
-                Vreau să învăț! 📚
+                Vreau să învăț!
               </motion.button>
             </div>
           </motion.div>
@@ -219,7 +219,7 @@ function StomatologiePediatrica() {
 
             <div className="relative z-10">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Găsește Zana Măseluța! 🧚‍♀️✨
+                Găsește Zana Măseluța!
               </h3>
               <p className="text-gray-600 mb-6">
                 Găsește și apasă pe Zana Măseluța să îți dai seama!
@@ -390,7 +390,7 @@ function StomatologiePediatrica() {
                   
                   {/* Hidden tooltip - only appears when very close */}
                   <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-purple-600 text-white text-xs px-2 py-1 rounded-full whitespace-nowrap z-40 shadow-lg">
-                    Aici sunt! 😊
+                    Aici sunt!
                   </div>
                 </motion.div>
                 
@@ -407,10 +407,10 @@ function StomatologiePediatrica() {
                   animate={{ scale: 1, opacity: 1 }}
                   className="bg-gradient-to-r from-green-400 to-blue-400 text-white p-4 rounded-2xl mb-4"
                 >
-                  <h4 className="text-xl font-bold mb-2">🎉 Felicitări! 🎉</h4>
+                  <h4 className="text-xl font-bold mb-2">Felicitări!</h4>
                   <p className="text-sm">
-                    Ai găsit Zana Măseluța! Ești un campion! 🏆<br />
-                    Scorul tău: {gameScore} puncte! Următoarea zană se ascunde... 👀
+                    Ai găsit Zana Măseluța! Ești un campion!<br />
+                    Scorul tău: {gameScore} puncte! Următoarea zană se ascunde...
                   </p>
                 </motion.div>
               )}
@@ -421,7 +421,7 @@ function StomatologiePediatrica() {
                 whileTap={{ scale: 0.95 }}
                 className="px-6 py-3 bg-gray-400 hover:bg-gray-500 text-white rounded-full font-semibold transition-colors"
               >
-                Ies din joc ✕
+                Ies din joc
               </motion.button>
             </div>
           </motion.div>
@@ -452,7 +452,7 @@ function StomatologiePediatrica() {
                     className="w-12 h-12 object-contain"
                   />
                   <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">
-                    🦷 Periuța Magică! ✨
+                    Periuța Magică!
                   </h3>
                   <img
                     src="/images/childrenpart/inima.png"
@@ -514,7 +514,7 @@ function StomatologiePediatrica() {
                   />
                   <div>
                     <p className="text-gray-700 leading-relaxed font-bold">
-                      Așa că... ia periuța, pune puțină pastă și fă spumă! Zâmbetul tău merită! 😊
+                      Așa că... ia periuța, pune puțină pastă și fă spumă! Zâmbetul tău merită!
                     </p>
                   </div>
                 </div>
@@ -526,19 +526,19 @@ function StomatologiePediatrica() {
                   animate={{ rotate: [0, 10, -10, 0] }}
                   transition={{ duration: 2, repeat: Infinity }}
                 >
-                  🪥
+                  Periuța de dinți
                 </motion.span>
                 <motion.span
                   animate={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
                 >
-                  ✨
+                  strălucitoare
                 </motion.span>
                 <motion.span
                   animate={{ y: [0, -5, 0] }}
                   transition={{ duration: 1.8, repeat: Infinity }}
                 >
-                  😄
+                  fericit
                 </motion.span>
               </div>
 
@@ -549,7 +549,7 @@ function StomatologiePediatrica() {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-3 bg-gradient-to-r from-pink-400 to-purple-400 text-white rounded-full font-bold text-lg hover:shadow-lg transition-all"
               >
-                Mulțumesc! Vreau să mă spăl pe dinți! 🦷✨
+                Mulțumesc! Vreau să mă spăl pe dinți!
               </motion.button>
             </div>
           </motion.div>
@@ -566,7 +566,7 @@ function StomatologiePediatrica() {
             className="text-center mb-8"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
-              Vedete reale cu copiii noștri! 📸
+              Vedete reale cu copiii noștri!
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Iată cum ne jucăm și învățăm împreună cu cei mici!
@@ -631,10 +631,10 @@ function StomatologiePediatrica() {
             className="text-center mb-8"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
-              De Ce Dragoste pentru Copii? 💕
+              De Ce Dragoste pentru Copii?
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Echipa noastră are răbdare și vorbește pe limba copiilor! 😊
+              Echipa noastră are răbdare și vorbește pe limba copiilor!
             </p>
           </motion.div>
 
@@ -709,7 +709,7 @@ function StomatologiePediatrica() {
             className="text-center mb-8"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
-              Serviciile Noastre Prietene 🦷
+              Serviciile Noastre Prietene
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Fie că e vorba de sigilări dentare, tratamente pentru carii de lapte sau simple controale de rutină
@@ -806,7 +806,7 @@ function StomatologiePediatrica() {
             className="max-w-4xl mx-auto text-center"
           >
             <h2 className="text-2xl sm:text-3xl font-heading font-bold text-gray-900 mb-6">
-              La Dr. Dent, copilul care zâmbește fără teamă devine un adult cu încredere! 🌟
+              La Dr. Dent, copilul care zâmbește fără teamă devine un adult cu încredere!
             </h2>
             
             <div className="bg-gradient-to-r from-yellow-100 via-pink-100 to-blue-100 rounded-2xl p-6 sm:p-8 mb-8">
@@ -836,7 +836,7 @@ function StomatologiePediatrica() {
             className="text-center mb-8"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
-              Punem Accent pe Prevenție 🛡️
+              Punem Accent pe Prevenție
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Formăm obiceiuri sănătoase pentru viitor
@@ -848,25 +848,25 @@ function StomatologiePediatrica() {
               {
                 title: 'Învățăm prin Joacă',
                 description: 'Transformăm periajul dinților într-o activitate distractivă',
-                icon: '🎮',
+                icon: 'joc',
                 color: 'from-purple-400 to-pink-400'
               },
               {
                 title: 'Ediție Specială',
                 description: 'Fiecare vizită este o aventură nouă cu surprize',
-                icon: '🎁',
+                icon: 'cadou',
                 color: 'from-yellow-400 to-orange-400'
               },
               {
                 title: 'Rezultate pe Termen Lung',
                 description: 'Construim obiceiuri sănătoase pentru o viață întreagă',
-                icon: '🌱',
+                icon: 'plantă',
                 color: 'from-green-400 to-blue-400'
               },
               {
                 title: 'Sprijin pentru Părinți',
                 description: 'Ghiding și sfaturi pentru îngrijirea acasă',
-                icon: '👨‍👩‍👧‍👦',
+                icon: 'familie',
                 color: 'from-pink-400 to-red-400'
               }
             ].map((item, index) => (
@@ -879,7 +879,7 @@ function StomatologiePediatrica() {
                 className="bg-white rounded-2xl p-6 shadow-lg border-2 border-yellow-200 hover:border-pink-300 transition-all"
               >
                 <div className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${item.color} text-white mb-4`}>
-                  <span className="text-2xl">{item.icon}</span>
+                  <span className="text-2xl">{item.icon === 'joc' ? 'joc' : item.icon === 'cadou' ? 'cadou' : item.icon === 'plantă' ? 'plantă' : item.icon === 'familie' ? 'familie' : 'stea'}</span>
                 </div>
                 <h3 className="text-lg font-heading font-bold text-gray-900 mb-2">
                   {item.title}
@@ -931,7 +931,7 @@ function StomatologiePediatrica() {
             </div>
             
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold mb-4">
-              Gata pentru o Aventură Dentară? 🎉
+              Gata pentru o Aventură Dentară?
             </h2>
             
             <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
@@ -946,7 +946,7 @@ function StomatologiePediatrica() {
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-pink-500 rounded-full font-bold text-lg hover:shadow-2xl transition-all"
               >
                 <Phone className="w-5 h-5" />
-                Suna Acum! 📞
+                Suna Acum!
               </motion.a>
               
               <motion.button
@@ -955,7 +955,7 @@ function StomatologiePediatrica() {
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/20 backdrop-blur-sm border-2 border-white text-white rounded-full font-bold text-lg hover:bg-white/30 transition-all"
               >
                 <StarIcon className="w-5 h-5" />
-                Vreau Surprize! 🎁
+                Vreau Surprize!
               </motion.button>
             </div>
           </motion.div>
