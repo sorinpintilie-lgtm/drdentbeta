@@ -227,16 +227,16 @@ function StomatologiePediatrica() {
                 Găsește și apasă pe dințișorul zburător să îți dai seama!
               </p>
 
-              {/* Game area - Made bigger for larger scene elements */}
-              <div className="relative w-96 h-72 mx-auto mb-6 bg-gradient-to-b from-sky-200 via-sky-100 to-green-100 rounded-2xl border-4 border-yellow-300 overflow-hidden">
+              {/* Game area */}
+              <div className="relative w-80 h-60 mx-auto mb-6 bg-gradient-to-b from-sky-200 via-sky-100 to-green-100 rounded-2xl border-4 border-yellow-300 overflow-hidden">
                 {/* Actual scene layout - TOP LAYER (hides the zanamaseluta) */}
                 <div className="absolute top-0 left-0 w-full h-full">
-                  {/* SKY SECTION - Clouds floating in the sky - 30% bigger */}
+                  {/* SKY SECTION - Clouds floating in the sky */}
                   <div className="absolute top-2 left-2 z-30">
                     <img
                       src="/images/scene/fluffy-cloud.png"
                       alt="Fluffy Cloud"
-                      className="w-24 h-16 object-contain drop-shadow-lg opacity-90"
+                      className="w-18 h-12 object-contain drop-shadow-lg opacity-90"
                     />
                   </div>
                   
@@ -244,7 +244,7 @@ function StomatologiePediatrica() {
                     <img
                       src="/images/scene/fluffy-cloud.png"
                       alt="Fluffy Cloud"
-                      className="w-20 h-14 object-contain drop-shadow-lg opacity-85"
+                      className="w-16 h-10 object-contain drop-shadow-lg opacity-85"
                     />
                   </div>
                   
@@ -252,11 +252,11 @@ function StomatologiePediatrica() {
                     <img
                       src="/images/scene/fluffy-cloud.png"
                       alt="Fluffy Cloud"
-                      className="w-18 h-12 object-contain drop-shadow-lg opacity-80"
+                      className="w-14 h-9 object-contain drop-shadow-lg opacity-80"
                     />
                   </div>
                   
-                  {/* Floating fluffy clouds that move - 30% bigger */}
+                  {/* Floating fluffy clouds that move */}
                   {[...Array(2)].map((_, i) => (
                     <motion.div
                       key={i}
@@ -266,8 +266,8 @@ function StomatologiePediatrica() {
                         left: `${i * 30}%`
                       }}
                       animate={{
-                        x: [0, 30, 0],
-                        y: [0, -10, 0]
+                        x: [0, 25, 0],
+                        y: [0, -8, 0]
                       }}
                       transition={{
                         duration: 8 + i,
@@ -278,17 +278,17 @@ function StomatologiePediatrica() {
                       <img
                         src="/images/scene/fluffy-cloud.png"
                         alt="Floating Cloud"
-                        className="w-16 h-11 object-contain drop-shadow-md opacity-75"
+                        className="w-12 h-8 object-contain drop-shadow-md opacity-75"
                       />
                     </motion.div>
                   ))}
                   
-                  {/* GROUND SECTION - Trees and bushes sitting on the ground - 30% bigger */}
+                  {/* GROUND SECTION - Trees and bushes sitting on the ground */}
                   <div className="absolute bottom-8 left-4 z-35">
                     <img
                       src="/images/scene/colored-tree-icon-isolated-on-square-white-background-simple-flat-outlined-cartoon-icon-drawing-with-nature-botanical-theme-free-vector-removebg-preview.png"
                       alt="Tree on ground"
-                      className="w-21 h-26 object-contain drop-shadow-lg"
+                      className="w-16 h-20 object-contain drop-shadow-lg"
                     />
                   </div>
                   
@@ -296,7 +296,7 @@ function StomatologiePediatrica() {
                     <img
                       src="/images/scene/bush-cartoon.png"
                       alt="Bush on ground"
-                      className="w-18 h-13 object-contain drop-shadow-lg"
+                      className="w-14 h-10 object-contain drop-shadow-lg"
                     />
                   </div>
                   
@@ -304,7 +304,7 @@ function StomatologiePediatrica() {
                     <img
                       src="/images/scene/bush-cartoon.png"
                       alt="Bush on ground"
-                      className="w-16 h-12 object-contain drop-shadow-lg"
+                      className="w-12 h-9 object-contain drop-shadow-lg"
                     />
                   </div>
                   
@@ -312,30 +312,30 @@ function StomatologiePediatrica() {
                     <img
                       src="/images/scene/colored-tree-icon-isolated-on-square-white-background-simple-flat-outlined-cartoon-icon-drawing-with-nature-botanical-theme-free-vector-removebg-preview.png"
                       alt="Tree on ground"
-                      className="w-18 h-23 object-contain drop-shadow-lg"
+                      className="w-14 h-18 object-contain drop-shadow-lg"
                     />
                   </div>
                   
-                  {/* Giraffe sitting on the ground - 30% bigger */}
+                  {/* Giraffe sitting on the ground */}
                   <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-35">
                     <img
                       src="/images/scene/giraffe-cartoon-roughen-filled-outline-icon-free-vector-removebg-preview.png"
                       alt="Giraffe sitting on ground"
-                      className="w-13 h-18 object-contain drop-shadow-lg opacity-90"
+                      className="w-10 h-14 object-contain drop-shadow-lg opacity-90"
                     />
                   </div>
                   
-                  {/* Ground line - taller for bigger elements */}
-                  <div className="absolute bottom-0 left-0 w-full h-16 z-35 bg-gradient-to-t from-green-300/60 to-green-200/30" />
+                  {/* Ground line */}
+                  <div className="absolute bottom-0 left-0 w-full h-12 z-35 bg-gradient-to-t from-green-300/60 to-green-200/30" />
                   
-                  {/* Small grass details on ground - more grass for bigger area */}
+                  {/* Small grass details on ground */}
                   <div className="absolute bottom-2 left-0 w-full z-36">
-                    {[...Array(20)].map((_, i) => (
+                    {[...Array(15)].map((_, i) => (
                       <div
                         key={i}
                         className="absolute bottom-0 w-0.5 h-2 bg-green-400/50"
                         style={{
-                          left: `${i * 5}%`,
+                          left: `${i * 6.5}%`,
                           height: `${1 + (i % 2)}px`
                         }}
                       />
@@ -396,13 +396,11 @@ function StomatologiePediatrica() {
                   </div>
                 </motion.div>
                 
-                {/* Small decorative elements - floating in sky - positioned for bigger area */}
+                {/* Small decorative elements - floating in sky */}
                 <div className="absolute top-6 left-8 w-1.5 h-1.5 bg-yellow-300/30 rounded-full z-20" />
                 <div className="absolute top-12 right-12 w-1 h-1 bg-pink-300/30 rounded-full z-20" />
                 <div className="absolute top-8 left-20 w-1.5 h-1.5 bg-blue-300/30 rounded-full z-20" />
                 <div className="absolute top-10 right-8 w-1 h-1 bg-purple-300/30 rounded-full z-20" />
-                <div className="absolute top-14 left-12 w-1 h-1 bg-green-300/30 rounded-full z-20" />
-                <div className="absolute top-6 right-24 w-1.5 h-1.5 bg-orange-300/30 rounded-full z-20" />
               </div>
 
               {showCongratulations && (
