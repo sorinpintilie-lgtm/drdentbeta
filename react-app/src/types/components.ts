@@ -76,6 +76,10 @@ export interface Service {
   title: string;
   description: string;
   href?: string;
+  detailedDescription?: string;
+  price?: string;
+  duration?: string;
+  popular?: boolean;
 }
 
 // Feature Data Types

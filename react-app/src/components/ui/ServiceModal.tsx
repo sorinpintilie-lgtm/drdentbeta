@@ -1,5 +1,5 @@
 import React from 'react';
-import { X } from 'lucide-react';
+import { X, Star, Clock } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface ServiceModalProps {
@@ -10,6 +10,9 @@ interface ServiceModalProps {
     description: string;
     detailedDescription?: string;
     icon: React.ReactNode;
+    price?: string;
+    duration?: string;
+    popular?: boolean;
   } | null;
 }
 
@@ -42,9 +45,34 @@ export const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, ser
                 <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center text-white">
                   {service.icon}
                 </div>
-                <h2 className="text-2xl font-heading font-bold text-gray-900">
-                  {service.title}
-                </h2>
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-1">
+                    <h2 className="text-2xl font-heading font-bold text-gray-900">
+                      {service.title}
+                    </h2>
+                    {service.popular && (
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-yellow-100 text-yellow-700 rounded-full text-xs font-semibold">
+                        <Star className="w-3 h-3 fill-current" />
+                        Popular
+                      </span>
+                    )}
+                  </div>
+                  {(service.price || service.duration) && (
+                    <div className="flex items-center gap-4 text-sm text-gray-600">
+                      {service.price && (
+                        <span className="font-semibold text-primary-600">
+                          {service.price}
+                        </span>
+                      )}
+                      {service.duration && (
+                        <span className="flex items-center gap-1">
+                          <Clock className="w-4 h-4" />
+                          {service.duration}
+                        </span>
+                      )}
+                    </div>
+                  )}
+                </div>
               </div>
               <button
                 onClick={onClose}
@@ -56,9 +84,16 @@ export const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, ser
             
             {/* Content */}
             <div className="p-6">
-              <p className="text-gray-700 leading-relaxed text-base">
-                {service.detailedDescription || service.description}
+              <p className="text-gray-700 leading-relaxed text-base mb-4">
+                {service.description}
               </p>
+              {service.detailedDescription && (
+                <div className="bg-primary-50 p-4 rounded-lg">
+                  <p className="text-gray-700 leading-relaxed text-base">
+                    {service.detailedDescription}
+                  </p>
+                </div>
+              )}
             </div>
             
             {/* Footer */}

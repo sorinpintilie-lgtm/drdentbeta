@@ -1,63 +1,88 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useState } from 'react';
 import {
+  Smile,
   Sparkles,
-  Scissors,
   Shield,
   Stethoscope,
-  Baby,
+  Anchor,
+  Award,
 } from 'lucide-react';
 import { ServiceCard } from '../ui/ServiceCard';
+import { ServiceModal } from '../ui/ServiceModal';
 import type { Service } from '../../types/components';
 
 const services: Service[] = [
   {
-    id: 'igienizari',
+    id: 'consultatie',
+    icon: <Smile className="w-8 h-8" />,
+    title: 'Consultație Dentară',
+    description:
+      'Examen oral complet cu evaluare detaliată și plan de tratament personalizat',
+    href: '#consultatie',
+    detailedDescription: 'O consultație dentară este primul pas către un zâmbet sănătos și frumos. În cadrul vizitei, medicul efectuează un examen complet al dinților, gingiilor și cavității bucale, identificând eventualele probleme ascunse. După evaluare, vei primi un plan de tratament personalizat, adaptat nevoilor tale, pentru ca fiecare etapă să fie clară, sigură și eficientă.',
+    price: '50 lei',
+    duration: '30 min',
+    popular: true
+  },
+  {
+    id: 'detartraj',
     icon: <Shield className="w-8 h-8" />,
-    title: 'Igienizări și profilaxie',
+    title: 'Detartraj Profesional',
     description:
-      'Consultații periodice, detartraje și recomandări pentru sănătatea dinților tăi.',
-    href: '#igienizari',
+      'Curățare profesională cu ultrasunete și periaj cu pastă specială',
+    href: '#detartraj',
+    detailedDescription: 'Detartrajul profesional îndepărtează placa bacteriană și tartrul depus pe dinți cu ajutorul ultrasunetelor, fără durere și fără a afecta smalțul. Procedura este urmată de un periaj cu pastă specială, care lasă dinții curați, netezi și strălucitori. Este recomandat să fie realizat periodic, pentru a menține sănătatea gingiilor și prospețimea zâmbetului.',
+    price: 'De la 200 RON',
+    duration: '45 min'
   },
   {
-    id: 'ortodontie',
+    id: 'facete',
     icon: <Sparkles className="w-8 h-8" />,
-    title: 'Ortodonție',
+    title: 'Fațete Ceramice',
     description:
-      'Tratamente personalizate pentru alinierea perfectă a dinților și un zâmbet armonios.',
-    href: '#ortodontie',
+      'Transformare completă a zâmbetului cu fațete ultra-subțiri',
+    href: '#facete',
+    detailedDescription: 'Fațetele ceramice sunt soluția ideală pentru o transformare completă și naturală a zâmbetului. Aceste foițe ultra-subțiri din ceramică se aplică pe suprafața dinților pentru a corecta forma, culoarea sau micile imperfecțiuni. Rezultatul este un zâmbet alb, armonios și elegant, obținut fără durere și cu o durabilitate de lungă durată.',
+    price: 'De la 1500 RON',
+    duration: '2 ședințe',
+    popular: true
   },
   {
-    id: 'estetica',
+    id: 'albire',
     icon: <Sparkles className="w-8 h-8" />,
-    title: 'Estetică dentară',
+    title: 'Albire Profesională',
     description:
-      'Albire profesională, fațete și soluții estetice pentru încredere deplină.',
-    href: '#estetica',
+      'Albire în cabinet cu tehnologie LED pentru rezultate rapide',
+    href: '#albire',
+    detailedDescription: 'Albirea profesională în cabinet redă dinților strălucirea naturală în doar o singură ședință. Cu ajutorul tehnologiei LED, procedura este sigură, rapidă și eficientă, îndepărtând petele cauzate de cafea, ceai sau fumat. Rezultatul: dinți vizibil mai albi și un zâmbet luminos care inspiră încredere.',
+    price: 'De la 800 RON',
+    duration: '60 min'
   },
   {
-    id: 'prothetica',
-    icon: <Shield className="w-8 h-8" />,
-    title: 'Protetică',
+    id: 'implant',
+    icon: <Anchor className="w-8 h-8" />,
+    title: 'Implant Dentar',
     description:
-      'Coroane, punți și proteze moderne pentru redobândirea funcționalității și esteticii.',
-    href: '#protetica',
+      'Soluție permanentă pentru dinți lipsă cu implant titan',
+    href: '#implant',
+    detailedDescription: 'Implantul dentar este cea mai sigură și durabilă soluție pentru înlocuirea dinților lipsă. Realizat din titan biocompatibil, implantul se integrează perfect în os și oferă o bază solidă pentru coroana dentară. Rezultatul este un dinte care arată, se simte și funcționează la fel ca unul natural, redând confortul, estetica și încrederea în propriul zâmbet.',
+    price: 'De la 2500 RON',
+    duration: '60 min',
+    popular: true
   },
   {
-    id: 'chirurgie',
-    icon: <Scissors className="w-8 h-8" />,
-    title: 'Chirurgie orală',
+    id: 'invisalign',
+    icon: <Award className="w-8 h-8" />,
+    title: 'Invisalign',
     description:
-      'Intervenții sigure, minim invazive, realizate cu echipamente moderne.',
-    href: '#chirurgie',
-  },
-  {
-    id: 'pedodontie',
-    icon: <Baby className="w-8 h-8" />,
-    title: 'Pedodonție',
-    description:
-      'Îngrijire specializată pentru copii, de la primul dințișor, pentru dezvoltare sănătoasă.',
-    href: '#pedodontie',
+      'Gutiere transparente invizibile pentru adulți',
+    href: '#invisalign',
+    detailedDescription: 'Invisalign este o metodă modernă și confortabilă de îndreptare a dinților, folosind gutiere transparente, aproape invizibile. Realizate special pentru fiecare pacient, acestea se poartă ușor, fără disconfort și fără restricții alimentare. Tratamentul oferă rezultate precise, estetice și discrete — ideal pentru adulții care își doresc un zâmbet perfect, fără aparate metalice.',
+    price: 'De la 8000 RON',
+    duration: '6-18 luni',
+    popular: true
   },
 ];
 
@@ -77,6 +102,19 @@ export const Services = () => {
     threshold: 0.1,
     triggerOnce: true,
   });
+
+  const [selectedService, setSelectedService] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openServiceModal = (service: any) => {
+    setSelectedService(service);
+    setIsModalOpen(true);
+  };
+
+  const closeServiceModal = () => {
+    setIsModalOpen(false);
+    setSelectedService(null);
+  };
 
   return (
     <section
@@ -101,7 +139,7 @@ export const Services = () => {
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#0066cc]/10 text-[#0066cc] rounded-full text-sm font-semibold">
               <Stethoscope className="w-4 h-4" />
-              Servicii Complete
+              Servicii complete
             </span>
           </motion.div>
 
@@ -109,7 +147,7 @@ export const Services = () => {
             id="services-heading"
             className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
           >
-            Serviciile Noastre
+            Serviciile noastre
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Oferim o gamă completă de servicii stomatologice moderne, adaptate
@@ -125,13 +163,14 @@ export const Services = () => {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
         >
           {services.map((service) => (
-            <ServiceCard
-              key={service.id}
-              icon={service.icon}
-              title={service.title}
-              description={service.description}
-              href={service.href}
-            />
+            <div key={service.id} onClick={() => openServiceModal(service)}>
+              <ServiceCard
+                icon={service.icon}
+                title={service.title}
+                description={service.description}
+                className="cursor-pointer"
+              />
+            </div>
           ))}
         </motion.div>
 
@@ -239,6 +278,13 @@ export const Services = () => {
             ))}
           </div>
         </motion.div>
+
+        {/* Service Modal */}
+        <ServiceModal
+          isOpen={isModalOpen}
+          onClose={closeServiceModal}
+          service={selectedService}
+        />
       </div>
     </section>
   );

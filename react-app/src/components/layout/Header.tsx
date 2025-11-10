@@ -51,7 +51,7 @@ function Header() {
   const navItems = [
     { label: 'Acasă', path: '/' },
     { label: 'Servicii', path: '/services' },
-    { label: 'Stomatologie Pediatrică', path: '/stomatologie-pediatrica' },
+    { label: 'Stomatologie pediatrică', path: '/stomatologie-pediatrica' },
     { label: 'Tarife', path: '/fees' },
     { label: 'Echipa', path: '/team' },
     { label: 'FAQ', path: '/faq' },
@@ -258,7 +258,7 @@ function Header() {
                       className="flex items-center justify-center gap-2 w-full px-6 py-3.5 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-xl font-semibold shadow-lg"
                     >
                       <Calendar className="w-5 h-5" />
-                      <span>Programează Acum</span>
+                      <span>Programează acum</span>
                     </a>
                     <a
                       href="tel:+40726530591"
@@ -272,7 +272,7 @@ function Header() {
                       className="flex items-center justify-center gap-2 w-full px-6 py-3.5 border-2 border-primary-500 text-primary-600 rounded-xl font-semibold hover:bg-primary-50 transition-all"
                     >
                       <Phone className="w-5 h-5" />
-                      <span>Sună Acum</span>
+                      <span>Sună acum</span>
                     </a>
                   </motion.div>
 

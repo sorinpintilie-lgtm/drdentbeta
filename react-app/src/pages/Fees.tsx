@@ -175,7 +175,6 @@ function Fees() {
   const importantInfo = [
     'Consultația costă 50 lei (Consultație Ortodonție: 100 lei)',
     'Prețurile sunt actualizate lunar',
-    'Garanție 5 ani pe toate lucrările efectuate',
     'Tehnologie CEREC pentru restaurări în aceeași zi',
     'Transparență totală - fără costuri ascunse',
     'Reduceri disponibile pentru pachete de tratament',

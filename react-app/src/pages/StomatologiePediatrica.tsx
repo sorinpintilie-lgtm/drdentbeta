@@ -521,25 +521,28 @@ function StomatologiePediatrica() {
               </div>
 
               {/* Fun decorative elements */}
-              <div className="flex justify-center items-center gap-4 my-6 text-3xl">
-                <motion.span
+              <div className="flex justify-center items-center gap-4 my-6">
+                <motion.div
+                  className="w-12 h-12 bg-gradient-to-br from-pink-400 to-purple-400 rounded-full flex items-center justify-center"
                   animate={{ rotate: [0, 10, -10, 0] }}
                   transition={{ duration: 2, repeat: Infinity }}
                 >
-                  Periuța de dinți
-                </motion.span>
-                <motion.span
+                  <Smile className="w-6 h-6 text-white" />
+                </motion.div>
+                <motion.div
+                  className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full flex items-center justify-center"
                   animate={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
                 >
-                  strălucitoare
-                </motion.span>
-                <motion.span
+                  <Sparkles className="w-6 h-6 text-white" />
+                </motion.div>
+                <motion.div
+                  className="w-12 h-12 bg-gradient-to-br from-green-400 to-blue-400 rounded-full flex items-center justify-center"
                   animate={{ y: [0, -5, 0] }}
                   transition={{ duration: 1.8, repeat: Infinity }}
                 >
-                  fericit
-                </motion.span>
+                  <Heart className="w-6 h-6 text-white" />
+                </motion.div>
               </div>
 
               {/* Close button */}
@@ -566,10 +569,10 @@ function StomatologiePediatrica() {
             className="text-center mb-8"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
-              Fotografii de la consultațiile pentru copii
+              Ne pasă de cei mici și avem grijă de zâmbetele lor!
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Iată cum ne ocupăm cu profesionalism de cei mici!
+              La Dr. Dent, fiecare copil este întâmpinat cu răbdare, blândețe și zâmbete. Transformăm vizita la dentist într-o experiență plăcută și fără frică, pentru ca cei mici să învețe de la început cât de importantă este grija pentru dinți. Creăm încredere, obiceiuri sănătoase și... multe zâmbete fericite!
             </p>
           </motion.div>
 
@@ -879,7 +882,7 @@ function StomatologiePediatrica() {
                 className="bg-white rounded-2xl p-6 shadow-lg border-2 border-yellow-200 hover:border-pink-300 transition-all"
               >
                 <div className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${item.color} text-white mb-4`}>
-                  <span className="text-2xl">{item.icon === 'joc' ? 'joc' : item.icon === 'cadou' ? 'cadou' : item.icon === 'plantă' ? 'plantă' : item.icon === 'familie' ? 'familie' : 'stea'}</span>
+                  <Heart className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-heading font-bold text-gray-900 mb-2">
                   {item.title}
@@ -955,7 +958,7 @@ function StomatologiePediatrica() {
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/20 backdrop-blur-sm border-2 border-white text-white rounded-full font-bold text-lg hover:bg-white/30 transition-all"
               >
                 <StarIcon className="w-5 h-5" />
-                Vreau Surprize!
+                Vreau surprize!
               </motion.button>
             </div>
           </motion.div>

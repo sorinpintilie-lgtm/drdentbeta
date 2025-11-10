@@ -42,10 +42,10 @@ function Home() {
       {/* Hero Section */}
       <section id="hero">
         <Hero
-          headline="Zâmbetul Tău Perfect Începe Aici"
+          headline="Zâmbetul tău perfect începe aici"
           subheadline="Îngrijire dentară profesională cu echipamente moderne și o echipă dedicată sănătății tale orale"
           primaryCTA={{
-            text: "Programează Consultație",
+            text: "Programează consultație",
             href: "tel:+40726530591",
             onClick: handleBookConsultation,
           }}
@@ -57,7 +57,7 @@ function Home() {
           trustIndicators={[
             {
               value: "15+",
-              label: "Ani Experiență",
+              label: "Ani experiență",
               icon: (
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -66,7 +66,7 @@ function Home() {
             },
             {
               value: "1000+",
-              label: "Pacienți Fericiți",
+              label: "Pacienți fericiți",
               icon: (
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -96,7 +96,7 @@ function Home() {
 
       {/* CTA Section 1 - After Services */}
       <CTA
-        title="Descoperă Diferența Dr.Dent"
+        title="Descoperă diferența Dr.Dent"
         description="Programează o consultație (50 lei) și află cum tehnologia noastră avansată și echipa dedicată pot transforma zâmbetul tău."
         variant="gradient"
       />
@@ -121,7 +121,7 @@ function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
-              Filosofia Noastră
+              Filosofia noastră
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               La DrDent, credem în:
@@ -155,10 +155,10 @@ function Home() {
 
       {/* CTA Section 2 - Before Contact */}
       <CTA
-        title="Pregătit pentru un Zâmbet Perfect?"
+        title="Pregătit pentru un zâmbet perfect?"
         description="Nu mai aștepta! Echipa noastră este gata să te ajute să obții zâmbetul pe care ți-l dorești. Programează acum consultația ta."
-        primaryButtonText="Programează Consultație"
-        secondaryButtonText="Sună Acum"
+        primaryButtonText="Programează consultație"
+        secondaryButtonText="Sună acum"
         variant="gradient"
       />
 

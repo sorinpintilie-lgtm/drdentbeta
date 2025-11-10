@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { cn } from '../../utils/cn';
 import type { ServiceCardProps } from '../../types/components';
 
@@ -10,17 +11,15 @@ export const ServiceCard = ({
   href,
   className,
 }: ServiceCardProps) => {
+  const navigate = useNavigate();
   const Component = href ? 'a' : 'div';
   const linkProps = href
     ? {
         href,
         onClick: (e: React.MouseEvent) => {
           e.preventDefault();
-          // Scroll to contact section
-          const contactElement = document.getElementById('contact');
-          if (contactElement) {
-            contactElement.scrollIntoView({ behavior: 'smooth' });
-          }
+          // Navigate to services page
+          navigate('/services');
         },
       }
     : {};

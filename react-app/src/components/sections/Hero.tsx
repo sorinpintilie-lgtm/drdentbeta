@@ -94,7 +94,7 @@ export const Hero = ({
             className="mb-3 sm:mb-4 md:mb-6"
           >
             <Badge variant="primary" size="lg" className="text-xs sm:text-sm px-3 sm:px-4 py-1 sm:py-1.5">
-              Clinică Dentară Premium
+              Dr.Dent
             </Badge>
           </motion.div>
 
