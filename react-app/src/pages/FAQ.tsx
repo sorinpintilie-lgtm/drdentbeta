@@ -29,10 +29,10 @@ function FAQ() {
       title: 'Programări și Servicii Generale',
       items: [
         {
-          question: 'Cum pot programa o programare?',
+          question: 'Cum pot face o programare?',
           answer: (
             <>
-              <p className="mb-2">Puteți programa o programare în mai multe moduri convenabile:</p>
+              <p className="mb-2">Puteți sa faceti programare în mai multe moduri convenabile:</p>
               <ul className="list-disc pl-5 space-y-1">
                 <li>Online prin sistemul nostru de programare</li>
                 <li>Sunați-ne la: <a href="tel:+40726530591" className="text-primary-600 hover:text-primary-700 font-semibold">0726 530 591</a></li>
@@ -109,16 +109,16 @@ function FAQ() {
       title: 'Îngrijirea Copiilor',
       items: [
         {
-          question: 'La ce vârstă ar trebui să aducă copilul la dentist?',
+          question: 'La ce vârstă ar trebui să aduceti copilul la dentist?',
           answer: 'Recomandăm prima vizită la dentist în jurul vârstei de 1 an sau în termen de 6 luni de la apariția primului dinte. Vizitele timpurii ajută la prevenirea problemelor și la familiarizarea copilului cu cabinetul dentar.',
         },
         {
           question: 'Cum îmi pregătesc copilul pentru prima vizită?',
-          answer: 'Vorbiți pozitiv despre vizită, citiți cărți despre dentist, evitați să folosiți cuvinte care provoacă frică, și asigurați-vă că copilul este odihnit. Echipa noastră este specializată în îngrijirea copiilor și va face experiența plăcută.',
+          answer: 'Vorbiți pozitiv despre vizită, citiți cărți despre dentist, evitați să folosiți cuvinte care provoacă frică, și asigurați-vă că cel mic este odihnit.',
         },
         {
           question: 'Sunt sigilările dentare necesare pentru copii?',
-          answer: 'Sigilările sunt foarte recomandate pentru protejarea molarilor permanenți ai copiilor. Acestea creează o barieră protectoare împotriva cariilor și sunt o metodă preventivă eficientă și nedureroasă.',
+          answer: 'Sigilările sunt recomandate pentru protejarea molarilor permanenți ai copiilor. Acestea creează o barieră protectoare împotriva cariilor și sunt o metodă preventivă eficientă și nedureroasă.',
         },
       ],
     },
@@ -127,7 +127,7 @@ function FAQ() {
       items: [
         {
           question: 'Ce este stomatologia biomimetică?',
-          answer: 'Stomatologia biomimetică este o abordare inovatoare care imită natura pentru a păstra cât mai mult posibil din structura naturală a dintelui. Utilizează tehnici și materiale avansate pentru a crea restaurări care arată, se simt și funcționează ca dinții naturali.',
+          answer: 'Stomatologia biomimetică este o abordare inovatoare inspirată din natură, menită să păstreze cât mai mult din structura naturală a dintelui.',
         },
         {
           question: 'Folosiți tehnologie avansată?',

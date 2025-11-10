@@ -337,7 +337,7 @@ function Team() {
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2">
             La Dr.Dent, credem în îngrijirea personalizată și în construirea de relații pe termen lung cu pacienții noștri.
-            Fiecare membru al echipei noastre este dedicat să vă ofere cea mai bună experiență dentară posibilă.
+            Fiecare specialist din echipa noastră se implică cu grijă și profesionalism pentru a vă oferi o experiență dentară impecabilă.
           </p>
           <a
             href="tel:+40726530591"
@@ -360,10 +360,10 @@ function Team() {
             className="text-center mb-8 sm:mb-12"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
-              Clinica Noastră în Acțiune
+              Clinica noastră în acțiune
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              O privire în cabinetul nostru modern și echipa în timpul programului
+              Descoperiți atmosfera cabinetului nostru modern și modul în care echipa lucrează zi de zi.
             </p>
           </motion.div>
 

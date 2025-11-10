@@ -99,14 +99,6 @@ function Resources() {
           actionHref: '#',
           meta: 'PDF',
         },
-        {
-          icon: <FileText className="w-8 h-8 text-primary-500" />,
-          title: 'Formular Asigurări',
-          description: 'Informații necesare pentru procesarea asigurării dentare. Completați cu detaliile poliței dumneavoastră de asigurare.',
-          actionText: 'Descarcă Formular',
-          actionHref: '#',
-          meta: 'PDF',
-        },
       ],
     },
     {
