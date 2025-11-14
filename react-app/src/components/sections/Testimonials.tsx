@@ -5,58 +5,14 @@ import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import { TestimonialCard } from '../ui/TestimonialCard';
 import type { Testimonial } from '../../types/components';
 
-const testimonials: Testimonial[] = [
-  {
-    id: '1',
-    name: 'Maria Popescu',
-    rating: 5,
-    text: 'Am fost impresionată de echipa noastră și de echipamentele moderne folosite. Implantul dentar a fost realizat fără durere și rezultatul este excelent. Recomand cu încredere!',
-    verified: true,
-    service: 'Implant Dentar',
-  },
-  {
-    id: '2',
-    name: 'Alexandru Ionescu',
-    rating: 5,
-    text: 'După ani de zile în care am evitat dentistul, am găsit în sfârșit o clinică unde mă simt confortabil. Echipa este prietenoasă, iar tratamentul ortodontic progresează excelent.',
-    verified: true,
-    service: 'Ortodonție',
-  },
-  {
-    id: '3',
-    name: 'Elena Dumitrescu',
-    rating: 5,
-    text: 'Albirea dentară profesională a depășit așteptările mele! Rezultatul este natural și strălucitor. Personalul este foarte atent și răbdător cu toate întrebările mele.',
-    verified: true,
-    service: 'Estetică Dentară',
-  },
-  {
-    id: '4',
-    name: 'Andrei Constantinescu',
-    rating: 5,
-    text: 'Tratamentul canalului radicular a fost mult mai ușor decât mă așteptam. Doctorul a explicat fiecare pas și s-a asigurat că sunt confortabil. Clinică modernă, echipament de top!',
-    verified: true,
-    service: 'Endodonție',
-  },
-  {
-    id: '5',
-    name: 'Ioana Radu',
-    rating: 5,
-    text: 'Copiii mei adoră să vină la control! Personalul este minunat cu cei mici, iar cabinetul este primitor și curat. Ne simțim ca acasă aici.',
-    verified: true,
-    service: 'Stomatologie Pediatrică',
-  },
-  {
-    id: '6',
-    name: 'Mihai Georgescu',
-    rating: 5,
-    text: 'Proteza dentară realizată cu tehnologia CEREC este incredibilă - precisă, rapidă și confortabilă. Nu mai trebuie să aștept săptămâni pentru rezultate!',
-    verified: true,
-    service: 'Protetică Dentară',
-  },
-];
+interface GoogleReview {
+  reviewer_name: string;
+  rating: number;
+  review_text: string;
+}
 
 export const Testimonials = () => {
+  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [direction, setDirection] = useState(0);
@@ -65,26 +21,55 @@ export const Testimonials = () => {
     triggerOnce: true,
   });
 
+  // Load reviews from JSON file
+  useEffect(() => {
+    const loadReviews = async () => {
+      try {
+        const response = await fetch('/reviews/reviews.json');
+        const googleReviews: GoogleReview[] = await response.json();
+        
+        // Transform Google reviews to Testimonial format
+        const transformedReviews: Testimonial[] = googleReviews.map((review, index) => ({
+          id: String(index + 1),
+          name: review.reviewer_name,
+          rating: review.rating,
+          text: review.review_text,
+          verified: true, // All Google reviews are verified
+        }));
+        
+        setTestimonials(transformedReviews);
+      } catch (error) {
+        console.error('Error loading reviews:', error);
+        // Fallback to empty array if loading fails
+        setTestimonials([]);
+      }
+    };
+
+    loadReviews();
+  }, []);
+
   // Auto-play functionality
   useEffect(() => {
-    if (!isAutoPlaying || !inView) return;
+    if (!isAutoPlaying || !inView || testimonials.length === 0) return;
 
     const interval = setInterval(() => {
       handleNext();
     }, 5000); // Change slide every 5 seconds
 
     return () => clearInterval(interval);
-  }, [currentIndex, isAutoPlaying, inView]);
+  }, [currentIndex, isAutoPlaying, inView, testimonials.length]);
 
   const handleNext = useCallback(() => {
+    if (testimonials.length === 0) return;
     setDirection(1);
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  }, []);
+  }, [testimonials.length]);
 
   const handlePrev = useCallback(() => {
+    if (testimonials.length === 0) return;
     setDirection(-1);
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  }, []);
+  }, [testimonials.length]);
 
   const handleDotClick = (index: number) => {
     setDirection(index > currentIndex ? 1 : -1);
@@ -155,6 +140,37 @@ export const Testimonials = () => {
       opacity: 0,
     }),
   };
+
+  // Show loading state while reviews are being fetched
+  if (testimonials.length === 0) {
+    return (
+      <section
+        ref={ref}
+        className="py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-gradient-to-br from-gray-50 to-white"
+        aria-labelledby="testimonials-heading"
+      >
+        <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="inline-block mb-2 sm:mb-3 md:mb-4">
+              <span className="inline-flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-1 sm:py-2 bg-[#0066cc]/10 text-[#0066cc] rounded-full text-xs sm:text-sm font-semibold">
+                <Quote className="w-3 h-3 sm:w-4 sm:h-4" />
+                Mărturii
+              </span>
+            </div>
+            <h2
+              id="testimonials-heading"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 sm:mb-3 md:mb-4 px-2"
+            >
+              Ce Spun Pacienții Noștri
+            </h2>
+            <p className="text-sm sm:text-base md:text-lg text-gray-600">
+              Se încarcă recenziile...
+            </p>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section

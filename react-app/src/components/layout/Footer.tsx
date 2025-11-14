@@ -36,7 +36,7 @@ function Footer() {
             </p>
             <div className="flex items-center space-x-4 pt-2">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/drdent.ro"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-all hover:scale-110"
@@ -47,7 +47,7 @@ function Footer() {
                 </svg>
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/drdent.ro/?utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-all hover:scale-110"

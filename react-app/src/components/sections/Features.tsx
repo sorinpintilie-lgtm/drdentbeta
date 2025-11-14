@@ -5,7 +5,7 @@ import {
   Users,
   Zap,
   ShieldCheck,
-  DollarSign,
+  HeartHandshake,
   Microscope,
 } from 'lucide-react';
 import { Card } from '../ui/Card';
@@ -49,7 +49,7 @@ const features: Feature[] = [
   },
   {
     id: 'personalizate',
-    icon: <DollarSign className="w-8 h-8" />,
+    icon: <HeartHandshake className="w-8 h-8" />,
     title: 'Soluții personalizate, adaptate nevoilor fiecărui pacient.',
     description:
       'Tarife clare și competitive, fără costuri ascunse. Planuri de plată flexibile disponibile.',

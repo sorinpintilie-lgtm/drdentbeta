@@ -165,11 +165,6 @@ function Fees() {
       title: 'Transfer Bancar',
       description: 'Opțiune convenabilă pentru plăți mai mari',
     },
-    {
-      icon: <Calendar className="w-6 h-6" />,
-      title: 'Plăți la Termen',
-      description: 'Opțiune de plată convenabilă pentru tratamente complexe',
-    },
   ];
 
   const importantInfo = [
@@ -274,7 +269,7 @@ function Fees() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-6">
             {paymentOptions.map((option, index) => (
               <motion.div
                 key={index}
