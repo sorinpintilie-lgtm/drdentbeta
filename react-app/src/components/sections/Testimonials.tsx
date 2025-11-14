@@ -161,7 +161,7 @@ export const Testimonials = () => {
               id="testimonials-heading"
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 sm:mb-3 md:mb-4 px-2"
             >
-              Ce Spun Pacienții Noștri
+              Părerile pacienților noștrii
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-gray-600">
               Se încarcă recenziile...
@@ -204,10 +204,10 @@ export const Testimonials = () => {
             id="testimonials-heading"
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 sm:mb-3 md:mb-4 px-2"
           >
-            Ce Spun Pacienții Noștri
+            Părerile Pacienților Noștri
           </h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-2">
-            Descoperă experiențele pacienților și motivele pentru care recomandă DrDent.
+            Zâmbetele lor ne motivează în fiecare zi. Află ce spun cei care au ales să aibă grijă de sănătatea lor alături de noi.
           </p>
         </motion.div>
 
