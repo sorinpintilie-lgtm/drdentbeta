@@ -19,137 +19,187 @@ interface PricingCategory {
 function Fees() {
   const pricingCategories: PricingCategory[] = [
     {
-      title: 'Consultație',
+      title: 'Consultatie',
       items: [
-        { service: 'Consultație', price: '50 lei' },
-        { service: 'Consultație Ortodonție', price: '100 lei' },
+        { service: 'Consultație', price: '100 RON' },
+        { service: 'Optragate', price: '20 RON' },
       ],
     },
     {
       title: 'Chirurgie Orală',
       items: [
+        { service: 'Extractie dinte monoradicular', price: '250 RON' },
+        { service: 'Extractie dinte pluriradicular', price: '300 RON' },
+        { service: 'Extractie molar de minte superior erupt', price: '350 RON' },
+        { service: 'Extractie molar de minte inferior erupt', price: '400 RON' },
+        { service: 'Extractie dinte inclus intraosos(odontectomie)(include sutura)', price: '600 RON' },
+        { service: 'Chiuretaj perimplant', price: '250 RON' },
+        { service: 'Decapusonare', price: '200 RON' },
+        { service: 'Extractie dinte parodontotic(mobil)/rest radicular', price: '200 RON' },
+        { service: 'Tratament abces parodontotic', price: '150 RON' },
+        { service: 'Gingivectomie', price: '150 RON' },
+        { service: 'Chistectomie', price: '600 RON' },
+        { service: 'Tratament alveolita', price: '150 RON' },
+        { service: 'Rezectie apicala dinte monoradicular', price: '500 RON' },
+        { service: 'Rezectie apicala dinte pluriradicular', price: '600 RON' },
+        { service: 'Descoperire canin/premolar in scop ortodontic', price: '450 RON' },
         { service: 'Implant dentar', price: '500 EUR' },
         { service: 'Sinus lift intern', price: '200 EUR' },
         { service: 'Sinus lift extern', price: '800 EUR' },
         { service: 'Un flacon bio oss', price: '100 EUR' },
         { service: 'Membrana', price: '150 EUR' },
         { service: 'Grefa de os autolog', price: '800 EUR' },
-        { service: 'Extractie dinte inclus intraosos (odontectomie)', price: '500 lei' },
-        { service: 'Extractie molar de minte inferior erupt', price: '400 lei' },
-        { service: 'Extractie molar de minte superior erupt', price: '300 lei' },
-        { service: 'Extractie dinte pluriradicular', price: '230 lei' },
-        { service: 'Extractie dinte monoradicular', price: '170 lei' },
-        { service: 'Extractie dinte parodontotic (mobil)', price: '150 lei' },
-        { service: 'Rezectie apicala dinte monoradicular', price: '500 lei' },
-        { service: 'Rezectie apicala dinte pluriradicular', price: '600 lei' },
-        { service: 'Chistectomie', price: '400 lei' },
-        { service: 'Frenectomie', price: '400 lei' },
-        { service: 'Gingivectomie', price: '100 lei' },
-        { service: 'Incizie abces', price: '100 lei' },
-        { service: 'Sutura', price: '20 lei' },
-        { service: 'Anestezie', price: '10 lei' },
+        { service: 'Extractie cu alveolotomie/separatie interradiculara', price: '500 RON' },
+        { service: 'Frenectomie', price: '400 RON' },
       ],
     },
     {
-      title: 'Endodonție',
+      title: 'Endodontie',
       items: [
-        { service: 'Tratament endodontic monoradicular (fara obturatie)', price: '250 lei' },
-        { service: 'Tratament endodontic pluriradicular 2 canale (fara obturatie)', price: '250 lei' },
-        { service: 'Tratament endodontic pluriradicular 3 canale (fara obturatie)', price: '300 lei' },
-        { service: 'Retratament endodontic dinte monoradicular', price: '350 lei' },
-        { service: 'Retratament endodontic pluriradicular 2 canale', price: '400 lei' },
-        { service: 'Retratament endodontic pluriradicular 3 canale', price: '450 lei' },
-        { service: 'Obturatie un canal', price: '200 lei' },
-        { service: 'Obturatie 2 canale', price: '200 lei' },
-        { service: 'Obturatie 3 canale', price: '250 lei' },
-        { service: 'Reconstituire cu pivot fibra de sticla', price: '350 lei' },
-        { service: 'Tratament devitalizant', price: '100 lei' },
-        { service: 'Drenaj endodontic dinte mono/pluriradicular', price: '100 lei' },
+        { service: 'Obturatie de canal pluriradicular 3 canale/+', price: '300 RON' },
+        { service: 'Reconstituire cu pivot fibra de sticla', price: '350 RON' },
+        { service: 'Tratament devitalizant', price: '100 RON' },
+        { service: 'Retratament endodontic pluriradicular 3 canale', price: '500 RON' },
+        { service: 'Retratament endodontic pluriradicular 2 canale', price: '450 RON' },
+        { service: 'Retratament endodontic dinte monoradicular', price: '400 RON' },
+        { service: 'Tratament endodontic pluriradicular 3 canale ( fara obturatie )', price: '350 RON' },
+        { service: 'Tratament endodontic pluriradicular 2 canale ( fara obturatie )', price: '300 RON' },
+        { service: 'Tratament endodontic dinte monoradicular ( fara obturatie )', price: '250 RON' },
+        { service: 'Tratament de urgenta (pansament calmant/drenaj/tratamnet pericoronarita etc)', price: '150 RON' },
+        { service: 'Refacere perete in vederea tratamentului endodontic', price: '200 RON' },
+        { service: 'Indepartare pivot/dentatus', price: '200 RON' },
+        { service: 'Obturatie de canal monoradicular/un canal', price: '200 RON' },
+        { service: 'Obturatie de canal biradicular 2 canale', price: '250 RON' },
       ],
     },
     {
-      title: 'Terapie Odontală',
+      title: 'Estetică Dentară',
       items: [
-        { service: 'Obturatie coronara frontala compozit', price: '370 lei' },
-        { service: 'Obturatie coronara posterioara compozit', price: '300 lei' },
-        { service: 'Obturatie coronara cu tetric EvoCeram', price: '350 lei' },
-        { service: 'Obturatie coronara tetric Evetric', price: '300 lei' },
-        { service: 'Obturatie coronara ionomer de sticla', price: '200 lei' },
-        { service: 'Obturatie coronara compozit pe dinti temporari', price: '250 lei' },
-        { service: 'Fateta directa rasina compozit', price: '300 lei' },
-      ],
-    },
-    {
-      title: 'Protetică Dentară',
-      items: [
-        { service: 'Coroana metalo-ceramica', price: '750 lei' },
-        { service: 'Coroana Emax (ceramica presata)', price: '1200 lei' },
-        { service: 'Coroana integral zirconiu', price: '1300 lei' },
-        { service: 'Coroana ceramica pe suport zirconiu', price: '1200 lei' },
-        { service: 'Coroana zirconiu pe implant', price: '350 EUR' },
-        { service: 'Coroana pe implant dentar - metalo-ceramica', price: '300 EUR' },
-        { service: 'Coroana semifizionomica metalo-ceramica', price: '550 lei' },
-        { service: 'Coroana metalica', price: '300 lei' },
-        { service: 'Fatete dentare', price: '1500 lei' },
-        { service: 'Onlay/Inlay ceramica/zirconiu', price: '700 lei' },
-        { service: 'Incrustatie compozit', price: '400 lei' },
-        { service: 'Proteza mobila acrilica', price: '1500 lei' },
-        { service: 'Proteza flexibila', price: '1800 lei' },
-        { service: 'Proteza scheletata pe capse (NU include capsa)', price: '2000 lei' },
-        { service: 'Capsa proteza', price: '500 lei' },
-        { service: 'Proteza cu capse pe 2 implanturi', price: '5800 lei' },
-        { service: 'Proteza cu capse pe 3 implanturi', price: '9000 lei' },
-        { service: 'Proteza cu capse pe 4 implanturi', price: '11000 lei' },
-        { service: 'Proteza inferioara insurubata pe 4 implanturi', price: '10000 lei' },
-        { service: 'Proteza superioara insurubata pe 6 implanturi', price: '13000 lei' },
-        { service: 'Coroana provizorie in cabinet', price: '80 lei' },
-        { service: 'Coroana provizorie in laborator - PMMA', price: '100 lei' },
-        { service: 'Reconstructie corono-radiculara metalica', price: '200 lei' },
-        { service: 'Reconstructie corono-radiculara zirconiu', price: '400 lei' },
-        { service: 'Reparatie proteza', price: '200 lei' },
-        { service: 'Captusire proteza', price: '250 lei' },
-        { service: 'Cimentare', price: '30 lei' },
+        { service: 'Aplicare bijuterie dentara', price: '250 RON' },
+        { service: 'Albire dentara acasa (gutiere incluse)', price: '1200 RON' },
+        { service: 'Albire dinte devital', price: '250 RON' },
+        { service: 'Albire dentara in cabinet + acasa (gutiere incluse)', price: '1500 RON' },
+        { service: 'Albire dentara in cabinet', price: '1000 RON' },
       ],
     },
     {
       title: 'Ortodonție',
       items: [
-        { service: 'Aparat fix metalic', price: '500 EUR' },
-        { service: 'Aparat fix metalic semifizionomic', price: '600 EUR' },
-        { service: 'Aparat fix safir', price: '700 EUR' },
-        { service: 'Aparat mobil', price: '1000 lei' },
-        { service: 'Aparat fix partial', price: '1000 lei' },
-        { service: 'Aparat miofunctional', price: '800 lei' },
-        { service: 'Disjunctor si masca faciala', price: '1400 lei' },
-        { service: 'Control aparat fix', price: '60 lei' },
-        { service: 'Control aparat mobil', price: '50 lei' },
-        { service: 'Retainer colat', price: '300 lei' },
-        { service: 'Gutiera de contentie', price: '300 lei' },
-        { service: 'Ortoimplant', price: '400 lei' },
-      ],
-    },
-    {
-      title: 'Profilaxie Dentară',
-      items: [
-        { service: 'Igienizare (detartraj, periaj, air-flow)', price: '250 lei' },
-        { service: 'Detartraj + periaj (dinte)', price: '10 lei' },
-        { service: 'Periaj', price: '50 lei' },
-        { service: 'Air flow', price: '50 lei' },
-        { service: 'Albire dentara cu gutiere', price: '800 lei' },
-        { service: 'Albire laser', price: '1000 lei' },
-        { service: 'Albire lampa zoom', price: '1000 lei' },
-        { service: 'Albire dinte devital', price: '100 lei' },
-        { service: 'Sigilare dentara', price: '150 lei' },
-        { service: 'Fluorizare/desensibilizare', price: '20 lei' },
-        { service: 'Gutiera fluorizare', price: '100 lei' },
-        { service: 'Gutiera bruxism CAD-CAM', price: '250 lei' },
+        { service: 'Disjunctor', price: '1500 RON' },
+        { service: 'Aparat fix partial', price: '1000 RON' },
+        { service: 'Aparat fix metalic', price: '2800 RON' },
+        { service: 'Consultatie Ortodontie', price: '100 RON' },
+        { service: 'Control aparat fix /per arcada', price: '100 RON' },
+        { service: 'Retainer colat', price: '450 RON' },
+        { service: 'Gutiera de contentie', price: '550 RON' },
+        { service: 'Gutiera acrilica pentru inaltare ocluzala', price: '250 RON' },
+        { service: 'Ortoimplant', price: '500 RON' },
+        { service: 'Disjunctor si masca faciala', price: '1400 RON' },
+        { service: 'Aparat miofunctional', price: '800 RON' },
+        { service: 'Aparat fix safir', price: '4000 RON' },
+        { service: 'Aparat fix metalic semifizionomic ICONIX', price: '3200 RON' },
       ],
     },
     {
       title: 'Parodontologie',
       items: [
-        { service: 'Chiuretaj parodontal in camp inchis', price: '50 lei' },
-        { service: 'Chiuretaj parodontal in camp deschis', price: 'La cerere' },
+        { service: 'Tratament regenerativ boala parodontala (per dinte)', price: '1100 RON' },
+        { service: 'Tunelizare', price: '400 RON' },
+        { service: 'Indepartare imobilizare', price: '100 RON' },
+        { service: 'Imobilizare 4-5 dinti', price: '500 RON' },
+        { service: 'Imobilizare cu fibra (per sextant)', price: '500 RON' },
+        { service: 'Chiuretaj camp inchis per arcada', price: '1200 RON' },
+        { service: 'Tratament antiinflamator gingivita (per arcada)', price: '100 RON' },
+        { service: 'Igienizare pacient parodontopat', price: '400 RON' },
+        { service: 'Parodontometrie', price: '200 RON' },
+        { service: 'Chiuretaj parodontal in camp inchis dinte pluriradicular', price: '200 RON' },
+        { service: 'Gingivectomie (per dinte)', price: '150 RON' },
+        { service: 'Tratament biostimulant neypulpin (5 sedinte)', price: '800 RON' },
+        { service: 'Chiuretaj parodontal in camp inchis dinte monoradicular', price: '150 RON' },
+        { service: 'Chiuretaj parodontal in camp deschis', price: '250 RON' },
+      ],
+    },
+    {
+      title: 'Pedodonție',
+      items: [
+        { service: 'Sigilare dentara largita', price: '200 RON' },
+        { service: 'Obturatie de canal dinte monoradicular temporar', price: '100 RON' },
+        { service: 'Obturatie coronara compozit pe dinti temporari', price: '250 RON' },
+        { service: 'Pulpectomie vitala dinte pluriradicular temporar', price: '200 RON' },
+        { service: 'Extractie dinte temporar mobil (fara anestezie)', price: '150 RON' },
+        { service: 'Extractie dinte temporar fara mobilitate (cu anestezie)', price: '200 RON' },
+        { service: 'Pulpectomie vitala dinte monoradicular temporar', price: '150 RON' },
+        { service: 'Obturatie coronara ionomer de sticla', price: '250 RON' },
+        { service: 'Obturatie de canal dinte pluriradicular temporar', price: '150 RON' },
+      ],
+    },
+    {
+      title: 'Profilaxie Dentară',
+      items: [
+        { service: 'Gutiera bruxism', price: '350 RON' },
+        { service: 'Fluorizare (per arcada)', price: '150 RON' },
+        { service: 'Air flow', price: '150 RON' },
+        { service: 'Detaratraj + periaj (ambele arcade)', price: '250 RON' },
+        { service: 'Periaj', price: '100 RON' },
+        { service: 'Detartraj', price: '200 RON' },
+        { service: 'Gutiera fluorizare', price: '100 RON' },
+        { service: 'Pachet igienizare (detartraj, periaj, air-flow)', price: '300 RON' },
+        { service: 'Sigilare dentara clasica', price: '150 RON' },
+      ],
+    },
+    {
+      title: 'Protetică Dentară',
+      items: [
+        { service: 'Incrustatie compozit', price: '400 RON' },
+        { service: 'Onlay/Inlay ceramica/zirconiu', price: '700 RON' },
+        { service: 'Aplicare capa de vindecare', price: '100 RON' },
+        { service: 'Cimentare(per dinte)', price: '50 RON' },
+        { service: 'Plasa metalica proteze', price: '500 RON' },
+        { service: 'Proteza Kemeny', price: '400 RON' },
+        { service: 'Proteza cu capse pe 4 implanturi', price: '13000 RON' },
+        { service: 'Proteza cu capse pe 2 implanturi', price: '9000 RON' },
+        { service: 'Schimb teflon proteza capse', price: '200 RON' },
+        { service: 'Proteza pe sisteme multiunit ( 4 implanturi ) dinti zirconiu', price: '24000 RON' },
+        { service: 'Coroana provizorie in cabinet', price: '100 RON' },
+        { service: 'Proteza pe sisteme multiunit (5 implanturi) dinti zirconiu', price: '24500 RON' },
+        { service: 'Adaugare dinte/croset pe proteza', price: '200 RON' },
+        { service: 'Ablatie lucrare veche', price: '50 RON' },
+        { service: 'Capsa proteza', price: '1000 RON' },
+        { service: 'Captusire proteza', price: '250 RON' },
+        { service: 'Proteza scheletata pe capse (pretul NU include contravaloarea capsei de 500 lei)', price: '2000 RON' },
+        { service: 'Cimentare provizorie(per dinte)', price: '30 RON' },
+        { service: 'Proteza elastica', price: '2000 RON' },
+        { service: 'Captusire molosil', price: '150 RON' },
+        { service: 'Coroana zirconiu pe implant', price: '390 EUR' },
+        { service: 'Reconstructie corono - radiculara metalica', price: '200 RON' },
+        { service: 'Wax-up', price: '100 RON' },
+        { service: 'Fatete dentare', price: '2000 RON' },
+        { service: 'Coroana Emax (ceramica presata)', price: '1700 RON' },
+        { service: 'Coroana integral zirconiu', price: '1500 RON' },
+        { service: 'Coroana metalo-ceramica', price: '900 RON' },
+        { service: 'Reconstructie cu pivot fibra de sticla', price: '350 RON' },
+        { service: 'Reparatie proteza', price: '300 RON' },
+        { service: 'Reconstructie corono - radiculara zirconiu', price: '400 RON' },
+        { service: 'Coroana provizorie in laborator (PMMA)', price: '300 RON' },
+        { service: 'Coroana metalica', price: '350 RON' },
+        { service: 'Proteza pe sisteme multiunit (6 implanturi), dinti zirconiu', price: '25000 RON' },
+        { service: 'Coroana semifizionomica metalo-ceramica', price: '600 RON' },
+        { service: 'Proteza pe sisteme multiunit ( 4 implanturi) dinti acrilat', price: '16000 RON' },
+        { service: 'Proteza mobila acrilica', price: '1500 RON' },
+        { service: 'Proteza pe sisteme multiunit ( 5 implanturi ) dinti acrilat', price: '17000 RON' },
+        { service: 'Proteza pe sisteme multiunit ( 4 implanturi ) dinti acrilat', price: '18000 RON' },
+        { service: 'Proteza cu capse pe 3 implanturi', price: '11000 RON' },
+        { service: 'Coroana pe implant dentar - metalo-ceramica', price: '350 EUR' },
+        { service: 'Proteza pe sisteme multiunit ( 6 implanturi) dinti acrilat', price: '18000 RON' },
+      ],
+    },
+    {
+      title: 'Terapie Dentară',
+      items: [
+        { service: 'Obturatie coronara posterioara', price: '350 RON' },
+        { service: 'Fatetare directa in cabinet rasina compozit', price: '500 RON' },
+        { service: 'Obturatie coronara frontala compozit', price: '370 RON' },
+        { service: 'Tratament desensibilizant (per dinte)', price: '50 RON' },
       ],
     },
   ];
@@ -158,21 +208,33 @@ function Fees() {
     {
       icon: <Banknote className="w-6 h-6" />,
       title: 'Numerar și Card',
-      description: 'Plăți imediate cu carduri de credit/debit sau numerar',
+      description: 'Plăți imediate cu carduri de credit/debit sau numerar în RON și EUR',
     },
     {
       icon: <CreditCard className="w-6 h-6" />,
-      title: 'Transfer Bancar',
-      description: 'Opțiune convenabilă pentru plăți mai mari',
+      title: 'Asigurări de Sănătate',
+      description: 'Acceptăm majoritatea asigurărilor medicale și dentare private',
+    },
+    {
+      icon: <Calendar className="w-6 h-6" />,
+      title: 'Plăți în Rate',
+      description: 'Opțiuni de plată în rate pentru tratamentele complexe',
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: 'Plăți Electronice',
+      description: 'Acceptăm transferuri bancare și plăți online',
     },
   ];
 
   const importantInfo = [
-    'Consultația costă 50 lei (Consultație Ortodonție: 100 lei)',
-    'Prețurile sunt actualizate lunar',
-    'Tehnologie CEREC pentru restaurări în aceeași zi',
+    'Prețurile sunt orientative și pot varia în funcție de complexitatea cazului',
+    'Consultația inițială este obligatorie pentru evaluarea exactă a costurilor',
+    'Acceptăm plăți în RON și EUR la cursul BNR din ziua plății',
+    'Oferim reduceri pentru pachete de tratament și plăți anticipate',
+    'Garanție pe toate lucrările efectuate conform standardelor internaționale',
     'Transparență totală - fără costuri ascunse',
-    'Reduceri disponibile pentru pachete de tratament',
+    'Opțiuni de finanțare disponibile pentru tratamentele complexe',
   ];
 
   return (
@@ -185,7 +247,7 @@ function Fees() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            Tarife și Prețuri
+            Tarife și Prețuri Complete
           </motion.h1>
           <motion.p
             className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto"
@@ -193,7 +255,7 @@ function Fees() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
           >
-            Transparență completă și prețuri competitive
+            Transparență completă și prețuri competitive în RON și EUR
           </motion.p>
         </div>
       </section>
@@ -203,12 +265,12 @@ function Fees() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
-              Oferim tarife competitive și transparente pentru toate serviciile noastre dentare.
-              Prețurile sunt actualizate lunar pentru a vă oferi cele mai bune prețuri.
+              Oferim tarife transparente și competitive pentru toate serviciile noastre dentare. 
+              Prețurile includ consultația inițială pentru evaluarea nevoilor dumneavoastră. Acceptăm plăți în RON și EUR.
             </p>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 text-primary-700 rounded-lg font-semibold">
               <CheckCircle className="w-5 h-5" />
-              Consultație: 50 lei
+              Consultație: 100 RON | 20 RON Optragate
             </div>
           </div>
         </div>
@@ -262,14 +324,14 @@ function Fees() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-8 md:mb-12">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-gray-900 mb-4">
-              Opțiuni de Plată
+              Opțiuni de Plată și Finanțare
             </h2>
             <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
               Acceptăm diverse metode de plată pentru a facilita accesul la îngrijire dentară de calitate
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {paymentOptions.map((option, index) => (
               <motion.div
                 key={index}
@@ -321,18 +383,20 @@ function Fees() {
             Doriți o estimare personalizată?
           </h3>
           <p className="text-base md:text-lg text-white/90 mb-6 md:mb-8 max-w-2xl mx-auto">
-            Contactați-ne pentru o consultație (50 lei) și aflați costurile exacte pentru tratamentul dumneavoastră.
+            Contactați-ne pentru o consultație gratuită și aflați costurile exacte pentru tratamentul dumneavoastră.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+40726530591"
+              href="tel:+40213449317"
               className="inline-flex items-center justify-center gap-2 px-6 md:px-8 py-3 md:py-4 bg-white text-primary-600 rounded-xl font-semibold text-base md:text-lg hover:bg-gray-50 transition-all hover:scale-105 shadow-xl"
             >
               <Phone className="w-5 h-5" />
-              Sunați: 0726 530 591
+              Sunați: 021 344 9317
             </a>
             <a
-              href="/contact"
+              href="https://app.nexhealth.com/appt/pearldentalbucharest"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-6 md:px-8 py-3 md:py-4 border-2 border-white text-white hover:bg-white hover:text-primary-600 rounded-xl font-semibold text-base md:text-lg transition-all"
             >
               <Calendar className="w-5 h-5" />
