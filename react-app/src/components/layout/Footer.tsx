@@ -214,6 +214,18 @@ function Footer() {
             </Link>
           </div>
         </div>
+
+        {/* Powered By Section */}
+        <div className="border-t border-white/20 pt-6 mt-6 text-center">
+          <p className="text-white/70 text-sm flex items-center justify-center gap-2">
+            Powered by
+            <img
+              src="/images/visualMarketing_logo.png"
+              alt="VisualMarketing"
+              className="h-6 w-auto"
+            />
+          </p>
+        </div>
       </div>
 
       {/* Back to Top Button */}
