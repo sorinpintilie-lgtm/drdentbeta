@@ -64,7 +64,6 @@ function Team() {
         'Medic Stomatolog',
         'Abordare empatică',
       ],
-      image: '/images/young-female-dentist-in-dental-office-dentist-at-2025-03-15-16-02-16-utc-min.jpg',
       type: 'doctor',
     },
     {
@@ -87,7 +86,6 @@ function Team() {
         'Medic Stomatolog',
         'Experiență în tratamente avansate',
       ],
-      image: '/images/portrait-of-senior-male-dentist-with-dental-instru-2025-01-16-22-34-30-utc-min.jpg',
       type: 'doctor',
     },
     {
@@ -98,7 +96,6 @@ function Team() {
         'Medic Stomatolog',
         'Profesionalism și grijă',
       ],
-      image: '/images/female-dentist-performing-dental-procedure-on-male-2025-04-03-21-15-19-utc-min.jpg',
       type: 'doctor',
     },
     {
@@ -131,7 +128,6 @@ function Team() {
         'Medic Stomatolog',
         'Abordare personalizată',
       ],
-      image: '/images/in-the-dental-office-girl-doctor-examines-the-oral-2024-12-04-04-36-51-utc-min.jpg',
       type: 'doctor',
     },
     {
@@ -142,7 +138,6 @@ function Team() {
         'Medic Stomatolog',
         'Experiență vastă',
       ],
-      image: '/images/young-female-dentist-in-dental-office-dentist-at-2025-03-18-14-08-17-utc-min.jpg',
       type: 'doctor',
     },
   ];
