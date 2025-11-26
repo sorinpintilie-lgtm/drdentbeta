@@ -106,7 +106,6 @@ function Team() {
         'Medic Stomatolog',
         'Experiență în practica privată',
       ],
-      image: '/images/Dr.chirica-roxana.jpg',
       type: 'doctor',
     },
     {
@@ -117,7 +116,6 @@ function Team() {
         'Medic Stomatolog',
         'Expert în estetică dentară',
       ],
-      image: '/images/As.Ana-Maria_Trasca.jpg',
       type: 'doctor',
     },
     {
