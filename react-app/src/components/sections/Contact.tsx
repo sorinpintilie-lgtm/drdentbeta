@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { AppointmentForm } from '../forms/AppointmentForm';
 
 export const Contact: React.FC = () => {
   const contactInfo = [
@@ -96,104 +95,164 @@ export const Contact: React.FC = () => {
           className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Programează o Consultație
+            Informații de Contact
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
-            Completează formularul și te vom contacta în cel mai scurt timp pentru a confirma programarea
+            Alege metoda de contact preferată și te vom ajuta în cel mai scurt timp cu detaliile de care ai nevoie.
           </p>
         </motion.div>
-
+ 
         {/* Two Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
-          {/* Contact Information Sidebar */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+          {/* Left Column: Contact + Program + Social */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-1 space-y-8"
+            className="space-y-8"
           >
-            {/* Contact Info Cards */}
-            <div className="bg-white rounded-2xl p-6 shadow-sm space-y-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Informații de Contact
-              </h3>
-              {contactInfo.map((item, index) => (
-                <a
-                  key={index}
-                  href={item.href}
-                  className="flex items-start gap-4 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
-                  target={item.href.startsWith('http') ? '_blank' : undefined}
-                  rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                >
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                    {item.icon}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm text-gray-500 mb-1">{item.label}</p>
-                    <p className="text-base font-medium text-gray-900 break-words">
-                      {item.value}
-                    </p>
-                  </div>
-                </a>
-              ))}
-            </div>
-
-            {/* Working Hours */}
-            <div className="bg-white rounded-2xl p-6 shadow-sm">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-                Program de Lucru
-              </h3>
-              <div className="space-y-3">
-                {workingHours.map((schedule, index) => (
-                  <div
-                    key={index}
-                    className="flex justify-between items-center py-2 border-b border-gray-100 last:border-0"
-                  >
-                    <span className="text-gray-600">{schedule.day}</span>
-                    <span className="font-medium text-gray-900">{schedule.hours}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Social Media */}
-            <div className="bg-white rounded-2xl p-6 shadow-sm">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Urmărește-ne
-              </h3>
-              <div className="flex gap-3">
-                {socialLinks.map((social, index) => (
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm space-y-6">
+              {/* Contact + Program grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {/* Contact rapid */}
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold text-gray-900">Contact rapid</h3>
+                  {[contactInfo[0], contactInfo[1]].map((item, index) => (
+                    <a
+                      key={index}
+                      href={item.href}
+                      className="flex items-start gap-3 rounded-lg hover:bg-gray-50 px-3 py-2 transition-colors group"
+                    >
+                      <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                        {item.icon}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-xs text-gray-500 mb-0.5 uppercase tracking-wide">
+                          {item.label}
+                        </p>
+                        <p className="text-sm font-medium text-gray-900 break-words">
+                          {item.value}
+                        </p>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+ 
+                {/* Adresă + Program */}
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold text-gray-900">Adresă & Program</h3>
+                  {/* Adresă */}
                   <a
-                    key={index}
-                    href={social.href}
+                    href={contactInfo[2].href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors"
-                    aria-label={social.name}
+                    className="flex items-start gap-3 rounded-lg hover:bg-gray-50 px-3 py-2 transition-colors group"
                   >
-                    {social.icon}
+                    <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                      {contactInfo[2].icon}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-xs text-gray-500 mb-0.5 uppercase tracking-wide">
+                        {contactInfo[2].label}
+                      </p>
+                      <p className="text-sm font-medium text-gray-900 break-words">
+                        {contactInfo[2].value}
+                      </p>
+                    </div>
                   </a>
-                ))}
+ 
+                  {/* Program de lucru */}
+                  <div className="rounded-xl bg-gray-50 px-3 py-3">
+                    <div className="flex items-center gap-2 mb-2">
+                      <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                      <p className="text-xs font-semibold text-gray-700 uppercase tracking-wide">
+                        Program de lucru
+                      </p>
+                    </div>
+                    <div className="space-y-1.5">
+                      {workingHours.map((schedule, index) => (
+                        <div key={index} className="flex justify-between text-xs text-gray-700">
+                          <span>{schedule.day}</span>
+                          <span className="font-medium">{schedule.hours}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+ 
+              {/* Social row */}
+              <div className="border-t border-gray-100 pt-5 mt-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div>
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">
+                    Urmărește-ne
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    Rămâi la curent cu noutățile și sfaturile de la Dr.Dent.
+                  </p>
+                </div>
+                <div className="flex gap-3">
+                  {socialLinks.map((social, index) => (
+                    <a
+                      key={index}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors"
+                      aria-label={social.name}
+                    >
+                      {social.icon}
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
-
-            {/* Map Link */}
+          </motion.div>
+ 
+          {/* Right Column: Map card */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex"
+          >
             <a
               href="https://maps.google.com/?q=Strada+Arh.+Ionescu+Grigore+Nr.100+bl.+34+sc.+1+ap.+2+sector+2+București"
               target="_blank"
               rel="noopener noreferrer"
-              className="block bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow group"
+              className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-lg transition-shadow group flex flex-col w-full"
             >
-              <div className="aspect-video bg-gray-200 rounded-lg mb-4 overflow-hidden relative group">
+              <div className="flex items-center justify-between mb-4 sm:mb-6">
+                <div>
+                  <p className="text-xs font-semibold text-primary uppercase tracking-wide mb-1">
+                    Hartă - Locația Dr.Dent
+                  </p>
+                  <h3 className="text-lg sm:text-xl font-heading font-bold text-gray-900">
+                    Vezi rapid locația cabinetului
+                  </h3>
+                </div>
+                <div className="hidden sm:flex w-10 h-10 rounded-full bg-primary/10 items-center justify-center text-primary">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    />
+                  </svg>
+                </div>
+              </div>
+ 
+              <div className="aspect-video bg-gray-200 rounded-xl overflow-hidden relative mb-4 sm:mb-6">
                 <img
                   src="/images/snapshot.png"
                   alt="Hartă - Locația Dr.Dent"
@@ -210,23 +269,16 @@ export const Contact: React.FC = () => {
                   </svg>
                 </div>
               </div>
-              <p className="text-center text-primary font-medium group-hover:text-secondary transition-colors">
-                Vezi pe hartă →
-              </p>
+ 
+              <div className="flex items-center justify-between">
+                <p className="text-sm text-gray-600">
+                  Deschide în Google Maps pentru indicații pas cu pas.
+                </p>
+                <span className="text-sm font-semibold text-primary group-hover:text-secondary transition-colors">
+                  Vezi pe hartă →
+                </span>
+              </div>
             </a>
-          </motion.div>
-
-          {/* Appointment Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="lg:col-span-2"
-          >
-            <div className="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-sm">
-              <AppointmentForm />
-            </div>
           </motion.div>
         </div>
       </div>
