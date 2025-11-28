@@ -219,41 +219,41 @@ export const Services = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                src: '/images/dentist-examining-the-mouth-of-a-patient-lying-on-2024-12-10-01-27-13-utc-min.jpg',
+                src: '/images/newimg/Pics site/Consultatie Iasmina/IMG_0225.jpg',
                 alt: 'Consultație dentară profesională',
                 title: 'Consultații Complete',
-                description: 'Examinări detaliate cu tehnologie modernă'
+                description: 'Examinări detaliate cu tehnologie modernă',
               },
               {
-                src: '/images/female-dentist-performing-dental-procedure-on-male-2025-04-03-21-15-19-utc-min.jpg',
+                src: '/images/newimg/Pics site/Extra/IMG_0498.jpg',
                 alt: 'Procedură dentară în curs',
                 title: 'Tratamente Profesionale',
-                description: 'Proceduri realizate cu precizie și atenție'
+                description: 'Proceduri realizate cu precizie și atenție',
               },
               {
-                src: '/images/in-the-dental-office-girl-doctor-examines-the-oral-2024-12-04-04-36-51-utc-min.jpg',
+                src: '/images/newimg/Pics site/Consultatie Iasmina/IMG_0232.jpg',
                 alt: 'Examinare dentară detaliată',
                 title: 'Diagnosticare Precisă',
-                description: 'Identificarea problemelor din timp'
+                description: 'Identificarea problemelor din timp',
               },
               {
-                src: '/images/dental-clinic-workers-with-a-patient-2024-10-16-08-17-47-utc-min.jpg',
+                src: '/images/newimg/Pics site/Poze grup/IMG_0173.jpg',
                 alt: 'Echipa medicală cu pacientul',
                 title: 'Echipa Noastră',
-                description: 'Profesioniști dedicați îngrijirii tale'
+                description: 'Profesioniști dedicați îngrijirii tale',
               },
               {
-                src: '/images/patient-during-dentist-visit-2024-10-15-08-26-18-utc-min.jpg',
+                src: '/images/newimg/Pics site/Poze grup/IMG_0187.jpg',
                 alt: 'Pacient la consultație',
                 title: 'Confort Pacienți',
-                description: 'Mediu prietenos și relaxant'
+                description: 'Mediu prietenos și relaxant',
               },
               {
-                src: '/images/young-female-dentist-in-dental-office-dentist-at-2025-03-15-16-02-16-utc-min.jpg',
+                src: '/images/newimg/Pics site/Extra/IMG_0503.jpg',
                 alt: 'Doctoriță în cabinetul dentar',
                 title: 'Medici Specializați',
-                description: 'Experiență și competență în domeniu'
-              }
+                description: 'Experiență și competență în domeniu',
+              },
             ].map((item, index) => (
               <motion.div
                 key={index}

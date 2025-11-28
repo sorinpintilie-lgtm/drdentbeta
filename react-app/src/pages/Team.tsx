@@ -23,43 +23,48 @@ function Team() {
 
   const teamMembers: TeamMember[] = [
     {
-      name: 'Dr. Anca Ciomag',
+      name: 'Ciomag Anca',
       role: 'Medic Stomatolog Principal',
       specialty: 'Stomatologie generală',
-      description: 'Medic stomatolog dedicat oferirii celor mai bune servicii de îngrijire dentară, cu o abordare personalizată pentru fiecare pacient.',
+      description:
+        'Medic stomatolog dedicat oferirii celor mai bune servicii de îngrijire dentară, cu o abordare personalizată pentru fiecare pacient.',
       credentials: [
         'Medic Stomatolog Principal',
         'Experiență vastă în stomatologie',
       ],
-      image: '/images/Dr-Anca-Ciomag.jpg',
+      image:
+        "/images/newimg/Pics site/Poze portret/Anca Ciomag - specialist stomatologie generală/IMG_0274.jpg",
       type: 'doctor',
     },
     {
-      name: 'Dr. Daniela Capatana',
+      name: 'Capatana Daniela',
       role: 'Medic Stomatolog',
-      description: 'Specializată în stomatologie generală, oferind tratamente de calitate superioară.',
+      description:
+        'Specializată în stomatologie generală, oferind tratamente de calitate superioară.',
       credentials: [
         'Medic Stomatolog',
         'Specialist în tratamente generale',
       ],
-      image: '/images/Dr.Daniela-Capatana.jpg',
+      image:
+        "/images/newimg/Pics site/Poze portret/Daniela Căpățână - Specialist stomatologie generală/IMG_0294.jpg",
       type: 'doctor',
     },
     {
-      name: 'Dr. Vlad Petrescu',
+      name: 'Vlad Petrescu',
       role: 'Medic Stomatolog',
       description: 'Expert în chirurgie oro-maxilo-facială și implantologie.',
       credentials: [
         'Medic Stomatolog',
         'Specialist Chirurgie OMF',
       ],
-      image: '/images/Dr.Vlad-Petrescu.jpg',
+      image: '/images/drdent-home-opt.jpg',
       type: 'doctor',
     },
     {
-      name: 'Dr. Cristina Popa',
+      name: 'Popa Cristina',
       role: 'Medic Stomatolog',
-      description: 'Medic stomatolog dedicat îngrijirii sănătății orale a pacienților.',
+      description:
+        'Medic stomatolog dedicat îngrijirii sănătății orale a pacienților.',
       credentials: [
         'Medic Stomatolog',
         'Abordare empatică',
@@ -68,7 +73,7 @@ function Team() {
       type: 'doctor',
     },
     {
-      name: 'Dr. Iulia Deleanu',
+      name: 'Deleanu Iulia',
       role: 'Medic Stomatolog',
       specialty: 'Ortodonție',
       description: 'Specializată în ortodonție și ortopedie dento-facială.',
@@ -76,13 +81,14 @@ function Team() {
         'Medic Stomatolog',
         'Specialist Ortodonție',
       ],
-      image: '/images/dr-iulia-deleanu.jpg',
+      image: '/images/drdent-home-opt.jpg',
       type: 'doctor',
     },
     {
-      name: 'Dr. Alexandru Vrajescu',
+      name: 'Vrajescu Alexandru',
       role: 'Medic Stomatolog',
-      description: 'Medic stomatolog cu experiență în tratamente dentare moderne.',
+      description:
+        'Medic stomatolog cu experiență în tratamente dentare moderne.',
       credentials: [
         'Medic Stomatolog',
         'Experiență în tratamente avansate',
@@ -91,42 +97,48 @@ function Team() {
       type: 'doctor',
     },
     {
-      name: 'Dr. Daria Petrescu',
+      name: 'Petrescu Daria',
       role: 'Medic Stomatolog',
-      description: 'Dedicată oferirii de servicii stomatologice de înaltă calitate.',
+      description:
+        'Dedicată oferirii de servicii stomatologice de înaltă calitate.',
       credentials: [
         'Medic Stomatolog',
         'Profesionalism și grijă',
+      ],
+      image:
+        "/images/newimg/Pics site/Poze portret/Daria Petrescu-Seceleanu - Chirurgie dento-alveolară/IMG_0392.jpg",
+      type: 'doctor',
+    },
+    {
+      name: 'Randasu Roxana',
+      role: 'Medic Stomatolog',
+      description:
+        'Medic stomatolog dedicat sănătății orale, cu o abordare calmă și empatică.',
+      credentials: [
+        'Medic Stomatolog',
+        'Experiență în îngrijirea pacienților anxioși',
+      ],
+      image:
+        "/images/newimg/Pics site/Poze portret/Roxana Ioana Rîndașu - Specialist parodontolog/IMG_0143.jpg",
+      type: 'doctor',
+    },
+    {
+      name: 'Dragne Ana-Maria',
+      role: 'Medic Stomatolog',
+      description:
+        'Specializată în tratamente dentare estetice și restorative.',
+      credentials: [
+        'Medic Stomatolog',
+        'Expert în estetică dentară',
       ],
       image: '/images/drdent-home-opt.jpg',
       type: 'doctor',
     },
     {
-      name: 'Dr. Roxana Chirica',
+      name: 'Smocot Ioana',
       role: 'Medic Stomatolog',
-      description: 'Medic stomatolog cu pasiune pentru sănătatea orală.',
-      credentials: [
-        'Medic Stomatolog',
-        'Experiență în practica privată',
-      ],
-      image: '/images/Dr.chirica-roxana.jpg',
-      type: 'doctor',
-    },
-    {
-      name: 'As. Ana-Maria Trasca',
-      role: 'Asistent medical',
-      description: 'Asistent medical dedicat, care asigură confortul și suportul pacienților pe tot parcursul tratamentului.',
-      credentials: [
-        'Asistent medical',
-        'Abordare empatică și atentă',
-      ],
-      image: '/images/As.Ana-Maria_Trasca.jpg',
-      type: 'assistant',
-    },
-    {
-      name: 'Dr. Ioana Smocot',
-      role: 'Medic Stomatolog',
-      description: 'Medic stomatolog dedicat îngrijirii pacienților cu atenție și profesionalism.',
+      description:
+        'Medic stomatolog dedicat îngrijirii pacienților cu atenție și profesionalism.',
       credentials: [
         'Medic Stomatolog',
         'Abordare personalizată',
@@ -135,14 +147,16 @@ function Team() {
       type: 'doctor',
     },
     {
-      name: 'Dr. Cristiana Marin',
+      name: 'Cristiana Marin',
       role: 'Medic Stomatolog',
-      description: 'Medic stomatolog cu experiență în diverse tratamente dentare.',
+      description:
+        'Medic stomatolog dedicat îngrijirii sănătății orale a pacienților.',
       credentials: [
         'Medic Stomatolog',
-        'Experiență vastă',
+        'Abordare empatică',
       ],
-      image: '/images/drdent-home-opt.jpg',
+      image:
+        "/images/newimg/Pics site/Poze portret/Marin Cristiana - specializare endodonție/IMG_0315.jpg",
       type: 'doctor',
     },
   ];
