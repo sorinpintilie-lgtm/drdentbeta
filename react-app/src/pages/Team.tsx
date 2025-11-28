@@ -64,6 +64,7 @@ function Team() {
         'Medic Stomatolog',
         'Abordare empatică',
       ],
+      image: '/images/drdent-home-opt.jpg',
       type: 'doctor',
     },
     {
@@ -86,6 +87,7 @@ function Team() {
         'Medic Stomatolog',
         'Experiență în tratamente avansate',
       ],
+      image: '/images/drdent-home-opt.jpg',
       type: 'doctor',
     },
     {
@@ -96,27 +98,30 @@ function Team() {
         'Medic Stomatolog',
         'Profesionalism și grijă',
       ],
+      image: '/images/drdent-home-opt.jpg',
       type: 'doctor',
     },
     {
-      name: 'Dr. Roxana Randasu',
+      name: 'Dr. Roxana Chirica',
       role: 'Medic Stomatolog',
       description: 'Medic stomatolog cu pasiune pentru sănătatea orală.',
       credentials: [
         'Medic Stomatolog',
         'Experiență în practica privată',
       ],
+      image: '/images/Dr.chirica-roxana.jpg',
       type: 'doctor',
     },
     {
-      name: 'Dr. Ana-Maria Dragne',
-      role: 'Medic Stomatolog',
-      description: 'Specializată în tratamente dentare estetice și restorative.',
+      name: 'As. Ana-Maria Trasca',
+      role: 'Asistent medical',
+      description: 'Asistent medical dedicat, care asigură confortul și suportul pacienților pe tot parcursul tratamentului.',
       credentials: [
-        'Medic Stomatolog',
-        'Expert în estetică dentară',
+        'Asistent medical',
+        'Abordare empatică și atentă',
       ],
-      type: 'doctor',
+      image: '/images/As.Ana-Maria_Trasca.jpg',
+      type: 'assistant',
     },
     {
       name: 'Dr. Ioana Smocot',
@@ -126,6 +131,7 @@ function Team() {
         'Medic Stomatolog',
         'Abordare personalizată',
       ],
+      image: '/images/drdent-home-opt.jpg',
       type: 'doctor',
     },
     {
@@ -136,6 +142,7 @@ function Team() {
         'Medic Stomatolog',
         'Experiență vastă',
       ],
+      image: '/images/drdent-home-opt.jpg',
       type: 'doctor',
     },
   ];

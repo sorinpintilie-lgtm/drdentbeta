@@ -394,13 +394,11 @@ function Fees() {
               Sunați: 021 344 9317
             </a>
             <a
-              href="https://app.nexhealth.com/appt/pearldentalbucharest"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:programare@drdent.ro"
               className="inline-flex items-center justify-center gap-2 px-6 md:px-8 py-3 md:py-4 border-2 border-white text-white hover:bg-white hover:text-primary-600 rounded-xl font-semibold text-base md:text-lg transition-all"
             >
               <Calendar className="w-5 h-5" />
-              Programați Consultația
+              Trimiteți Email
             </a>
           </div>
         </div>
@@ -408,5 +406,5 @@ function Fees() {
     </div>
   );
 }
-
+ 
 export default Fees;

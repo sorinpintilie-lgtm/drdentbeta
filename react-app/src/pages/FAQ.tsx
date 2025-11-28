@@ -32,9 +32,9 @@ function FAQ() {
           question: 'Cum pot face o programare?',
           answer: (
             <>
-              <p className="mb-2">Puteți sa faceti programare în mai multe moduri convenabile:</p>
+              <p className="mb-2">Puteți să faceți programare în mai multe moduri convenabile:</p>
               <ul className="list-disc pl-5 space-y-1">
-                <li>Online prin sistemul nostru de programare</li>
+                <li>Prin telefon sau email</li>
                 <li>Sunați-ne la: <a href="tel:+40726530591" className="text-primary-600 hover:text-primary-700 font-semibold">0726 530 591</a></li>
                 <li>Trimiteți-ne un email la: <a href="mailto:programare@drdent.ro" className="text-primary-600 hover:text-primary-700 font-semibold">programare@drdent.ro</a></li>
               </ul>
