@@ -24,8 +24,7 @@ function Team() {
   const teamMembers: TeamMember[] = [
     {
       name: 'Ciomag Anca',
-      role: 'Medic Stomatolog Principal',
-      specialty: 'Stomatologie generală',
+      role: 'Specialist stomatologie generală',
       description:
         'Medic stomatolog dedicat oferirii celor mai bune servicii de îngrijire dentară, cu o abordare personalizată pentru fiecare pacient.',
       credentials: [
@@ -37,8 +36,8 @@ function Team() {
       type: 'doctor',
     },
     {
-      name: 'Capatana Daniela',
-      role: 'Medic Stomatolog',
+      name: 'Căpățână Daniela',
+      role: 'Specialist stomatologie generală',
       description:
         'Specializată în stomatologie generală, oferind tratamente de calitate superioară.',
       credentials: [
@@ -62,7 +61,7 @@ function Team() {
     },
     {
       name: 'Popa Cristina',
-      role: 'Medic Stomatolog',
+      role: 'Pedodonție și stomatologie generală',
       description:
         'Medic stomatolog dedicat îngrijirii sănătății orale a pacienților.',
       credentials: [
@@ -98,7 +97,7 @@ function Team() {
     },
     {
       name: 'Petrescu Daria',
-      role: 'Medic Stomatolog',
+      role: 'Chirurgie dento-alveolară',
       description:
         'Dedicată oferirii de servicii stomatologice de înaltă calitate.',
       credentials: [
@@ -110,8 +109,8 @@ function Team() {
       type: 'doctor',
     },
     {
-      name: 'Randasu Roxana',
-      role: 'Medic Stomatolog',
+      name: 'Rîndașu Roxana',
+      role: 'Specialist Parodontolog',
       description:
         'Medic stomatolog dedicat sănătății orale, cu o abordare calmă și empatică.',
       credentials: [
@@ -123,8 +122,8 @@ function Team() {
       type: 'doctor',
     },
     {
-      name: 'Dragne Ana-Maria',
-      role: 'Medic Stomatolog',
+      name: 'Dragane Anamaria',
+      role: 'Asistent medical generalist',
       description:
         'Specializată în tratamente dentare estetice și restorative.',
       credentials: [
@@ -136,7 +135,7 @@ function Team() {
     },
     {
       name: 'Smocot Ioana',
-      role: 'Medic Stomatolog',
+      role: 'Registrator medical',
       description:
         'Medic stomatolog dedicat îngrijirii pacienților cu atenție și profesionalism.',
       credentials: [
@@ -147,8 +146,8 @@ function Team() {
       type: 'doctor',
     },
     {
-      name: 'Cristiana Marin',
-      role: 'Medic Stomatolog',
+      name: 'Marin Cristiana',
+      role: 'Specializare endodonție',
       description:
         'Medic stomatolog dedicat îngrijirii sănătății orale a pacienților.',
       credentials: [
