@@ -236,7 +236,7 @@ export const Features = () => {
               className="relative overflow-hidden rounded-2xl shadow-lg group"
             >
               <img
-                src="/images/young-female-dentist-in-dental-office-dentist-at-2025-03-18-14-08-17-utc-min.jpg"
+                src="/images/newimg/Pics site/Consultatie Iasmina/IMG_0208.jpg"
                 alt="Doctoriță cu echipament dentar modern"
                 className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -258,7 +258,7 @@ export const Features = () => {
               className="relative overflow-hidden rounded-2xl shadow-lg group"
             >
               <img
-                src="/images/portrait-of-senior-male-dentist-with-dental-instru-2025-01-16-22-34-30-utc-min.jpg"
+                src="/images/newimg/Pics site/Consultatie Iasmina/IMG_0225.jpg"
                 alt="Doctor cu instrumente dentare profesionale"
                 className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
               />

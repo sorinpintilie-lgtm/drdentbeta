@@ -394,19 +394,19 @@ function Team() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {[
               {
-                src: '/images/young-female-dentist-in-dental-office-dentist-at-2025-03-18-14-08-17-utc-min.jpg',
+                src: '/images/newimg/Pics site/Consultatie Iasmina/IMG_0208.jpg',
                 alt: 'Tânără doctoriță în cabinetul dentar',
                 title: 'Cabinet Modern',
                 description: 'Spații moderne și echipamente de ultimă generație'
               },
               {
-                src: '/images/portrait-of-senior-male-dentist-with-dental-instru-2025-01-16-22-34-30-utc-min.jpg',
+                src: '/images/newimg/Pics site/Consultatie Iasmina/IMG_0225.jpg',
                 alt: 'Doctor cu experiență și instrumente',
                 title: 'Experiență și Expertiză',
                 description: 'Medici cu ani de experiență și dedicare'
               },
               {
-                src: '/images/dentist-and-patient-at-modern-medical-center-doct-2025-02-21-07-25-59-utc.jpg',
+                src: '/images/newimg/Pics site/Extra/IMG_0493.jpg',
                 alt: 'Doctor și pacient în centru medical',
                 title: 'Relația Medic-Pacient',
                 description: 'Comunicare deschisă și încredere reciprocă'
@@ -423,7 +423,7 @@ function Team() {
                 <img
                   src={photo.src}
                   alt={photo.alt}
-                  className="w-full h-64 sm:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-64 sm:h-80 object-cover object-top group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white">
