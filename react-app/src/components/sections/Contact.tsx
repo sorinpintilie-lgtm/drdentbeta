@@ -130,29 +130,29 @@ export const Contact: React.FC = () => {
             <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm space-y-6">
               {/* Contact + Program grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {/* Contact rapid */}
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold text-gray-900">Contact rapid</h3>
-                  {[contactInfo[0], contactInfo[1]].map((item, index) => (
-                    <a
-                      key={index}
-                      href={item.href}
-                      className="flex items-start gap-3 rounded-lg hover:bg-gray-50 px-3 py-2 transition-colors group"
-                    >
-                      <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                        {item.icon}
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <p className="text-xs text-gray-500 mb-0.5 uppercase tracking-wide">
-                          {item.label}
-                        </p>
-                        <p className="text-sm font-medium text-gray-900 break-words">
-                          {item.value}
-                        </p>
-                      </div>
-                    </a>
-                  ))}
-                </div>
+               {/* Contact rapid */}
+               <div className="space-y-4">
+                 <h3 className="text-lg font-semibold text-gray-900">Contact rapid</h3>
+                 {[contactInfo[0], contactInfo[1], contactInfo[2]].map((item, index) => (
+                   <a
+                     key={index}
+                     href={item.href}
+                     className="flex items-start gap-3 rounded-lg hover:bg-gray-50 px-3 py-2 transition-colors group"
+                   >
+                     <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                       {item.icon}
+                     </div>
+                     <div className="flex-1 min-w-0">
+                       <p className="text-xs text-gray-500 mb-0.5 uppercase tracking-wide">
+                         {item.label}
+                       </p>
+                       <p className="text-sm font-medium text-gray-900 break-words">
+                         {item.value}
+                       </p>
+                     </div>
+                   </a>
+                 ))}
+               </div>
  
                 {/* Adresă + Program */}
                 <div className="space-y-4">
