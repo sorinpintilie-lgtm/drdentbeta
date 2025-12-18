@@ -181,9 +181,9 @@ export const Stats = () => {
             <motion.div
               key={stat.id}
               variants={itemVariants}
-              className="relative group"
+              className="relative group lg:h-[320px]"
             >
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-2xl h-full flex flex-col">
                 {/* Icon */}
                 <motion.div
                   initial={{ scale: 0, rotate: -180 }}
