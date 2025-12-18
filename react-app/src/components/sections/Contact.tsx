@@ -15,6 +15,21 @@ export const Contact: React.FC = () => {
         </svg>
       ),
       label: 'Telefon',
+      value: '0724 055 872',
+      href: 'tel:+40724055872',
+    },
+    {
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+          />
+        </svg>
+      ),
+      label: 'Telefon',
       value: '0726 530 591',
       href: 'tel:+40726530591',
     },
@@ -144,20 +159,20 @@ export const Contact: React.FC = () => {
                   <h3 className="text-lg font-semibold text-gray-900">Adresă & Program</h3>
                   {/* Adresă */}
                   <a
-                    href={contactInfo[2].href}
+                    href={contactInfo[3].href}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-start gap-3 rounded-lg hover:bg-gray-50 px-3 py-2 transition-colors group"
                   >
                     <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                      {contactInfo[2].icon}
+                      {contactInfo[3].icon}
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className="text-xs text-gray-500 mb-0.5 uppercase tracking-wide">
-                        {contactInfo[2].label}
+                        {contactInfo[3].label}
                       </p>
                       <p className="text-sm font-medium text-gray-900 break-words">
-                        {contactInfo[2].value}
+                        {contactInfo[3].value}
                       </p>
                     </div>
                   </a>

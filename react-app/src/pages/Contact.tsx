@@ -45,6 +45,11 @@ function Contact() {
               <a href="tel:+40726530591" className="text-primary-600 hover:text-primary-700 font-semibold">
                 0726 530 591
               </a>
+              <br></br>
+              <a href="tel:+40724055872" className="text-primary-600 hover:text-primary-700 font-semibold">
+                0724 055 872
+              </a>
+              
             </div>
 
             {/* Email */}

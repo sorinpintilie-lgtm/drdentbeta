@@ -27,7 +27,7 @@ function Home() {
   }, []);
 
   const handleBookConsultation = () => {
-    window.location.href = 'tel:+40726530591';
+    window.location.href = 'tel:+40724055872';
   };
 
   const handleViewServices = () => {
@@ -46,7 +46,7 @@ function Home() {
           subheadline="Îngrijire dentară profesională cu echipamente moderne și o echipă dedicată sănătății tale orale"
           primaryCTA={{
             text: "Programează consultație",
-            href: "tel:+40726530591",
+            href: "tel:+40724055872",
             onClick: handleBookConsultation,
           }}
           secondaryCTA={{
@@ -125,7 +125,7 @@ function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Contact Imediat</h3>
-              <p className="text-gray-600">Sună acum pentru asistență de urgență: <a href="tel:+40726530591" className="text-red-600 font-semibold">0726 530 591</a></p>
+              <p className="text-gray-600">Sună acum pentru asistență de urgență: <a href="tel:+40724055872" className="text-red-600 font-semibold"></a> <a href="tel:+40726530591" className="text-red-600 font-semibold">0726 530 591</a></p>
             </div>
 
             <div className="bg-white rounded-xl p-6 border border-red-100 hover:shadow-lg transition-all">
@@ -154,7 +154,7 @@ function Home() {
                   Sună: 0726 530 591
                 </a>
                 <a
-                  href="tel:+40726530591"
+                  href="tel:+40724055872"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition-colors"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
