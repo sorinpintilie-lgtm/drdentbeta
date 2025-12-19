@@ -57,19 +57,11 @@ export const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, ser
                       </span>
                     )}
                   </div>
-                  {(service.price || service.duration) && (
-                    <div className="flex items-center gap-4 text-sm text-gray-600">
-                      {service.price && (
-                        <span className="font-semibold text-primary-600">
-                          {service.price}
-                        </span>
-                      )}
-                      {service.duration && (
-                        <span className="flex items-center gap-1">
-                          <Clock className="w-4 h-4" />
-                          {service.duration}
-                        </span>
-                      )}
+                  {service.price && (
+                    <div className="text-sm text-gray-600">
+                      <span className="font-semibold text-primary-600">
+                        {service.price}
+                      </span>
                     </div>
                   )}
                 </div>

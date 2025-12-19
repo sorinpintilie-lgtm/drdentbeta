@@ -23,8 +23,8 @@ function Team() {
 
   const teamMembers: TeamMember[] = [
     {
-      name: 'Dr. Ciomag Anca',
-      role: 'Specialist stomatologie generală',
+      name: 'Dr. Anca Ciomag',
+      role: 'Specialist Stomatologie Generală',
       description:
         'Medic stomatolog dedicat oferirii celor mai bune servicii de îngrijire dentară, cu o abordare personalizată pentru fiecare pacient.',
       credentials: [
@@ -36,8 +36,8 @@ function Team() {
       type: 'doctor',
     },
     {
-      name: 'Dr. Căpățână Daniela',
-      role: 'Specialist stomatologie generală',
+      name: 'Dr. Daniela Căpățână',
+      role: 'Stomatolog generalist',
       description:
         'Specializată în stomatologie generală, oferind tratamente de calitate superioară.',
       credentials: [
@@ -50,18 +50,18 @@ function Team() {
     },
     {
       name: 'Dr. Vlad Petrescu',
-      role: 'Medic Stomatolog',
+      role: 'Specialist Chirurgie OMF',
       description: 'Expert în chirurgie oro-maxilo-facială și implantologie.',
       credentials: [
         'Medic Stomatolog',
         'Specialist Chirurgie OMF',
       ],
-      image: '/images/drdent-home-opt.jpg',
+      image: '/images/Dr.Vlad-Petrescu.jpg',
       type: 'doctor',
     },
     {
-      name: 'Dr. Popa Cristina',
-      role: 'Pedodonție și stomatologie generală',
+      name: 'Dr. Cristina Popa',
+      role: 'Pedodonție',
       description:
         'Medic stomatolog dedicat îngrijirii sănătății orale a pacienților.',
       credentials: [
@@ -72,32 +72,19 @@ function Team() {
       type: 'doctor',
     },
     {
-      name: 'Dr. Deleanu Iulia',
-      role: 'Medic Stomatolog',
-      specialty: 'Ortodonție',
+      name: 'Dr. Iulia Deleanu',
+      role: 'Specialist ortodonție',
       description: 'Specializată în ortodonție și ortopedie dento-facială.',
       credentials: [
         'Medic Stomatolog',
         'Specialist Ortodonție',
       ],
-      image: '/images/drdent-home-opt.jpg',
+      image: '/images/dr-iulia-deleanu.jpg',
       type: 'doctor',
     },
     {
-      name: 'Dr. Vrajescu Alexandru',
-      role: 'Medic Stomatolog',
-      description:
-        'Medic stomatolog cu experiență în tratamente dentare moderne.',
-      credentials: [
-        'Medic Stomatolog',
-        'Experiență în tratamente avansate',
-      ],
-      image: '/images/drdent-home-opt.jpg',
-      type: 'doctor',
-    },
-    {
-      name: 'Dr. Petrescu Daria',
-      role: 'Chirurgie dento-alveolară',
+      name: 'Dr. Daria Petrescu Seceleanu',
+      role: 'Specialist chirurgie dento-alveolară',
       description:
         'Dedicată oferirii de servicii stomatologice de înaltă calitate.',
       credentials: [
@@ -109,8 +96,8 @@ function Team() {
       type: 'doctor',
     },
     {
-      name: 'Dr. Rîndașu Roxana',
-      role: 'Specialist Parodontolog',
+      name: 'Dr. Roxana Rândașu',
+      role: 'Specialist parodontologie',
       description:
         'Medic stomatolog dedicat sănătății orale, cu o abordare calmă și empatică.',
       credentials: [
@@ -122,28 +109,52 @@ function Team() {
       type: 'doctor',
     },
     {
-      name: 'Dr. Dragane Anamaria',
-      role: 'Asistent medical generalist',
+      name: 'Dr. Oxana Predușelu',
+      role: 'Stomatologie generală',
       description:
-        'Specializată în tratamente dentare estetice și restorative.',
+        'Medic stomatolog cu experiență în tratamente dentare moderne.',
       credentials: [
         'Medic Stomatolog',
-        'Expert în estetică dentară',
+        'Experiență în tratamente avansate',
       ],
       image: '/images/drdent-home-opt.jpg',
       type: 'doctor',
     },
     {
-      name: 'Dr. Smocot Ioana',
-      role: 'Registrator medical',
+      name: 'Dr. Paul Staicu',
+      role: 'Stomatologie generală',
       description:
-        'Medic stomatolog dedicat îngrijirii pacienților cu atenție și profesionalism.',
+        'Medic stomatolog dedicat îngrijirii sănătății orale a pacienților.',
       credentials: [
         'Medic Stomatolog',
-        'Abordare personalizată',
+        'Abordare empatică',
       ],
       image: '/images/drdent-home-opt.jpg',
       type: 'doctor',
+    },
+    {
+      name: 'Ana-Maria Dragne',
+      role: 'Asistentă stomatologie',
+      description:
+        'Asistentă medicală specializată în sprijinirea procedurilor dentare.',
+      credentials: [
+        'Asistent medical',
+        'Suport în tratamente dentare',
+      ],
+      image: '/images/drdent-home-opt.jpg',
+      type: 'assistant',
+    },
+    {
+      name: 'Ioana Smocot',
+      role: 'Registrator medical',
+      description:
+        'Responsabilă cu organizarea programărilor și administrarea cabinetului.',
+      credentials: [
+        'Registrator medical',
+        'Organizare și coordonare',
+      ],
+      image: '/images/drdent-home-opt.jpg',
+      type: 'assistant',
     },
     {
       name: 'Dr. Marin Cristiana',
