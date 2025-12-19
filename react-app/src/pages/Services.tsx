@@ -31,122 +31,417 @@ function Services() {
 
   const serviceCategories = [
     {
-      category: 'Prevenție & igienă',
+      category: 'Consultatie',
       color: 'from-blue-500 to-blue-600',
-      icon: <Shield className="w-6 h-6" />,
+      icon: <Smile className="w-6 h-6" />,
       services: [
         {
           icon: <Smile className="w-8 h-8" />,
-          title: 'Consultație dentară',
-          description: 'Examen oral complet cu evaluare detaliată și plan de tratament personalizat',
-          detailedDescription: 'O consultație dentară este primul pas către un zâmbet sănătos și frumos. În cadrul vizitei, medicul efectuează un examen complet al dinților, gingiilor și cavității bucale, identificând eventualele probleme ascunse. După evaluare, vei primi un plan de tratament personalizat, adaptat nevoilor tale, pentru ca fiecare etapă să fie clară, sigură și eficientă.',
-          price: '100 lei',
-          duration: '30 min',
-          popular: true
-        },
-        {
-          icon: <Sparkles className="w-8 h-8" />,
-          title: 'Detartraj profesional',
-          description: 'Curățare profesională cu ultrasunete și periaj cu pastă specială',
-          detailedDescription: 'Detartrajul profesional îndepărtează placa bacteriană și tartrul depus pe dinți cu ajutorul ultrasunetelor, fără durere și fără a afecta smalțul. Procedura este urmată de un periaj cu pastă specială, care lasă dinții curați, netezi și strălucitori. Este recomandat să fie realizat periodic, pentru a menține sănătatea gingiilor și prospețimea zâmbetului.',
-          price: 'De la 200 RON',
-          duration: '45 min'
-        },
-        {
-          icon: <Shield className="w-8 h-8" />,
-          title: 'Sigilare preventivă',
-          description: 'Protecție pentru dinții permanenți împotriva cariilor',
-          detailedDescription: 'Sigilarea dentară este o procedură simplă și nedureroasă prin care medicul aplică un strat subțire de material protector pe suprafața dinților permanenți, în special pe măselele de minte și măselele mari de pe spate. Acest strat acționează ca un scut împotriva resturilor alimentare și a bacteriilor care pot provoca carii. Este o metodă eficientă și sigură de a menține dinții sănătoși pe termen lung.',
-          price: 'De la 150 RON',
-          duration: '20 min'
-        },
-        {
-          icon: <Heart className="w-8 h-8" />,
-          title: 'Control periodic',
-          description: 'Verificare semestrială pentru menținerea sănătății orale',
-          detailedDescription: 'Controlul periodic este esențial pentru menținerea sănătății orale pe termen lung. Printr-o verificare efectuată la fiecare șase luni, medicul poate depista din timp eventualele probleme dentare și le poate trata înainte să devină dureroase sau costisitoare. Este o vizită scurtă, dar importantă, care ajută la păstrarea unui zâmbet sănătos și curat în fiecare zi.',
-          price: 'De la 100 RON',
-          duration: '20 min'
+          title: 'Consultație',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '100 RON',
+          duration: 'Variază',
+          popular: false
         },
       ]
     },
     {
-      category: 'Estetică dentară',
+      category: 'Chirurgie Orală',
+      color: 'from-green-500 to-emerald-600',
+      icon: <Bone className="w-6 h-6" />,
+      services: [
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Extractie dinte monoradicular',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '250 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Extractie dinte pluriradicular',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '300 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Extractie molar de minte superior erupt',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '350 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Extractie molar de minte inferior erupt',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '400 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Extractie dinte inclus intraosos(odontectomie)(include sutura)',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '600 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Chiuretaj perimplant',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '250 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Decapusonare',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '200 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Extractie dinte parodontotic(mobil)/rest radicular',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '200 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Tratament abces parodontotic',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '150 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Gingivectomie',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '150 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Chistectomie',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '600 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Tratament alveolita',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '150 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Rezectie apicala dinte monoradicular',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '500 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Rezectie apicala dinte pluriradicular',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '600 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Descoperire canin/premolar in scop ortodontic',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '450 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Implant dentar',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '500 EUR',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Sinus lift intern',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '200 EUR',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Sinus lift extern',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '800 EUR',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Un flacon bio oss',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '100 EUR',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Membrana',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '150 EUR',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Grefa de os autolog',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '800 EUR',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Extractie cu alveolotomie/separatie interradiculara',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '500 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Frenectomie',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '400 RON',
+          duration: 'Variază',
+          popular: false
+        },
+      ]
+    },
+    {
+      category: 'Endodontie',
       color: 'from-purple-500 to-pink-500',
+      icon: <Zap className="w-6 h-6" />,
+      services: [
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Obturatie de canal pluriradicular 3 canale/+',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '300 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Reconstituire cu pivot fibra de sticla',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '350 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Tratament devitalizant',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '100 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Retratament endodontic pluriradicular 3 canale',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '500 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Retratament endodontic pluriradicular 2 canale',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '450 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Retratament endodontic dinte monoradicular',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '400 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Tratament endodontic pluriradicular 3 canale ( fara obturatie )',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '350 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Tratament endodontic pluriradicular 2 canale ( fara obturatie )',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '300 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Tratament endodontic dinte monoradicular ( fara obturatie )',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '250 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Tratament de urgenta (pansament calmant/drenaj/tratamnet pericoronarita etc)',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '150 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Refacere perete in vederea tratamentului endodontic',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '200 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Indepartare pivot/dentatus',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '200 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Obturatie de canal monoradicular/un canal',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '200 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Obturatie de canal biradicular 2 canale',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '250 RON',
+          duration: 'Variază',
+          popular: false
+        },
+      ]
+    },
+    {
+      category: 'Estetică Dentară',
+      color: 'from-pink-500 to-rose-500',
       icon: <Gem className="w-6 h-6" />,
       services: [
         {
-          icon: <Gem className="w-8 h-8" />,
-          title: 'Fațete ceramice',
-          description: 'Transformare completă a zâmbetului cu fațete ultra-subțiri',
-          detailedDescription: 'Fațetele ceramice sunt soluția ideală pentru o transformare completă și naturală a zâmbetului. Aceste foițe ultra-subțiri din ceramică se aplică pe suprafața dinților pentru a corecta forma, culoarea sau micile imperfecțiuni. Rezultatul este un zâmbet alb, armonios și elegant, obținut fără durere și cu o durabilitate de lungă durată.',
-          price: 'De la 1500 RON',
-          duration: '2 ședințe',
-          popular: true
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Aplicare bijuterie dentara',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '250 RON',
+          duration: 'Variază',
+          popular: false
         },
         {
-          icon: <Circle className="w-8 h-8" />,
-          title: 'Albire profesională',
-          description: 'Albire în cabinet cu tehnologie LED pentru rezultate rapide',
-          detailedDescription: 'Albirea profesională în cabinet redă dinților strălucirea naturală în doar o singură ședință. Cu ajutorul tehnologiei LED, procedura este sigură, rapidă și eficientă, îndepărtând petele cauzate de cafea, ceai sau fumat. Rezultatul: dinți vizibil mai albi și un zâmbet luminos care inspiră încredere.',
-          price: 'De la 800 RON',
-          duration: '60 min'
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Albire dentara acasa (gutiere incluse)',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '1200 RON',
+          duration: 'Variază',
+          popular: false
         },
         {
-          icon: <Palette className="w-8 h-8" />,
-          title: 'Restaurări estetice',
-          description: 'Plombe albe invizibile cu materiale composite premium',
-          detailedDescription: 'Restaurările estetice redau forma și culoarea naturală a dinților afectați de carii sau mici fracturi. Folosim materiale composite premium, perfect adaptate nuanței dinților tăi, pentru un rezultat invizibil și durabil. Astfel, dinții își recapătă aspectul sănătos, iar zâmbetul tău rămâne natural și armonios.',
-          price: 'De la 300 RON',
-          duration: '45 min'
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Albire dinte devital',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '250 RON',
+          duration: 'Variază',
+          popular: false
         },
         {
-          icon: <Star className="w-8 h-8" />,
-          title: 'Smile makeover',
-          description: 'Transformare completă a zâmbetului cu plan personalizat',
-          detailedDescription: 'Smile Makeover înseamnă o transformare completă a zâmbetului, realizată printr-un plan personalizat, adaptat trăsăturilor și dorințelor tale. Combinând tratamente estetice precum fațete, albire și restaurări, medicul creează un zâmbet perfect echilibrat, natural și plin de încredere. Rezultatul: un zâmbet care te reprezintă în cel mai frumos mod posibil.',
-          price: 'Consultație',
-          duration: 'Variabil'
-        },
-      ]
-    },
-    {
-      category: 'Implantologie',
-      color: 'from-green-500 to-emerald-600',
-      icon: <Anchor className="w-6 h-6" />,
-      services: [
-        {
-          icon: <Anchor className="w-8 h-8" />,
-          title: 'Implant dentar',
-          description: 'Soluție permanentă pentru dinți lipsă cu implant titan',
-          detailedDescription: 'Implantul dentar este cea mai sigură și durabilă soluție pentru înlocuirea dinților lipsă. Realizat din titan biocompatibil, implantul se integrează perfect în os și oferă o bază solidă pentru coroana dentară. Rezultatul este un dinte care arată, se simte și funcționează la fel ca unul natural, redând confortul, estetica și încrederea în propriul zâmbet.',
-          price: 'De la 2500 RON',
-          duration: '60 min',
-          popular: true
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Albire dentara in cabinet + acasa (gutiere incluse)',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '1500 RON',
+          duration: 'Variază',
+          popular: false
         },
         {
-          icon: <Crown className="w-8 h-8" />,
-          title: 'Coroană pe implant',
-          description: 'Restaurare completă cu coroană ceramică pe implant',
-          detailedDescription: 'Coroana pe implant reprezintă finalizarea tratamentului cu implant dentar, oferind o restaurare completă și estetică. Realizată din ceramică de înaltă calitate, coroana se integrează perfect cu restul dinților, redând aspectul natural și funcționalitatea zâmbetului. Este o soluție durabilă, confortabilă și elegantă, care îți permite să zâmbești din nou cu încredere.',
-          price: 'De la 1800 RON',
-          duration: '2 ședințe'
-        },
-        {
-          icon: <Bone className="w-8 h-8" />,
-          title: 'Grefă osoasă',
-          description: 'Reconstrucție osoasă pentru pregătirea implantului',
-          detailedDescription: 'Grefa osoasă este o procedură prin care se reface volumul osului maxilar pentru a crea o bază solidă în vederea inserării implantului dentar. Aceasta ajută osul să se regenereze natural, oferind stabilitate și rezistență pe termen lung. Este un pas esențial pentru succesul tratamentului cu implant și pentru un zâmbet sănătos și complet.',
-          price: 'De la 1200 RON',
-          duration: '90 min'
-        },
-        {
-          icon: <Zap className="w-8 h-8" />,
-          title: 'All-on-4',
-          description: 'Protezare completă pe 4 implanturi într-o singură zi',
-          detailedDescription: 'Sistemul All-on-4 oferă o soluție modernă și rapidă pentru înlocuirea completă a danturii, folosind doar 4 implanturi dentare. Într-o singură zi, pacientul primește o proteză fixă, stabilă și estetică, care redă confortul și funcționalitatea unui zâmbet natural. Este o opțiune ideală pentru cei care își doresc rezultate imediate și durabile, fără proceduri complexe și de lungă durată.',
-          price: 'Consultație',
-          duration: '1 zi'
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Albire dentara in cabinet',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '1000 RON',
+          duration: 'Variază',
+          popular: false
         },
       ]
     },
@@ -156,29 +451,849 @@ function Services() {
       icon: <Award className="w-6 h-6" />,
       services: [
         {
-          icon: <Award className="w-8 h-8" />,
-          title: 'Aparat dentar fix',
-          description: 'Corectare precisă a alinierii cu aparate metalice sau ceramice',
-          detailedDescription: 'Aparatul dentar fix corectează cu precizie poziția dinților și aliniază zâmbetul pas cu pas. Poate fi metalic sau ceramic, în funcție de preferințe, oferind rezultate sigure și durabile. Tratamentul este personalizat pentru fiecare pacient, contribuind la o mușcătură corectă, un zâmbet armonios și o sănătate orală îmbunătățită.',
-          price: 'De la 3500 RON',
-          duration: '12-24 luni'
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Disjunctor',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '1500 RON',
+          duration: 'Variază',
+          popular: false
         },
         {
-          icon: <Circle className="w-8 h-8" />,
-          title: 'Invisalign',
-          description: 'Gutiere transparente invizibile pentru adulți',
-          detailedDescription: 'Invisalign este o metodă modernă și confortabilă de îndreptare a dinților, folosind gutiere transparente, aproape invizibile. Realizate special pentru fiecare pacient, acestea se poartă ușor, fără disconfort și fără restricții alimentare. Tratamentul oferă rezultate precise, estetice și discrete — ideal pentru adulții care își doresc un zâmbet perfect, fără aparate metalice.',
-          price: 'De la 8000 RON',
-          duration: '6-18 luni',
-          popular: true
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Aparat fix partial',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '1000 RON',
+          duration: 'Variază',
+          popular: false
         },
         {
-          icon: <Smile className="w-8 h-8" />,
-          title: 'Aparat mobil',
-          description: 'Soluție pentru copii și corectări minore',
-          detailedDescription: 'Aparatul dentar mobil este o soluție ideală pentru copii și pentru corectarea problemelor dentare minore. Ușor de purtat și de curățat, acesta ajută la ghidarea creșterii corecte a dinților și a maxilarului. Fiind detașabil, oferă confort și flexibilitate, contribuind la formarea unui zâmbet sănătos încă din copilărie.',
-          price: 'De la 1500 RON',
-          duration: '6-12 luni'
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Aparat fix metalic',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '2800 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Consultatie Ortodontie',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '100 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Control aparat fix /per arcada',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '100 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Retainer colat',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '450 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Gutiera de contentie',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '550 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Gutiera acrilica pentru inaltare ocluzala',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '250 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Ortoimplant',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '500 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Disjunctor si masca faciala',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '1400 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Aparat miofunctional',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '800 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Aparat fix safir',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '4000 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Aparat fix metalic semifizionomic ICONIX',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '3200 RON',
+          duration: 'Variază',
+          popular: false
+        },
+      ]
+    },
+    {
+      category: 'Parodontologie',
+      color: 'from-teal-500 to-cyan-500',
+      icon: <Shield className="w-6 h-6" />,
+      services: [
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Tratament regenerativ boala parodontala (per dinte)',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '1100 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Tunelizare',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '400 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Indepartare imobilizare',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '100 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Imobilizare 4-5 dinti',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '500 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Imobilizare cu fibra (per sextant)',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '500 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Chiuretaj camp inchis per arcada',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '1200 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Tratament antiinflamator gingivita (per arcada)',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '100 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Igienizare pacient parodontopat',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '400 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Parodontometrie',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '200 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Chiuretaj parodontal in camp inchis dinte pluriradicular',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '200 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Gingivectomie (per dinte)',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '150 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Tratament biostimulant neypulpin (5 sedinte)',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '800 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Chiuretaj parodontal in camp inchis dinte monoradicular',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '150 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Chiuretaj parodontal in camp deschis',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '250 RON',
+          duration: 'Variază',
+          popular: false
+        },
+      ]
+    },
+    {
+      category: 'Pedodonție',
+      color: 'from-yellow-500 to-amber-500',
+      icon: <Heart className="w-6 h-6" />,
+      services: [
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Sigilare dentara largita',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '200 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Obturatie de canal dinte monoradicular temporar',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '100 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Obturatie coronara compozit pe dinti temporari',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '250 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Pulpectomie vitala dinte pluriradicular temporar',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '200 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Extractie dinte temporar mobil (fara anestezie)',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '150 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Extractie dinte temporar fara mobilitate (cu anestezie)',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '200 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Pulpectomie vitala dinte monoradicular temporar',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '150 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Obturatie coronara ionomer de sticla',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '250 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Obturatie de canal dinte pluriradicular temporar',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '150 RON',
+          duration: 'Variază',
+          popular: false
+        },
+      ]
+    },
+    {
+      category: 'Profilaxie Dentară',
+      color: 'from-indigo-500 to-blue-500',
+      icon: <Sparkles className="w-6 h-6" />,
+      services: [
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Gutiera bruxism',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '350 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Fluorizare (per arcada)',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '150 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Air flow',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '150 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Detaratraj + periaj (ambele arcade)',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '250 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Periaj',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '100 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Detartraj',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '200 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Gutiera fluorizare',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '100 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Pachet igienizare (detartraj, periaj, air-flow)',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '300 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Sigilare dentara clasica',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '150 RON',
+          duration: 'Variază',
+          popular: false
+        },
+      ]
+    },
+    {
+      category: 'Protetică Dentară',
+      color: 'from-gray-500 to-slate-500',
+      icon: <Crown className="w-6 h-6" />,
+      services: [
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Incrustatie compozit',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '400 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Onlay/Inlay ceramica/zirconiu',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '700 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Aplicare capa de vindecare',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '100 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Cimentare(per dinte)',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '50 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Plasa metalica proteze',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '500 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Proteza Kemeny',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '400 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Proteza cu capse pe 4 implanturi',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '13000 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Proteza cu capse pe 2 implanturi',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '9000 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Schimb teflon proteza capse',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '200 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Proteza pe sisteme multiunit ( 4 implanturi ) dinti zirconiu',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '24000 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Coroana provizorie in cabinet',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '100 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Proteza pe sisteme multiunit (5 implanturi) dinti zirconiu',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '24500 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Adaugare dinte/croset pe proteza',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '200 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Ablatie lucrare veche',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '50 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Capsa proteza',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '1000 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Captusire proteza',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '250 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Proteza scheletata pe capse (pretul NU include contravaloarea capsei de 500 lei)',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '2000 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Cimentare provizorie(per dinte)',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '30 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Proteza elastica',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '2000 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Captusire molosil',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '150 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Coroana zirconiu pe implant',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '390 EUR',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Reconstructie corono - radiculara metalica',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '200 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Wax-up',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '100 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Fatete dentare',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '2000 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Coroana Emax (ceramica presata)',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '1700 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Coroana integral zirconiu',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '1500 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Coroana metalo-ceramica',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '900 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Reconstructie cu pivot fibra de sticla',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '350 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Reparatie proteza',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '300 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Reconstructie corono - radiculara zirconiu',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '400 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Coroana provizorie in laborator (PMMA)',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '300 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Coroana metalica',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '350 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Proteza pe sisteme multiunit (6 implanturi), dinti zirconiu',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '25000 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Coroana semifizionomica metalo-ceramica',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '600 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Proteza pe sisteme multiunit ( 4 implanturi) dinti acrilat',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '16000 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Proteza mobila acrilica',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '1500 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Proteza pe sisteme multiunit ( 5 implanturi ) dinti acrilat',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '17000 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Proteza pe sisteme multiunit ( 4 implanturi ) dinti acrilat',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '18000 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Proteza cu capse pe 3 implanturi',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '11000 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Coroana pe implant dentar - metalo-ceramica',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '350 EUR',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Proteza pe sisteme multiunit ( 6 implanturi) dinti acrilat',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '18000 RON',
+          duration: 'Variază',
+          popular: false
+        },
+      ]
+    },
+    {
+      category: 'Terapie Dentară',
+      color: 'from-lime-500 to-green-500',
+      icon: <Circle className="w-6 h-6" />,
+      services: [
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Obturatie coronara posterioara',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '350 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Fatetare directa in cabinet rasina compozit',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '500 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Obturatie coronara frontala compozit',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '370 RON',
+          duration: 'Variază',
+          popular: false
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8" />,
+          title: 'Tratament desensibilizant (per dinte)',
+          description: 'Description to be added',
+          detailedDescription: 'Detailed description to be added',
+          price: '50 RON',
+          duration: 'Variază',
+          popular: false
         },
       ]
     },

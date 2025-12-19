@@ -237,7 +237,7 @@ function Fees() {
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
               Oferim tarife transparente și competitive pentru toate serviciile noastre dentare. 
-              Prețurile includ consultația inițială pentru evaluarea nevoilor dumneavoastră. Acceptăm plăți în RON și EUR.
+              Prețurile includ consultația inițială pentru evaluarea nevoilor dumneavoastră. 
             </p>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 text-primary-700 rounded-lg font-semibold">
               <CheckCircle className="w-5 h-5" />
