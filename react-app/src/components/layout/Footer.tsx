@@ -236,8 +236,8 @@ function Footer() {
               className="inline-flex items-center gap-1 hover:opacity-90 transition-opacity"
             >
               <img
-                src="/images/visualMarketing_logo.png"
-                alt="VisualMarketing"
+                src="/images/sky_logo.png"
+                alt="Sky Logo"
                 className="h-12 w-auto"
               />
             </a>
