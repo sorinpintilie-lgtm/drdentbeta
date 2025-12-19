@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Star, Clock } from 'lucide-react';
+import { X, Star } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface ServiceModalProps {
