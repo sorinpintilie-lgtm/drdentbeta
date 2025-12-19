@@ -29,16 +29,28 @@ function Services() {
     setSelectedService(null);
   };
 
+  const formatTitle = (title: string) => {
+    const index = title.indexOf('(');
+    if (index === -1) return title;
+    const mainTitle = title.substring(0, index);
+    const details = title.substring(index);
+    return (
+      <>
+        {mainTitle} <span className="text-sm">{details}</span>
+      </>
+    );
+  };
+
   const serviceCategories = [
     {
-      category: 'Consultatie',
+      category: 'Consultație',
       color: 'from-blue-500 to-blue-600',
       icon: <Smile className="w-6 h-6" />,
       services: [
         {
           icon: <Smile className="w-8 h-8" />,
           title: 'Consultație',
-          description: 'Evaluare clinică completă a stării dentare, diagnostic și recomandare de plan de tratament personalizat.',
+          description: 'Evaluare clinică completă și stabilirea planului de tratament personalizat.',
           detailedDescription: 'Consultația stomatologică reprezintă primul pas în evaluarea sănătății orale. Medicul examinează dinții, gingiile și structurile de susținere, identificând eventualele afecțiuni sau riscuri. În urma consultației, pacientul primește un diagnostic clar și un plan de tratament personalizat, adaptat nevoilor și obiectivelor sale.',
           price: '100 RON',
           duration: 'Variază',
@@ -53,7 +65,7 @@ function Services() {
       services: [
         {
           icon: <CheckCircle className="w-8 h-8" />,
-          title: 'Extractie dinte monoradicular',
+          title: 'Extracție dinte monoradicular',
           description: 'Îndepărtarea atraumatică a unui dinte cu o singură rădăcină.',
           detailedDescription: 'Procedură prin care este îndepărtat un dinte cu o singură rădăcină, afectat de carii profunde, infecții sau fracturi. Intervenția se realizează sub anestezie locală și urmărește protejarea osului și a țesuturilor înconjurătoare pentru o vindecare rapidă.',
           price: '250 RON',
@@ -62,8 +74,8 @@ function Services() {
         },
         {
           icon: <CheckCircle className="w-8 h-8" />,
-          title: 'Extractie dinte pluriradicular',
-          description: 'Extracția unui dinte cu mai multe rădăcini, realizată în condiții de siguranță.',
+          title: 'Extracție dinte pluriradicular',
+          description: 'Extracția sigură a dinților cu mai multe rădăcini.',
           detailedDescription: 'Extracția unui dinte cu mai multe rădăcini necesită tehnici chirurgicale adaptate anatomiei dentare. Procedura este realizată în condiții de siguranță, cu scopul de a elimina sursa durerii sau infecției și de a preveni complicațiile ulterioare.',
           price: '300 RON',
           duration: 'Variază',
@@ -71,7 +83,7 @@ function Services() {
         },
         {
           icon: <CheckCircle className="w-8 h-8" />,
-          title: 'Extractie molar de minte superior erupt',
+          title: 'Extracție molar de minte superior erupt',
           description: 'Îndepărtarea molarului de minte superior complet erupt.',
           detailedDescription: 'Îndepărtarea molarului de minte superior complet erupt, atunci când acesta provoacă inflamație, durere sau dificultăți de igienizare. Intervenția este relativ simplă și permite prevenirea problemelor recurente.',
           price: '350 RON',
@@ -80,8 +92,8 @@ function Services() {
         },
         {
           icon: <CheckCircle className="w-8 h-8" />,
-          title: 'Extractie molar de minte inferior erupt',
-          description: 'Extracția molarului de minte inferior, cu tehnici adaptate complexității zonei.',
+          title: 'Extracție molar de minte inferior erupt',
+          description: 'Extracția molarului de minte inferior, adaptată anatomiei zonei.',
           detailedDescription: 'Extracția molarului de minte inferior erupt este o procedură mai complexă din cauza poziției sale. Medicul utilizează tehnici precise pentru a asigura o intervenție sigură și o recuperare corectă.',
           price: '400 RON',
           duration: 'Variază',
@@ -89,8 +101,8 @@ function Services() {
         },
         {
           icon: <CheckCircle className="w-8 h-8" />,
-          title: 'Extractie dinte inclus intraosos(odontectomie)(include sutura)',
-          description: 'Îndepărtarea chirurgicală a unui dinte inclus în os, cu sutură inclusă.',
+          title: 'Extracție dinte inclus intraosos(odontectomie)(include sutura)',
+          description: 'Îndepărtarea chirurgicală a unui dinte inclus în os.',
           detailedDescription: 'Procedură chirurgicală prin care este îndepărtat un dinte blocat în os. Intervenția include deschiderea controlată a osului și sutura finală, fiind indicată pentru prevenirea infecțiilor sau a problemelor ortodontice.',
           price: '600 RON',
           duration: 'Variază',
@@ -116,8 +128,8 @@ function Services() {
         },
         {
           icon: <CheckCircle className="w-8 h-8" />,
-          title: 'Extractie dinte parodontotic(mobil)/rest radicular',
-          description: 'Îndepărtarea dinților sever afectați sau a resturilor radiculare.',
+          title: 'Extracție dinte parodontotic(mobil)/rest radicular',
+          description: 'Îndepărtarea dinților mobili sau a resturilor radiculare.',
           detailedDescription: 'Îndepărtarea dinților cu mobilitate avansată sau a resturilor radiculare rămase în os. Procedura previne infecțiile persistente și disconfortul pacientului.',
           price: '200 RON',
           duration: 'Variază',
@@ -161,7 +173,7 @@ function Services() {
         },
         {
           icon: <CheckCircle className="w-8 h-8" />,
-          title: 'Rezectie apicala dinte monoradicular',
+          title: 'Rezecție apicală dinte monoradicular',
           description: 'Îndepărtarea vârfului rădăcinii pentru eliminarea infecției persistente.',
           detailedDescription: 'Intervenție chirurgicală prin care se îndepărtează vârful rădăcinii unui dinte pentru eliminarea infecțiilor persistente. Procedura permite salvarea dintelui atunci când tratamentul de canal nu este suficient.',
           price: '500 RON',
@@ -170,7 +182,7 @@ function Services() {
         },
         {
           icon: <CheckCircle className="w-8 h-8" />,
-          title: 'Rezectie apicala dinte pluriradicular',
+          title: 'Rezecție apicală dinte pluriradicular',
           description: 'Intervenție chirurgicală pentru tratarea infecțiilor la dinții cu mai multe rădăcini.',
           detailedDescription: 'Procedură similară aplicată dinților cu mai multe rădăcini. Permite controlul infecțiilor cronice și menținerea dintelui pe arcadă.',
           price: '600 RON',
@@ -191,7 +203,7 @@ function Services() {
           title: 'Implant dentar',
           description: 'Înlocuirea dintelui lipsă prin inserarea unui implant din titan.',
           detailedDescription: 'Implantul dentar este o soluție modernă pentru înlocuirea dinților lipsă. Acesta se integrează în os și oferă o bază solidă pentru refacerea esteticii și funcționalității.',
-          price: '500 EUR',
+          price: '500 EUR*',
           duration: 'Variază',
           popular: false
         },
@@ -200,7 +212,7 @@ function Services() {
           title: 'Sinus lift intern',
           description: 'Augmentare osoasă minim invazivă în zona sinusului maxilar.',
           detailedDescription: 'Procedură minim invazivă de augmentare osoasă în zona sinusului maxilar, indicată atunci când volumul osos este insuficient pentru implant.',
-          price: '200 EUR',
+          price: '200 EUR*',
           duration: 'Variază',
           popular: false
         },
@@ -209,7 +221,7 @@ function Services() {
           title: 'Sinus lift extern',
           description: 'Procedură avansată de adăugare de os pentru implanturi dentare.',
           detailedDescription: 'Intervenție chirurgicală avansată pentru creșterea volumului osos în maxilarul superior, necesară în cazurile cu pierdere osoasă semnificativă.',
-          price: '800 EUR',
+          price: '800 EUR*',
           duration: 'Variază',
           popular: false
         },
@@ -218,7 +230,7 @@ function Services() {
           title: 'Un flacon bio oss',
           description: 'Material biocompatibil pentru regenerare osoasă.',
           detailedDescription: 'Material biocompatibil utilizat pentru regenerarea osoasă. Favorizează refacerea naturală a osului și stabilitatea implanturilor.',
-          price: '100 EUR',
+          price: '100 EUR*',
           duration: 'Variază',
           popular: false
         },
@@ -227,7 +239,7 @@ function Services() {
           title: 'Membrana',
           description: 'Membrană de protecție utilizată în proceduri de regenerare osoasă.',
           detailedDescription: 'Membrană utilizată pentru protejarea grefelor osoase și ghidarea regenerării tisulare.',
-          price: '150 EUR',
+          price: '150 EUR*',
           duration: 'Variază',
           popular: false
         },
@@ -236,13 +248,13 @@ function Services() {
           title: 'Grefa de os autolog',
           description: 'Recoltare și aplicare de os propriu pentru reconstrucție osoasă.',
           detailedDescription: 'Procedură care utilizează os propriu pentru reconstrucția zonelor deficitare. Asigură compatibilitate maximă și rezultate stabile.',
-          price: '800 EUR',
+          price: '800 EUR*',
           duration: 'Variază',
           popular: false
         },
         {
           icon: <CheckCircle className="w-8 h-8" />,
-          title: 'Extractie cu alveolotomie/separatie interradiculara',
+          title: 'Extracție cu alveolotomie/separație interradiculară',
           description: 'Extracție chirurgicală a dinților cu structură complexă.',
           detailedDescription: 'Extracție chirurgicală realizată prin secționarea controlată a dintelui, indicată în cazurile complexe.',
           price: '500 RON',
@@ -267,7 +279,7 @@ function Services() {
       services: [
         {
           icon: <CheckCircle className="w-8 h-8" />,
-          title: 'Obturatie de canal pluriradicular 3 canale/+',
+          title: 'Obturație de canal pluriradicular 3 canale/+',
           description: 'Sigilarea canalului radicular după tratamentul endodontic.',
           detailedDescription: 'Procedură prin care canalele radiculare sunt sigilate după curățare și dezinfectare. Scopul este prevenirea reinfectării și menținerea dintelui funcțional.',
           price: '300 RON',
@@ -321,7 +333,7 @@ function Services() {
         },
         {
           icon: <CheckCircle className="w-8 h-8" />,
-          title: 'Tratament endodontic pluriradicular 3 canale ( fara obturatie )',
+          title: 'Tratament endodontic pluriradicular 3 canale ( fără obturație )',
           description: 'Curățarea și modelarea canalelor multiple, fără sigilare finală.',
           detailedDescription: 'Etapă inițială a tratamentului de canal, care presupune curățarea și modelarea canalelor. Obturarea finală se realizează ulterior.',
           price: '350 RON',
@@ -330,7 +342,7 @@ function Services() {
         },
         {
           icon: <CheckCircle className="w-8 h-8" />,
-          title: 'Tratament endodontic pluriradicular 2 canale ( fara obturatie )',
+          title: 'Tratament endodontic pluriradicular 2 canale ( fără obturație )',
           description: 'Curățarea și modelarea canalelor multiple, fără sigilare finală.',
           detailedDescription: 'Etapă inițială a tratamentului de canal, care presupune curățarea și modelarea canalelor. Obturarea finală se realizează ulterior.',
           price: '300 RON',
@@ -339,7 +351,7 @@ function Services() {
         },
         {
           icon: <CheckCircle className="w-8 h-8" />,
-          title: 'Tratament endodontic dinte monoradicular ( fara obturatie )',
+          title: 'Tratament endodontic dinte monoradicular ( fără obturație )',
           description: 'Curățarea și dezinfectarea canalului unui dinte cu o singură rădăcină.',
           detailedDescription: 'Etapă inițială a tratamentului de canal, care presupune curățarea și modelarea canalelor. Obturarea finală se realizează ulterior.',
           price: '250 RON',
@@ -348,7 +360,7 @@ function Services() {
         },
         {
           icon: <CheckCircle className="w-8 h-8" />,
-          title: 'Tratament de urgenta (pansament calmant/drenaj/tratamnet pericoronarita etc)',
+          title: 'Tratament de urgență (pansament calmant/drenaj/tratament pericoronită etc)',
           description: 'Intervenție rapidă pentru calmarea durerii acute sau drenaj.',
           detailedDescription: 'Intervenție rapidă pentru calmarea durerii, drenaj sau controlul infecțiilor acute.',
           price: '150 RON',
@@ -376,7 +388,7 @@ function Services() {
         {
           icon: <CheckCircle className="w-8 h-8" />,
           title: 'Obturatie de canal monoradicular/un canal',
-          description: 'Sigilarea canalului radicular după tratamentul endodontic.',
+          description: 'Sigilarea canalului unui dinte cu o singură rădăcină.',
           detailedDescription: 'Procedură prin care canalele radiculare sunt sigilate după curățare și dezinfectare. Scopul este prevenirea reinfectării și menținerea dintelui funcțional.',
           price: '200 RON',
           duration: 'Variază',
@@ -401,7 +413,7 @@ function Services() {
         {
           icon: <CheckCircle className="w-8 h-8" />,
           title: 'Aplicare bijuterie dentara',
-          description: 'Aplicarea decorativă a unei bijuterii pe suprafața dintelui.',
+          description: 'Procedură estetică non-invazivă.',
           detailedDescription: 'Procedură estetică non-invazivă, fără afectarea structurii dentare.',
           price: '250 RON',
           duration: 'Variază',
@@ -479,7 +491,7 @@ function Services() {
         },
         {
           icon: <CheckCircle className="w-8 h-8" />,
-          title: 'Consultatie Ortodontie',
+          title: 'Consultație Ortodonție',
           description: 'Evaluare ortodontică și stabilirea planului de tratament.',
           detailedDescription: 'Tratamente ortodontice\n\nCorectarea alinierii dentare și a mușcăturii prin aparate fixe sau mobile. Tratamentul îmbunătățește funcționalitatea și estetica zâmbetului.\n\nRetainer / gutiere\n\nDispozitive utilizate pentru menținerea rezultatelor obținute după tratamentul ortodontic.',
           price: '100 RON',
@@ -745,7 +757,7 @@ function Services() {
         },
         {
           icon: <CheckCircle className="w-8 h-8" />,
-          title: 'Extractie dinte temporar mobil (fara anestezie)',
+          title: 'Extracție dinte temporar mobil (fără anestezie)',
           description: 'Îndepărtarea dinților de lapte în condiții sigure.',
           detailedDescription: 'Tratamente dentare pentru copii\n\nProceduri adaptate vârstei copilului, realizate într-un mediu prietenos pentru prevenție și sănătate dentară pe termen lung.',
           price: '150 RON',
@@ -754,8 +766,8 @@ function Services() {
         },
         {
           icon: <CheckCircle className="w-8 h-8" />,
-          title: 'Extractie dinte temporar fara mobilitate (cu anestezie)',
-          description: 'Extractie dinte temporar fara mobilitate (cu anestezie)',
+          title: 'Extracție dinte temporar fără mobilitate (cu anestezie)',
+          description: 'Extracție dinte temporar fără mobilitate (cu anestezie)',
           detailedDescription: 'Tratamente dentare pentru copii\n\nProceduri adaptate vârstei copilului, realizate într-un mediu prietenos pentru prevenție și sănătate dentară pe termen lung.',
           price: '200 RON',
           duration: 'Variază',
@@ -1068,7 +1080,7 @@ function Services() {
           title: 'Coroana zirconiu pe implant',
           description: 'Refacerea dintelui lipsă prin implant dentar.',
           detailedDescription: 'Lucrări protetice dentare\n\nRefacerea dinților lipsă sau afectați prin coroane, punți sau proteze dentare, adaptate fiecărui pacient.',
-          price: '390 EUR',
+          price: '390 EUR*',
           duration: 'Variază',
           popular: false
         },
@@ -1239,7 +1251,7 @@ function Services() {
           title: 'Coroana pe implant dentar - metalo-ceramica',
           description: 'Coroana pe implant dentar - metalo-ceramica',
           detailedDescription: 'Lucrări protetice dentare\n\nRefacerea dinților lipsă sau afectați prin coroane, punți sau proteze dentare, adaptate fiecărui pacient.',
-          price: '350 EUR',
+          price: '350 EUR*',
           duration: 'Variază',
           popular: false
         },
@@ -1375,40 +1387,39 @@ function Services() {
                     <div key={serviceIndex}>
                       <motion.div
                         whileHover={{ scale: 1.02 }}
-                        className="bg-white rounded-xl p-4 shadow-md border border-gray-100 h-full"
+                        className="bg-white rounded-xl p-4 shadow-md border border-gray-100 h-full flex flex-col"
                       >
-                        {service.popular && (
-                          <div className="inline-flex items-center gap-1 px-2 py-0.5 bg-yellow-100 text-yellow-700 rounded-full text-xs font-semibold mb-3">
-                            <Star className="w-3 h-3 fill-current" />
-                            Popular
+                        <div className="flex-grow">
+                          {service.popular && (
+                            <div className="inline-flex items-center gap-1 px-2 py-0.5 bg-yellow-100 text-yellow-700 rounded-full text-xs font-semibold mb-3">
+                              <Star className="w-3 h-3 fill-current" />
+                              Popular
+                            </div>
+                          )}
+
+                          <div className={`inline-flex p-3 rounded-lg bg-gradient-to-br ${category.color} text-white mb-3`}>
+                            {service.icon}
                           </div>
-                        )}
-                        
-                        <div className={`inline-flex p-3 rounded-lg bg-gradient-to-br ${category.color} text-white mb-3`}>
-                          {service.icon}
+
+                          <h3 className="text-base font-bold text-gray-900 mb-2 line-clamp-1">
+                            {formatTitle(service.title)}
+                          </h3>
+
+                          <p className="text-xs text-gray-600 mb-3 line-clamp-2 leading-relaxed">
+                            {service.description}
+                          </p>
                         </div>
-                        
-                        <h3 className="text-base font-bold text-gray-900 mb-2 line-clamp-1">
-                          {service.title}
-                        </h3>
-                        
-                        <p className="text-xs text-gray-600 mb-3 line-clamp-2 leading-relaxed">
-                          {service.description}
-                        </p>
-                        
+
                         <div className="flex items-center justify-between text-xs mb-2">
-                          <span className="flex items-center gap-1 text-gray-500">
-                            <Clock className="w-3 h-3" />
-                            {service.duration}
-                          </span>
+                          <span className="text-gray-500">Preț</span>
                           <span className="font-bold text-primary-600">
                             {service.price}
                           </span>
                         </div>
-                        
-                        <button 
+
+                        <button
                           onClick={() => openServiceModal(service)}
-                          className="w-full flex items-center justify-center gap-1 px-3 py-2 bg-primary-50 text-primary-600 rounded-lg font-semibold text-xs hover:bg-primary-100 transition-colors"
+                          className="w-full flex items-center justify-center gap-1 px-3 py-2 bg-primary-50 text-primary-600 rounded-lg font-semibold text-xs hover:bg-primary-100 transition-colors mt-auto"
                         >
                           Detalii
                           <ArrowRight className="w-3 h-3" />
@@ -1426,40 +1437,39 @@ function Services() {
                     <motion.div
                       key={serviceIndex}
                       whileHover={{ y: -4 }}
-                      className="bg-white rounded-xl p-5 shadow-md border border-gray-100 hover:shadow-xl transition-all"
+                      className="bg-white rounded-xl p-5 shadow-md border border-gray-100 hover:shadow-xl transition-all flex flex-col"
                     >
-                      {service.popular && (
-                        <div className="inline-flex items-center gap-1 px-2 py-1 bg-yellow-100 text-yellow-700 rounded-full text-xs font-semibold mb-3">
-                          <Star className="w-3 h-3 fill-current" />
-                          Popular
+                      <div className="flex-grow">
+                        {service.popular && (
+                          <div className="inline-flex items-center gap-1 px-2 py-1 bg-yellow-100 text-yellow-700 rounded-full text-xs font-semibold mb-3">
+                            <Star className="w-3 h-3 fill-current" />
+                            Popular
+                          </div>
+                        )}
+
+                        <div className={`inline-flex p-3 rounded-lg bg-gradient-to-br ${category.color} text-white mb-4`}>
+                          {service.icon}
                         </div>
-                      )}
-                      
-                      <div className={`inline-flex p-3 rounded-lg bg-gradient-to-br ${category.color} text-white mb-4`}>
-                        {service.icon}
+
+                        <h3 className="text-lg font-bold text-gray-900 mb-2">
+                          {formatTitle(service.title)}
+                        </h3>
+
+                        <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                          {service.description}
+                        </p>
                       </div>
-                      
-                      <h3 className="text-lg font-bold text-gray-900 mb-2">
-                        {service.title}
-                      </h3>
-                      
-                      <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-                        {service.description}
-                      </p>
-                      
+
                       <div className="flex items-center justify-between text-sm mb-3">
-                        <span className="flex items-center gap-1 text-gray-500">
-                          <Clock className="w-4 h-4" />
-                          {service.duration}
-                        </span>
+                        <span className="text-gray-500">Preț</span>
                         <span className="font-bold text-primary-600">
                           {service.price}
                         </span>
                       </div>
-                      
-                      <button 
+
+                      <button
                         onClick={() => openServiceModal(service)}
-                        className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-primary-50 text-primary-600 rounded-lg font-semibold text-sm hover:bg-primary-100 transition-colors"
+                        className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-primary-50 text-primary-600 rounded-lg font-semibold text-sm hover:bg-primary-100 transition-colors mt-auto"
                       >
                         Detalii
                         <ArrowRight className="w-4 h-4" />
@@ -1470,6 +1480,17 @@ function Services() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* EUR Disclaimer */}
+      <section className="section bg-gray-50 py-6 sm:py-8">
+        <div className="container mx-auto px-3 sm:px-4">
+          <div className="max-w-2xl mx-auto text-center">
+            <p className="text-sm sm:text-base text-gray-600">
+              *Prețurile afișate în EUR se achită în RON, la cursul BNR din ziua plății.
+            </p>
+          </div>
         </div>
       </section>
 

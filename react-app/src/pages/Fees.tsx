@@ -19,7 +19,7 @@ interface PricingCategory {
 function Fees() {
   const pricingCategories: PricingCategory[] = [
     {
-      title: 'Consultatie',
+      title: 'Consultație',
       items: [
         { service: 'Consultație', price: '100 RON' },
       ],
@@ -42,12 +42,12 @@ function Fees() {
         { service: 'Rezectie apicala dinte monoradicular', price: '500 RON' },
         { service: 'Rezectie apicala dinte pluriradicular', price: '600 RON' },
         { service: 'Descoperire canin/premolar in scop ortodontic', price: '450 RON' },
-        { service: 'Implant dentar', price: '500 EUR' },
-        { service: 'Sinus lift intern', price: '200 EUR' },
-        { service: 'Sinus lift extern', price: '800 EUR' },
-        { service: 'Un flacon bio oss', price: '100 EUR' },
-        { service: 'Membrana', price: '150 EUR' },
-        { service: 'Grefa de os autolog', price: '800 EUR' },
+        { service: 'Implant dentar', price: '500 EUR*' },
+        { service: 'Sinus lift intern', price: '200 EUR*' },
+        { service: 'Sinus lift extern', price: '800 EUR*' },
+        { service: 'Un flacon bio oss', price: '100 EUR*' },
+        { service: 'Membrana', price: '150 EUR*' },
+        { service: 'Grefa de os autolog', price: '800 EUR*' },
         { service: 'Extractie cu alveolotomie/separatie interradiculara', price: '500 RON' },
         { service: 'Frenectomie', price: '400 RON' },
       ],
@@ -169,7 +169,7 @@ function Fees() {
         { service: 'Cimentare provizorie(per dinte)', price: '30 RON' },
         { service: 'Proteza elastica', price: '2000 RON' },
         { service: 'Captusire molosil', price: '150 RON' },
-        { service: 'Coroana zirconiu pe implant', price: '390 EUR' },
+        { service: 'Coroana zirconiu pe implant', price: '390 EUR*' },
         { service: 'Reconstructie corono - radiculara metalica', price: '200 RON' },
         { service: 'Wax-up', price: '100 RON' },
         { service: 'Fatete dentare', price: '2000 RON' },
@@ -188,7 +188,7 @@ function Fees() {
         { service: 'Proteza pe sisteme multiunit ( 5 implanturi ) dinti acrilat', price: '17000 RON' },
         { service: 'Proteza pe sisteme multiunit ( 4 implanturi ) dinti acrilat', price: '18000 RON' },
         { service: 'Proteza cu capse pe 3 implanturi', price: '11000 RON' },
-        { service: 'Coroana pe implant dentar - metalo-ceramica', price: '350 EUR' },
+        { service: 'Coroana pe implant dentar - metalo-ceramica', price: '350 EUR*' },
         { service: 'Proteza pe sisteme multiunit ( 6 implanturi) dinti acrilat', price: '18000 RON' },
       ],
     },
@@ -206,6 +206,7 @@ function Fees() {
   const importantInfo = [
     'Consultația inițială este obligatorie pentru evaluarea exactă a costurilor',
     'Transparență totală - fără costuri ascunse',
+    'Prețurile afișate în EUR se achită în RON, la cursul BNR din ziua plății.',
   ];
 
   return (
