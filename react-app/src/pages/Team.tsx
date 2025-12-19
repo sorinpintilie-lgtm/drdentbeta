@@ -68,7 +68,7 @@ function Team() {
         'Medic Stomatolog',
         'Abordare empatică',
       ],
-      image: '/images/drdent-home-opt.jpg',
+      image: '/images/Cristina-popa.jpg',
       type: 'doctor',
     },
     {
@@ -141,7 +141,7 @@ function Team() {
         'Asistent medical',
         'Suport în tratamente dentare',
       ],
-      image: '/images/drdent-home-opt.jpg',
+      image: '/images/dr-ana-maria-dragne.jpg',
       type: 'assistant',
     },
     {
@@ -153,7 +153,7 @@ function Team() {
         'Registrator medical',
         'Organizare și coordonare',
       ],
-      image: '/images/drdent-home-opt.jpg',
+      image: '/images/Ioana-Smocot.jpg',
       type: 'assistant',
     },
     {
