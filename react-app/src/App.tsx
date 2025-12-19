@@ -19,10 +19,10 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="services" element={<Services />} />
+        <Route path="servicii" element={<Services />} />
         <Route path="stomatologie-pediatrica" element={<StomatologiePediatrica />} />
-        <Route path="fees" element={<Fees />} />
-        <Route path="team" element={<Team />} />
+        <Route path="preturi" element={<Fees />} />
+        <Route path="despre-noi" element={<Team />} />
         <Route path="faq" element={<FAQ />} />
         <Route path="resources" element={<Resources />} />
         <Route path="contact" element={<Contact />} />

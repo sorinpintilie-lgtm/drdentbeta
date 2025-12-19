@@ -28,7 +28,7 @@ function MobileNav() {
         </svg>
       ),
       label: 'Servicii',
-      path: '/services',
+      path: '/servicii',
     },
     {
       icon: (

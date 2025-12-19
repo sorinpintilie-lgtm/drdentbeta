@@ -75,19 +75,19 @@ function Footer() {
                 → Acasă
               </Link>
               <Link
-                to="/services"
+                to="/servicii"
                 className="text-white/80 hover:text-white transition-colors hover:translate-x-1 inline-block"
               >
                 → Servicii
               </Link>
               <Link
-                to="/fees"
+                to="/preturi"
                 className="text-white/80 hover:text-white transition-colors hover:translate-x-1 inline-block"
               >
                 → Tarife
               </Link>
               <Link
-                to="/team"
+                to="/despre-noi"
                 className="text-white/80 hover:text-white transition-colors hover:translate-x-1 inline-block"
               >
                 → Echipa Noastră

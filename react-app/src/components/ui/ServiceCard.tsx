@@ -19,7 +19,7 @@ export const ServiceCard = ({
         onClick: (e: React.MouseEvent) => {
           e.preventDefault();
           // Navigate to services page
-          navigate('/services');
+          navigate('/servicii');
         },
       }
     : {};

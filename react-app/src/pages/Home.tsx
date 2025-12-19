@@ -31,7 +31,7 @@ function Home() {
   };
 
   const handleViewServices = () => {
-    window.location.href = '/services';
+    window.location.href = '/servicii';
   };
 
   return (
@@ -48,7 +48,7 @@ function Home() {
           }}
           secondaryCTA={{
             text: "Servicii",
-            href: "/services",
+            href: "/servicii",
             onClick: handleViewServices,
           }}
           trustIndicators={[
