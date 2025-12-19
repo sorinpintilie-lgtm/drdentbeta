@@ -25,11 +25,12 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12">
           {/* About / Logo Section */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center text-white font-bold text-2xl">
-                D
-              </div>
-              <span className="font-heading font-bold text-2xl">Dr.Dent</span>
+            <div className="mb-4">
+              <img
+                src="/images/logo-color.svg"
+                alt="Dr.Dent Logo"
+                className="h-16 w-auto"
+              />
             </div>
             <p className="text-white/80 leading-relaxed">
               Îngrijire dentară profesională cu echipamente moderne și o echipă dedicată sănătății tale orale.
@@ -237,7 +238,7 @@ function Footer() {
               <img
                 src="/images/visualMarketing_logo.png"
                 alt="VisualMarketing"
-                className="h-6 w-auto"
+                className="h-12 w-auto"
               />
             </a>
           </p>

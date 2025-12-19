@@ -1,4 +1,4 @@
-import { CreditCard, Banknote, Calendar, Shield, CheckCircle, Phone } from 'lucide-react';
+import { Calendar, Shield, CheckCircle, Phone } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 /**
@@ -22,7 +22,6 @@ function Fees() {
       title: 'Consultatie',
       items: [
         { service: 'Consultație', price: '100 RON' },
-        { service: 'Optragate', price: '20 RON' },
       ],
     },
     {
@@ -204,37 +203,9 @@ function Fees() {
     },
   ];
 
-  const paymentOptions = [
-    {
-      icon: <Banknote className="w-6 h-6" />,
-      title: 'Numerar și Card',
-      description: 'Plăți imediate cu carduri de credit/debit sau numerar în RON și EUR',
-    },
-    {
-      icon: <CreditCard className="w-6 h-6" />,
-      title: 'Asigurări de Sănătate',
-      description: 'Acceptăm majoritatea asigurărilor medicale și dentare private',
-    },
-    {
-      icon: <Calendar className="w-6 h-6" />,
-      title: 'Plăți în Rate',
-      description: 'Opțiuni de plată în rate pentru tratamentele complexe',
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: 'Plăți Electronice',
-      description: 'Acceptăm transferuri bancare și plăți online',
-    },
-  ];
-
   const importantInfo = [
-    'Prețurile sunt orientative și pot varia în funcție de complexitatea cazului',
     'Consultația inițială este obligatorie pentru evaluarea exactă a costurilor',
-    'Acceptăm plăți în RON și EUR la cursul BNR din ziua plății',
-    'Oferim reduceri pentru pachete de tratament și plăți anticipate',
-    'Garanție pe toate lucrările efectuate conform standardelor internaționale',
     'Transparență totală - fără costuri ascunse',
-    'Opțiuni de finanțare disponibile pentru tratamentele complexe',
   ];
 
   return (
@@ -270,7 +241,7 @@ function Fees() {
             </p>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 text-primary-700 rounded-lg font-semibold">
               <CheckCircle className="w-5 h-5" />
-              Consultație: 100 RON | 20 RON Optragate
+              Consultație: 100 RON
             </div>
           </div>
         </div>
@@ -319,40 +290,6 @@ function Fees() {
         </div>
       </section>
 
-      {/* Payment Options */}
-      <section className="section bg-white py-12 md:py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-gray-900 mb-4">
-              Opțiuni de Plată și Finanțare
-            </h2>
-            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-              Acceptăm diverse metode de plată pentru a facilita accesul la îngrijire dentară de calitate
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            {paymentOptions.map((option, index) => (
-              <motion.div
-                key={index}
-                className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-xl md:rounded-2xl p-5 md:p-6 hover:shadow-lg transition-all hover:-translate-y-1"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-primary-500 rounded-xl flex items-center justify-center text-white mb-3 md:mb-4">
-                  {option.icon}
-                </div>
-                <h3 className="text-lg md:text-xl font-heading font-bold text-gray-900 mb-2">
-                  {option.title}
-                </h3>
-                <p className="text-sm md:text-base text-gray-600">{option.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Important Info */}
       <section className="section bg-gradient-to-br from-primary-50 to-primary-100 py-12 md:py-16">
@@ -387,11 +324,11 @@ function Fees() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+40213449317"
+              href="tel:+40726530591"
               className="inline-flex items-center justify-center gap-2 px-6 md:px-8 py-3 md:py-4 bg-white text-primary-600 rounded-xl font-semibold text-base md:text-lg hover:bg-gray-50 transition-all hover:scale-105 shadow-xl"
             >
               <Phone className="w-5 h-5" />
-              Sunați: 021 344 9317
+              Sunați: 0726 530 591
             </a>
             <a
               href="mailto:programare@drdent.ro"

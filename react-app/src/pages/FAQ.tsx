@@ -135,9 +135,9 @@ function FAQ() {
             <>
               <p className="mb-2">Da, cabinetul nostru este echipat cu echipamente moderne:</p>
               <ul className="list-disc pl-5 space-y-1">
-                <li>CEREC® PrimeScan pentru scanări digitale precise</li>
-                <li>CEREC® PrimeMill pentru restaurări în aceeași zi</li>
-                <li>CEREC® SpeedFire pentru coroane din zirconiu</li>
+                <li>Scanere digitale pentru scanări precise</li>
+                <li>Sisteme moderne pentru restaurări rapide</li>
+                <li>Tehnologie avansată pentru coroane din zirconiu</li>
                 <li>Radiografii digitale cu radiații reduse</li>
               </ul>
             </>

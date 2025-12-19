@@ -23,7 +23,7 @@ function Team() {
 
   const teamMembers: TeamMember[] = [
     {
-      name: 'Ciomag Anca',
+      name: 'Dr. Ciomag Anca',
       role: 'Specialist stomatologie generală',
       description:
         'Medic stomatolog dedicat oferirii celor mai bune servicii de îngrijire dentară, cu o abordare personalizată pentru fiecare pacient.',
@@ -36,7 +36,7 @@ function Team() {
       type: 'doctor',
     },
     {
-      name: 'Căpățână Daniela',
+      name: 'Dr. Căpățână Daniela',
       role: 'Specialist stomatologie generală',
       description:
         'Specializată în stomatologie generală, oferind tratamente de calitate superioară.',
@@ -49,7 +49,7 @@ function Team() {
       type: 'doctor',
     },
     {
-      name: 'Vlad Petrescu',
+      name: 'Dr. Vlad Petrescu',
       role: 'Medic Stomatolog',
       description: 'Expert în chirurgie oro-maxilo-facială și implantologie.',
       credentials: [
@@ -60,7 +60,7 @@ function Team() {
       type: 'doctor',
     },
     {
-      name: 'Popa Cristina',
+      name: 'Dr. Popa Cristina',
       role: 'Pedodonție și stomatologie generală',
       description:
         'Medic stomatolog dedicat îngrijirii sănătății orale a pacienților.',
@@ -72,7 +72,7 @@ function Team() {
       type: 'doctor',
     },
     {
-      name: 'Deleanu Iulia',
+      name: 'Dr. Deleanu Iulia',
       role: 'Medic Stomatolog',
       specialty: 'Ortodonție',
       description: 'Specializată în ortodonție și ortopedie dento-facială.',
@@ -84,7 +84,7 @@ function Team() {
       type: 'doctor',
     },
     {
-      name: 'Vrajescu Alexandru',
+      name: 'Dr. Vrajescu Alexandru',
       role: 'Medic Stomatolog',
       description:
         'Medic stomatolog cu experiență în tratamente dentare moderne.',
@@ -96,7 +96,7 @@ function Team() {
       type: 'doctor',
     },
     {
-      name: 'Petrescu Daria',
+      name: 'Dr. Petrescu Daria',
       role: 'Chirurgie dento-alveolară',
       description:
         'Dedicată oferirii de servicii stomatologice de înaltă calitate.',
@@ -109,7 +109,7 @@ function Team() {
       type: 'doctor',
     },
     {
-      name: 'Rîndașu Roxana',
+      name: 'Dr. Rîndașu Roxana',
       role: 'Specialist Parodontolog',
       description:
         'Medic stomatolog dedicat sănătății orale, cu o abordare calmă și empatică.',
@@ -122,7 +122,7 @@ function Team() {
       type: 'doctor',
     },
     {
-      name: 'Dragane Anamaria',
+      name: 'Dr. Dragane Anamaria',
       role: 'Asistent medical generalist',
       description:
         'Specializată în tratamente dentare estetice și restorative.',
@@ -134,7 +134,7 @@ function Team() {
       type: 'doctor',
     },
     {
-      name: 'Smocot Ioana',
+      name: 'Dr. Smocot Ioana',
       role: 'Registrator medical',
       description:
         'Medic stomatolog dedicat îngrijirii pacienților cu atenție și profesionalism.',
@@ -146,7 +146,7 @@ function Team() {
       type: 'doctor',
     },
     {
-      name: 'Marin Cristiana',
+      name: 'Dr. Marin Cristiana',
       role: 'Specializare endodonție',
       description:
         'Medic stomatolog dedicat îngrijirii sănătății orale a pacienților.',

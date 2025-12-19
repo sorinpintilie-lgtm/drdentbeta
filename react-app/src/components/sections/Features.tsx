@@ -38,7 +38,7 @@ const features: Feature[] = [
     icon: <Zap className="w-8 h-8" />,
     title: 'Tehnologii inovatoare pentru proceduri eficiente și fără durere.',
     description:
-      'Utilizăm CEREC, scanere 3D și alte tehnologii moderne pentru rezultate rapide și precise.',
+      'Utilizăm scanere 3D și alte tehnologii moderne pentru rezultate rapide și precise.',
   },
   {
     id: 'transparenta',
@@ -166,12 +166,12 @@ export const Features = () => {
                     </motion.div>
 
                     {/* Title - Responsive */}
-                    <h3 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold text-gray-900 mb-2 sm:mb-3 line-clamp-2">
+                    <h3 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold text-gray-900 mb-2 sm:mb-3">
                       {feature.title}
                     </h3>
 
                     {/* Description - Compact */}
-                    <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed line-clamp-3">
+                    <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed">
                       {feature.description}
                     </p>
                   </div>
@@ -194,7 +194,7 @@ export const Features = () => {
                 Pregătit pentru un zâmbet sănătos?
               </h3>
               <p className="text-xs sm:text-sm md:text-base text-gray-600">
-                Programează o consultație astăzi (50 lei)
+                Programează o consultație astăzi (100 lei)
               </p>
             </div>
             <a

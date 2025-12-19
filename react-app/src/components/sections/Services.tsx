@@ -22,7 +22,7 @@ const services: Service[] = [
       'Examen oral complet cu evaluare detaliată și plan de tratament personalizat',
     href: '#consultatie',
     detailedDescription: 'O consultație dentară este primul pas către un zâmbet sănătos și frumos. În cadrul vizitei, medicul efectuează un examen complet al dinților, gingiilor și cavității bucale, identificând eventualele probleme ascunse. După evaluare, vei primi un plan de tratament personalizat, adaptat nevoilor tale, pentru ca fiecare etapă să fie clară, sigură și eficientă.',
-    price: '50 lei',
+    price: '100 lei',
     duration: '30 min',
     popular: true
   },
@@ -219,7 +219,7 @@ export const Services = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                src: '/images/newimg/Pics site/Consultatie Iasmina/IMG_0225.jpg',
+                src: '/images/newimages/IMG_0493.jpg',
                 alt: 'Consultație dentară profesională',
                 title: 'Consultații Complete',
                 description: 'Examinări detaliate cu tehnologie modernă',

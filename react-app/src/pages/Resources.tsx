@@ -135,13 +135,6 @@ function Resources() {
         },
         {
           icon: <Star className="w-8 h-8 text-primary-500" />,
-          title: 'Tehnologia CEREC',
-          description: 'Descoperiți cum tehnologia CEREC revoluționează stomatologia modernă, oferind restaurări de calitate în aceeași zi cu precizie digitală.',
-          actionText: 'Citește Articolul',
-          actionHref: '#',
-        },
-        {
-          icon: <Star className="w-8 h-8 text-primary-500" />,
           title: 'Sănătatea Orală la Copii',
           description: 'Ghid pentru părinți despre îngrijirea dentară a copiilor: de la primii dinți până la adolescență, prevenție și vizite regulate.',
           actionText: 'Citește Articolul',

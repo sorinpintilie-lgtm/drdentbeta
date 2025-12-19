@@ -31,10 +31,7 @@ function Home() {
   };
 
   const handleViewServices = () => {
-    const servicesSection = document.getElementById('services');
-    if (servicesSection) {
-      servicesSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    window.location.href = '/services';
   };
 
   return (
@@ -51,7 +48,7 @@ function Home() {
           }}
           secondaryCTA={{
             text: "Servicii",
-            href: "#services",
+            href: "/services",
             onClick: handleViewServices,
           }}
           trustIndicators={[
@@ -176,7 +173,7 @@ function Home() {
       {/* CTA Section 1 - After Services */}
       <CTA
         title="Descoperă diferența Dr.Dent"
-        description="Programează o consultație (50 lei) și află cum tehnologia noastră avansată și echipa dedicată pot transforma zâmbetul tău."
+        description="Programează o consultație (100 lei) și află cum tehnologia noastră avansată și echipa dedicată pot transforma zâmbetul tău."
         variant="gradient"
       />
 
