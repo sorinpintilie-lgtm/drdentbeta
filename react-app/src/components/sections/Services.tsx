@@ -223,36 +223,42 @@ export const Services = () => {
                 alt: 'Consultație dentară profesională',
                 title: 'Consultații Complete',
                 description: 'Examinări detaliate cu tehnologie modernă',
+                href: '/servicii',
               },
               {
                 src: '/images/newimg/Pics site/Extra/IMG_0498.jpg',
                 alt: 'Procedură dentară în curs',
                 title: 'Tratamente Profesionale',
                 description: 'Proceduri realizate cu precizie și atenție',
+                href: '/servicii',
               },
               {
                 src: '/images/newimg/Pics site/Consultatie Iasmina/IMG_0232.jpg',
                 alt: 'Examinare dentară detaliată',
                 title: 'Diagnosticare Precisă',
                 description: 'Identificarea problemelor din timp',
+                href: '/servicii',
               },
               {
                 src: '/images/newimg/Pics site/Poze grup/IMG_0173.jpg',
                 alt: 'Echipa medicală cu pacientul',
                 title: 'Echipa Noastră',
                 description: 'Profesioniști dedicați îngrijirii tale',
+                href: '/team',
               },
               {
-                src: '/images/newimg/Pics site/Poze grup/IMG_0187.jpg',
+                src: '/images/IMG_0611.jpg',
                 alt: 'Pacient la consultație',
                 title: 'Confort Pacienți',
                 description: 'Mediu prietenos și relaxant',
+                href: '/team',
               },
               {
                 src: '/images/newimg/Pics site/Extra/IMG_0503.jpg',
                 alt: 'Doctoriță în cabinetul dentar',
                 title: 'Medici Specializați',
                 description: 'Experiență și competență în domeniu',
+                href: '/team',
               },
             ].map((item, index) => (
               <motion.div
@@ -260,7 +266,8 @@ export const Services = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.5, delay: 0.9 + index * 0.1 }}
-                className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+                className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+                onClick={() => window.location.href = item.href}
               >
                 <div className="aspect-w-4 aspect-h-3">
                   <img

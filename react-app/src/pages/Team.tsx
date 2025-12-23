@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { X, Award, Briefcase, GraduationCap, Heart } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '../utils/cn';
@@ -20,6 +20,18 @@ interface TeamMember {
 
 function Team() {
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
+
+  // Prevent body scroll when modal is open
+  useEffect(() => {
+    if (selectedMember) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedMember]);
 
   const teamMembers: TeamMember[] = [
     {
@@ -51,7 +63,7 @@ function Team() {
     {
       name: 'Dr. Vlad Petrescu',
       role: 'Specialist Chirurgie OMF',
-      description: 'Expert în chirurgie oro-maxilo-facială și implantologie.',
+      description: 'Medic specialist cu 24 de ani de experiență în Chirurgie Oro-Maxilo-Facială și Implantologie Orală. Președinte al Asociației Române de Implantologie Orală și membru al European Association for Cranio-Maxillo-Facial Surgery.',
       credentials: [
         'Medic Stomatolog',
         'Specialist Chirurgie OMF',
@@ -129,7 +141,7 @@ function Team() {
         'Medic Stomatolog',
         'Abordare empatică',
       ],
-      image: '/images/drdent-home-opt.jpg',
+      image: '/images/paul.jpg',
       type: 'doctor',
     },
     {
@@ -451,21 +463,21 @@ function Team() {
       <AnimatePresence>
         {selectedMember && (
           <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+            className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/50 backdrop-blur-sm pt-16 md:pt-20 pb-20 md:pb-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setSelectedMember(null)}
           >
             <motion.div
-              className="bg-white rounded-2xl shadow-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto"
+              className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[80vh] m-4 flex flex-col"
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
             >
               {/* Modal Header - Compact */}
-              <div className="sticky top-0 bg-gradient-to-r from-primary-500 to-primary-600 text-white p-3 sm:p-4 md:p-6 flex items-start justify-between z-10">
+              <div className="sticky top-0 bg-gradient-to-r from-primary-500 to-primary-600 text-white p-3 sm:p-4 md:p-6 flex items-start justify-between z-10 rounded-t-2xl">
                 <div className="flex-1">
                   <div className="flex items-center gap-1 sm:gap-2 mb-1 sm:mb-2">
                     <span className="inline-flex items-center gap-0.5 sm:gap-1 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-[0.65rem] sm:text-xs font-semibold bg-white/20 text-white">
@@ -476,11 +488,8 @@ function Team() {
                     </span>
                   </div>
                   <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-bold mb-1 sm:mb-2">
-                    {selectedMember.name}
+                    {selectedMember.name} – {selectedMember.role}
                   </h2>
-                  <p className="text-white/90 font-semibold text-xs sm:text-sm md:text-base">
-                    {selectedMember.role}
-                  </p>
                   {selectedMember.specialty && (
                     <p className="text-white/80 text-[0.7rem] sm:text-xs md:text-sm mt-1 sm:mt-2">
                       {selectedMember.specialty}
@@ -496,66 +505,69 @@ function Team() {
                 </button>
               </div>
 
-              {/* Modal Body - Responsive Layout */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-6 p-3 sm:p-4 md:p-6">
-                {/* Left Column - Image - 9:16 Portrait */}
-                <div className="order-1">
-                  <div className="aspect-[9/16] md:max-h-[600px] rounded-lg sm:rounded-xl overflow-hidden bg-gray-100 md:sticky md:top-24">
-                    {selectedMember.image ? (
-                      <img
-                        src={selectedMember.image}
-                        alt={selectedMember.name}
-                        className="w-full h-full object-cover object-top"
-                      />
-                    ) : (
-                      <div className="h-full bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
-                        {selectedMember.type === 'doctor' && <Briefcase className="w-32 h-32 text-primary-600" />}
-                        {selectedMember.type === 'student' && <GraduationCap className="w-32 h-32 text-purple-600" />}
-                        {selectedMember.type === 'assistant' && <Heart className="w-32 h-32 text-pink-600" />}
+              {/* Scrollable Content */}
+              <div className="flex-1 overflow-y-auto">
+                {/* Modal Body - Responsive Layout */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-6 p-3 sm:p-4 md:p-6">
+                  {/* Left Column - Image - 9:16 Portrait */}
+                  <div className="order-1">
+                    <div className="aspect-[9/16] md:max-h-[600px] rounded-lg sm:rounded-xl overflow-hidden bg-gray-100 md:sticky md:top-24">
+                      {selectedMember.image ? (
+                        <img
+                          src={selectedMember.image}
+                          alt={selectedMember.name}
+                          className="w-full h-full object-cover object-top"
+                        />
+                      ) : (
+                        <div className="h-full bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
+                          {selectedMember.type === 'doctor' && <Briefcase className="w-32 h-32 text-primary-600" />}
+                          {selectedMember.type === 'student' && <GraduationCap className="w-32 h-32 text-purple-600" />}
+                          {selectedMember.type === 'assistant' && <Heart className="w-32 h-32 text-pink-600" />}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Right Column - Details - Compact */}
+                  <div className="order-2 space-y-3 sm:space-y-4 md:space-y-6">
+                    {/* Description */}
+                    <div>
+                      <h3 className="text-base sm:text-lg font-heading font-bold text-gray-900 mb-2 sm:mb-3">
+                        Despre
+                      </h3>
+                      <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                        {selectedMember.description}
+                      </p>
+                    </div>
+
+                    {/* Credentials */}
+                    {selectedMember.credentials && selectedMember.credentials.length > 0 && (
+                      <div>
+                        <h3 className="text-base sm:text-lg font-heading font-bold text-gray-900 mb-2 sm:mb-3">
+                          Credențiale
+                        </h3>
+                        <ul className="space-y-2 sm:space-y-3">
+                          {selectedMember.credentials.map((credential, index) => (
+                            <li key={index} className="flex items-start gap-2 sm:gap-3">
+                              <Award className="w-4 h-4 sm:w-5 sm:h-5 text-primary-500 flex-shrink-0 mt-0.5" />
+                              <span className="text-sm sm:text-base text-gray-700">{credential}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     )}
                   </div>
                 </div>
 
-                {/* Right Column - Details - Compact */}
-                <div className="order-2 space-y-3 sm:space-y-4 md:space-y-6">
-                  {/* Description */}
-                  <div>
-                    <h3 className="text-base sm:text-lg font-heading font-bold text-gray-900 mb-2 sm:mb-3">
-                      Despre
-                    </h3>
-                    <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                      {selectedMember.description}
-                    </p>
-                  </div>
-
-                  {/* Credentials */}
-                  {selectedMember.credentials && selectedMember.credentials.length > 0 && (
-                    <div>
-                      <h3 className="text-base sm:text-lg font-heading font-bold text-gray-900 mb-2 sm:mb-3">
-                        Credențiale
-                      </h3>
-                      <ul className="space-y-2 sm:space-y-3">
-                        {selectedMember.credentials.map((credential, index) => (
-                          <li key={index} className="flex items-start gap-2 sm:gap-3">
-                            <Award className="w-4 h-4 sm:w-5 sm:h-5 text-primary-500 flex-shrink-0 mt-0.5" />
-                            <span className="text-sm sm:text-base text-gray-700">{credential}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
+                {/* Modal Footer - Compact */}
+                <div className="border-t border-gray-200 p-3 sm:p-4 md:p-6 bg-gray-50">
+                  <button
+                    onClick={() => setSelectedMember(null)}
+                    className="w-full px-4 sm:px-6 py-2.5 sm:py-3 bg-primary-500 hover:bg-primary-600 text-white rounded-lg sm:rounded-xl text-sm sm:text-base font-semibold transition-all"
+                  >
+                    Închide
+                  </button>
                 </div>
-              </div>
-
-              {/* Modal Footer - Compact */}
-              <div className="border-t border-gray-200 p-3 sm:p-4 md:p-6 bg-gray-50">
-                <button
-                  onClick={() => setSelectedMember(null)}
-                  className="w-full px-4 sm:px-6 py-2.5 sm:py-3 bg-primary-500 hover:bg-primary-600 text-white rounded-lg sm:rounded-xl text-sm sm:text-base font-semibold transition-all"
-                >
-                  Închide
-                </button>
               </div>
             </motion.div>
           </motion.div>
