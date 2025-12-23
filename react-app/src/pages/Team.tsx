@@ -470,7 +470,7 @@ function Team() {
             onClick={() => setSelectedMember(null)}
           >
             <motion.div
-              className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[80vh] m-4 flex flex-col"
+              className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full max-h-[70vh] m-4 flex flex-col"
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}

@@ -39,12 +39,6 @@ function MobileNav() {
       label: 'Contact',
       path: '/contact',
     },
-    {
-      icon: <MessageCircle className="w-6 h-6" />,
-      label: 'Chat',
-      path: '/chat',
-      isChat: true,
-    },
   ];
 
   return (
@@ -52,7 +46,7 @@ function MobileNav() {
       className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-white/95 backdrop-blur-lg border-t border-gray-200 shadow-lg"
       style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
     >
-      <div className="grid grid-cols-4 gap-1 px-2 py-2">
+      <div className="grid grid-cols-3 gap-1 px-2 py-2">
         {navItems.map((item) => {
           const isActive = location.pathname === item.path;
 

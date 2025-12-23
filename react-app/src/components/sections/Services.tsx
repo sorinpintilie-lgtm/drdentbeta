@@ -244,21 +244,21 @@ export const Services = () => {
                 alt: 'Echipa medicală cu pacientul',
                 title: 'Echipa Noastră',
                 description: 'Profesioniști dedicați îngrijirii tale',
-                href: '/team',
+                href: '/despre-noi',
               },
               {
                 src: '/images/IMG_0611.jpg',
                 alt: 'Pacient la consultație',
                 title: 'Confort Pacienți',
                 description: 'Mediu prietenos și relaxant',
-                href: '/team',
+                href: '/despre-noi',
               },
               {
                 src: '/images/newimg/Pics site/Extra/IMG_0503.jpg',
                 alt: 'Doctoriță în cabinetul dentar',
                 title: 'Medici Specializați',
                 description: 'Experiență și competență în domeniu',
-                href: '/team',
+                href: '/despre-noi',
               },
             ].map((item, index) => (
               <motion.div
