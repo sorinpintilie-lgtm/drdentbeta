@@ -470,7 +470,7 @@ function Team() {
             onClick={() => setSelectedMember(null)}
           >
             <motion.div
-              className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full max-h-[70vh] m-4 flex flex-col"
+              className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full max-h-[75vh] sm:max-h-[85vh] m-4 flex flex-col"
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
@@ -506,12 +506,12 @@ function Team() {
               </div>
 
               {/* Scrollable Content */}
-              <div className="flex-1 overflow-y-auto">
+              <div className="flex-1 overflow-y-auto p-3 sm:p-4 md:p-6">
                 {/* Modal Body - Responsive Layout */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-6 p-3 sm:p-4 md:p-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
                   {/* Left Column - Image - 9:16 Portrait */}
                   <div className="order-1">
-                    <div className="aspect-[9/16] md:max-h-[600px] rounded-lg sm:rounded-xl overflow-hidden bg-gray-100 md:sticky md:top-24">
+                    <div className="aspect-[9/16] md:max-h-[300px] rounded-lg sm:rounded-xl overflow-hidden bg-gray-100">
                       {selectedMember.image ? (
                         <img
                           src={selectedMember.image}
@@ -520,9 +520,9 @@ function Team() {
                         />
                       ) : (
                         <div className="h-full bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
-                          {selectedMember.type === 'doctor' && <Briefcase className="w-32 h-32 text-primary-600" />}
-                          {selectedMember.type === 'student' && <GraduationCap className="w-32 h-32 text-purple-600" />}
-                          {selectedMember.type === 'assistant' && <Heart className="w-32 h-32 text-pink-600" />}
+                          {selectedMember.type === 'doctor' && <Briefcase className="w-20 h-20 text-primary-600" />}
+                          {selectedMember.type === 'student' && <GraduationCap className="w-20 h-20 text-purple-600" />}
+                          {selectedMember.type === 'assistant' && <Heart className="w-20 h-20 text-pink-600" />}
                         </div>
                       )}
                     </div>
@@ -560,7 +560,7 @@ function Team() {
                 </div>
 
                 {/* Modal Footer - Compact */}
-                <div className="border-t border-gray-200 p-3 sm:p-4 md:p-6 bg-gray-50">
+                <div className="border-t border-gray-200 pt-3 sm:pt-4 md:pt-6 mt-3 sm:mt-4 md:mt-6 bg-gray-50 -mx-3 sm:-mx-4 md:-mx-6 -mb-3 sm:-mb-4 md:-mb-6 px-3 sm:px-4 md:px-6 pb-3 sm:pb-4 md:pb-6">
                   <button
                     onClick={() => setSelectedMember(null)}
                     className="w-full px-4 sm:px-6 py-2.5 sm:py-3 bg-primary-500 hover:bg-primary-600 text-white rounded-lg sm:rounded-xl text-sm sm:text-base font-semibold transition-all"
