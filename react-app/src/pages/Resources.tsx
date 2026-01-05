@@ -1,4 +1,4 @@
-import { BookOpen, FileText, Download, Star, Phone, Mail, Calendar, X } from 'lucide-react';
+import { BookOpen, Download, Star, Phone, Mail, Calendar, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 
