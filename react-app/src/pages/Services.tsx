@@ -59,7 +59,7 @@ function Services() {
       ]
     },
     {
-      category: 'Chirurgie Orală',
+      category: 'Chirurgie orală',
       color: 'from-green-500 to-emerald-600',
       icon: <Bone className="w-6 h-6" />,
       services: [
@@ -406,7 +406,7 @@ function Services() {
       ]
     },
     {
-      category: 'Estetică Dentară',
+      category: 'Estetică dentară',
       color: 'from-pink-500 to-rose-500',
       icon: <Gem className="w-6 h-6" />,
       services: [
@@ -491,7 +491,7 @@ function Services() {
         },
         {
           icon: <CheckCircle className="w-8 h-8" />,
-          title: 'Consultație Ortodonție',
+          title: 'Consultație ortodonție',
           description: 'Evaluare ortodontică și stabilirea planului de tratament.',
           detailedDescription: 'Tratamente ortodontice\n\nCorectarea alinierii dentare și a mușcăturii prin aparate fixe sau mobile. Tratamentul îmbunătățește funcționalitatea și estetica zâmbetului.\n\nRetainer / gutiere\n\nDispozitive utilizate pentru menținerea rezultatelor obținute după tratamentul ortodontic.',
           price: '100 RON',

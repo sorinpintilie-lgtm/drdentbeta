@@ -81,7 +81,7 @@ function Contact() {
           <div className="max-w-2xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
               <h2 className="text-3xl font-heading font-bold text-gray-900 mb-6 text-center">
-                Trimiteți-ne un Mesaj
+                Trimiteți-ne un mesaj
               </h2>
               
               <form className="space-y-6">
@@ -141,7 +141,7 @@ function Contact() {
                   className="w-full px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-xl font-semibold text-lg hover:shadow-xl transition-all hover:-translate-y-1 flex items-center justify-center gap-2"
                 >
                   <Send className="w-5 h-5" />
-                  Trimite Mesajul
+                  Trimite mesajul
                 </button>
               </form>
             </div>
@@ -157,7 +157,7 @@ function Contact() {
               <AlertCircle className="w-16 h-16 text-red-600" />
             </div>
             <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4">
-              Urgență Dentară?
+              Urgență dentară?
             </h2>
             <p className="text-lg text-gray-600 mb-6">
               Pentru urgențe dentare, sunați imediat la numărul nostru de telefon.

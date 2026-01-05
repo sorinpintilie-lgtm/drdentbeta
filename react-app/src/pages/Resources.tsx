@@ -36,19 +36,19 @@ function Resources() {
 
   const resourceCategories: ResourceCategory[] = [
     {
-      title: 'Ghiduri de Îngrijire',
+      title: 'Ghiduri de îngrijire',
       icon: <BookOpen className="w-6 h-6" />,
       resources: [
         {
           icon: <BookOpen className="w-8 h-8 text-primary-500" />,
-          title: 'Înainte de Tratament',
+          title: 'Înainte de tratament',
           description: 'Pregătiți-vă pentru vizita la dentist cu acest ghid complet. Aflați ce să așteptați și cum să vă pregătiți pentru diferite proceduri dentare.',
           actionText: 'Citește Ghidul',
           detailedDescription: 'Vizita la medicul stomatolog începe întotdeauna cu o evaluare atentă a stării de sănătate orală. În această etapă, medicul analizează dinții, gingiile și mucoasa orală, iar la nevoie pot fi recomandate investigații suplimentare, precum radiografii sau fotografii intraorale. Scopul este stabilirea unui diagnostic corect și a unui plan de tratament personalizat.\n\nEste important ca pacientul să comunice deschis orice problemă medicală generală, tratament medicamentos urmat, alergii cunoscute sau temeri legate de procedurile stomatologice. Aceste informații ajută medicul să aleagă cea mai sigură și eficientă abordare.\n\nÎnainte de tratament, se recomandă o igienă orală corectă și respectarea indicațiilor primite în urma consultației. O bună pregătire contribuie la confortul pacientului și la obținerea unor rezultate optime.',
         },
         {
           icon: <BookOpen className="w-8 h-8 text-primary-500" />,
-          title: 'După Extracție Dentară',
+          title: 'După extracție dentară',
           description: 'Instrucțiuni detaliate pentru îngrijirea post-extracție. Aflați cum să gestionați durerea, umflarea și să promovați vindecarea rapidă.',
           actionText: 'Citește Ghidul',
           detailedDescription: 'După o extracție dentară, organismul are nevoie de timp pentru vindecare. În primele ore pot apărea ușoare dureri, inflamații sau sângerări minore, reacții normale ale țesuturilor. Este recomandat să se evite clătirea energică a gurii și consumul de alimente fierbinți în primele 24 de ore.\n\nPentru a favoriza vindecarea, este indicat să se evite fumatul, consumul de alcool și efortul fizic intens. Alimentația trebuie să fie una ușoară, cu alimente moi, la temperatură moderată. Igiena orală se menține cu atenție, evitând zona extracției în primele zile.\n\nRespectarea indicațiilor medicului stomatolog reduce riscul de complicații și ajută la o recuperare rapidă și fără probleme.',
@@ -84,7 +84,7 @@ function Resources() {
       ],
     },
     {
-      title: 'Educație Dentară',
+      title: 'Educație dentară',
       icon: <Star className="w-6 h-6" />,
       resources: [
         {
@@ -251,7 +251,7 @@ function Resources() {
               className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-primary-600 rounded-xl font-semibold text-lg transition-all"
             >
               <Calendar className="w-5 h-5" />
-              Programați o Consultație
+              Programați o consultație
             </a>
           </div>
         </div>

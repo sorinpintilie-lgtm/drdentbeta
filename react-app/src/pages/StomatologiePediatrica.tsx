@@ -52,28 +52,28 @@ function StomatologiePediatrica() {
 
   const childFriendlyServices = [
     {
-      title: 'Prima Vizită la Doctor',
+      title: 'Prima vizită la doctor',
       description: 'O întâlnire prietenoasă pentru a ne cunoaște și a ne juca puțin!',
       icon: <Heart className="w-8 h-8" />,
       color: 'from-pink-400 to-pink-500',
       image: '/images/childrenpart/fata.png'
     },
     {
-      title: 'Curățare cu Periuța Magică',
+      title: 'Curățare cu periuța magică',
       description: 'Învățăm să ne spălăm dințișorii ca un adevărat campion!',
       icon: <Smile className="w-8 h-8" />,
       color: 'from-green-400 to-green-500',
       image: '/images/childrenpart/iepuras.png'
     },
     {
-      title: 'Sigilare cu Flori Colorate',
+      title: 'Sigilare cu flori colorate',
       description: 'Pune flori magice pe dințișori să îi protejăm de carii!',
       icon: <Flower className="w-8 h-8" />,
       color: 'from-yellow-400 to-orange-400',
       image: '/images/childrenpart/floare roz.png'
     },
     {
-      title: 'Tratament Fără Durere',
+      title: 'Tratament fără durere',
       description: 'Folosim formule blânde și tehnici speciale pentru copii',
       icon: <HeartHandshake className="w-8 h-8" />,
       color: 'from-blue-400 to-purple-400',
@@ -154,7 +154,7 @@ function StomatologiePediatrica() {
             
             {/* Rainbow title */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-4 bg-gradient-to-r from-yellow-200 via-pink-200 to-blue-200 bg-clip-text text-transparent">
-              Stomatologie Pediatrică
+              Stomatologie pediatrică
             </h1>
             
             <p className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto mb-6 leading-relaxed">
@@ -582,19 +582,19 @@ function StomatologiePediatrica() {
               {
                 src: '/images/doctor-orthodontist-playing-with-the-boy-in-the-de-2025-10-15-18-19-30-utc.jpg',
                 alt: 'Doctor jucându-se cu un băiețel',
-                title: 'Joacă și Învățare',
+                title: 'Joacă și învățare',
                 description: 'Transformăm consultația într-o aventură distractivă!'
               },
               {
                 src: '/images/female-dentist-shows-a-boy-on-a-mock-up-how-to-bru-2025-02-16-18-23-20-utc.jpg',
                 alt: 'Doctorița învață un băiețel cum să-și spele dinții',
-                title: 'Educație Dentară',
+                title: 'Educație dentară',
                 description: 'Învățăm să avem grijă de dințișorii noștri!'
               },
               {
                 src: '/images/woman-doctor-is-giving-hi-five-to-little-girl-afte-2025-01-09-01-53-21-utc.jpg',
                 alt: 'Doctorița face high-five cu o fetița',
-                title: 'Celebrăm Succesul',
+                title: 'Celebrăm succesul',
                 description: 'Fiecare vizită este o victorie împreună!'
               }
             ].map((photo, index) => (
@@ -654,7 +654,7 @@ function StomatologiePediatrica() {
                 <Users className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-heading font-bold text-gray-900 mb-3">
-                Echipa Noastră Are Răbdare
+                Echipa noastră are răbdare
               </h3>
               <p className="text-gray-700">
                 Vorbim pe limba copiilor și îi ajutăm să înțeleagă cât de important este să aibă grijă de dințișorii lor.
@@ -692,7 +692,7 @@ function StomatologiePediatrica() {
                 <Sparkles className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-heading font-bold text-gray-900 mb-3">
-                Experiență Distractivă
+                Experiență distractivă
               </h3>
               <p className="text-gray-700">
                 Nu este un motiv de stres, ci o oportunitate de a învăța și de a se distra!

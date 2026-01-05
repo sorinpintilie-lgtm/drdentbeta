@@ -25,7 +25,7 @@ function Fees() {
       ],
     },
     {
-      title: 'Chirurgie Orală',
+      title: 'Chirurgie orală',
       items: [
         { service: 'Extracție dinte monoradicular', price: '250 RON' },
         { service: 'Extracție dinte pluriradicular', price: '300 RON' },
@@ -72,7 +72,7 @@ function Fees() {
       ],
     },
     {
-      title: 'Estetică Dentară',
+      title: 'Estetică dentară',
       items: [
         { service: 'Aplicare bijuterie dentara', price: '250 RON' },
         { service: 'Albire dentara acasă (gutiere incluse)', price: '1200 RON' },
@@ -133,7 +133,7 @@ function Fees() {
       ],
     },
     {
-      title: 'Profilaxie Dentară',
+      title: 'Profilaxie dentară',
       items: [
         { service: 'Gutiera bruxism', price: '350 RON' },
         { service: 'Fluorizare (per arcada)', price: '150 RON' },
@@ -147,7 +147,7 @@ function Fees() {
       ],
     },
     {
-      title: 'Protetică Dentară',
+      title: 'Protetică dentară',
       items: [
         { service: 'Incrustatie compozit', price: '400 RON' },
         { service: 'Onlay/Inlay ceramica/zirconiu', price: '700 RON' },
@@ -193,7 +193,7 @@ function Fees() {
       ],
     },
     {
-      title: 'Terapie Dentară',
+      title: 'Terapie dentară',
       items: [
         { service: 'Obturație coronara posterioara', price: '350 RON' },
         { service: 'Fatetare directa in cabinet rasina compozit', price: '500 RON' },
@@ -237,13 +237,9 @@ function Fees() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
-              Oferim tarife transparente și competitive pentru toate serviciile noastre dentare. 
-              Prețurile includ consultația inițială pentru evaluarea nevoilor dumneavoastră. 
+              Oferim tarife transparente și competitive pentru toate serviciile noastre dentare.
+              Prețurile includ consultația inițială pentru evaluarea nevoilor dumneavoastră.
             </p>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 text-primary-700 rounded-lg font-semibold">
-              <CheckCircle className="w-5 h-5" />
-              Consultație: 100 RON
-            </div>
           </div>
         </div>
       </section>
@@ -299,7 +295,7 @@ function Fees() {
             <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8">
               <h3 className="text-xl md:text-2xl font-heading font-bold text-gray-900 mb-4 md:mb-6 flex items-center gap-2">
                 <Shield className="w-5 h-5 md:w-6 md:h-6 text-primary-500" />
-                Informații Importante
+                Informații importante
               </h3>
               <ul className="space-y-3 md:space-y-4">
                 {importantInfo.map((info, index) => (
@@ -336,7 +332,7 @@ function Fees() {
               className="inline-flex items-center justify-center gap-2 px-6 md:px-8 py-3 md:py-4 border-2 border-white text-white hover:bg-white hover:text-primary-600 rounded-xl font-semibold text-base md:text-lg transition-all"
             >
               <Calendar className="w-5 h-5" />
-              Trimiteți Email
+              Trimiteți email
             </a>
           </div>
         </div>

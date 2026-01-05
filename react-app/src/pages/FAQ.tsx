@@ -26,7 +26,7 @@ function FAQ() {
 
   const faqCategories: FAQCategory[] = [
     {
-      title: 'Programări și Servicii Generale',
+      title: 'Programări și servicii generale',
       items: [
         {
           question: 'Cum pot face o programare?',
@@ -85,7 +85,7 @@ function FAQ() {
       ],
     },
     {
-      title: 'Urgențe Dentare',
+      title: 'Urgențe dentare',
       items: [
         {
           question: 'Ce este considerată o urgență dentară?',
@@ -106,7 +106,7 @@ function FAQ() {
       ],
     },
     {
-      title: 'Îngrijirea Copiilor',
+      title: 'Îngrijirea copiilor',
       items: [
         {
           question: 'La ce vârstă ar trebui să aduceti copilul la dentist?',
@@ -123,7 +123,7 @@ function FAQ() {
       ],
     },
     {
-      title: 'Tratamente și Tehnologie',
+      title: 'Tratamente și tehnologie',
       items: [
         {
           question: 'Ce este stomatologia biomimetică?',
@@ -175,7 +175,7 @@ function FAQ() {
           >
             <HelpCircle className="w-16 h-16 mx-auto mb-4 text-white/90" />
             <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4">
-              Întrebări Frecvente
+              Întrebări frecvente
             </h1>
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
               Răspunsuri la întrebările dumneavoastră
@@ -282,14 +282,14 @@ function FAQ() {
               className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-primary-600 rounded-xl font-semibold text-lg transition-all"
             >
               <Mail className="w-5 h-5" />
-              Trimiteți Email
+              Trimiteți email
             </a>
             <a
               href="#contact"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-primary-600 rounded-xl font-semibold text-lg transition-all"
             >
               <Calendar className="w-5 h-5" />
-              Programați o Consultație
+              Programați o consultație
             </a>
           </div>
         </div>
