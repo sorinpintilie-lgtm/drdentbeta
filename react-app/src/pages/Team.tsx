@@ -51,7 +51,7 @@ function Team() {
       name: 'Dr. Daniela Căpățână',
       role: 'Stomatolog generalist',
       description:
-        'Specializată în stomatologie generală, oferind tratamente de calitate superioară.',
+        'Dr Daniela Căpătînă, sunt medic dentist generalist cu peste zece ani de experiență dedicați menținerii sănătății orale prin tratamente corecte, moderne și adaptate fiecărui pacient. Pun accent pe prevenție, comunicare deschisă și confort, grijă,profesionalism și atenție pentru fiecare pacient.',
       credentials: [
         'Medic Stomatolog',
         'Specialist în tratamente generale',
@@ -124,49 +124,25 @@ function Team() {
       name: 'Dr. Oxana Predușelu',
       role: 'Stomatologie generală',
       description:
-        'Medic stomatolog cu experiență în tratamente dentare moderne.',
+        'Am absolvit Facultatea de Medicină Dentară din cadrul Universității Ovidius din Constanța în anul 2015 și m-am specializat în protetică dentară în urma Rezidențiatului efectuat la Universitatea de Medicină și Farmacie „Carol Davila" din București.\n\nÎn cei peste 10 ani de practică, am urmat numeroase cursuri complementare în implantologie dentară, precum și cursuri de perfecționare în endodonție, estetică dentară și protetică. Întotdeauna am pus accent pe relația medic–pacient și pe calitatea actului stomatologic.\n\nEmpatia și înțelegerea dorințelor pacienților, corelate cu statusul medical concret al acestora, reprezintă cheia unui diagnostic corect și a unui plan de tratament adecvat. Tendința către perfecțiune m-a determinat să adopt o abordare interdisciplinară, în care colaborarea cu colegii din clinică devine un element esențial în cadrul reabilitărilor orale complexe.\n\nConsider că educația este baza dezvoltării unei societăți sănătoase, inclusiv în domeniul medicinei dentare. Aceasta trebuie să înceapă de acasă și de la o vârstă cât mai fragedă. Scăderea vârstei pacienților cu patologii orale importante (carii complicate, edentații la pacienți tineri) reprezintă un semnal de alarmă atât pentru noi, medicii stomatologi, cât și un indicator al stării generale de sănătate a societății.\n\nÎmi propun să educ pacienții în direcția unei igiene orale corecte, prin metode clasice, dar și prin tehnici moderne și adjuvante (duș bucal utilizat la domiciliu, airflow și laser în cabinet), deoarece nimic nu este mai sănătos și mai estetic decât un dinte natural. Sănătatea este, în final, cea mai elegantă formă de frumusețe.\n\nCea mai mare bucurie profesională a mea rămâne încrederea pacienților și zâmbetele sănătoase pe care le redobândesc.',
       credentials: [
         'Medic Stomatolog',
         'Experiență în tratamente avansate',
       ],
-      image: '/images/drdent-home-opt.jpg',
+      image: '/images/droxana.jpeg',
       type: 'doctor',
     },
     {
       name: 'Dr. Paul Staicu',
       role: 'Stomatologie generală',
       description:
-        'Medic stomatolog dedicat îngrijirii sănătății orale a pacienților.',
+        'Salut, sunt Paul, medic stomatolog, iar pe lângă pasiunile mele pentru istorie, muzică și sport, medicina dentară reprezintă pasiunea și vocația mea, fiind o profesie în care îmbin precizia, ştiința şi arta pentru reda încrederea în zâmbetul propriu.',
       credentials: [
         'Medic Stomatolog',
         'Abordare empatică',
       ],
       image: '/images/paul.jpg',
       type: 'doctor',
-    },
-    {
-      name: 'Ana-Maria Dragne',
-      role: 'Asistentă stomatologie',
-      description:
-        'Asistentă medicală specializată în sprijinirea procedurilor dentare.',
-      credentials: [
-        'Asistent medical',
-        'Suport în tratamente dentare',
-      ],
-      image: '/images/dr-ana-maria-dragne.jpg',
-      type: 'assistant',
-    },
-    {
-      name: 'Ioana Smocot',
-      role: 'Registrator medical',
-      description:
-        'Responsabilă cu organizarea programărilor și administrarea cabinetului.',
-      credentials: [
-        'Registrator medical',
-        'Organizare și coordonare',
-      ],
-      image: '/images/Ioana-Smocot.jpg',
-      type: 'assistant',
     },
     {
       name: 'Dr. Marin Cristiana',
@@ -180,6 +156,30 @@ function Team() {
       image:
         "/images/newimg/Pics site/Poze portret/Marin Cristiana - specializare endodonție/IMG_0315.jpg",
       type: 'doctor',
+    },
+    {
+      name: 'Ioana Smocot',
+      role: 'Registrator medical',
+      description:
+        'Responsabilă cu organizarea programărilor și administrarea cabinetului.',
+      credentials: [
+        'Registrator medical',
+        'Organizare și coordonare',
+      ],
+      image: '/images/Ioana-Smocot.jpg',
+      type: 'student',
+    },
+    {
+      name: 'Ana-Maria Dragne',
+      role: 'Asistentă stomatologie',
+      description:
+        'Asistentă medicală specializată în sprijinirea procedurilor dentare.',
+      credentials: [
+        'Asistent medical',
+        'Suport în tratamente dentare',
+      ],
+      image: '/images/dr-ana-maria-dragne.jpg',
+      type: 'assistant',
     },
   ];
 
@@ -220,7 +220,7 @@ function Team() {
           >
             <Award className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 mx-auto mb-3 sm:mb-4 text-white/90" />
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-2 sm:mb-3 md:mb-4">
-              Echipa Noastră
+              Echipa noastră
             </h1>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 max-w-2xl mx-auto px-2">
               Profesioniști dedicați sănătății dumneavoastră orale
@@ -314,7 +314,7 @@ function Team() {
                       <img
                         src={member.image}
                         alt={member.name}
-                        className="w-full h-full object-cover object-top"
+                        className="w-full h-full object-cover object-left"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                     </>
@@ -341,7 +341,7 @@ function Team() {
                         <span className="w-3 h-3 sm:w-4 sm:h-4">{getRoleIcon(member.type)}</span>
                         <span className="hidden sm:inline">
                           {member.type === 'doctor' && 'Medic'}
-                          {member.type === 'student' && 'Student'}
+                          {member.type === 'student' && 'Registrator medical'}
                           {member.type === 'assistant' && 'Asistent'}
                         </span>
                       </span>
@@ -379,7 +379,7 @@ function Team() {
       <section className="section bg-gradient-to-br from-primary-50 to-primary-100 py-8 sm:py-12 md:py-16">
         <div className="container mx-auto px-3 sm:px-4 text-center">
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-gray-900 mb-3 sm:mb-4 md:mb-6">
-            Filozofia Noastră
+            Filozofia noastră
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2">
             La Dr.Dent, credem în îngrijirea personalizată și în construirea de relații pe termen lung cu pacienții noștri.
@@ -483,7 +483,7 @@ function Team() {
                     <span className="inline-flex items-center gap-0.5 sm:gap-1 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-[0.65rem] sm:text-xs font-semibold bg-white/20 text-white">
                       {getRoleIcon(selectedMember.type)}
                       {selectedMember.type === 'doctor' && 'Medic'}
-                      {selectedMember.type === 'student' && 'Student'}
+                      {selectedMember.type === 'student' && 'Registrator medical'}
                       {selectedMember.type === 'assistant' && 'Asistent'}
                     </span>
                   </div>
@@ -516,7 +516,7 @@ function Team() {
                         <img
                           src={selectedMember.image}
                           alt={selectedMember.name}
-                          className="w-full h-full object-cover object-top"
+                          className="w-full h-full object-cover object-left"
                         />
                       ) : (
                         <div className="h-full bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">

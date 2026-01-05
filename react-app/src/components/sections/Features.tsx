@@ -107,7 +107,7 @@ export const Features = () => {
           >
             <span className="inline-flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-1 sm:py-2 bg-[#0066cc]/10 text-[#0066cc] rounded-full text-xs sm:text-sm font-semibold">
               <ShieldCheck className="w-3 h-3 sm:w-4 sm:h-4" />
-              Avantajele Noastre
+              Avantajele noastre
             </span>
           </motion.div>
 
@@ -194,7 +194,7 @@ export const Features = () => {
                 Pregătit pentru un zâmbet sănătos?
               </h3>
               <p className="text-xs sm:text-sm md:text-base text-gray-600">
-                Programează o consultație astăzi (100 lei)
+                Programează o consultație astăzi
               </p>
             </div>
             <a
@@ -221,7 +221,7 @@ export const Features = () => {
         >
           <div className="text-center mb-8 sm:mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-              Tehnologie Modernă
+              Tehnologie modernă
             </h3>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Echipamente de ultimă generație pentru diagnosticare și tratamente precise
@@ -243,7 +243,7 @@ export const Features = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-[#0066cc]/80 to-transparent" />
               <div className="absolute inset-0 p-6 sm:p-8 flex flex-col justify-end text-white">
                 <h4 className="text-xl sm:text-2xl font-bold mb-2">
-                  Echipament Avansat
+                  Echipament avansat
                 </h4>
                 <p className="text-sm sm:text-base text-white/90">
                   Tehnologie de vârf pentru cele mai bune rezultate
@@ -265,7 +265,7 @@ export const Features = () => {
               <div className="absolute inset-0 bg-gradient-to-l from-[#0066cc]/80 to-transparent" />
               <div className="absolute inset-0 p-6 sm:p-8 flex flex-col justify-end text-white">
                 <h4 className="text-xl sm:text-2xl font-bold mb-2">
-                  Experiență Profesională
+                  Experiență profesională
                 </h4>
                 <p className="text-sm sm:text-base text-white/90">
                   Medici cu ani de experiență și dedicare

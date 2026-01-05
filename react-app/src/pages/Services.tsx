@@ -1113,7 +1113,7 @@ function Services() {
         },
         {
           icon: <CheckCircle className="w-8 h-8" />,
-          title: 'Coroana Emax (ceramica presata)',
+          title: 'Coroana Emax (ceramică presată)',
           description: 'Coroana Emax (ceramica presata)',
           detailedDescription: 'Lucrări protetice dentare\n\nRefacerea dinților lipsă sau afectați prin coroane, punți sau proteze dentare, adaptate fiecărui pacient.',
           price: '1700 RON',
@@ -1551,7 +1551,7 @@ function Services() {
             </h2>
             
             <p className="text-sm sm:text-base text-white/90 mb-6 sm:mb-8 max-w-md mx-auto leading-relaxed">
-              Programează o consultație (100 lei) și discutăm despre nevoile dumneavoastră.
+              Programează o consultație și discutăm despre nevoile dumneavoastră.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
