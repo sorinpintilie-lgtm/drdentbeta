@@ -323,7 +323,7 @@ function Resources() {
                   className="px-6 py-2.5 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-xl text-base font-semibold hover:shadow-lg hover:scale-105 transition-all inline-block text-center flex items-center gap-2"
                 >
                   <Calendar className="w-4 h-4" />
-                  <span>Programează o consultație</span>
+                  <span>Programează-te</span>
                 </a>
               </div>
             </motion.div>
