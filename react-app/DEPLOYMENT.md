@@ -1,8 +1,29 @@
-# Netlify Deployment Guide for DrDent Landing Page
+# Deployment Guide for DrDent Landing Page
 
 ## 🚀 Quick Deploy
 
-### Option 1: Deploy via Netlify CLI
+### Option 1: Deploy to GitHub Pages (Recommended)
+
+This project includes a GitHub Actions workflow for automatic deployment to GitHub Pages.
+
+1. **Enable GitHub Pages**:
+   - Go to your repository settings
+   - Navigate to "Pages" section
+   - Set Source to "Deploy from a branch"
+   - Choose `gh-pages` branch and `/ (root)` folder
+
+2. **Push to main/master branch**:
+   ```bash
+   git add .
+   git commit -m "Add GitHub Pages deployment"
+   git push origin main
+   ```
+
+3. **Automatic Deployment**:
+   - GitHub Actions will build and deploy automatically
+   - Your site will be available at `https://[username].github.io/[repository-name]`
+
+### Option 2: Deploy via Netlify CLI
 
 ```bash
 # Install Netlify CLI globally

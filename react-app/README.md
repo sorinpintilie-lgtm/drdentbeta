@@ -156,7 +156,15 @@ import Button from '@/components/ui/Button'
 
 ## 🚀 Deployment
 
-### Netlify (Recommended & Configured)
+### GitHub Pages (Recommended)
+
+This project includes a GitHub Actions workflow for automatic deployment to GitHub Pages.
+
+1. **Enable GitHub Pages** in your repository settings (Pages → Deploy from a branch → gh-pages /root)
+2. **Push to main branch** - deployment happens automatically
+3. **Site URL**: `https://[username].github.io/[repository-name]`
+
+### Netlify
 
 This project is fully configured for Netlify deployment with:
 - ✅ `netlify.toml` configuration file

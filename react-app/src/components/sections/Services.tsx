@@ -17,7 +17,7 @@ const services: Service[] = [
   {
     id: 'consultatie',
     icon: <Smile className="w-8 h-8" />,
-    title: 'Consultație Dentară',
+    title: 'Consultație dentară',
     description:
       'Examen oral complet cu evaluare detaliată și plan de tratament personalizat',
     href: '#consultatie',
@@ -29,7 +29,7 @@ const services: Service[] = [
   {
     id: 'detartraj',
     icon: <Shield className="w-8 h-8" />,
-    title: 'Detartraj Profesional',
+    title: 'Detartraj profesional',
     description:
       'Curățare profesională cu ultrasunete și periaj cu pastă specială',
     href: '#detartraj',
@@ -40,7 +40,7 @@ const services: Service[] = [
   {
     id: 'facete',
     icon: <Sparkles className="w-8 h-8" />,
-    title: 'Fațete Ceramice',
+    title: 'Fațete ceramice',
     description:
       'Transformare completă a zâmbetului cu fațete ultra-subțiri',
     href: '#facete',
@@ -52,7 +52,7 @@ const services: Service[] = [
   {
     id: 'albire',
     icon: <Sparkles className="w-8 h-8" />,
-    title: 'Albire Profesională',
+    title: 'Albire profesională',
     description:
       'Albire în cabinet cu tehnologie LED pentru rezultate rapide',
     href: '#albire',
@@ -63,7 +63,7 @@ const services: Service[] = [
   {
     id: 'implant',
     icon: <Anchor className="w-8 h-8" />,
-    title: 'Implant Dentar',
+    title: 'Implant dentar',
     description:
       'Soluție permanentă pentru dinți lipsă cu implant titan',
     href: '#implant',
@@ -221,7 +221,7 @@ export const Services = () => {
               {
                 src: '/images/newimages/IMG_0493.jpg',
                 alt: 'Consultație dentară profesională',
-                title: 'Consultații Complete',
+                title: 'Consultații complete',
                 description: 'Examinări detaliate cu tehnologie modernă',
                 href: '/servicii',
               },
