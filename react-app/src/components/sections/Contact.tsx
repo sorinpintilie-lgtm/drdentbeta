@@ -110,7 +110,7 @@ export const Contact: React.FC = () => {
           className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Informații de Contact
+            Informații de contact
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
             Alege metoda de contact preferată și te vom ajuta în cel mai scurt timp cu detaliile de care ai nevoie.

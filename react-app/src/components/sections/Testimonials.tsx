@@ -154,7 +154,7 @@ export const Testimonials = () => {
             <div className="inline-block mb-2 sm:mb-3 md:mb-4">
               <span className="inline-flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-1 sm:py-2 bg-[#0066cc]/10 text-[#0066cc] rounded-full text-xs sm:text-sm font-semibold">
                 <Quote className="w-3 h-3 sm:w-4 sm:h-4" />
-                Mărturii
+                Testimoniale
               </span>
             </div>
             <h2
@@ -196,7 +196,7 @@ export const Testimonials = () => {
           >
             <span className="inline-flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-1 sm:py-2 bg-[#0066cc]/10 text-[#0066cc] rounded-full text-xs sm:text-sm font-semibold">
               <Quote className="w-3 h-3 sm:w-4 sm:h-4" />
-              Mărturii
+              Testimoniale
             </span>
           </motion.div>
 
