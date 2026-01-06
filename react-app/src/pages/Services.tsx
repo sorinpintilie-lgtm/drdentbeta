@@ -1671,12 +1671,6 @@ function Services() {
 
               <a
                 href="tel:+40726530591"
-                onClick={() => {
-                  const contactElement = document.getElementById('contact');
-                  if (contactElement) {
-                    contactElement.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white/10 backdrop-blur-sm border-2 border-white text-white rounded-xl font-semibold text-sm sm:text-base hover:bg-white/20 transition-all"
               >
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
