@@ -19,34 +19,48 @@ interface ServiceModalProps {
 export const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, service }) => {
   if (!service) return null;
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isOpen]);
+
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 pt-8 sm:pt-16 md:pt-24 pb-16 lg:pb-8">
+        <>
           {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm"
+            style={{ zIndex: 999 }}
             onClick={onClose}
           />
-          
-          {/* Modal */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="relative bg-white rounded-2xl shadow-2xl max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl w-full max-h-[80vh] overflow-y-auto"
-            style={{
-              scrollbarWidth: 'none',
-              msOverflowStyle: 'none',
-            }}
-            onScroll={(e) => {
-              const target = e.target as HTMLElement;
-              target.style.setProperty('-webkit-scrollbar', 'none');
-            }}
-          >
+
+          {/* Modal Container */}
+          <div className="fixed inset-0 flex items-center justify-center p-4 pt-8 sm:pt-16 md:pt-24 pb-16 lg:pb-8" style={{ zIndex: 1000 }}>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              className="bg-white rounded-2xl shadow-2xl max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl w-full max-h-[80vh] overflow-y-auto"
+              style={{
+                scrollbarWidth: 'none',
+                msOverflowStyle: 'none',
+              }}
+              onScroll={(e) => {
+                const target = e.target as HTMLElement;
+                target.style.setProperty('-webkit-scrollbar', 'none');
+              }}
+            >
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-gray-100">
               <div className="flex items-center gap-4">
@@ -115,6 +129,7 @@ export const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, ser
             </div>
           </motion.div>
         </div>
+        </>
       )}
     </AnimatePresence>
   );

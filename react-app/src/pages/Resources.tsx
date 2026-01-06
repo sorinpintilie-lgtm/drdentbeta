@@ -180,28 +180,30 @@ function Resources() {
               {category.resources.map((resource, resourceIndex) => (
                 <motion.div
                   key={resourceIndex}
-                  className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all hover:-translate-y-2 border border-gray-100"
+                  className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all hover:-translate-y-2 border border-gray-100 flex flex-col"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: resourceIndex * 0.1 }}
                 >
-                  <div className="mb-4">{resource.icon}</div>
-                  <h3 className="text-xl font-heading font-bold text-gray-900 mb-3">
-                    {resource.title}
-                  </h3>
-                  {resource.meta && (
-                    <span className="inline-block px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm font-semibold mb-3">
-                      {resource.meta}
-                    </span>
-                  )}
-                  <p className="text-gray-600 mb-4 leading-relaxed">
-                    {resource.description}
-                  </p>
+                  <div className="flex-grow">
+                    <div className="mb-4">{resource.icon}</div>
+                    <h3 className="text-xl font-heading font-bold text-gray-900 mb-3">
+                      {resource.title}
+                    </h3>
+                    {resource.meta && (
+                      <span className="inline-block px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm font-semibold mb-3">
+                        {resource.meta}
+                      </span>
+                    )}
+                    <p className="text-gray-600 mb-4 leading-relaxed">
+                      {resource.description}
+                    </p>
+                  </div>
                   {resource.detailedDescription ? (
                     <button
                       onClick={() => openResourceModal(resource)}
-                      className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold transition-colors"
+                      className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold transition-colors mt-auto"
                     >
                       <Download className="w-4 h-4" />
                       {resource.actionText}
@@ -209,7 +211,7 @@ function Resources() {
                   ) : (
                     <a
                       href={resource.actionHref}
-                      className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold transition-colors"
+                      className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold transition-colors mt-auto"
                     >
                       <Download className="w-4 h-4" />
                       {resource.actionText}
@@ -261,14 +263,14 @@ function Resources() {
       <AnimatePresence>
         {selectedResource && (
           <motion.div
-            className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/50 backdrop-blur-sm pt-16 md:pt-20 pb-20 md:pb-8"
+            className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/50 backdrop-blur-sm pt-16 md:pt-20 pb-20 md:pb-12 lg:pb-16"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={closeResourceModal}
           >
             <motion.div
-              className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[75vh] sm:max-h-[85vh] m-4 flex flex-col"
+              className="bg-white rounded-2xl shadow-2xl max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl w-full max-h-[75vh] sm:max-h-[85vh] m-4 flex flex-col"
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
