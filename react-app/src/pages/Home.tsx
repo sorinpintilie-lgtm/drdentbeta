@@ -107,7 +107,7 @@ function Home() {
          <div className="text-center mb-12">
             <div className="bg-red-600 text-white rounded-xl p-6 max-w-2xl mx-auto">
               <h3 className="text-xl font-bold mb-2">Urgență dentară? Sună acum!</h3>
-              <p className="mb-4">Echipa noastră este pregătită să te ajute în orice moment de urgență.</p>
+              <p className="mb-4">Echipa noastră este pregătită să te ajute în orice moment în caz de urgență.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:+40726530591"
