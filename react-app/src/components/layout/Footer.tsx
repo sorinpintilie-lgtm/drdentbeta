@@ -199,11 +199,11 @@ function Footer() {
             </div>
             <div className="pt-4">
               <a
-                href="tel:+40724055872"
+                href="/contact"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg font-semibold transition-all hover:scale-105"
               >
                 <Calendar className="w-4 h-4" />
-                <span>Programează-te acum</span>
+                <span>Detalii de contact</span>
               </a>
             </div>
           </div>

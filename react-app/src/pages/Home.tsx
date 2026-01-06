@@ -26,10 +26,6 @@ function Home() {
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
-  const handleBookConsultation = () => {
-    window.location.href = 'tel:+40724055872';
-  };
-
   const handleViewServices = () => {
     window.location.href = '/servicii';
   };
@@ -42,9 +38,8 @@ function Home() {
           headline="Zâmbetul tău perfect începe aici"
           subheadline="Îngrijire dentară profesională cu echipamente moderne și o echipă dedicată sănătății tale orale"
           primaryCTA={{
-            text: "Programează consultație",
-            href: "tel:+40724055872",
-            onClick: handleBookConsultation,
+            text: "Detalii de contact",
+            href: "/contact",
           }}
           secondaryCTA={{
             text: "Servicii",
@@ -119,13 +114,13 @@ function Home() {
                   Sună: 0726 530 591
                 </a>
                 <a
-                  href="tel:+40724055872"
+                  href="/contact"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition-colors"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
-                  Programare de urgență
+                  Detalii de contact
                 </a>
               </div>
             </div>
@@ -233,7 +228,7 @@ function Home() {
       <CTA
         title="Pregătit pentru un zâmbet perfect?"
         description="Nu mai aștepta! Echipa noastră este gata să te ajute să obții zâmbetul pe care ți-l dorești. Programează acum consultația ta."
-        primaryButtonText="Programează consultație"
+        primaryButtonText="Detalii de contact"
         secondaryButtonText="Sună acum"
         variant="gradient"
       />

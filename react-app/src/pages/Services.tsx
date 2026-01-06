@@ -1649,24 +1649,18 @@ function Services() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold mb-3 sm:mb-4">
               Programează-te astăzi
             </h2>
-            
+
             <p className="text-sm sm:text-base text-white/90 mb-6 sm:mb-8 max-w-md mx-auto leading-relaxed">
               Programează o consultație și discutăm despre nevoile dumneavoastră.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
               <a
-                href="#contact"
-                onClick={() => {
-                  const contactElement = document.getElementById('contact');
-                  if (contactElement) {
-                    contactElement.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
+                href="/contact"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-primary-600 rounded-xl font-semibold text-sm sm:text-base hover:shadow-2xl transition-all hover:-translate-y-1"
               >
                 <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
-                Programează consultație
+                Detalii de contact
               </a>
 
               <a

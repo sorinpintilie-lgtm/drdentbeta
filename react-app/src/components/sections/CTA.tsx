@@ -20,8 +20,8 @@ interface CTAProps {
 export function CTA({
   title = 'Pregătit pentru un zâmbet perfect?',
   description = 'Programează o consultație și descoperă cum te putem ajuta să obții zâmbetul pe care ți-l dorești.',
-  primaryButtonText = 'Programează-te acum',
-  primaryButtonHref = 'tel:+40726530591',
+  primaryButtonText = 'Detalii de contact',
+  primaryButtonHref = '/contact',
   secondaryButtonText = 'Sună acum',
   secondaryButtonHref = 'tel:+40726530591',
   variant = 'gradient',

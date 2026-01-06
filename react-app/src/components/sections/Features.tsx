@@ -194,7 +194,7 @@ export const Features = () => {
                 Pregătit pentru un zâmbet sănătos?
               </h3>
               <p className="text-xs sm:text-sm md:text-base text-gray-600">
-                Programează o consultație astăzi
+                Detalii de contact astăzi
               </p>
             </div>
             <a

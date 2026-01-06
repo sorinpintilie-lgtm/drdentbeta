@@ -936,7 +936,7 @@ function StomatologiePediatrica() {
             </h2>
             
             <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-              Programează o consultație și transformăm experiența într-un moment special!
+              Detalii de contact și transformăm experiența într-un moment special!
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

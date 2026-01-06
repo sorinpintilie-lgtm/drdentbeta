@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { X, Star } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -18,18 +18,6 @@ interface ServiceModalProps {
 
 export const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, service }) => {
   if (!service) return null;
-
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
-
-    return () => {
-      document.body.style.overflow = 'auto';
-    };
-  }, [isOpen]);
 
   return (
     <AnimatePresence>
@@ -123,7 +111,7 @@ export const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, ser
                   href="tel:+40726530591"
                   className="px-6 py-3 border-2 border-primary-600 text-primary-600 rounded-xl font-semibold hover:bg-primary-50 transition-colors text-center"
                 >
-                  Programează consultație
+                  Detalii de contact
                 </a>
               </div>
             </div>
