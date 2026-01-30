@@ -10,6 +10,17 @@ import { cn } from '@/utils/cn';
 function MobileNav() {
   const location = useLocation();
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
+    // Check if we are already on the current path
+    if (location.pathname === path) {
+      e.preventDefault(); // Prevent redundant route push
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      // Allow default Link behavior but ensure we start at top of new page
+      window.scrollTo({ top: 0, behavior: 'auto' });
+    }
+  };
+
   const navItems = [
     {
       icon: (
@@ -49,20 +60,14 @@ function MobileNav() {
         {navItems.map((item) => {
           const isActive = location.pathname === item.path;
 
-          const isChat = 'isChat' in item && item.isChat;
-          
           return (
             <Link
               key={item.label}
               to={item.path}
-              onClick={() => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
+              onClick={(e) => handleNavClick(e, item.path)}
               className={cn(
                 'flex flex-col items-center justify-center py-2.5 px-1 rounded-xl transition-all min-h-[64px]',
-                isChat
-                  ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-md'
-                  : isActive
+                isActive
                   ? 'bg-primary-50 text-primary-600'
                   : 'text-gray-600 hover:bg-gray-50 active:bg-gray-100'
               )}

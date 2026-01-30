@@ -41,7 +41,7 @@ export const TestimonialCard = ({
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.3 }}
       className={cn(
-        'relative bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-md hover:shadow-lg border border-gray-100 h-full flex flex-col',
+        'relative bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-md hover:shadow-lg border border-gray-100 h-full flex flex-col select-none touch-pan-y',
         'transition-shadow duration-300',
         className
       )}

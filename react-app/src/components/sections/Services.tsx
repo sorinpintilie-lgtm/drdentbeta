@@ -186,12 +186,6 @@ export const Services = () => {
           </p>
           <a
             href="tel:+40726530591"
-            onClick={() => {
-              const contactElement = document.getElementById('contact');
-              if (contactElement) {
-                contactElement.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
             className="inline-flex items-center gap-2 px-8 py-4 bg-[#0066cc] text-white rounded-xl font-semibold text-lg hover:bg-[#004999] transition-all hover:shadow-xl hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-[#0080ff]/30"
           >
             <Stethoscope className="w-5 h-5" />
@@ -219,28 +213,28 @@ export const Services = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                src: '/images/newimages/IMG_0493.jpg',
+                src: '/images/gallery/pics-site/Consultatie Iasmina/IMG_0208.jpg',
                 alt: 'Consultație dentară profesională',
                 title: 'Consultații complete',
                 description: 'Examinări detaliate cu tehnologie modernă',
                 href: '/servicii',
               },
               {
-                src: '/images/newimg/Pics site/Extra/IMG_0498.jpg',
+                src: '/images/gallery/pics-site/Extra/IMG_0493.jpg',
                 alt: 'Procedură dentară în curs',
                 title: 'Tratamente profesionale',
                 description: 'Proceduri realizate cu precizie și atenție',
                 href: '/servicii',
               },
               {
-                src: '/images/newimg/Pics site/Consultatie Iasmina/IMG_0232.jpg',
+                src: '/images/gallery/pics-site/Consultatie Iasmina/IMG_0232.jpg',
                 alt: 'Examinare dentară detaliată',
                 title: 'Diagnosticare precisă',
                 description: 'Identificarea problemelor din timp',
                 href: '/servicii',
               },
               {
-                src: '/images/newimg/Pics site/Poze grup/IMG_0173.jpg',
+                src: '/images/gallery/pics-site/Poze grup/IMG_0173.jpg',
                 alt: 'Echipa medicală cu pacientul',
                 title: 'Echipa noastră',
                 description: 'Profesioniști dedicați îngrijirii tale',
@@ -254,7 +248,7 @@ export const Services = () => {
                 href: '/despre-noi',
               },
               {
-                src: '/images/newimg/Pics site/Extra/IMG_0503.jpg',
+                src: '/images/gallery/pics-site/Extra/IMG_0503.jpg',
                 alt: 'Doctoriță în cabinetul dentar',
                 title: 'Medici specializați',
                 description: 'Experiență și competență în domeniu',

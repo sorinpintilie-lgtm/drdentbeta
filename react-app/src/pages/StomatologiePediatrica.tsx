@@ -56,39 +56,39 @@ function StomatologiePediatrica() {
       description: 'O întâlnire prietenoasă pentru a ne cunoaște și a ne juca puțin!',
       icon: <Heart className="w-8 h-8" />,
       color: 'from-pink-400 to-pink-500',
-      image: '/images/childrenpart/fata.png'
+      image: '/images/children/fata.png'
     },
     {
       title: 'Curățare cu periuța magică',
       description: 'Învățăm să ne spălăm dințișorii ca un adevărat campion!',
       icon: <Smile className="w-8 h-8" />,
       color: 'from-green-400 to-green-500',
-      image: '/images/childrenpart/iepuras.png'
+      image: '/images/children/iepuras.png'
     },
     {
       title: 'Sigilare cu flori colorate',
       description: 'Pune flori magice pe dințișori să îi protejăm de carii!',
       icon: <Flower className="w-8 h-8" />,
       color: 'from-yellow-400 to-orange-400',
-      image: '/images/childrenpart/floare roz.png'
+      image: '/images/children/floare roz.png'
     },
     {
       title: 'Tratament fără durere',
       description: 'Folosim formule blânde și tehnici speciale pentru copii',
       icon: <HeartHandshake className="w-8 h-8" />,
       color: 'from-blue-400 to-purple-400',
-      image: '/images/childrenpart/inima.png'
+      image: '/images/children/inima.png'
     },
   ];
 
   const floatingElements = [
-    { src: '/images/childrenpart/soare test .png', size: 'w-16 h-16', top: '10%', left: '5%', delay: 0 },
-    { src: '/images/childrenpart/curcubeu peste nori.png', size: 'w-20 h-20', top: '15%', right: '10%', delay: 1 },
-    { src: '/images/childrenpart/fluture.png', size: 'w-12 h-12', top: '30%', left: '8%', delay: 2 },
-    { src: '/images/childrenpart/unicorn.png', size: 'w-16 h-16', top: '60%', right: '15%', delay: 3 },
-    { src: '/images/childrenpart/balon cu aer cald.png', size: 'w-14 h-14', top: '75%', left: '10%', delay: 4 },
-    { src: '/images/childrenpart/floare albastra.png', size: 'w-12 h-12', top: '45%', right: '5%', delay: 5 },
-    { src: '/images/childrenpart/inghetata.png', size: 'w-14 h-14', top: '80%', right: '8%', delay: 6 },
+    { src: '/images/children/soare test .png', size: 'w-16 h-16', top: '10%', left: '5%', delay: 0 },
+    { src: '/images/children/curcubeu peste nori.png', size: 'w-20 h-20', top: '15%', right: '10%', delay: 1 },
+    { src: '/images/children/fluture.png', size: 'w-12 h-12', top: '30%', left: '8%', delay: 2 },
+    { src: '/images/children/unicorn.png', size: 'w-16 h-16', top: '60%', right: '15%', delay: 3 },
+    { src: '/images/children/balon cu aer cald.png', size: 'w-14 h-14', top: '75%', left: '10%', delay: 4 },
+    { src: '/images/children/floare albastra.png', size: 'w-12 h-12', top: '45%', right: '5%', delay: 5 },
+    { src: '/images/children/inghetata.png', size: 'w-14 h-14', top: '80%', right: '8%', delay: 6 },
   ];
 
   return (
@@ -447,7 +447,7 @@ function StomatologiePediatrica() {
               <div className="mb-6">
                 <div className="flex justify-center items-center gap-3 mb-4">
                   <img
-                    src="/images/childrenpart/iepuras.png"
+                     src="/images/children/iepuras.png"
                     alt="Cute bunny"
                     className="w-12 h-12 object-contain"
                   />
@@ -455,7 +455,7 @@ function StomatologiePediatrica() {
                     Periuța Magică!
                   </h3>
                   <img
-                    src="/images/childrenpart/inima.png"
+                     src="/images/children/inima.png"
                     alt="Heart"
                     className="w-12 h-12 object-contain"
                   />
@@ -466,7 +466,7 @@ function StomatologiePediatrica() {
               <div className="space-y-4 text-left">
                 <div className="flex items-start gap-3">
                   <img
-                    src="/images/childrenpart/fata.png"
+                     src="/images/children/fata.png"
                     alt="Happy girl"
                     className="w-10 h-10 object-contain flex-shrink-0 mt-1"
                   />
@@ -482,7 +482,7 @@ function StomatologiePediatrica() {
 
                 <div className="flex items-start gap-3">
                   <img
-                    src="/images/childrenpart/unicorn.png"
+                     src="/images/children/unicorn.png"
                     alt="Unicorn"
                     className="w-10 h-10 object-contain flex-shrink-0 mt-1"
                   />
@@ -495,7 +495,7 @@ function StomatologiePediatrica() {
 
                 <div className="flex items-start gap-3">
                   <img
-                    src="/images/childrenpart/fluture.png"
+                     src="/images/children/fluture.png"
                     alt="Butterfly"
                     className="w-10 h-10 object-contain flex-shrink-0 mt-1"
                   />
@@ -508,7 +508,7 @@ function StomatologiePediatrica() {
 
                 <div className="flex items-start gap-3">
                   <img
-                    src="/images/childrenpart/curcubeu peste nori.png"
+                     src="/images/children/curcubeu peste nori.png"
                     alt="Rainbow"
                     className="w-10 h-10 object-contain flex-shrink-0 mt-1"
                   />
@@ -720,38 +720,33 @@ function StomatologiePediatrica() {
           </motion.div>
 
           {/* Mobile Carousel */}
-          <div className="md:hidden">
-            <SwipeableCarousel cardWidth={280} gap={12}>
+          <div className="mt-8">
+            <SwipeableCarousel gap={15}>
               {childFriendlyServices.map((service, index) => (
-                <div key={index}>
-                  <motion.div
-                    whileHover={{ scale: 1.02 }}
-                    className="bg-white rounded-2xl p-6 shadow-lg border-4 border-yellow-200 h-full relative overflow-hidden"
-                  >
-                    {/* Decorative corner */}
-                    <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-yellow-200 to-pink-200 rounded-bl-3xl" />
-                    
-                    {/* Service image */}
-                    <div className="relative z-10 mb-4">
-                      <img 
-                        src={service.image} 
-                        alt={service.title}
-                        className="w-16 h-16 object-contain mx-auto"
-                      />
-                    </div>
-                    
-                    <div className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${service.color} text-white mb-4`}>
-                      {service.icon}
-                    </div>
-                    
-                    <h3 className="text-lg font-bold text-gray-900 mb-2 text-center">
-                      {service.title}
-                    </h3>
-                    
-                    <p className="text-sm text-gray-600 text-center leading-relaxed">
-                      {service.description}
-                    </p>
-                  </motion.div>
+                <div key={index} className="bg-white/90 p-6 rounded-3xl shadow-xl relative overflow-hidden">
+                  {/* Decorative corner */}
+                  <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-yellow-200 to-pink-200 rounded-bl-3xl" />
+                  
+                  {/* Service image */}
+                  <div className="relative z-10 mb-4">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-16 h-16 object-contain mx-auto"
+                    />
+                  </div>
+                  
+                  <div className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${service.color} text-white mb-4`}>
+                    {service.icon}
+                  </div>
+                  
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 text-center">
+                    {service.title}
+                  </h3>
+                  
+                  <p className="text-sm text-gray-600 text-center leading-relaxed">
+                    {service.description}
+                  </p>
                 </div>
               ))}
             </SwipeableCarousel>

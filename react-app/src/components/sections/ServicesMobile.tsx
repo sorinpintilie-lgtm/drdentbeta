@@ -8,7 +8,7 @@ import {
   Stethoscope,
   Baby,
 } from 'lucide-react';
-import { InfiniteCarousel } from '../ui/InfiniteCarousel';
+import { SwipeableCarousel } from '../ui/SwipeableCarousel';
 import { ServiceCard } from '../ui/ServiceCard';
 import type { Service } from '../../types/components';
 
@@ -107,21 +107,20 @@ export const ServicesMobile = () => {
           </p>
         </motion.div>
 
-        {/* Mobile: Infinite Carousel */}
-        <div className="block md:hidden mb-6">
-          <InfiniteCarousel speed={40} pauseOnHover={true}>
+        {/* Mobile: Swipeable Carousel with 2 cards visible */}
+        <div className="block md:hidden mb-10 px-4">
+          <SwipeableCarousel gap={12} visibleItems={2}>
             {services.map((service) => (
-              <div key={service.id} className="w-[280px]">
-                <ServiceCard
-                  icon={service.icon}
-                  title={service.title}
-                  description={service.description}
-                  href={service.href}
-                  className="h-full"
-                />
-              </div>
+              <ServiceCard
+                key={service.id}
+                icon={service.icon}
+                title={service.title}
+                description={service.description}
+                href={service.href}
+                className="h-full border border-gray-100 shadow-sm"
+              />
             ))}
-          </InfiniteCarousel>
+          </SwipeableCarousel>
         </div>
 
         {/* Tablet/Desktop: Grid with alternating layout */}

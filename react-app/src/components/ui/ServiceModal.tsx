@@ -111,7 +111,7 @@ export const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, ser
                   href="tel:+40726530591"
                   className="px-6 py-3 border-2 border-primary-600 text-primary-600 rounded-xl font-semibold hover:bg-primary-50 transition-colors text-center"
                 >
-                  Detalii de contact
+                  Programează o consultație
                 </a>
               </div>
             </div>

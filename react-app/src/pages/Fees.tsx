@@ -19,12 +19,6 @@ interface PricingCategory {
 function Fees() {
   const pricingCategories: PricingCategory[] = [
     {
-      title: 'Consultație',
-      items: [
-        { service: 'Consultație', price: '100 RON' },
-      ],
-    },
-    {
       title: 'Chirurgie orală',
       items: [
         { service: 'Extracție dinte monoradicular', price: '250 RON' },
@@ -87,7 +81,6 @@ function Fees() {
         { service: 'Disjunctor', price: '1500 RON' },
         { service: 'Aparat fix partial', price: '1000 RON' },
         { service: 'Aparat fix metalic', price: '2800 RON' },
-        { service: 'Consultație Ortodontie', price: '100 RON' },
         { service: 'Control aparat fix /per arcada', price: '100 RON' },
         { service: 'Retainer colat', price: '450 RON' },
         { service: 'Gutiera de contentie', price: '550 RON' },
@@ -204,7 +197,6 @@ function Fees() {
   ];
 
   const importantInfo = [
-    'Consultația inițială este obligatorie pentru evaluarea exactă a costurilor',
     'Transparență totală - fără costuri ascunse',
     'Prețurile afișate în EUR se achită în RON, la cursul BNR din ziua plății.',
   ];
@@ -238,7 +230,6 @@ function Fees() {
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
               Oferim tarife transparente și competitive pentru toate serviciile noastre dentare.
-              Prețurile includ consultația inițială pentru evaluarea nevoilor dumneavoastră.
             </p>
           </div>
         </div>

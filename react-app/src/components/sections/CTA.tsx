@@ -108,12 +108,6 @@ export function CTA({
           >
             <a
               href={primaryButtonHref}
-              onClick={() => {
-                const contactElement = document.getElementById('contact');
-                if (contactElement) {
-                  contactElement.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
               className="inline-flex items-center justify-center gap-2 px-8 py-4 text-lg min-h-[56px] w-full sm:w-auto bg-white text-primary-600 hover:bg-gray-50 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all rounded-lg font-semibold"
             >
               <Calendar className="w-5 h-5" />
@@ -121,12 +115,6 @@ export function CTA({
             </a>
             <a
               href={secondaryButtonHref}
-              onClick={() => {
-                const contactElement = document.getElementById('contact');
-                if (contactElement) {
-                  contactElement.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
               className="inline-flex items-center justify-center gap-2 px-8 py-4 text-lg min-h-[56px] w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-primary-600 shadow-lg rounded-lg font-semibold transition-all"
             >
               <Phone className="w-5 h-5" />

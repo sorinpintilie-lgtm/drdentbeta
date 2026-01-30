@@ -43,22 +43,6 @@ function Services() {
 
   const serviceCategories = [
     {
-      category: 'Consultație',
-      color: 'from-blue-500 to-blue-600',
-      icon: <Smile className="w-6 h-6" />,
-      services: [
-        {
-          icon: <Smile className="w-8 h-8" />,
-          title: 'Consultație',
-          description: 'Evaluare clinică completă și stabilirea planului de tratament personalizat.',
-          detailedDescription: 'Consultația stomatologică reprezintă primul pas în evaluarea sănătății orale. Medicul examinează dinții, gingiile și structurile de susținere, identificând eventualele afecțiuni sau riscuri. În urma consultației, pacientul primește un diagnostic clar și un plan de tratament personalizat, adaptat nevoilor și obiectivelor sale.',
-          price: '100 RON',
-          duration: 'Variază',
-          popular: false
-        },
-      ]
-    },
-    {
       category: 'Chirurgie orală',
       color: 'from-green-500 to-emerald-600',
       icon: <Bone className="w-6 h-6" />,
@@ -1481,13 +1465,13 @@ function Services() {
               </div>
 
               {/* Swipeable Carousel for Mobile */}
-              <div className="md:hidden px-3">
-                <SwipeableCarousel cardWidth={280} gap={12}>
+              <div className="md:hidden">
+                <SwipeableCarousel gap={20}>
                   {category.services.map((service, serviceIndex) => (
-                    <div key={serviceIndex}>
+                    <div key={serviceIndex} onClick={() => openServiceModal(service)}>
                       <motion.div
                         whileHover={{ scale: 1.02 }}
-                        className="bg-white rounded-xl p-4 shadow-md border border-gray-100 h-full flex flex-col"
+                        className="bg-white rounded-xl p-4 shadow-lg border border-gray-100 h-full flex flex-col"
                       >
                         <div className="flex-grow">
                           {service.popular && (
@@ -1518,7 +1502,6 @@ function Services() {
                         </div>
 
                         <button
-                          onClick={() => openServiceModal(service)}
                           className="w-full flex items-center justify-center gap-1 px-3 py-2 bg-primary-50 text-primary-600 rounded-lg font-semibold text-xs hover:bg-primary-100 transition-colors mt-auto"
                         >
                           Detalii

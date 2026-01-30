@@ -30,6 +30,10 @@ function Home() {
     window.location.href = '/servicii';
   };
 
+  const handleContact = () => {
+    window.location.href = '/contact';
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -40,6 +44,7 @@ function Home() {
           primaryCTA={{
             text: "Detalii de contact",
             href: "/contact",
+            onClick: handleContact,
           }}
           secondaryCTA={{
             text: "Servicii",

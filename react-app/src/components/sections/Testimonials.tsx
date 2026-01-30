@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import { TestimonialCard } from '../ui/TestimonialCard';
 import type { Testimonial } from '../../types/components';
+import { cn } from '@/utils/cn';
 
 interface GoogleReview {
   reviewer_name: string;
@@ -16,6 +17,7 @@ export const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [direction, setDirection] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
   const { ref, inView } = useInView({
     threshold: 0.1,
     triggerOnce: true,
@@ -93,22 +95,37 @@ export const Testimonials = () => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [handleNext, handlePrev]);
 
-  // Swipe gesture support
+  // Swipe gesture support with ghost click prevention
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
 
   const minSwipeDistance = 50;
 
   const onTouchStart = (e: React.TouchEvent) => {
+    setIsDragging(false);
     setTouchEnd(null);
     setTouchStart(e.targetTouches[0].clientX);
   };
 
   const onTouchMove = (e: React.TouchEvent) => {
-    setTouchEnd(e.targetTouches[0].clientX);
+    if (!touchStart) return;
+    const currentTouch = e.targetTouches[0].clientX;
+    setTouchEnd(currentTouch);
+    
+    const distance = Math.abs(touchStart - currentTouch);
+    
+    // If user moves more than 10px, consider it a drag, not a click
+    if (distance > 10) {
+      setIsDragging(true);
+    }
   };
 
-  const onTouchEnd = () => {
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (isDragging) {
+      // Prevent browser from triggering a click event on underlying elements
+      e.preventDefault();
+    }
+    
     if (!touchStart || !touchEnd) return;
 
     const distance = touchStart - touchEnd;
@@ -122,6 +139,10 @@ export const Testimonials = () => {
       handlePrev();
       setIsAutoPlaying(false);
     }
+    
+    setTouchStart(null);
+    setTouchEnd(null);
+    setIsDragging(false);
   };
 
   const slideVariants = {
@@ -244,27 +265,32 @@ export const Testimonials = () => {
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}
           >
-            <AnimatePresence initial={false} custom={direction} mode="wait">
-              <motion.div
-                key={currentIndex}
-                custom={direction}
-                variants={slideVariants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{
-                  x: { type: 'spring', stiffness: 300, damping: 30 },
-                  opacity: { duration: 0.2 },
-                }}
-                className="px-2 sm:px-0"
-              >
-                {/* Current testimonial - Full width on mobile */}
-                <TestimonialCard
-                  testimonial={testimonials[currentIndex]}
-                  className="w-full"
-                />
-              </motion.div>
-            </AnimatePresence>
+            <div className={cn(
+              "transition-opacity duration-200",
+              isDragging ? "pointer-events-none" : "pointer-events-auto"
+            )}>
+              <AnimatePresence initial={false} custom={direction} mode="wait">
+                <motion.div
+                  key={currentIndex}
+                  custom={direction}
+                  variants={slideVariants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{
+                    x: { type: 'spring', stiffness: 300, damping: 30 },
+                    opacity: { duration: 0.2 },
+                  }}
+                  className="px-2 sm:px-0"
+                >
+                  {/* Current testimonial - Full width on mobile */}
+                  <TestimonialCard
+                    testimonial={testimonials[currentIndex]}
+                    className="w-full"
+                  />
+                </motion.div>
+              </AnimatePresence>
+            </div>
           </div>
 
           {/* Navigation Dots - Smaller on mobile */}

@@ -24,7 +24,8 @@ function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      // Trigger solid background earlier for better visibility
+      setIsScrolled(window.scrollY > 20);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -67,13 +68,10 @@ function Header() {
       <header
         className={cn(
           'fixed top-0 left-0 right-0 z-[100] transition-all duration-300',
-          // On home page: transparent until scrolled, then white
-          // On other pages: always white with shadow
-          isHomePage
-            ? isScrolled
-              ? 'bg-white/95 backdrop-blur-lg shadow-sm'
-              : 'bg-transparent'
-            : 'bg-white/95 backdrop-blur-lg shadow-sm'
+          // Force solid background on all sub-pages regardless of scroll
+          !isHomePage || isScrolled
+            ? 'bg-white/95 backdrop-blur-lg shadow-sm py-2'
+            : 'bg-transparent py-4'
         )}
       >
         <div className="container mx-auto px-4">
@@ -83,7 +81,11 @@ function Header() {
               <motion.img
                 src="/images/logo-color.svg"
                 alt="Dr.Dent Logo"
-                className="h-12 sm:h-14 md:h-16 lg:h-20 w-auto object-contain"
+                className={cn(
+                  "h-12 sm:h-14 md:h-16 lg:h-20 w-auto object-contain transition-all",
+                  // Ensure logo visibility if it's white on transparent home hero
+                  !isHomePage || isScrolled ? 'brightness-100' : 'brightness-0 invert'
+                )}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               />
@@ -100,11 +102,8 @@ function Header() {
                   }}
                   className={cn(
                     'font-medium transition-colors hover:text-primary-500 relative group',
-                    // On home page: white until scrolled, then dark
-                    // On other pages: always dark
-                    isHomePage
-                      ? isScrolled ? 'text-gray-700' : 'text-white'
-                      : 'text-gray-700'
+                    // Logic update: Ensure dark text on all sub-pages
+                    !isHomePage || isScrolled ? 'text-gray-700' : 'text-white'
                   )}
                 >
                   {item.label}
@@ -115,16 +114,10 @@ function Header() {
               {/* Desktop CTA Button */}
               <a
                 href="/contact"
-                onClick={() => {
-                  const contactElement = document.getElementById('contact');
-                  if (contactElement) {
-                    contactElement.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
                 className="px-6 py-2.5 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all flex items-center gap-2"
               >
                 <Calendar className="w-4 h-4" />
-                <span>Detalii de contact</span>
+                <span>Programează o consultație</span>
               </a>
             </nav>
 
@@ -139,11 +132,8 @@ function Header() {
                 <motion.span
                   className={cn(
                     'block h-0.5 w-full transition-all',
-                    // On home page: white until scrolled, then dark
-                    // On other pages: always dark
-                    isHomePage
-                      ? isScrolled ? 'bg-gray-900' : 'bg-white'
-                      : 'bg-gray-900'
+                    // Logic update: Ensure dark icon on all sub-pages
+                    !isHomePage || isScrolled ? 'bg-gray-900' : 'bg-white'
                   )}
                   animate={{
                     rotate: isMobileMenuOpen ? 45 : 0,
@@ -153,9 +143,7 @@ function Header() {
                 <motion.span
                   className={cn(
                     'block h-0.5 w-full transition-all',
-                    isHomePage
-                      ? isScrolled ? 'bg-gray-900' : 'bg-white'
-                      : 'bg-gray-900'
+                    !isHomePage || isScrolled ? 'bg-gray-900' : 'bg-white'
                   )}
                   animate={{
                     opacity: isMobileMenuOpen ? 0 : 1,
@@ -164,9 +152,7 @@ function Header() {
                 <motion.span
                   className={cn(
                     'block h-0.5 w-full transition-all',
-                    isHomePage
-                      ? isScrolled ? 'bg-gray-900' : 'bg-white'
-                      : 'bg-gray-900'
+                    !isHomePage || isScrolled ? 'bg-gray-900' : 'bg-white'
                   )}
                   animate={{
                     rotate: isMobileMenuOpen ? -45 : 0,
@@ -248,27 +234,15 @@ function Header() {
                   >
                     <a
                       href="/contact"
-                      onClick={() => {
-                        setIsMobileMenuOpen(false);
-                        const contactElement = document.getElementById('contact');
-                        if (contactElement) {
-                          contactElement.scrollIntoView({ behavior: 'smooth' });
-                        }
-                      }}
+                      onClick={() => setIsMobileMenuOpen(false)}
                       className="flex items-center justify-center gap-2 w-full px-6 py-3.5 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-xl font-semibold shadow-lg"
                     >
                       <Calendar className="w-5 h-5" />
-                      <span>Detalii de contact</span>
+                      <span>Programează o consultație</span>
                     </a>
                     <a
                       href="tel:+40726530591"
-                      onClick={() => {
-                        setIsMobileMenuOpen(false);
-                        const contactElement = document.getElementById('contact');
-                        if (contactElement) {
-                          contactElement.scrollIntoView({ behavior: 'smooth' });
-                        }
-                      }}
+                      onClick={() => setIsMobileMenuOpen(false)}
                       className="flex items-center justify-center gap-2 w-full px-6 py-3.5 border-2 border-primary-500 text-primary-600 rounded-xl font-semibold hover:bg-primary-50 transition-all"
                     >
                       <Phone className="w-5 h-5" />

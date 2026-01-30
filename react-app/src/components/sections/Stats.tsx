@@ -86,9 +86,14 @@ const Counter = ({
   }, [end, duration, inView]);
 
   const formattedCount = decimals > 0 ? count.toFixed(decimals) : Math.floor(count);
-
+  
   return (
-    <span className="tabular-nums">
+    <span 
+      className="tabular-nums"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+    >
       {formattedCount}
       {suffix}
     </span>
@@ -131,8 +136,8 @@ export const Stats = () => {
       className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-[#0066cc] to-[#004999] relative overflow-hidden"
       aria-labelledby="stats-heading"
     >
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
+      {/* Background Pattern - Optimization: added pointer-events-none */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div className="absolute inset-0" style={{
           backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
           backgroundSize: '40px 40px',
@@ -163,7 +168,7 @@ export const Stats = () => {
             id="stats-heading"
             className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4"
           >
-            Rezultate în cifre
+            Excelență în Stomatologie: Rezultatele Noastre
           </h2>
           <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
             Cifrele vorbesc despre dedicarea și calitatea serviciilor noastre
@@ -250,7 +255,7 @@ export const Stats = () => {
             href="tel:+40726530591"
             className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#0066cc] rounded-xl font-semibold text-lg hover:bg-gray-50 transition-all hover:shadow-2xl hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-white/30"
           >
-            Detalii de contact
+            Programează o consultație
           </a>
         </motion.div>
       </div>

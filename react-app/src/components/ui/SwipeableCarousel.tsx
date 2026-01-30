@@ -1,158 +1,98 @@
-import { useRef, useState } from 'react';
-import { motion, useMotionValue, animate, PanInfo } from 'framer-motion';
+import { useState, useRef } from 'react';
 import { cn } from '../../utils/cn';
 
 interface SwipeableCarouselProps {
   children: React.ReactNode[];
   className?: string;
-  cardWidth?: number;
   gap?: number;
+  visibleItems?: number; // New prop to control cards per screen
 }
 
-export const SwipeableCarousel = ({
-  children,
-  className,
-  cardWidth = 280,
-  gap = 16,
+export const SwipeableCarousel = ({ 
+  children, 
+  className, 
+  gap = 20, 
+  visibleItems = 1 
 }: SwipeableCarouselProps) => {
-  const containerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const x = useMotionValue(0);
-  const [isDragging, setIsDragging] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  
+  const totalItems = children.length;
+  const dotCount = Math.min(totalItems, 20);
 
-  const cardWithGap = cardWidth + gap;
-
-  // Navigate to specific index with infinite loop support
-  const navigateToIndex = (index: number, immediate = false) => {
-    // Handle infinite loop
-    let targetIndex = index;
-    if (index < 0) {
-      targetIndex = children.length - 1;
-    } else if (index >= children.length) {
-      targetIndex = 0;
-    }
-
-    setCurrentIndex(targetIndex);
+  const handleScroll = () => {
+    if (!containerRef.current) return;
     
-    const targetX = -targetIndex * cardWithGap;
+    const container = containerRef.current;
+    const scrollPosition = container.scrollLeft;
+    const containerWidth = container.offsetWidth;
     
-    if (immediate) {
-      x.set(targetX);
-    } else {
-      animate(x, targetX, {
-        type: 'spring',
-        stiffness: 300,
-        damping: 30,
-      });
+    // Calculate accurate item width based on visible items configuration
+    // Formula: (Container Width - Total Gaps) / Visible Items
+    const itemWidth = (containerWidth - (gap * (visibleItems - 1))) / visibleItems;
+    const stride = itemWidth + gap;
+    
+    const newIndex = Math.round(scrollPosition / stride);
+    
+    if (newIndex !== currentIndex && newIndex >= 0 && newIndex < totalItems) {
+      setCurrentIndex(newIndex);
     }
   };
 
-  // Handle drag end with infinite loop
-  const handleDragEnd = (_: any, info: PanInfo) => {
-    setIsDragging(false);
+  const scrollToindex = (index: number) => {
+    if (!containerRef.current) return;
     
-    const velocity = info.velocity.x;
-    const swipeThreshold = 50; // Minimum swipe distance
-    const velocityThreshold = 500; // Minimum velocity for quick swipe
-
-    // Determine direction based on velocity or distance
-    let newIndex = currentIndex;
+    const container = containerRef.current;
+    const containerWidth = container.offsetWidth;
+    const itemWidth = (containerWidth - (gap * (visibleItems - 1))) / visibleItems;
+    const stride = itemWidth + gap;
     
-    if (Math.abs(velocity) > velocityThreshold) {
-      // Quick swipe - use velocity
-      newIndex = velocity > 0 ? currentIndex - 1 : currentIndex + 1;
-    } else if (Math.abs(info.offset.x) > swipeThreshold) {
-      // Slow drag - use distance
-      newIndex = info.offset.x > 0 ? currentIndex - 1 : currentIndex + 1;
-    }
-
-    // Navigate with infinite loop
-    navigateToIndex(newIndex);
+    container.scrollTo({
+      left: index * stride,
+      behavior: 'smooth'
+    });
   };
 
   return (
-    <div ref={containerRef} className={cn('relative overflow-hidden', className)}>
-      {/* Swipeable Container */}
-      <motion.div
-        drag="x"
-        dragConstraints={{ left: 0, right: 0 }}
-        dragElastic={0.2}
-        dragMomentum={false}
-        onDragStart={() => setIsDragging(true)}
-        onDragEnd={handleDragEnd}
-        style={{ x }}
-        className={cn(
-          'flex',
-          isDragging ? 'cursor-grabbing' : 'cursor-grab'
-        )}
+    <div className={cn("relative w-full", className)}>
+      <div 
+        ref={containerRef}
+        onScroll={handleScroll}
+        className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide touch-pan-x pb-4"
+        style={{ gap: `${gap}px` }}
       >
-        {children.map((child, index) => (
-          <div
-            key={index}
-            className="flex-shrink-0 select-none"
-            style={{
-              width: cardWidth,
-              marginRight: index < children.length - 1 ? gap : 0,
+        {children.map((child, i) => (
+          <div 
+            key={i} 
+            // Changed to snap-start so the pair aligns to the left
+            className="flex-shrink-0 snap-start snap-always"
+            style={{ 
+              // CSS calc to perfectly fit 'visibleItems' minus the gaps
+              width: `calc((100% - ${(visibleItems - 1) * gap}px) / ${visibleItems})` 
             }}
           >
             {child}
           </div>
         ))}
-      </motion.div>
-
-      {/* Pagination Dots */}
-      <div className="flex justify-center gap-2 mt-4">
-        {children.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => navigateToIndex(index)}
-            className={cn(
-              'transition-all rounded-full',
-              index === currentIndex
-                ? 'w-6 h-2 bg-primary-600'
-                : 'w-2 h-2 bg-gray-300 hover:bg-gray-400'
-            )}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
       </div>
 
-      {/* Navigation Arrows - Desktop with infinite loop */}
-      {children.length > 1 && (
-        <>
-          <button
-            onClick={() => navigateToIndex(currentIndex - 1)}
-            className={cn(
-              'hidden sm:flex absolute left-2 top-1/2 -translate-y-1/2 z-10',
-              'w-10 h-10 items-center justify-center',
-              'bg-white rounded-full shadow-lg',
-              'hover:bg-gray-50 transition-all hover:scale-110',
-              'focus:outline-none focus:ring-2 focus:ring-primary-500'
-            )}
-            aria-label="Previous"
-          >
-            <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-
-          <button
-            onClick={() => navigateToIndex(currentIndex + 1)}
-            className={cn(
-              'hidden sm:flex absolute right-2 top-1/2 -translate-y-1/2 z-10',
-              'w-10 h-10 items-center justify-center',
-              'bg-white rounded-full shadow-lg',
-              'hover:bg-gray-50 transition-all hover:scale-110',
-              'focus:outline-none focus:ring-2 focus:ring-primary-500'
-            )}
-            aria-label="Next"
-          >
-            <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-        </>
-      )}
+      {/* Pagination Dots */}
+      <div className="flex justify-center gap-1.5 mt-2 max-w-full px-4 flex-wrap">
+        {Array.from({ length: dotCount }).map((_, i) => {
+          const isActive = Math.round((currentIndex / (totalItems - 1)) * (dotCount - 1)) === i;
+          return (
+            <button
+              key={i}
+              onClick={() => scrollToindex(Math.floor((i / (dotCount - 1)) * (totalItems - 1)))}
+              className={cn(
+                "h-1.5 rounded-full transition-all duration-300",
+                isActive ? "w-6 bg-[#0066cc]" : "w-1.5 bg-gray-300"
+              )}
+              aria-label={`Go to item ${i + 1}`}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };

@@ -44,7 +44,7 @@ function Team() {
         'Experiență vastă în stomatologie',
       ],
       image:
-        "/images/newimg/Pics site/Poze portret/Anca Ciomag - specialist stomatologie generală/IMG_0274.jpg",
+        "/images/gallery/pics-site/Poze portret/Anca Ciomag - specialist stomatologie generală/IMG_0274.jpg",
       type: 'doctor',
     },
     {
@@ -57,7 +57,7 @@ function Team() {
         'Specialist în tratamente generale',
       ],
       image:
-        "/images/newimg/Pics site/Poze portret/Daniela Căpățână - Specialist stomatologie generală/IMG_0294.jpg",
+        "/images/gallery/pics-site/Poze portret/Daniela Căpățână - Specialist stomatologie generală/IMG_0294.jpg",
       type: 'doctor',
     },
     {
@@ -104,7 +104,7 @@ function Team() {
         'Profesionalism și grijă',
       ],
       image:
-        "/images/newimg/Pics site/Poze portret/Daria Petrescu-Seceleanu - Chirurgie dento-alveolară/IMG_0392.jpg",
+        "/images/gallery/pics-site/Poze portret/Daria Petrescu-Seceleanu - Chirurgie dento-alveolară/IMG_0392.jpg",
       type: 'doctor',
     },
     {
@@ -117,7 +117,7 @@ function Team() {
         'Experiență în îngrijirea pacienților anxioși',
       ],
       image:
-        "/images/newimg/Pics site/Poze portret/Roxana Ioana Rîndașu - Specialist parodontolog/IMG_0143.jpg",
+        "/images/gallery/pics-site/Poze portret/Roxana Ioana Rîndașu - Specialist parodontolog/IMG_0143.jpg",
       type: 'doctor',
     },
     {
@@ -154,7 +154,7 @@ function Team() {
         'Abordare empatică',
       ],
       image:
-        "/images/newimg/Pics site/Poze portret/Marin Cristiana - specializare endodonție/IMG_0315.jpg",
+        "/images/gallery/pics-site/Poze portret/Marin Cristiana - specializare endodonție/IMG_0315.jpg",
       type: 'doctor',
     },
     {
@@ -207,6 +207,15 @@ function Team() {
       default:
         return 'bg-gray-100 text-gray-700';
     }
+  };
+
+  // Helper function to get mobile version of image path
+  const getMobileImagePath = (imagePath: string | undefined): string | undefined => {
+    if (!imagePath) return undefined;
+    // Insert .m between filename and extension
+    const lastDotIndex = imagePath.lastIndexOf('.');
+    if (lastDotIndex === -1) return imagePath;
+    return imagePath.substring(0, lastDotIndex) + '.m' + imagePath.substring(lastDotIndex);
   };
 
   return (
@@ -311,11 +320,14 @@ function Team() {
                   )}>
                   {member.image ? (
                     <>
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        className="w-full h-full object-cover object-left"
-                      />
+                      <picture>
+                        <source media="(max-width: 640px)" srcSet={getMobileImagePath(member.image)} />
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className="w-full h-full object-cover object-left"
+                        />
+                      </picture>
                       <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                     </>
                   ) : (
@@ -417,19 +429,19 @@ function Team() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {[
               {
-                src: '/images/newimg/Pics site/Consultatie Iasmina/IMG_0208.jpg',
+                src: '/images/gallery/pics-site/Consultatie Iasmina/IMG_0208.jpg',
                 alt: 'Tânără doctoriță în cabinetul dentar',
                 title: 'Cabinet modern',
                 description: 'Spații moderne și echipamente de ultimă generație'
               },
               {
-                src: '/images/newimg/Pics site/Consultatie Iasmina/IMG_0225.jpg',
+                src: '/images/gallery/pics-site/Consultatie Iasmina/IMG_0225.jpg',
                 alt: 'Doctor cu experiență și instrumente',
                 title: 'Experiență și expertiză',
                 description: 'Medici cu ani de experiență și dedicare'
               },
               {
-                src: '/images/newimg/Pics site/Extra/IMG_0493.jpg',
+                src: '/images/gallery/pics-site/Extra/IMG_0493.jpg',
                 alt: 'Doctor și pacient în centru medical',
                 title: 'Relația medic-pacient',
                 description: 'Comunicare deschisă și încredere reciprocă'
@@ -513,11 +525,14 @@ function Team() {
                   <div className="order-1">
                     <div className="aspect-[9/16] md:max-h-[300px] rounded-lg sm:rounded-xl overflow-hidden bg-gray-100">
                       {selectedMember.image ? (
-                        <img
-                          src={selectedMember.image}
-                          alt={selectedMember.name}
-                          className="w-full h-full object-cover object-left"
-                        />
+                        <picture>
+                          <source media="(max-width: 640px)" srcSet={getMobileImagePath(selectedMember.image)} />
+                          <img
+                            src={selectedMember.image}
+                            alt={selectedMember.name}
+                            className="w-full h-full object-cover object-left"
+                          />
+                        </picture>
                       ) : (
                         <div className="h-full bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
                           {selectedMember.type === 'doctor' && <Briefcase className="w-20 h-20 text-primary-600" />}

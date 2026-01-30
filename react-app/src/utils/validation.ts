@@ -13,65 +13,30 @@ const errorMessages = {
   maxLength: (max: number) => `Maxim ${max} caractere`,
 };
 
-// Appointment form validation schema
+// Service options for dropdown
+export const serviceOptions = [
+  { value: 'consultatie', label: 'Consultație dentară' },
+  { value: 'detartraj', label: 'Detartraj profesional' },
+  { value: 'facete', label: 'Fațete ceramice' },
+  { value: 'albire', label: 'Albire profesională' },
+  { value: 'implant', label: 'Implant dentar' },
+  { value: 'invisalign', label: 'Invisalign' },
+  { value: 'pedodontie', label: 'Stomatologie pediatrică' },
+] as const;
+
+// Ensure the schema accepts these exact values
 export const appointmentFormSchema = z.object({
-  fullName: z
-    .string()
-    .min(1, errorMessages.required)
-    .min(3, errorMessages.minLength(3))
-    .max(100, errorMessages.maxLength(100))
-    .regex(/^[a-zA-ZăâîșțĂÂÎȘȚ\s-]+$/, 'Numele poate conține doar litere, spații și cratime'),
-  
-  email: z
-    .string()
-    .min(1, errorMessages.required)
-    .email(errorMessages.invalidEmail)
-    .max(100, errorMessages.maxLength(100)),
-  
-  phone: z
-    .string()
-    .min(1, errorMessages.required)
-    .regex(romanianPhoneRegex, errorMessages.invalidPhone)
-    .transform((val) => val.replace(/\s/g, '')), // Remove spaces for storage
-  
-  service: z
-    .string()
-    .min(1, 'Vă rugăm să selectați un serviciu'),
-  
-  preferredDate: z
-    .string()
-    .min(1, errorMessages.required)
-    .refine((date) => {
-      const selectedDate = new Date(date);
-      const today = new Date();
-      today.setHours(0, 0, 0, 0);
-      return selectedDate >= today;
-    }, 'Data trebuie să fie în viitor'),
-  
-  preferredTime: z
-    .string()
-    .min(1, errorMessages.required),
-  
-  message: z
-    .string()
-    .max(500, errorMessages.maxLength(500))
-    .optional(),
+  fullName: z.string().min(3, 'Numele trebuie să aibă cel puțin 3 caractere'),
+  email: z.string().email('Email invalid'),
+  phone: z.string().regex(/^(\+40|0)7[0-9]{8}$/, 'Număr de telefon invalid'),
+  service: z.enum(serviceOptions.map(opt => opt.value) as [string, ...string[]]),
+  preferredDate: z.string().min(1, 'Vă rugăm selectați o dată'),
+  preferredTime: z.string().min(1, 'Vă rugăm selectați ora'),
+  message: z.string().optional(),
 });
 
 // Type inference from schema
 export type AppointmentFormData = z.infer<typeof appointmentFormSchema>;
-
-// Service options for the dropdown
-export const serviceOptions = [
-  { value: '', label: 'Selectează serviciul dorit' },
-  { value: 'consultatie-generala', label: 'Consultație Generală' },
-  { value: 'igienizare', label: 'Igienizare Dentară' },
-  { value: 'albire', label: 'Albire Dentară' },
-  { value: 'implant', label: 'Implant Dentar' },
-  { value: 'ortodontie', label: 'Ortodonție' },
-  { value: 'estetica', label: 'Stomatologie Estetică' },
-  { value: 'urgenta', label: 'Urgență Dentară' },
-];
 
 // Time slot options
 export const timeSlotOptions = [

@@ -7,13 +7,17 @@
   html {
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
-    scroll-padding-top: 80px; /* Account for fixed header */
+    scroll-padding-top: 80px; /* Height of your header */
   }
   
   body {
     @apply font-body text-gray-900 bg-white;
     overflow-x: hidden;
-    min-height: 100vh;
+  }
+  
+  /* Update global layout wrapper */
+  .layout-wrapper {
+    @apply min-h-[100dvh] flex flex-col;
   }
   
   /* Headings */

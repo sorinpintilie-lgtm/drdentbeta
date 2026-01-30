@@ -198,13 +198,13 @@ function Footer() {
               </div>
             </div>
             <div className="pt-4">
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg font-semibold transition-all hover:scale-105"
               >
                 <Calendar className="w-4 h-4" />
                 <span>Detalii de contact</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

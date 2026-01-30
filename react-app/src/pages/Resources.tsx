@@ -253,7 +253,7 @@ function Resources() {
               className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-primary-600 rounded-xl font-semibold text-lg transition-all"
             >
               <Calendar className="w-5 h-5" />
-              Programați o consultație
+              Programează o consultație
             </a>
           </div>
         </div>
@@ -316,16 +316,10 @@ function Resources() {
                 </button>
                 <a
                   href="tel:+40726530591"
-                  onClick={() => {
-                    const contactElement = document.getElementById('contact');
-                    if (contactElement) {
-                      contactElement.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}
                   className="px-6 py-2.5 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-xl text-base font-semibold hover:shadow-lg hover:scale-105 transition-all inline-block text-center flex items-center gap-2"
                 >
                   <Calendar className="w-4 h-4" />
-                  <span>Detalii de contact</span>
+                  <span>Programează o consultație</span>
                 </a>
               </div>
             </motion.div>

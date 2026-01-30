@@ -17,6 +17,17 @@ import {
   Button,
 } from '../ui';
 
+const CheckIcon = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M5 13l4 4L19 7"
+    />
+  </svg>
+);
+
 type SubmissionStatus = 'idle' | 'loading' | 'success' | 'error';
 
 export const AppointmentForm: React.FC = () => {
@@ -44,21 +55,37 @@ export const AppointmentForm: React.FC = () => {
 
       setSubmissionStatus('success');
       reset();
-
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setSubmissionStatus('idle');
-      }, 5000);
     } catch (error) {
       console.error('Form submission error:', error);
       setSubmissionStatus('error');
-
-      // Reset error message after 5 seconds
-      setTimeout(() => {
-        setSubmissionStatus('idle');
-      }, 5000);
     }
   };
+
+  // Show success view when form is successfully submitted
+  if (submissionStatus === 'success') {
+    return (
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        className="text-center py-12 px-6 bg-green-50 rounded-2xl border border-green-100"
+      >
+        <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+          <CheckIcon className="w-10 h-10" />
+        </div>
+        <h3 className="text-2xl font-bold text-gray-900 mb-2">Programare Trimisă!</h3>
+        <p className="text-gray-600 mb-8">
+          Vă mulțumim! Un reprezentant Dr.Dent vă va contacta telefonic în cel mai scurt timp pentru confirmare.
+        </p>
+        <Button 
+          variant="outline" 
+          onClick={() => setSubmissionStatus('idle')}
+          className="w-full sm:w-auto"
+        >
+          Trimite o altă solicitare
+        </Button>
+      </motion.div>
+    );
+  }
 
   return (
     <div className="w-full">
@@ -254,41 +281,8 @@ export const AppointmentForm: React.FC = () => {
         </Button>
       </form>
 
-      {/* Success/Error Messages */}
+      {/* Error Messages */}
       <AnimatePresence>
-        {submissionStatus === 'success' && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg"
-            role="alert"
-            aria-live="polite"
-          >
-            <div className="flex items-start gap-3">
-              <svg
-                className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-              <div>
-                <h3 className="font-semibold text-green-900">Programare trimisă cu succes!</h3>
-                <p className="text-sm text-green-700 mt-1">
-                  Vă vom contacta în cel mai scurt timp pentru a confirma programarea.
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        )}
-
         {submissionStatus === 'error' && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
