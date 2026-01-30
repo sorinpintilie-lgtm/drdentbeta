@@ -1,18 +1,5 @@
 import { z } from 'zod';
 
-// Romanian phone number validation regex
-// Accepts formats: +40 XXX XXX XXX, +40XXXXXXXXX, 07XX XXX XXX, 07XXXXXXXX
-const romanianPhoneRegex = /^(\+40|0040|0)[1-9]\d{8}$/;
-
-// Custom error messages in Romanian
-const errorMessages = {
-  required: 'Acest câmp este obligatoriu',
-  invalidEmail: 'Adresa de email nu este validă',
-  invalidPhone: 'Numărul de telefon nu este valid (ex: +40 XXX XXX XXX)',
-  minLength: (min: number) => `Minim ${min} caractere`,
-  maxLength: (max: number) => `Maxim ${max} caractere`,
-};
-
 // Service options for dropdown
 export const serviceOptions = [
   { value: 'consultatie', label: 'Consultație dentară' },

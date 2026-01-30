@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import {
-  Smile, Sparkles, Shield, Gem, Circle, Crown, Bone,
+  Sparkles, Shield, Gem, Circle, Crown, Bone,
   Phone, Star, Award, Zap, Heart, CheckCircle, ArrowRight, Clock, Users, Calendar
 } from 'lucide-react';
 import { SwipeableCarousel } from '../components/ui/SwipeableCarousel';

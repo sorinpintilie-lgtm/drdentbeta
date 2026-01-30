@@ -16,6 +16,7 @@ import {
   FormField,
   Button,
 } from '../ui';
+import type { SelectOption } from '../ui/Select';
 
 const CheckIcon = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -185,7 +186,7 @@ export const AppointmentForm: React.FC = () => {
         >
           <Select
             id="service"
-            options={serviceOptions}
+            options={serviceOptions as unknown as SelectOption[]}
             error={!!errors.service}
             disabled={isSubmitting}
             {...register('service')}
