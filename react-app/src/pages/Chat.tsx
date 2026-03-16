@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { MessageCircle, ArrowLeft, Phone, Mail, AlertCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 /**
  * Chat Page Component
@@ -23,7 +24,12 @@ function Chat() {
   }, [iframeLoaded]);
 
   return (
-    <div className="min-h-screen pt-16 pb-20 md:pb-8 bg-gradient-to-br from-gray-50 to-white">
+    <>
+      <Helmet>
+        <title>Chat cu asistentul DrDent</title>
+        <meta name="robots" content="noindex,follow" />
+      </Helmet>
+      <div className="min-h-screen pt-16 pb-20 md:pb-8 bg-gradient-to-br from-gray-50 to-white">
       {/* Header */}
       <div className="bg-gradient-to-r from-primary-500 to-primary-600 text-white py-6 md:py-8">
         <div className="container mx-auto px-4">
@@ -136,6 +142,7 @@ function Chat() {
         </motion.div>
       </div>
     </div>
+    </>
   );
 }
 
