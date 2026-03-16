@@ -1,10 +1,13 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const NotFound = () => {
   return (
     <>
-      <title>Pagina nu a fost găsită | DrDent</title>
-      <meta name="robots" content="noindex,follow" />
+      <Helmet>
+        <title>Pagina nu a fost găsită | DrDent</title>
+        <meta name="robots" content="noindex,follow" />
+      </Helmet>
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-white px-4">
         <div className="text-center max-w-md">
           <h1 className="text-4xl font-bold text-blue-600 mb-4">Pagina nu a fost găsită</h1>
