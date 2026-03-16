@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { X, Award, Briefcase, GraduationCap, Heart } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '../utils/cn';
@@ -220,6 +221,17 @@ function Team() {
 
   return (
     <div className="min-h-screen pt-20 relative z-0">
+      <Helmet>
+        <title>Despre clinica stomatologică DrDent din București | Echipa DrDent</title>
+        <meta name="description" content="Cunoaște echipa DrDent, experiența medicilor și abordarea clinicii noastre stomatologice din București, Sector 2." />
+        <link rel="canonical" href="https://drdent.ro/despre-noi" />
+        <meta name="robots" content="index,follow" />
+        <meta property="og:title" content="Despre clinica stomatologică DrDent din București | Echipa DrDent" />
+        <meta property="og:description" content="Cunoaște echipa DrDent, experiența medicilor și abordarea clinicii noastre stomatologice din București, Sector 2." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://drdent.ro/despre-noi" />
+        <meta property="og:locale" content="ro_RO" />
+      </Helmet>
       {/* Page Header - Compact for mobile */}
       <section className="bg-gradient-to-br from-primary-500 to-primary-700 text-white py-8 sm:py-12 md:py-16">
         <div className="container mx-auto px-3 sm:px-4 text-center">

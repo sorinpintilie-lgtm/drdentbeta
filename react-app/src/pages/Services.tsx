@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import {
   Sparkles, Shield, Gem, Circle, Crown, Bone,
   Phone, Star, Award, Zap, Heart, CheckCircle, ArrowRight, Clock, Users, Calendar
@@ -1403,6 +1404,17 @@ function Services() {
 
   return (
     <div className="min-h-screen pt-16 bg-gradient-to-b from-gray-50 to-white relative z-0">
+      <Helmet>
+        <title>Servicii stomatologice București | DrDent</title>
+        <meta name="description" content="Vezi serviciile stomatologice DrDent din București: chirurgie orală, implant dentar, ortodonție, endodonție, parodontologie, profilaxie și stomatologie pediatrică." />
+        <link rel="canonical" href="https://drdent.ro/servicii" />
+        <meta name="robots" content="index,follow" />
+        <meta property="og:title" content="Servicii stomatologice București | DrDent" />
+        <meta property="og:description" content="Vezi serviciile stomatologice DrDent din București: chirurgie orală, implant dentar, ortodonție, endodonție, parodontologie, profilaxie și stomatologie pediatrică." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://drdent.ro/servicii" />
+        <meta property="og:locale" content="ro_RO" />
+      </Helmet>
       {/* Compact Hero - Mobile Optimized */}
       <section className="bg-gradient-to-br from-primary-500 to-primary-700 text-white py-8 sm:py-12 relative overflow-hidden">
         {/* Decorative circles */}

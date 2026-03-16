@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail, Clock, AlertCircle, Send } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 /**
  * Contact Page Component
@@ -7,6 +8,17 @@ import { MapPin, Phone, Mail, Clock, AlertCircle, Send } from 'lucide-react';
 function Contact() {
   return (
     <div className="min-h-screen pt-20">
+      <Helmet>
+        <title>Contact DrDent București Sector 2 | Programări</title>
+        <meta name="description" content="Datele de contact DrDent din București, Sector 2: adresă, telefon, email, program și formular pentru programări stomatologice." />
+        <link rel="canonical" href="https://drdent.ro/contact" />
+        <meta name="robots" content="index,follow" />
+        <meta property="og:title" content="Contact DrDent București Sector 2 | Programări" />
+        <meta property="og:description" content="Datele de contact DrDent din București, Sector 2: adresă, telefon, email, program și formular pentru programări stomatologice." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://drdent.ro/contact" />
+        <meta property="og:locale" content="ro_RO" />
+      </Helmet>
       {/* Page Header */}
       <section className="bg-gradient-to-br from-primary-500 to-primary-700 text-white py-16">
         <div className="container mx-auto px-4 text-center">

@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Hero } from '../components/sections/Hero';
 import { Services } from '../components/sections/Services';
 import { Features } from '../components/sections/Features';
@@ -36,6 +37,17 @@ function Home() {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Cabinet stomatologic București Sector 2 | DrDent</title>
+        <meta name="description" content="DrDent este cabinet stomatologic în București, Sector 2. Consultații, profilaxie, implantologie, ortodonție, pedodonție și programări rapide." />
+        <link rel="canonical" href="https://drdent.ro/" />
+        <meta name="robots" content="index,follow" />
+        <meta property="og:title" content="Cabinet stomatologic București Sector 2 | DrDent" />
+        <meta property="og:description" content="DrDent este cabinet stomatologic în București, Sector 2. Consultații, profilaxie, implantologie, ortodonție, pedodonție și programări rapide." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://drdent.ro/" />
+        <meta property="og:locale" content="ro_RO" />
+      </Helmet>
       {/* Hero Section */}
       <section id="hero">
         <Hero

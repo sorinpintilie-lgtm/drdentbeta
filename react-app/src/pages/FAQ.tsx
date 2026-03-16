@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { ChevronDown, HelpCircle, Phone, Mail, Calendar } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -166,6 +167,17 @@ function FAQ() {
 
   return (
     <div className="min-h-screen pt-20">
+      <Helmet>
+        <title>Întrebări frecvente despre tratamente stomatologice | DrDent</title>
+        <meta name="description" content="Răspunsuri despre programări, urgențe dentare, tratamente, prețuri și recomandări utile pentru pacienții DrDent." />
+        <link rel="canonical" href="https://drdent.ro/faq" />
+        <meta name="robots" content="index,follow" />
+        <meta property="og:title" content="Întrebări frecvente despre tratamente stomatologice | DrDent" />
+        <meta property="og:description" content="Răspunsuri despre programări, urgențe dentare, tratamente, prețuri și recomandări utile pentru pacienții DrDent." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://drdent.ro/faq" />
+        <meta property="og:locale" content="ro_RO" />
+      </Helmet>
       {/* Page Header */}
       <section className="bg-gradient-to-br from-primary-500 to-primary-700 text-white py-16">
         <div className="container mx-auto px-4 text-center">

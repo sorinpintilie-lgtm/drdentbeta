@@ -1,5 +1,6 @@
 import { Calendar, Shield, CheckCircle, Phone } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 
 /**
  * Fees Page Component
@@ -203,6 +204,17 @@ function Fees() {
 
   return (
     <div className="min-h-screen pt-20">
+      <Helmet>
+        <title>Prețuri servicii stomatologice București | DrDent</title>
+        <meta name="description" content="Consultă prețurile DrDent pentru servicii stomatologice în București: consultații, extracții, implanturi, tratamente endodontice, ortodonție și profilaxie." />
+        <link rel="canonical" href="https://drdent.ro/preturi" />
+        <meta name="robots" content="index,follow" />
+        <meta property="og:title" content="Prețuri servicii stomatologice București | DrDent" />
+        <meta property="og:description" content="Consultă prețurile DrDent pentru servicii stomatologice în București: consultații, extracții, implanturi, tratamente endodontice, ortodonție și profilaxie." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://drdent.ro/preturi" />
+        <meta property="og:locale" content="ro_RO" />
+      </Helmet>
       {/* Page Header */}
       <section className="bg-gradient-to-br from-primary-500 to-primary-700 text-white py-12 md:py-16">
         <div className="container mx-auto px-4 text-center">

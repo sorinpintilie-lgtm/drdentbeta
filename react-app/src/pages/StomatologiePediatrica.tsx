@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 import {
   Heart, Star as StarIcon,
@@ -93,6 +94,17 @@ function StomatologiePediatrica() {
 
   return (
     <div className="min-h-screen pt-16 bg-gradient-to-b from-yellow-50 via-pink-50 to-blue-50 relative overflow-hidden">
+      <Helmet>
+        <title>Stomatologie pediatrică București Sector 2 | DrDent</title>
+        <meta name="description" content="Consultații și tratamente de stomatologie pediatrică în București, Sector 2. Îngrijire dentară pentru copii într-un mediu prietenos." />
+        <link rel="canonical" href="https://drdent.ro/stomatologie-pediatrica" />
+        <meta name="robots" content="index,follow" />
+        <meta property="og:title" content="Stomatologie pediatrică București Sector 2 | DrDent" />
+        <meta property="og:description" content="Consultații și tratamente de stomatologie pediatrică în București, Sector 2. Îngrijire dentară pentru copii într-un mediu prietenos." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://drdent.ro/stomatologie-pediatrica" />
+        <meta property="og:locale" content="ro_RO" />
+      </Helmet>
       {/* Floating Background Elements */}
       {floatingElements.map((element, index) => (
         <motion.div
