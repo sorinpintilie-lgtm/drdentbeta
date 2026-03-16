@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock, Phone, Tag } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -20,6 +20,11 @@ function formatDate(date: string) {
 function ResourceArticle() {
   const { slug } = useParams();
   const article = useMemo(() => getResource(slug || ''), [slug]);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }, [slug]);
+
   const relatedResources = useMemo(
     () => getRelatedResources(article?.related).filter((item) => item.slug !== article?.slug).slice(0, 3),
     [article]

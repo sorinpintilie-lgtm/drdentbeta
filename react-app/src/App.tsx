@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/layout/Layout';
+import ScrollToTop from './components/layout/ScrollToTop';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import StomatologiePediatrica from './pages/StomatologiePediatrica';
@@ -14,7 +15,9 @@ import Chat from './pages/Chat';
 
 function App() {
   return (
-    <Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="servicii" element={<Services />} />
@@ -30,6 +33,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
+    </>
   );
 }
 
