@@ -1,19 +1,16 @@
-import { Routes, Route } from 'react-router-dom'
-import Layout from './components/layout/Layout'
-import Home from './pages/Home'
-import Services from './pages/Services'
-import StomatologiePediatrica from './pages/StomatologiePediatrica'
-import Team from './pages/Team'
-import Contact from './pages/Contact'
-import Fees from './pages/Fees'
-import FAQ from './pages/FAQ'
-import Resources from './pages/Resources'
-import Chat from './pages/Chat'
+import { Routes, Route } from 'react-router-dom';
+import Layout from './components/layout/Layout';
+import Home from './pages/Home';
+import Services from './pages/Services';
+import StomatologiePediatrica from './pages/StomatologiePediatrica';
+import Team from './pages/Team';
+import Contact from './pages/Contact';
+import Fees from './pages/Fees';
+import FAQ from './pages/FAQ';
+import Resources from './pages/Resources';
+import ResourceArticle from './pages/ResourceArticle';
+import Chat from './pages/Chat';
 
-/**
- * Main App component with routing configuration
- * Uses React Router v6 for client-side routing
- */
 function App() {
   return (
     <Routes>
@@ -25,11 +22,12 @@ function App() {
         <Route path="despre-noi" element={<Team />} />
         <Route path="faq" element={<FAQ />} />
         <Route path="resources" element={<Resources />} />
+        <Route path="resources/:slug" element={<ResourceArticle />} />
         <Route path="contact" element={<Contact />} />
         <Route path="chat" element={<Chat />} />
       </Route>
     </Routes>
-  )
+  );
 }
 
-export default App
+export default App;
