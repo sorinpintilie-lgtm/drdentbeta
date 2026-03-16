@@ -1,56 +1,24 @@
 import { ArrowRight, BookOpen, Calendar, Mail, Phone } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { groupResourcesByCategory } from '../data/resourcesData';
-
-function upsertMetaTag(name: string, content: string, attribute: 'name' | 'property' = 'name') {
-  let tag = document.head.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement | null;
-
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute(attribute, name);
-    document.head.appendChild(tag);
-  }
-
-  tag.setAttribute('content', content);
-}
-
-function upsertCanonical(url: string) {
-  let link = document.head.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-
-  if (!link) {
-    link = document.createElement('link');
-    link.setAttribute('rel', 'canonical');
-    document.head.appendChild(link);
-  }
-
-  link.setAttribute('href', url);
-}
 
 function Resources() {
   const resourceCategories = groupResourcesByCategory();
 
-  useEffect(() => {
-    document.title = 'Resurse stomatologice pentru pacienți | DrDent București';
-    upsertMetaTag(
-      'description',
-      'Articole utile despre tratamente dentare, recuperare, igienă orală și întrebări frecvente pentru pacienții DrDent din București.'
-    );
-    upsertMetaTag('robots', 'index,follow');
-    upsertMetaTag('og:title', 'Resurse pentru pacienți | DrDent', 'property');
-    upsertMetaTag(
-      'og:description',
-      'Ghiduri de îngrijire, articole educaționale și resurse utile despre tratamente dentare.',
-      'property'
-    );
-    upsertMetaTag('og:type', 'website', 'property');
-    upsertMetaTag('og:url', 'https://drdent.ro/resources', 'property');
-    upsertCanonical('https://drdent.ro/resources');
-  }, []);
-
   return (
     <div className="min-h-screen pt-20">
+      <Helmet>
+        <title>Resurse stomatologice pentru pacienți | DrDent București</title>
+        <meta name="description" content="Articole utile despre tratamente dentare, recuperare, igienă orală și întrebări frecvente pentru pacienții DrDent din București." />
+        <meta name="robots" content="index,follow" />
+        <meta property="og:title" content="Resurse pentru pacienți | DrDent" />
+        <meta property="og:description" content="Ghiduri de îngrijire, articole educaționale și resurse utile despre tratamente dentare." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://drdent.ro/resources" />
+        <link rel="canonical" href="https://drdent.ro/resources" />
+      </Helmet>
       <section className="bg-gradient-to-br from-primary-500 to-primary-700 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>

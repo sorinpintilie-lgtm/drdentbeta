@@ -1,60 +1,9 @@
-import { useEffect, useMemo } from 'react';
+import { useMemo } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock, Phone, Tag } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { getRelatedResources, getResource } from '../data/resourcesData';
-
-function upsertMetaTag(name: string, content: string, attribute: 'name' | 'property' = 'name') {
-  let tag = document.head.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement | null;
-
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute(attribute, name);
-    document.head.appendChild(tag);
-  }
-
-  tag.setAttribute('content', content);
-}
-
-function upsertCanonical(url: string) {
-  let link = document.head.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-
-  if (!link) {
-    link = document.createElement('link');
-    link.setAttribute('rel', 'canonical');
-    document.head.appendChild(link);
-  }
-
-  link.setAttribute('href', url);
-}
-
-function upsertJsonLd(id: string, payload: Record<string, unknown>) {
-  let script = document.getElementById(id) as HTMLScriptElement | null;
-
-  if (!script) {
-    script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.id = id;
-    document.head.appendChild(script);
-  }
-
-  script.textContent = JSON.stringify(payload);
-}
-
-function removeJsonLd(id: string) {
-  const script = document.getElementById(id);
-
-  if (script) {
-    script.remove();
-  }
-}
-
-function removeCanonical() {
-  const link = document.head.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-  if (link) {
-    link.remove();
-  }
-}
 
 function formatDate(date: string) {
   try {
@@ -76,93 +25,87 @@ function ResourceArticle() {
     [article]
   );
 
-  useEffect(() => {
-    if (!article) {
-      document.title = 'Resursă negăsită | DrDent';
-      upsertMetaTag('robots', 'noindex,follow');
-      removeCanonical();
-      return;
-    }
-
-    const canonicalUrl = `https://drdent.ro/resources/${article.slug}`;
-
-    document.title = article.seoTitle;
-    upsertMetaTag('description', article.metaDescription);
-    upsertMetaTag('robots', 'index,follow');
-    upsertMetaTag('og:title', article.seoTitle, 'property');
-    upsertMetaTag('og:description', article.metaDescription, 'property');
-    upsertMetaTag('og:type', 'article', 'property');
-    upsertMetaTag('og:url', canonicalUrl, 'property');
-    upsertMetaTag('twitter:card', 'summary_large_image');
-    upsertMetaTag('twitter:title', article.seoTitle);
-    upsertMetaTag('twitter:description', article.metaDescription);
-    upsertCanonical(canonicalUrl);
-
-    upsertJsonLd('resource-article-schema', {
-      '@context': 'https://schema.org',
-      '@type': 'Article',
-      headline: article.title,
-      description: article.metaDescription,
-      mainEntityOfPage: canonicalUrl,
-      dateModified: article.lastUpdated,
-      author: {
-        '@type': 'Organization',
-        name: 'DrDent',
-      },
-      publisher: {
-        '@type': 'Organization',
-        name: 'DrDent',
-      },
-      keywords: article.seoKeywords.join(', '),
-    });
-
-    if (article.faq?.length) {
-      upsertJsonLd('resource-faq-schema', {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: article.faq.map((item) => ({
-          '@type': 'Question',
-          name: item.question,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: item.answer,
-          },
-        })),
-      });
-    } else {
-      removeJsonLd('resource-faq-schema');
-    }
-
-    return () => {
-      removeJsonLd('resource-article-schema');
-      removeJsonLd('resource-faq-schema');
-    };
-  }, [article]);
+  const canonicalUrl = article ? `https://drdent.ro/resources/${article.slug}` : '';
 
   if (!article) {
     return (
-      <div className="min-h-screen pt-20 flex items-center justify-center px-4">
-        <div className="text-center max-w-lg">
-          <h1 className="text-3xl font-heading font-bold text-gray-900 mb-4">
-            Resursa nu a fost găsită
-          </h1>
-          <p className="text-gray-600 mb-6">
-            Articolul căutat nu este disponibil momentan sau slug-ul nu există.
-          </p>
-          <Link
-            to="/resources"
-            className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Înapoi la resurse
-          </Link>
+      <>
+        <Helmet>
+          <title>Resursă negăsită | DrDent</title>
+          <meta name="robots" content="noindex,follow" />
+        </Helmet>
+        <div className="min-h-screen pt-20 flex items-center justify-center px-4">
+          <div className="text-center max-w-lg">
+            <h1 className="text-3xl font-heading font-bold text-gray-900 mb-4">
+              Resursa nu a fost găsită
+            </h1>
+            <p className="text-gray-600 mb-6">
+              Articolul căutat nu este disponibil momentan sau slug-ul nu există.
+            </p>
+            <Link
+              to="/resources"
+              className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Înapoi la resurse
+            </Link>
+          </div>
         </div>
-      </div>
+      </>
     );
   }
 
   return (
-    <div className="min-h-screen pt-20">
+    <>
+      <Helmet>
+        <title>{article.seoTitle}</title>
+        <meta name="description" content={article.metaDescription} />
+        <meta name="robots" content="index,follow" />
+        <meta property="og:title" content={article.seoTitle} />
+        <meta property="og:description" content={article.metaDescription} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={article.seoTitle} />
+        <meta name="twitter:description" content={article.metaDescription} />
+        <link rel="canonical" href={canonicalUrl} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Article',
+            headline: article.title,
+            description: article.metaDescription,
+            mainEntityOfPage: canonicalUrl,
+            dateModified: article.lastUpdated,
+            author: {
+              '@type': 'Organization',
+              name: 'DrDent',
+            },
+            publisher: {
+              '@type': 'Organization',
+              name: 'DrDent',
+            },
+            keywords: article.seoKeywords.join(', '),
+          })}
+        </script>
+        {article.faq?.length && (
+          <script type="application/ld+json">
+            {JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: article.faq.map((item: { question: string; answer: string }) => ({
+                '@type': 'Question',
+                name: item.question,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: item.answer,
+                },
+              })),
+            })}
+          </script>
+        )}
+      </Helmet>
+      <div className="min-h-screen pt-20">
       <section className="bg-gradient-to-br from-primary-500 to-primary-700 text-white py-12">
         <div className="container mx-auto px-4">
           <Link
@@ -315,6 +258,7 @@ function ResourceArticle() {
         </div>
       </section>
     </div>
+    </>
   );
 }
 
