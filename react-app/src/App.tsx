@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import Home from './pages/Home';
 import Services from './pages/Services';
@@ -9,6 +9,7 @@ import Fees from './pages/Fees';
 import FAQ from './pages/FAQ';
 import Resources from './pages/Resources';
 import ResourceArticle from './pages/ResourceArticle';
+import NotFound from './pages/NotFound';
 import Chat from './pages/Chat';
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
         <Route path="resources/:slug" element={<ResourceArticle />} />
         <Route path="contact" element={<Contact />} />
         <Route path="chat" element={<Chat />} />
+        <Route path="pedodontie" element={<Navigate to="/stomatologie-pediatrica" replace />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   );
