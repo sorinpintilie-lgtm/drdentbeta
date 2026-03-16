@@ -27,6 +27,8 @@ export interface ResourceArticle {
   content: ResourceSection[];
   faq?: ResourceFaq[];
   related?: string[];
+  primaryRoute?: string;
+  primaryRouteLabel?: string;
 }
 
 export interface ResourceCategoryMeta {
@@ -387,6 +389,8 @@ export const resourcesData: ResourceArticle[] = [
     seoKeywords: ['sanatatea orala la copii', 'ingrijire dentara copii', 'preventie carii copii'],
     readTime: '4 min',
     lastUpdated: '2026-03-16',
+    primaryRoute: '/stomatologie-pediatrica',
+    primaryRouteLabel: 'Vezi stomatologia pediatrică',
     content: [
       {
         heading: 'Rolul prevenției',
@@ -417,6 +421,8 @@ export const resourcesData: ResourceArticle[] = [
     seoKeywords: ['implant dentar bucuresti', 'pret implant dentar bucuresti', 'etape implant dentar', 'vindecare dupa implant dentar'],
     readTime: '8 min',
     lastUpdated: '2026-03-16',
+    primaryRoute: '/servicii',
+    primaryRouteLabel: 'Vezi serviciile DrDent',
     content: [
       {
         heading: 'Când este recomandat implantul dentar',
@@ -487,6 +493,8 @@ export const resourcesData: ResourceArticle[] = [
     seoKeywords: ['aparat dentar bucuresti', 'pret aparat dentar bucuresti', 'tipuri aparat dentar', 'durata tratament ortodontic'],
     readTime: '8 min',
     lastUpdated: '2026-03-16',
+    primaryRoute: '/servicii',
+    primaryRouteLabel: 'Vezi serviciile ortodontice',
     content: [
       {
         heading: 'Când este recomandat aparatul dentar',
@@ -557,6 +565,8 @@ export const resourcesData: ResourceArticle[] = [
     seoKeywords: ['durere de masea', 'ce faci cand te doare maseaua', 'durere masea noaptea', 'urgenta stomatologica bucuresti'],
     readTime: '7 min',
     lastUpdated: '2026-03-16',
+    primaryRoute: '/servicii',
+    primaryRouteLabel: 'Vezi serviciile de urgență',
     content: [
       {
         heading: 'De ce apare durerea de măsea',
@@ -627,6 +637,8 @@ export const resourcesData: ResourceArticle[] = [
     seoKeywords: ['cand se scoate maseaua de minte', 'extractie masea de minte bucuresti', 'durere masea de minte', 'recuperare dupa extractie masea de minte'],
     readTime: '7 min',
     lastUpdated: '2026-03-16',
+    primaryRoute: '/servicii',
+    primaryRouteLabel: 'Vezi serviciile de chirurgie orală',
     content: [
       {
         heading: 'Ce este măseaua de minte și de ce poate crea probleme',
@@ -697,6 +709,8 @@ export const resourcesData: ResourceArticle[] = [
     seoKeywords: ['gingii care sangereaza', 'sangerari gingivale', 'gingivita tratament', 'parodontoza simptome'],
     readTime: '7 min',
     lastUpdated: '2026-03-16',
+    primaryRoute: '/servicii',
+    primaryRouteLabel: 'Vezi tratamentele parodontale',
     content: [
       {
         heading: 'Este normal să sângereze gingiile?',

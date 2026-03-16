@@ -32,10 +32,10 @@ function Resources() {
   const resourceCategories = groupResourcesByCategory();
 
   useEffect(() => {
-    document.title = 'Resurse pentru pacienți | DrDent';
+    document.title = 'Resurse stomatologice pentru pacienți | DrDent București';
     upsertMetaTag(
       'description',
-      'Resurse pentru pacienți DrDent: ghiduri de îngrijire, articole educaționale și informații utile despre tratamente dentare și sănătate orală.'
+      'Articole utile despre tratamente dentare, recuperare, igienă orală și întrebări frecvente pentru pacienții DrDent din București.'
     );
     upsertMetaTag('robots', 'index,follow');
     upsertMetaTag('og:title', 'Resurse pentru pacienți | DrDent', 'property');

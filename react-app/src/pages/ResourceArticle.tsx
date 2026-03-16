@@ -49,6 +49,13 @@ function removeJsonLd(id: string) {
   }
 }
 
+function removeCanonical() {
+  const link = document.head.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+  if (link) {
+    link.remove();
+  }
+}
+
 function formatDate(date: string) {
   try {
     return new Intl.DateTimeFormat('ro-RO', {
@@ -72,6 +79,8 @@ function ResourceArticle() {
   useEffect(() => {
     if (!article) {
       document.title = 'Resursă negăsită | DrDent';
+      upsertMetaTag('robots', 'noindex,follow');
+      removeCanonical();
       return;
     }
 
@@ -269,6 +278,15 @@ function ResourceArticle() {
                 >
                   Vezi prețurile
                 </Link>
+
+                {article.primaryRoute && (
+                  <Link
+                    to={article.primaryRoute}
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent-blue text-white rounded-xl font-semibold hover:bg-blue-700 transition-colors"
+                  >
+                    {article.primaryRouteLabel}
+                  </Link>
+                )}
               </div>
             </div>
 

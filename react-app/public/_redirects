@@ -1,2 +1,6 @@
-# Redirect all routes to index.html for client-side routing
-/*    /index.html   200
+# Specific redirects (must be before the SPA fallback)
+/pedodontie    /stomatologie-pediatrica   301
+/pedodontie/   /stomatologie-pediatrica   301
+
+# SPA fallback (must be last)
+/*             /index.html                200
