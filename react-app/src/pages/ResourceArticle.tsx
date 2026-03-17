@@ -226,15 +226,6 @@ function ResourceArticle() {
                 >
                   Vezi prețurile
                 </Link>
-
-                {article.primaryRoute && (
-                  <Link
-                    to={article.primaryRoute}
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent-blue text-white rounded-xl font-semibold hover:bg-blue-700 transition-colors"
-                  >
-                    {article.primaryRouteLabel}
-                  </Link>
-                )}
               </div>
             </div>
 
