@@ -41,17 +41,20 @@ export const resourceCategoryMeta: Record<ResourceCategoryKey, ResourceCategoryM
   ghiduri: {
     title: 'Ghiduri de îngrijire',
     icon: ShieldCheck,
-    intro: 'Recomandări practice pentru pregătirea tratamentelor și îngrijirea după proceduri stomatologice.',
+    intro:
+      'Recomandări practice pentru pregătirea tratamentelor, îngrijirea după proceduri și menținerea rezultatelor pe termen lung.',
   },
   educatie: {
     title: 'Educație dentară',
     icon: BookOpen,
-    intro: 'Articole explicative despre prevenție, sănătate orală și probleme dentare frecvente.',
+    intro:
+      'Articole explicative despre carii, gingii, prevenție și decizii informate înainte de tratamente stomatologice.',
   },
   tratamente: {
-    title: 'Tratemente și soluții',
+    title: 'Tratamente și soluții',
     icon: Stethoscope,
-    intro: 'Resurse cu intenție puternică de căutare pentru pacienții care caută tratamente, prețuri și pași clari.',
+    intro:
+      'Resurse cu intenție puternică de căutare pentru pacienții care caută tratamente, pași clari, recuperare și informații utile înainte de programare.',
   },
 };
 
@@ -59,712 +62,1188 @@ export const resourcesData: ResourceArticle[] = [
   {
     slug: 'inainte-de-tratament',
     title: 'Înainte de tratament',
-    description: 'Pregătiți-vă pentru vizita la dentist cu acest ghid complet și aflați ce informații este bine să aveți la consultație.',
-    excerpt: 'Ce trebuie să știți înainte de consultație, investigații și proceduri stomatologice.',
+    description:
+      'Pregătiți-vă pentru vizita la dentist cu acest ghid complet și aflați ce informații este bine să aveți la consultație.',
+    excerpt:
+      'Ce trebuie să știți înainte de consultație, investigații și proceduri stomatologice.',
     category: 'ghiduri',
     categoryTitle: resourceCategoryMeta.ghiduri.title,
     seoTitle: 'Înainte de tratament stomatologic: cum te pregătești | DrDent',
-    metaDescription: 'Află cum te pregătești pentru un tratament stomatologic, ce informații să comunici medicului și ce recomandări sunt utile înainte de consultație.',
-    seoKeywords: ['inainte de tratament stomatologic', 'pregatire consultatie dentist', 'ce faci inainte de tratament dentar'],
-    readTime: '4 min',
-    lastUpdated: '2026-03-16',
+    metaDescription:
+      'Află cum te pregătești pentru un tratament stomatologic, ce informații să comunici medicului și ce recomandări sunt utile înainte de consultație.',
+    seoKeywords: [
+      'inainte de tratament stomatologic',
+      'pregatire consultatie dentist',
+      'ce faci inainte de tratament dentar',
+      'pregatire inainte de interventie dentara',
+    ],
+    readTime: '6 min',
+    lastUpdated: '2026-03-17',
+    primaryRoute: '/contact',
+    primaryRouteLabel: 'Programează o consultație',
     content: [
       {
-        heading: 'Ce se întâmplă la prima evaluare',
+        heading: 'De ce contează pregătirea înainte de tratament',
         paragraphs: [
-          'Vizita la medicul stomatolog începe cu o evaluare atentă a stării de sănătate orală. În această etapă, medicul analizează dinții, gingiile și mucoasa orală și, dacă este necesar, poate recomanda investigații suplimentare precum radiografii sau fotografii intraorale.',
-          'Scopul este stabilirea unui diagnostic corect și a unui plan de tratament clar, adaptat nevoilor pacientului.',
+          'Multe tratamente stomatologice decurg mai ușor atunci când pacientul ajunge pregătit la consultație. Pregătirea nu înseamnă doar să fii prezent la timp, ci să oferi medicului informațiile corecte despre starea ta de sănătate, simptomele actuale și obiectivele pe care le ai.',
+          'În cabinet, aceste detalii ajută la stabilirea unui plan de tratament realist, sigur și adaptat. În plus, un pacient informat înțelege mai bine etapele, costurile, recuperarea și limitele fiecărei soluții.',
         ],
       },
       {
         heading: 'Ce informații trebuie comunicate medicului',
         paragraphs: [
-          'Este important să menționați orice afecțiune generală, tratament medicamentos, alergii cunoscute sau experiențe neplăcute avute la proceduri anterioare. Aceste detalii ajută echipa medicală să aleagă cea mai sigură abordare.',
-          'Comunicarea deschisă despre simptome, sensibilitate, anxietate sau obiective estetice face consultația mai eficientă și mai bine orientată.',
+          'Spune medicului dacă ai afecțiuni generale, alergii, tratamente medicamentoase, probleme de coagulare, intervenții recente sau episoade neplăcute la proceduri stomatologice anterioare. Aceste informații pot influența anestezia, planul de tratament sau momentul optim pentru anumite proceduri.',
+          'Este util să menționezi și dacă ai dureri, sensibilitate la cald sau rece, sângerări gingivale, dificultăți la masticație, lucrări vechi sau dorințe estetice. Cu cât informația este mai clară, cu atât diagnosticul și recomandarea vor fi mai precise.',
         ],
       },
       {
-        heading: 'Cum vă pregătiți înainte de programare',
+        heading: 'Cum te pregătești practic înainte de programare',
         paragraphs: [
-          'Înainte de tratament, este recomandată o igienă orală corectă și respectarea indicațiilor primite la programare. În funcție de procedură, medicul vă poate spune dacă trebuie evitate alimentele, fumatul sau anumite medicamente.',
-          'O bună pregătire crește confortul pacientului și contribuie la desfășurarea eficientă a tratamentului.',
+          'Înainte de consultație, este recomandat un periaj corect și o igienă orală cât mai bună, fără a traumatiza gingiile. Dacă ai radiografii, planuri de tratament mai vechi sau analize relevante, le poți aduce la cabinet.',
+          'Pentru tratamente mai complexe, medicul poate recomanda să mănânci ușor înainte, să eviți fumatul, să nu întrerupi anumite medicamente fără acord medical și să ai suficient timp după programare pentru recuperare sau controale suplimentare.',
+        ],
+      },
+      {
+        heading: 'Întrebări utile pe care merită să le pui',
+        paragraphs: [
+          'Nu ezita să întrebi care este diagnosticul, ce alternative există, cât durează tratamentul, ce presupune recuperarea și care sunt costurile etapizate. Pacienții care pun întrebări iau de regulă decizii mai bune și respectă mai ușor recomandările primite.',
+          'Dacă ai anxietate, menționează acest lucru din start. O comunicare sinceră îl ajută pe medic să adapteze ritmul consultației, explicațiile și modul în care este organizată experiența în cabinet.',
         ],
       },
     ],
-    related: ['dupa-extractie-dentara', 'dupa-implant-dentar'],
+    faq: [
+      {
+        question: 'Trebuie să mănânc înainte de consultația stomatologică?',
+        answer:
+          'Pentru majoritatea consultațiilor este util să nu veniți nemâncat, dar recomandarea exactă depinde de procedura planificată și de indicațiile medicului.',
+      },
+      {
+        question: 'Este important să spun dacă iau tratament medicamentos?',
+        answer:
+          'Da. Tratamentul medicamentos, alergiile și bolile generale pot influența anestezia, indicațiile postoperatorii și siguranța procedurii.',
+      },
+      {
+        question: 'Ce fac dacă am frică de dentist?',
+        answer:
+          'Spuneți acest lucru la programare și în cabinet. O echipă bună poate adapta comunicarea și etapele tratamentului astfel încât experiența să fie mai ușor de tolerat.',
+      },
+    ],
+    related: ['dupa-extractie-dentara', 'dupa-implant-dentar', 'durere-de-masea'],
   },
   {
     slug: 'dupa-extractie-dentara',
     title: 'După extracție dentară',
-    description: 'Instrucțiuni clare pentru îngrijirea post-extracție și o vindecare cât mai bună.',
-    excerpt: 'Recomandări utile după extracție: sângerare, alimentație, igienă și semnale de alarmă.',
+    description:
+      'Instrucțiuni clare pentru îngrijirea post-extracție și o vindecare cât mai bună.',
+    excerpt:
+      'Recomandări utile după extracție: sângerare, alimentație, igienă și semnale de alarmă.',
     category: 'ghiduri',
     categoryTitle: resourceCategoryMeta.ghiduri.title,
     seoTitle: 'După extracție dentară: recomandări și recuperare | DrDent',
-    metaDescription: 'Vezi ce este recomandat după extracția dentară, cum reduci disconfortul și când trebuie să revii la medicul stomatolog.',
-    seoKeywords: ['dupa extractie dentara', 'recomandari dupa extractie', 'recuperare dupa extractie masea'],
-    readTime: '4 min',
-    lastUpdated: '2026-03-16',
+    metaDescription:
+      'Vezi ce este recomandat după extracția dentară, cum reduci disconfortul și când trebuie să revii la medicul stomatolog.',
+    seoKeywords: [
+      'dupa extractie dentara',
+      'recomandari dupa extractie',
+      'recuperare dupa extractie masea',
+      'ce faci dupa ce scoti o masea',
+    ],
+    readTime: '6 min',
+    lastUpdated: '2026-03-17',
+    primaryRoute: '/contact',
+    primaryRouteLabel: 'Solicită control după extracție',
     content: [
       {
         heading: 'Primele ore după extracție',
         paragraphs: [
-          'După o extracție dentară, este normal să apară ușoare dureri, inflamații sau sângerări minore. În primele ore, este bine să evitați clătirea energică a gurii și consumul de băuturi foarte fierbinți.',
-          'Respectarea indicațiilor primite în cabinet ajută la protejarea cheagului format și susține vindecarea normală.',
+          'După o extracție dentară, organismul începe imediat procesul de vindecare. Cheagul format în alveolă are un rol esențial, pentru că protejează zona și susține regenerarea normală a țesuturilor.',
+          'În primele ore este normal să existe o ușoară sângerare, sensibilitate sau senzație de presiune. De regulă, aceste manifestări se diminuează dacă sunt respectate indicațiile primite în cabinet.',
         ],
       },
       {
-        heading: 'Ce să evitați',
+        heading: 'Ce este recomandat în primele 24 de ore',
         paragraphs: [
-          'În primele 24 de ore se recomandă evitarea fumatului, alcoolului, efortului fizic intens și a alimentelor dure sau foarte fierbinți.',
-          'Dacă simțiți disconfort, puteți urma recomandările medicului privind tratamentul medicamentos și alimentația.',
+          'În această perioadă, este bine să evitați clătirea energică, scuipatul repetat, băuturile foarte fierbinți și alimentele dure. Toate acestea pot destabiliza cheagul și pot prelungi vindecarea.',
+          'De obicei sunt recomandate alimente moi, la temperatură moderată, hidratare adecvată și repaus relativ. Dacă medicul a prescris calmante sau alte indicații, ele trebuie urmate conform recomandării.',
         ],
       },
       {
-        heading: 'Când este nevoie de control',
+        heading: 'Igienă, fumat și efort fizic',
         paragraphs: [
-          'Dacă durerea devine accentuată, sângerarea persistă sau apare febră, este important să luați legătura cu medicul stomatolog.',
-          'Un control la timp ajută la prevenirea complicațiilor și la o recuperare fără probleme.',
+          'Igiena orală nu trebuie abandonată, dar trebuie adaptată. Dinții pot fi curățați cu atenție, evitând agresarea directă a zonei operate în primele zile. Medicul poate recomanda clătiri blânde sau alte măsuri specifice, în funcție de caz.',
+          'Fumatul, alcoolul și efortul fizic intens sunt de evitat, pentru că pot accentua sângerarea, inflamația și disconfortul. Aceste recomandări contează mai ales în primele 24-72 de ore.',
+        ],
+      },
+      {
+        heading: 'Semnale de alarmă și când revii la control',
+        paragraphs: [
+          'Durerea accentuată care crește după câteva zile, sângerarea persistentă, gustul neplăcut, mirosul neplăcut, febra sau umflătura importantă sunt motive pentru a contacta cabinetul. Nu toate indică o complicație severă, dar merită evaluate.',
+          'Un control la timp poate face diferența între o recuperare simplă și o evoluție neplăcută. Dacă ai nelămuriri, este mai sigur să ceri o reevaluare decât să încerci soluții improvizate acasă.',
         ],
       },
     ],
-    related: ['inainte-de-tratament', 'maseaua-de-minte'],
+    faq: [
+      {
+        question: 'Este normal să doară după extracție dentară?',
+        answer:
+          'Da, un anumit grad de durere și sensibilitate este normal, mai ales în primele zile. Durerea puternică sau în creștere trebuie însă evaluată.',
+      },
+      {
+        question: 'Pot să fumez după extracție?',
+        answer:
+          'Este recomandat să evitați fumatul după extracție, în special în primele zile, deoarece poate întârzia vindecarea și crește riscul de complicații.',
+      },
+      {
+        question: 'Când trebuie să sun medicul?',
+        answer:
+          'Dacă aveți sângerare persistentă, febră, durere intensă, umflătură mare sau gust neplăcut, contactați medicul stomatolog pentru reevaluare.',
+      },
+    ],
+    related: ['inainte-de-tratament', 'maseaua-de-minte', 'durere-de-masea'],
   },
   {
     slug: 'dupa-implant-dentar',
     title: 'După implant dentar',
-    description: 'Ghid practic pentru perioada postoperatorie și menținerea unui implant dentar sănătos.',
-    excerpt: 'Cum îngrijești zona implantului, ce e normal după intervenție și cum susții osteointegrarea.',
+    description:
+      'Ghid practic pentru perioada postoperatorie și menținerea unui implant dentar sănătos.',
+    excerpt:
+      'Cum îngrijești zona implantului, ce este normal după intervenție și cum susții osteointegrarea.',
     category: 'ghiduri',
     categoryTitle: resourceCategoryMeta.ghiduri.title,
     seoTitle: 'După implant dentar: îngrijire și recuperare | DrDent',
-    metaDescription: 'Află ce recomandări sunt utile după implant dentar, cum decurge perioada de vindecare și când trebuie făcut controlul.',
-    seoKeywords: ['dupa implant dentar', 'ingrijire implant dentar', 'vindecare dupa implant'],
-    readTime: '4 min',
-    lastUpdated: '2026-03-16',
+    metaDescription:
+      'Află ce recomandări sunt utile după implant dentar, cum decurge perioada de vindecare și când trebuie făcut controlul.',
+    seoKeywords: [
+      'dupa implant dentar',
+      'ingrijire implant dentar',
+      'vindecare dupa implant',
+      'recomandari dupa implant dentar',
+    ],
+    readTime: '7 min',
+    lastUpdated: '2026-03-17',
+    primaryRoute: '/contact',
+    primaryRouteLabel: 'Programează controlul postoperator',
     content: [
       {
-        heading: 'Perioada de vindecare',
+        heading: 'Ce urmează imediat după inserarea implantului',
         paragraphs: [
-          'Implantul dentar este o procedură sigură și predictibilă, însă succesul său depinde și de perioada postoperatorie. După inserarea implantului urmează etapa de osteointegrare, în care implantul se stabilizează în os.',
-          'Este important să urmați cu atenție recomandările privind igiena, alimentația și controalele periodice.',
+          'După inserarea implantului dentar, este normal să apară o sensibilitate locală, o ușoară umflătură și disconfort controlabil. Intensitatea simptomelor depinde de complexitatea intervenției, de volumul de os implicat și de eventualele proceduri asociate.',
+          'În cele mai multe cazuri, evoluția este bună dacă pacientul respectă recomandările primite în cabinet. Scopul principal în această etapă este protejarea zonei și susținerea osteointegrării.',
         ],
       },
       {
-        heading: 'Igienă și alimentație',
+        heading: 'Ce înseamnă osteointegrarea',
         paragraphs: [
-          'Menținerea unei igiene orale corecte, dar delicate, este esențială. Zona implantului trebuie curățată conform indicațiilor medicului, fără traumatizare inutilă.',
-          'În primele zile pot fi recomandate alimente moi și evitarea masticației pe partea tratată.',
+          'Osteointegrarea este procesul prin care implantul se stabilizează în os. Nu este o etapă care se vede din exterior, dar este esențială pentru succesul pe termen lung al tratamentului.',
+          'În această perioadă, controalele periodice, igiena și evitarea supraîncărcării mecanice a zonei sunt importante. Medicul urmărește evoluția pentru a decide momentul potrivit pentru etapa protetică.',
         ],
       },
       {
-        heading: 'Monitorizare și controale',
+        heading: 'Alimentație și igienă în perioada de vindecare',
         paragraphs: [
-          'Controalele periodice permit verificarea vindecării și adaptarea planului protetic atunci când este nevoie.',
-          'Respectarea recomandărilor postoperatorii contribuie la stabilitatea implantului și la un rezultat estetic și funcțional pe termen lung.',
+          'În primele zile sunt de preferat alimentele moi, la temperatură moderată, și evitarea masticației pe partea tratată atunci când medicul recomandă acest lucru. Fumatul și alcoolul pot afecta vindecarea și sunt de evitat.',
+          'Igiena trebuie menținută corect, dar delicat. Zona implantului se îngrijește conform indicațiilor primite, iar restul cavității orale trebuie curățat cu atenție pentru a reduce încărcarea bacteriană.',
+        ],
+      },
+      {
+        heading: 'Când trebuie cerut un control mai repede',
+        paragraphs: [
+          'Durerea care se agravează, umflătura importantă, sângerarea persistentă, gustul neplăcut sau mobilitatea în zona tratată sunt motive pentru a contacta medicul. Nu toate indică o complicație majoră, dar trebuie evaluate fără amânare.',
+          'Un implant dentar are șanse foarte bune de succes atunci când planificarea este corectă și indicațiile de după intervenție sunt respectate. Comunicarea rapidă cu echipa medicală contează la fel de mult ca procedura în sine.',
         ],
       },
     ],
-    related: ['implanturile-dentare-explicate', 'implant-dentar-bucuresti'],
+    faq: [
+      {
+        question: 'Este normal să apară umflătură după implant dentar?',
+        answer:
+          'Da, o umflare moderată poate apărea după intervenție și se diminuează de regulă treptat. Evoluția exactă depinde de complexitatea cazului.',
+      },
+      {
+        question: 'Cât durează vindecarea după implant?',
+        answer:
+          'Vindecarea inițială durează zile sau săptămâni, iar osteointegrarea se desfășoară pe o perioadă mai lungă, stabilită de medic în funcție de caz.',
+      },
+      {
+        question: 'Pot să mănânc normal imediat după intervenție?',
+        answer:
+          'În general, se recomandă o alimentație moale și evitarea zonei tratate în primele zile, după indicațiile primite în cabinet.',
+      },
+    ],
+    related: ['implanturile-dentare-explicate', 'implant-dentar-bucuresti', 'inainte-de-tratament'],
   },
   {
     slug: 'ingrijirea-coroanelor-facetelor',
     title: 'Îngrijirea coroanelor și fațetelor',
-    description: 'Sfaturi utile pentru păstrarea restaurărilor estetice în stare foarte bună.',
-    excerpt: 'Cum întreții coroanele și fațetele pentru a le păstra aspectul și durabilitatea.',
+    description:
+      'Sfaturi utile pentru păstrarea restaurărilor estetice în stare foarte bună.',
+    excerpt:
+      'Cum întreții coroanele și fațetele pentru a le păstra aspectul și durabilitatea.',
     category: 'ghiduri',
     categoryTitle: resourceCategoryMeta.ghiduri.title,
     seoTitle: 'Îngrijirea coroanelor și fațetelor dentare | DrDent',
-    metaDescription: 'Vezi cum se întrețin corect coroanele și fațetele dentare și ce obiceiuri trebuie evitate pentru rezultate de durată.',
-    seoKeywords: ['ingrijirea coroanelor dentare', 'ingrijirea fatetelor', 'cum intretii fatetele dentare'],
-    readTime: '4 min',
-    lastUpdated: '2026-03-16',
+    metaDescription:
+      'Vezi cum se întrețin corect coroanele și fațetele dentare și ce obiceiuri trebuie evitate pentru rezultate de durată.',
+    seoKeywords: [
+      'ingrijirea coroanelor dentare',
+      'ingrijirea fatetelor',
+      'cum intretii fatetele dentare',
+      'cum cureti coroanele dentare',
+    ],
+    readTime: '6 min',
+    lastUpdated: '2026-03-17',
+    primaryRoute: '/servicii',
+    primaryRouteLabel: 'Vezi serviciile protetice și estetice',
     content: [
       {
-        heading: 'Igienă zilnică',
+        heading: 'De ce întreținerea corectă face diferența',
         paragraphs: [
-          'Coroanele și fațetele dentare necesită o îngrijire corectă pentru a-și păstra aspectul și funcționalitatea. Chiar dacă materialele folosite sunt rezistente, dinții naturali și gingiile din jur au nevoie de atenție constantă.',
-          'Periajul de două ori pe zi și utilizarea mijloacelor auxiliare de igienă recomandate de medic sunt esențiale.',
+          'Coroanele și fațetele dentare pot oferi rezultate estetice foarte bune, dar durabilitatea lor depinde și de modul în care sunt îngrijite. Materialele moderne sunt rezistente, însă gingiile, dinții suport și mușcătura au în continuare nevoie de atenție constantă.',
+          'Mulți pacienți cred că o lucrare estetică nu mai necesită aceeași disciplină ca dinții naturali. În realitate, tocmai menținerea unei igiene corecte și a controalelor regulate protejează investiția făcută.',
         ],
       },
       {
-        heading: 'Obiceiuri de evitat',
+        heading: 'Cum arată rutina zilnică potrivită',
         paragraphs: [
-          'Este recomandat să evitați mușcarea obiectelor dure, deschiderea ambalajelor cu dinții și scrâșnirea dinților fără protecție adecvată.',
-          'Aceste obiceiuri pot compromite restaurările și pot scurta durata lor de viață.',
+          'Periajul de două ori pe zi, folosirea mijloacelor auxiliare de igienă și curățarea atentă a marginilor lucrărilor sunt pași esențiali. Scopul este prevenirea inflamației gingivale și a acumulării de placă bacteriană în jurul restaurărilor.',
+          'Dacă medicul recomandă periuțe interdentare, duș bucal sau tehnici speciale de curățare, aceste indicații merită respectate. Îngrijirea adaptată tipului de lucrare poate prelungi semnificativ rezultatul obținut.',
+        ],
+      },
+      {
+        heading: 'Obiceiuri care pot compromite rezultatul',
+        paragraphs: [
+          'Mușcarea obiectelor dure, rosul unghiilor, deschiderea ambalajelor cu dinții și scrâșnirea dinților fără protecție adecvată pot produce fisuri, desprinderi sau suprasolicitare mecanică.',
+          'Chiar dacă lucrarea pare stabilă, aceste obiceiuri pot afecta marginile coroanei, adeziunea fațetei sau țesuturile din jur. Pentru pacienții cu bruxism, medicul poate recomanda gutieră de protecție.',
+        ],
+      },
+      {
+        heading: 'Când este bine să mergi la control',
+        paragraphs: [
+          'Dacă observi sensibilitate, inflamație gingivală, modificări de culoare la marginea lucrării, senzația că lucrarea nu mai este confortabilă sau orice schimbare de mușcătură, este util un consult stomatologic.',
+          'Controalele periodice ajută la verificarea etanșeității, a igienei și a echilibrului funcțional. Multe probleme pot fi corectate simplu dacă sunt observate din timp.',
         ],
       },
     ],
-    related: ['albirea-dentara-optiuni-rezultate', 'ingrijire-zilnica-orala'],
+    faq: [
+      {
+        question: 'Coroanele și fațetele trebuie curățate diferit față de dinții naturali?',
+        answer:
+          'Baza rămâne aceeași, dar uneori sunt utile mijloace auxiliare și tehnici recomandate de medic pentru a curăța corect marginile lucrărilor.',
+      },
+      {
+        question: 'Pot să albesc fațetele sau coroanele?',
+        answer:
+          'Nu în același mod în care se albesc dinții naturali. De aceea este importantă evaluarea profesională înainte de orice procedură estetică suplimentară.',
+      },
+      {
+        question: 'Ce fac dacă simt că lucrarea nu mai este confortabilă?',
+        answer:
+          'Programați un control. O senzație de presiune, mobilitate sau disconfort nu trebuie ignorată.',
+      },
+    ],
+    related: ['albirea-dentara-optiuni-rezultate', 'ingrijire-zilnica-orala', 'ingrijirea-protezelor-dentare'],
   },
   {
     slug: 'ingrijire-zilnica-orala',
     title: 'Îngrijire zilnică orală',
-    description: 'Rutina de bază pentru sănătatea orală pe termen lung.',
-    excerpt: 'Periaj, ață dentară, controale periodice și recomandări simple pentru prevenție.',
+    description:
+      'Rutina de bază pentru sănătatea orală pe termen lung.',
+    excerpt:
+      'Periaj, ață dentară, controale periodice și recomandări simple pentru prevenție.',
     category: 'ghiduri',
     categoryTitle: resourceCategoryMeta.ghiduri.title,
     seoTitle: 'Îngrijire zilnică orală: rutină corectă pentru dinți și gingii | DrDent',
-    metaDescription: 'Află cum arată o rutină corectă de îngrijire orală și ce pași sunt importanți pentru prevenirea cariilor și inflamațiilor gingivale.',
-    seoKeywords: ['ingrijire zilnica orala', 'rutina igiena orala', 'cum te speli corect pe dinti'],
-    readTime: '3 min',
-    lastUpdated: '2026-03-16',
+    metaDescription:
+      'Află cum arată o rutină corectă de îngrijire orală și ce pași sunt importanți pentru prevenirea cariilor și inflamațiilor gingivale.',
+    seoKeywords: [
+      'ingrijire zilnica orala',
+      'rutina igiena orala',
+      'cum te speli corect pe dinti',
+      'prevenire carii si gingivita',
+    ],
+    readTime: '6 min',
+    lastUpdated: '2026-03-17',
+    primaryRoute: '/contact',
+    primaryRouteLabel: 'Programează un control preventiv',
     content: [
       {
-        heading: 'Pașii de bază',
+        heading: 'Ce înseamnă o rutină corectă',
         paragraphs: [
-          'Igiena orală zilnică reprezintă fundamentul sănătății dentare. Ea include periaj corect de cel puțin două ori pe zi, utilizarea aței dentare și, la nevoie, a apei de gură sau altor produse recomandate de medic.',
-          'Tehnica este la fel de importantă ca frecvența. Un periaj corect ajută la îndepărtarea plăcii bacteriene și reduce riscul apariției cariilor.',
+          'Îngrijirea orală de zi cu zi este baza prevenirii cariilor, a inflamațiilor gingivale și a problemelor dentare costisitoare. O rutină corectă nu înseamnă doar frecvență, ci și tehnică bună și consecvență.',
+          'Mulți pacienți se spală pe dinți zilnic, dar nu curăță eficient zonele dintre dinți, linia gingivală sau suprafețele greu accesibile. Tocmai aceste detalii fac diferența între o igienă acceptabilă și una eficientă.',
         ],
       },
       {
-        heading: 'De ce contează controalele regulate',
+        heading: 'Periaj, ață dentară și produse auxiliare',
         paragraphs: [
-          'Chiar și atunci când igiena orală este bună, controalele periodice rămân importante. Multe probleme dentare pot evolua fără simptome evidente în fazele incipiente.',
-          'Prevenția este mai simplă, mai confortabilă și de obicei mai puțin costisitoare decât tratamentele tardive.',
+          'Periajul de cel puțin două ori pe zi, cu o tehnică blândă și corectă, rămâne esențial. Ața dentară sau periuțele interdentare completează curățarea în zonele unde periuța obișnuită nu ajunge bine.',
+          'Apa de gură, dușul bucal sau alte produse trebuie folosite cu logică și, ideal, la recomandarea medicului. Nu toate produsele sunt utile pentru orice pacient, iar uneori excesul poate irita inutil mucoasele.',
+        ],
+      },
+      {
+        heading: 'Rolul alimentației și al obiceiurilor zilnice',
+        paragraphs: [
+          'Consumul frecvent de gustări zaharoase, băuturi acide, fumatul și lipsa hidratării pot influența negativ mediul oral. Nu contează doar cantitatea de zahăr, ci și frecvența cu care dinții sunt expuși la atacuri acide și la acumularea plăcii bacteriene.',
+          'O rutină bună înseamnă și limite sănătoase: mai puține ronțăieli continue, mai puține băuturi acide și atenție la semne precum sângerare gingivală, halenă persistentă sau sensibilitate.',
+        ],
+      },
+      {
+        heading: 'De ce controalele regulate rămân importante',
+        paragraphs: [
+          'Chiar și pacienții care se îngrijesc bine acasă au nevoie de controale periodice și igienizări profesionale. Unele leziuni incipiente nu dor și pot trece ușor neobservate între vizitele la medic.',
+          'Prevenția corectă costă de regulă mai puțin decât tratamentul complicațiilor. Un control regulat ajută la depistarea problemelor la timp și la ajustarea rutinei de igienă în funcție de nevoile reale.',
         ],
       },
     ],
-    related: ['intelegerea-cariilor-dentare', 'boala-parodontala'],
+    faq: [
+      {
+        question: 'Este suficient periajul dacă mă spăl bine pe dinți?',
+        answer:
+          'Nu întotdeauna. Zonele interdentare și linia gingivală au nevoie adesea de ață dentară sau periuțe interdentare pentru o curățare completă.',
+      },
+      {
+        question: 'Apa de gură poate înlocui periajul?',
+        answer:
+          'Nu. Apa de gură poate completa igiena, dar nu înlocuiește periajul și curățarea mecanică a plăcii bacteriene.',
+      },
+      {
+        question: 'Cât de des este recomandat controlul stomatologic?',
+        answer:
+          'Frecvența exactă depinde de riscul individual, dar controalele regulate sunt importante chiar și atunci când nu există durere.',
+      },
+    ],
+    related: ['intelegerea-cariilor-dentare', 'boala-parodontala', 'gingii-care-sangereaza'],
   },
   {
     slug: 'ingrijirea-protezelor-dentare',
     title: 'Îngrijirea protezelor dentare',
-    description: 'Recomandări simple pentru curățarea, depozitarea și întreținerea protezelor.',
-    excerpt: 'Cum păstrezi protezele curate, confortabile și funcționale zi de zi.',
+    description:
+      'Recomandări simple pentru curățarea, depozitarea și întreținerea protezelor.',
+    excerpt:
+      'Cum păstrezi protezele curate, confortabile și funcționale zi de zi.',
     category: 'ghiduri',
     categoryTitle: resourceCategoryMeta.ghiduri.title,
     seoTitle: 'Îngrijirea protezelor dentare: recomandări utile | DrDent',
-    metaDescription: 'Vezi cum se întrețin corect protezele dentare, ce produse pot fi folosite și când este recomandat controlul stomatologic.',
-    seoKeywords: ['ingrijirea protezelor dentare', 'cum cureti proteza dentara', 'intretinere proteze'],
-    readTime: '3 min',
-    lastUpdated: '2026-03-16',
+    metaDescription:
+      'Vezi cum se întrețin corect protezele dentare, ce produse pot fi folosite și când este recomandat controlul stomatologic.',
+    seoKeywords: [
+      'ingrijirea protezelor dentare',
+      'cum cureti proteza dentara',
+      'intretinere proteze',
+      'cum porti corect proteza dentara',
+    ],
+    readTime: '6 min',
+    lastUpdated: '2026-03-17',
+    primaryRoute: '/servicii',
+    primaryRouteLabel: 'Vezi serviciile protetice',
     content: [
       {
-        heading: 'Curățare și depozitare',
+        heading: 'De ce protezele au nevoie de întreținere atentă',
         paragraphs: [
-          'Protezele dentare necesită o îngrijire atentă pentru a rămâne confortabile și funcționale. Este recomandată curățarea zilnică cu produse adecvate și clătirea după fiecare masă.',
-          'Pe timpul nopții, protezele pot fi îndepărtate conform recomandării medicului pentru a permite mucoasei orale să se refacă.',
+          'Protezele dentare trebuie curățate și întreținute regulat pentru a rămâne confortabile, stabile și igienice. Chiar dacă nu sunt dinți naturali, protezele pot reține placă, resturi alimentare și microorganisme care irită mucoasa orală.',
+          'O proteză bine întreținută ajută la masticație, vorbire și confort zilnic. În schimb, o proteză murdară, instabilă sau neadaptată poate produce leziuni, halitoză și inflamație.',
         ],
       },
       {
-        heading: 'Când este necesară ajustarea',
+        heading: 'Curățare zilnică și depozitare corectă',
         paragraphs: [
-          'Dacă apar zone de presiune, instabilitate sau disconfort la masticație, este recomandat un control stomatologic.',
-          'O proteză bine întreținută contribuie la confort, masticație eficientă și o stare generală mai bună.',
+          'Proteza trebuie curățată zilnic cu produse recomandate și clătită după mese, atunci când este posibil. Este important să nu fie folosite metode agresive sau produse nepotrivite care pot deteriora materialul.',
+          'Depozitarea corectă și manipularea atentă sunt la fel de importante. În funcție de tipul protezei și de recomandarea medicului, aceasta poate fi îndepărtată noaptea pentru a permite mucoasei să se odihnească.',
+        ],
+      },
+      {
+        heading: 'Semne că proteza are nevoie de ajustare',
+        paragraphs: [
+          'Durerea, zonele de presiune, dificultatea la mestecat, mobilitatea protezei sau sunetele neobișnuite la vorbire pot indica faptul că adaptarea nu mai este optimă. Structurile orale se schimbă în timp, iar proteza poate avea nevoie de ajustare.',
+          'Mulți pacienți încearcă să se obișnuiască cu disconfortul, dar acest lucru poate agrava iritația locală. Un control simplu poate corecta problema mult mai ușor decât o perioadă lungă de tolerare a durerii.',
+        ],
+      },
+      {
+        heading: 'Controale și igiena cavității orale',
+        paragraphs: [
+          'Chiar și cu proteză, igiena orală a mucoasei, gingiilor și a eventualilor dinți restanți rămâne foarte importantă. Nu se curăță doar proteza, ci întreaga cavitate orală.',
+          'Controalele periodice ajută la verificarea adaptării, a stării mucoasei și a stabilității lucrării. Astfel, confortul și funcționalitatea pot fi menținute pe termen lung.',
         ],
       },
     ],
-    related: ['ingrijire-zilnica-orala'],
+    faq: [
+      {
+        question: 'Trebuie să scot proteza noaptea?',
+        answer:
+          'În multe situații, da, dar recomandarea exactă depinde de tipul protezei și de indicațiile medicului.',
+      },
+      {
+        question: 'Pot să curăț proteza cu pastă de dinți obișnuită?',
+        answer:
+          'Nu întotdeauna. Unele produse pot fi prea abrazive, iar medicul sau tehnicianul poate recomanda variante mai potrivite.',
+      },
+      {
+        question: 'Ce fac dacă proteza mă rănește?',
+        answer:
+          'Este indicat un control pentru ajustare. Nu încercați să modificați singur proteza și nu amânați dacă durerea persistă.',
+      },
+    ],
+    related: ['ingrijire-zilnica-orala', 'ingrijirea-coroanelor-facetelor'],
   },
   {
     slug: 'intelegerea-cariilor-dentare',
     title: 'Înțelegerea cariilor dentare',
-    description: 'Cum se formează cariile, de ce apar și ce poți face pentru prevenție.',
-    excerpt: 'Un ghid clar despre cauzele cariilor, prevenție și tratament la timp.',
+    description:
+      'Cum se formează cariile, de ce apar și ce poți face pentru prevenție.',
+    excerpt:
+      'Un ghid clar despre cauzele cariilor, prevenție și tratament la timp.',
     category: 'educatie',
     categoryTitle: resourceCategoryMeta.educatie.title,
     seoTitle: 'Carii dentare: cauze, prevenție și tratament | DrDent',
-    metaDescription: 'Află cum apar cariile dentare, ce factori le favorizează și de ce tratamentul timpuriu ajută la păstrarea dintelui natural.',
-    seoKeywords: ['carii dentare', 'cum apar cariile', 'tratament carii'],
-    readTime: '4 min',
-    lastUpdated: '2026-03-16',
+    metaDescription:
+      'Află cum apar cariile dentare, ce factori le favorizează și de ce tratamentul timpuriu ajută la păstrarea dintelui natural.',
+    seoKeywords: [
+      'carii dentare',
+      'cum apar cariile',
+      'tratament carii',
+      'prevenire carii dentare',
+    ],
+    readTime: '7 min',
+    lastUpdated: '2026-03-17',
+    primaryRoute: '/servicii',
+    primaryRouteLabel: 'Vezi serviciile stomatologice',
     content: [
       {
-        heading: 'Cum apar cariile',
+        heading: 'Cum se formează o carie dentară',
         paragraphs: [
-          'Cariile dentare apar ca urmare a acumulării plăcii bacteriene și a expunerii frecvente la zaharuri fermentabile. Acizii produși de bacterii atacă smalțul și favorizează apariția leziunilor.',
-          'În fazele incipiente, cariile pot trece neobservate, motiv pentru care controalele regulate sunt importante.',
+          'Caria nu apare dintr-o singură cauză, ci din interacțiunea dintre bacteriile din placă, zaharurile fermentabile, timpul de expunere și susceptibilitatea dintelui. Acizii produși de bacterii atacă smalțul, iar dacă procesul continuă, leziunea avansează spre straturile mai profunde.',
+          'În primele faze, pacientul poate să nu simtă nimic. Tocmai de aceea, cariile mici sunt deseori descoperite la control sau pe radiografie, înainte să producă durere.',
         ],
       },
       {
-        heading: 'Prevenție și tratament',
+        heading: 'Factori care cresc riscul',
         paragraphs: [
-          'Igiena orală corectă, alimentația echilibrată și evaluările periodice reduc riscul de carii.',
-          'Atunci când sunt tratate la timp, cariile pot fi rezolvate minim invaziv și cu șanse mai bune de păstrare a dintelui natural.',
+          'Igiena incompletă, gustările frecvente, băuturile dulci sau acide, lipsa fluorului, gura uscată și anumite obiceiuri alimentare pot crește riscul de carii. Contează nu doar cât zahăr este consumat, ci și cât de des se repetă atacurile acide asupra smalțului.',
+          'Lucrările vechi infiltrate, înghesuirile dentare sau dificultatea de igienizare în anumite zone pot favoriza și ele apariția leziunilor carioase.',
+        ],
+      },
+      {
+        heading: 'Ce simptome pot apărea',
+        paragraphs: [
+          'Sensibilitatea la rece, dulce sau mestecat poate fi un semn că leziunea a progresat. Uneori apar pete, modificări de culoare, retenție alimentară sau durere spontană, însă în alte situații pacientul nu observă aproape nimic până când problema devine mai avansată.',
+          'Tocmai din acest motiv, lipsa durerii nu înseamnă lipsa problemei. Controalele periodice și investigațiile recomandate sunt importante pentru diagnostic corect.',
+        ],
+      },
+      {
+        heading: 'Cum previi și când tratezi',
+        paragraphs: [
+          'Prevenția înseamnă igienă bună, alimentație echilibrată, controale regulate și igienizări profesionale. În funcție de risc, medicul poate recomanda și măsuri suplimentare pentru protecția smalțului.',
+          'Când caria este tratată la timp, soluția este de obicei mai simplă și mai conservatoare. Cu cât leziunea este ignorată mai mult, cu atât crește riscul de afectare profundă și de tratamente mai complexe.',
         ],
       },
     ],
-    related: ['durere-de-masea', 'ingrijire-zilnica-orala'],
+    faq: [
+      {
+        question: 'Cariile dor întotdeauna?',
+        answer:
+          'Nu. În fazele incipiente, cariile pot evolua fără simptome evidente și pot fi depistate doar la control.',
+      },
+      {
+        question: 'Se poate opri o carie fără tratament?',
+        answer:
+          'Unele leziuni foarte incipiente pot fi monitorizate sau remineralizate în anumite condiții, dar acest lucru se stabilește doar după evaluare clinică.',
+      },
+      {
+        question: 'Cât de repede se agravează o carie?',
+        answer:
+          'Evoluția diferă de la un pacient la altul, în funcție de igienă, alimentație, poziția dintelui și alți factori de risc.',
+      },
+    ],
+    related: ['durere-de-masea', 'ingrijire-zilnica-orala', 'sanatatea-orala-la-copii'],
   },
   {
     slug: 'boala-parodontala',
     title: 'Boala parodontală',
-    description: 'Ghid despre simptome, cauze și importanța tratamentului precoce pentru gingii și osul de susținere.',
-    excerpt: 'Semne, riscuri și tratament pentru boala parodontală.',
+    description:
+      'Ghid despre simptome, cauze și importanța tratamentului precoce pentru gingii și osul de susținere.',
+    excerpt:
+      'Semne, riscuri și tratament pentru boala parodontală.',
     category: 'educatie',
     categoryTitle: resourceCategoryMeta.educatie.title,
     seoTitle: 'Boala parodontală: simptome, cauze și tratament | DrDent',
-    metaDescription: 'Vezi care sunt semnele bolii parodontale și de ce diagnosticul precoce este important pentru menținerea dinților pe termen lung.',
-    seoKeywords: ['boala parodontala', 'simptome parodontoza', 'tratament gingii'],
-    readTime: '4 min',
-    lastUpdated: '2026-03-16',
+    metaDescription:
+      'Vezi care sunt semnele bolii parodontale și de ce diagnosticul precoce este important pentru menținerea dinților pe termen lung.',
+    seoKeywords: [
+      'boala parodontala',
+      'simptome parodontoza',
+      'tratament gingii',
+      'parodontoza tratament',
+    ],
+    readTime: '7 min',
+    lastUpdated: '2026-03-17',
+    primaryRoute: '/servicii',
+    primaryRouteLabel: 'Vezi serviciile parodontale',
     content: [
       {
-        heading: 'Primele semne',
+        heading: 'Ce este boala parodontală',
         paragraphs: [
-          'Boala parodontală afectează gingiile și structurile de susținere ale dinților. Printre semnele frecvente se numără sângerarea gingiilor, inflamația, respirația neplăcută și sensibilitatea.',
-          'În stadii avansate, pot apărea retracția gingivală și mobilitatea dentară.',
+          'Boala parodontală afectează gingiile și structurile care susțin dinții. Nu este doar o problemă de suprafață, pentru că în formele avansate poate implica pierdere de os și mobilitate dentară.',
+          'Mulți pacienți folosesc termenul de parodontoză pentru orice sângerare gingivală, dar există diferențe între gingivită și boala parodontală instalată. Diagnosticul corect se stabilește în cabinet, prin examen clinic și investigații specifice.',
         ],
       },
       {
-        heading: 'De ce tratamentul precoce contează',
+        heading: 'Semne pe care nu este bine să le ignori',
         paragraphs: [
-          'Boala parodontală poate evolua fără durere accentuată, ceea ce întârzie uneori prezentarea la medic.',
-          'Tratamentul precoce ajută la controlul inflamației și la protejarea țesuturilor care susțin dinții.',
+          'Sângerarea la periaj, gingiile roșii sau umflate, respirația neplăcută, retracția gingivală și sensibilitatea locală sunt semne care merită evaluate. În stadii mai avansate poate apărea mobilitatea dinților sau modificarea mușcăturii.',
+          'Faptul că boala parodontală nu doare mereu intens este unul dintre motivele pentru care pacienții amână consultul. Tocmai această evoluție discretă o face periculoasă.',
+        ],
+      },
+      {
+        heading: 'De ce apare și cine are risc mai mare',
+        paragraphs: [
+          'Placa bacteriană și tartrul au un rol major, dar boala parodontală este influențată și de igiena orală, fumat, predispoziție individuală, diabet, dezechilibre hormonale sau lucrări greu de igienizat.',
+          'De aceea, două persoane cu obiceiuri aparent similare pot avea evoluții diferite. Evaluarea individuală este importantă pentru a înțelege cauza reală și ritmul de progresie.',
+        ],
+      },
+      {
+        heading: 'Cum ajută tratamentul timpuriu',
+        paragraphs: [
+          'Tratamentul precoce urmărește reducerea inflamației, controlul plăcii bacteriene și stabilizarea țesuturilor. În funcție de stadiu, planul poate include igienizare profesională, detartraj, chiuretaj, reevaluări și recomandări personalizate de igienă.',
+          'Cu cât intervenția este mai devreme, cu atât șansele de a păstra dinții și suportul osos sunt mai bune. Boala parodontală poate fi controlată, dar cere consecvență și controale regulate.',
         ],
       },
     ],
-    related: ['gingii-care-sangereaza', 'ingrijire-zilnica-orala'],
+    faq: [
+      {
+        question: 'Sângerarea gingiilor înseamnă automat parodontoză?',
+        answer:
+          'Nu automat, dar este un semn important care trebuie evaluat. Poate fi gingivită sau o problemă parodontală într-o fază mai avansată.',
+      },
+      {
+        question: 'Boala parodontală se poate vindeca?',
+        answer:
+          'Poate fi controlată foarte bine, mai ales când este depistată timpuriu, dar are nevoie de tratament și întreținere constantă.',
+      },
+      {
+        question: 'Fumatul influențează gingiile?',
+        answer:
+          'Da. Fumatul este un factor de risc important și poate masca uneori semnele evidente de inflamație.',
+      },
+    ],
+    related: ['gingii-care-sangereaza', 'ingrijire-zilnica-orala', 'durere-de-masea'],
   },
   {
     slug: 'implanturile-dentare-explicate',
     title: 'Implanturile dentare explicate',
-    description: 'Un articol introductiv despre rolul, beneficiile și îngrijirea implanturilor dentare.',
-    excerpt: 'Ce este un implant dentar și ce trebuie să știi înainte de a lua o decizie.',
+    description:
+      'Un articol introductiv despre rolul, beneficiile și îngrijirea implanturilor dentare.',
+    excerpt:
+      'Ce este un implant dentar și ce trebuie să știi înainte de a lua o decizie.',
     category: 'educatie',
     categoryTitle: resourceCategoryMeta.educatie.title,
     seoTitle: 'Implanturi dentare explicate: beneficii și etape | DrDent',
-    metaDescription: 'Află pe scurt cum funcționează implanturile dentare, care sunt beneficiile și ce implică îngrijirea lor.',
-    seoKeywords: ['implanturi dentare', 'ce este implantul dentar', 'beneficii implant dentar'],
-    readTime: '4 min',
-    lastUpdated: '2026-03-16',
+    metaDescription:
+      'Află pe scurt cum funcționează implanturile dentare, care sunt beneficiile și ce implică îngrijirea lor.',
+    seoKeywords: [
+      'implanturi dentare',
+      'ce este implantul dentar',
+      'beneficii implant dentar',
+      'cand se recomanda implant dentar',
+    ],
+    readTime: '7 min',
+    lastUpdated: '2026-03-17',
+    primaryRoute: '/servicii',
+    primaryRouteLabel: 'Vezi serviciile de implantologie',
     content: [
       {
-        heading: 'Ce este implantul dentar',
+        heading: 'Ce este un implant dentar',
         paragraphs: [
-          'Implantul dentar este o soluție modernă pentru înlocuirea dinților lipsă, oferind stabilitate și un aspect apropiat de cel natural.',
-          'Tratamentul presupune integrarea implantului în os și realizarea restaurării protetice potrivite.',
+          'Implantul dentar este o soluție folosită pentru înlocuirea unui dinte lipsă sau a mai multor dinți lipsă, atunci când situația clinică permite. El preia rolul rădăcinii și susține ulterior o coroană, o punte sau alt tip de lucrare protetică.',
+          'Deși ideea pare simplă, indicația corectă depinde de mai mulți factori: volumul de os, starea gingiilor, sănătatea generală, mușcătura și obiectivele pacientului.',
         ],
       },
       {
-        heading: 'De ce este o soluție populară',
+        heading: 'Care sunt beneficiile principale',
         paragraphs: [
-          'Implanturile nu necesită șlefuirea dinților vecini și pot reda confortul la masticație și zâmbetul.',
-          'Îngrijirea corectă și controalele regulate contribuie la durabilitatea rezultatului.',
+          'Implanturile pot oferi stabilitate bună, confort la masticație și un rezultat estetic apropiat de natural atunci când sunt planificate și întreținute corect. Un avantaj important este că, în multe cazuri, nu este nevoie de șlefuirea dinților vecini pentru a înlocui un singur dinte lipsă.',
+          'Pentru mulți pacienți, beneficiul major este recâștigarea funcției și a încrederii. Totuși, un implant nu este o soluție automată pentru orice lipsă dentară, iar consultația rămâne etapa decisivă.',
+        ],
+      },
+      {
+        heading: 'Ce presupune tratamentul',
+        paragraphs: [
+          'Tratamentul începe cu evaluarea clinică și imagistică. Medicul stabilește dacă este nevoie doar de inserarea implantului sau și de etape suplimentare, cum ar fi regenerare osoasă, extracții sau tratamente pregătitoare.',
+          'După inserare urmează perioada de vindecare și osteointegrare, apoi etapa protetică. Durata totală diferă în funcție de complexitatea cazului și de răspunsul biologic individual.',
+        ],
+      },
+      {
+        heading: 'Îngrijire și controale pe termen lung',
+        paragraphs: [
+          'Implantul dentar are nevoie de igienă atentă și controale regulate, la fel ca orice altă lucrare dentară. Lipsa durerii nu înseamnă automat că totul este perfect, de aceea reevaluările periodice sunt importante.',
+          'Pacienții care întrețin corect zona implantului și respectă controalele au șanse mai bune de stabilitate și durabilitate pe termen lung.',
         ],
       },
     ],
-    related: ['implant-dentar-bucuresti', 'dupa-implant-dentar'],
+    faq: [
+      {
+        question: 'Implantul dentar este aceeași lucru cu dintele definitiv?',
+        answer:
+          'Implantul este suportul inserat în os. Peste el se realizează ulterior partea protetică, în funcție de planul de tratament.',
+      },
+      {
+        question: 'Oricine poate primi implant dentar?',
+        answer:
+          'Nu automat. Este necesară o evaluare clinică și imagistică pentru a vedea dacă există condițiile locale și generale potrivite.',
+      },
+      {
+        question: 'Un implant durează toată viața?',
+        answer:
+          'Poate avea o durată foarte bună în timp, dar rezultatul depinde de planificare, igienă, controale și de comportamentul pacientului.',
+      },
+    ],
+    related: ['implant-dentar-bucuresti', 'dupa-implant-dentar', 'inainte-de-tratament'],
   },
   {
     slug: 'albirea-dentara-optiuni-rezultate',
     title: 'Albirea dentară: opțiuni și rezultate',
-    description: 'Metode de albire dentară și criterii care te ajută să alegi varianta potrivită.',
-    excerpt: 'Ce opțiuni există pentru albire și la ce rezultate te poți aștepta.',
+    description:
+      'Metode de albire dentară și criterii care te ajută să alegi varianta potrivită.',
+    excerpt:
+      'Ce opțiuni există pentru albire și la ce rezultate te poți aștepta.',
     category: 'educatie',
     categoryTitle: resourceCategoryMeta.educatie.title,
     seoTitle: 'Albirea dentară: opțiuni, siguranță și rezultate | DrDent',
-    metaDescription: 'Află ce variante de albire dentară există și de ce evaluarea profesională este importantă înainte de tratament.',
-    seoKeywords: ['albire dentara', 'optiuni albire dentara', 'rezultate albire dentara'],
-    readTime: '4 min',
-    lastUpdated: '2026-03-16',
+    metaDescription:
+      'Află ce variante de albire dentară există și de ce evaluarea profesională este importantă înainte de tratament.',
+    seoKeywords: [
+      'albire dentara',
+      'optiuni albire dentara',
+      'rezultate albire dentara',
+      'albire dentara profesionala',
+    ],
+    readTime: '6 min',
+    lastUpdated: '2026-03-17',
+    primaryRoute: '/servicii',
+    primaryRouteLabel: 'Vezi serviciile estetice',
     content: [
       {
-        heading: 'Ce trebuie evaluat înainte',
+        heading: 'De ce este importantă evaluarea înainte de albire',
         paragraphs: [
-          'Albirea dentară este o procedură estetică frecvent solicitată, însă nu orice discolorare are aceeași cauză sau răspunde identic la tratament.',
-          'De aceea, evaluarea profesională este utilă pentru a alege metoda potrivită și pentru a exclude probleme care trebuie tratate înainte.',
+          'Albirea dentară este o procedură estetică frecvent solicitată, dar nu orice colorare dentară răspunde la fel la tratament. Unele nuanțe sunt influențate de obiceiuri alimentare, altele de structură dentară, tratamente vechi sau de particularități ale smalțului.',
+          'De aceea, evaluarea profesională înainte de albire este utilă pentru a vedea dacă există carii, sensibilitate, lucrări vizibile sau alte probleme care ar trebui rezolvate înainte.',
         ],
       },
       {
-        heading: 'Rezultatele depind de mai mulți factori',
+        heading: 'Ce opțiuni există în practică',
         paragraphs: [
-          'Structura dintelui, obiceiurile alimentare și istoricul stomatologic influențează rezultatul final.',
-          'Procedurile realizate corect și monitorizate de medic oferă mai multă siguranță și predictibilitate.',
+          'În funcție de caz, pot exista variante realizate în cabinet, variante supravegheate pentru acasă sau combinații între ele. Alegerea nu se face doar după dorința de a obține un alb mai intens, ci și după starea dinților și obiectivul realist al pacientului.',
+          'Rezultatele pot fi bune atunci când procedura este făcută controlat și când pacientul înțelege ce se poate obține și ce limitări există în raport cu culoarea de plecare.',
+        ],
+      },
+      {
+        heading: 'Ce factori influențează rezultatul',
+        paragraphs: [
+          'Tipul de colorare, grosimea smalțului, obiceiurile alimentare, fumatul și existența lucrărilor protetice în zona vizibilă pot influența rezultatul final. Albirea nu schimbă culoarea coroanelor, fațetelor sau obturațiilor existente.',
+          'Acest lucru este important de înțeles înainte de tratament, pentru că uneori este nevoie și de alte ajustări estetice pentru un rezultat armonios.',
+        ],
+      },
+      {
+        heading: 'Cum menții rezultatul mai mult timp',
+        paragraphs: [
+          'După albire, unele obiceiuri influențează direct menținerea nuanței obținute. Igiena bună, reducerea expunerii la coloranți și controalele periodice ajută la păstrarea rezultatului.',
+          'Pentru unii pacienți, strategia corectă nu este doar albirea, ci un plan estetic complet, stabilit împreună cu medicul, în funcție de zâmbet și de istoricul dentar.',
         ],
       },
     ],
-    related: ['ingrijirea-coroanelor-fatetelor'],
+    faq: [
+      {
+        question: 'Albirea dentară funcționează la fel pentru toți pacienții?',
+        answer:
+          'Nu. Rezultatul depinde de cauza colorării, de structura dintelui și de starea generală a cavității orale.',
+      },
+      {
+        question: 'Albirea schimbă culoarea coroanelor și fațetelor?',
+        answer:
+          'Nu în același mod ca dinții naturali, motiv pentru care evaluarea estetică înainte de tratament este importantă.',
+      },
+      {
+        question: 'Este bine să fac albire fără consult?',
+        answer:
+          'Nu este recomandat. Un consult ajută la alegerea metodei potrivite și la evitarea procedurilor nepotrivite pentru situația clinică.',
+      },
+    ],
+    related: ['ingrijirea-coroanelor-facetelor', 'ingrijire-zilnica-orala'],
   },
   {
     slug: 'sanatatea-orala-la-copii',
     title: 'Sănătatea orală la copii',
-    description: 'Ghid pentru părinți despre prevenție, igienă și primele controale stomatologice.',
-    excerpt: 'Cum susții sănătatea orală a copilului de la primii dinți până la adolescență.',
+    description:
+      'Ghid pentru părinți despre prevenție, igienă și primele controale stomatologice.',
+    excerpt:
+      'Cum susții sănătatea orală a copilului de la primii dinți până la adolescență.',
     category: 'educatie',
     categoryTitle: resourceCategoryMeta.educatie.title,
     seoTitle: 'Sănătatea orală la copii: prevenție și controale | DrDent',
-    metaDescription: 'Află ce contează în îngrijirea dentară a copiilor, de la primii dinți până la obiceiuri sănătoase pe termen lung.',
-    seoKeywords: ['sanatatea orala la copii', 'ingrijire dentara copii', 'preventie carii copii'],
-    readTime: '4 min',
-    lastUpdated: '2026-03-16',
+    metaDescription:
+      'Află ce contează în îngrijirea dentară a copiilor, de la primii dinți până la obiceiuri sănătoase pe termen lung.',
+    seoKeywords: [
+      'sanatatea orala la copii',
+      'ingrijire dentara copii',
+      'preventie carii copii',
+      'primul control stomatologic copil',
+    ],
+    readTime: '7 min',
+    lastUpdated: '2026-03-17',
     primaryRoute: '/stomatologie-pediatrica',
     primaryRouteLabel: 'Vezi stomatologia pediatrică',
     content: [
       {
-        heading: 'Rolul prevenției',
+        heading: 'De ce contează primii ani',
         paragraphs: [
-          'Sănătatea orală a copiilor începe încă din primii ani de viață. Dinții temporari au un rol important în masticație, vorbire și ghidarea corectă a erupției dentiției permanente.',
-          'Educația privind igiena orală și alimentația echilibrată trebuie începută devreme.',
+          'Sănătatea orală a copilului începe devreme, încă din perioada apariției primilor dinți. Dinții temporari au rol important în masticație, vorbire, dezvoltarea armonioasă și ghidarea erupției dinților permanenți.',
+          'Ideea că dinții de lapte nu trebuie îngrijiți atent pentru că oricum se schimbă este greșită. Problemele netratate pot influența confortul copilului, alimentația și viitoarea dentiție.',
         ],
       },
       {
-        heading: 'Vizitele regulate la stomatolog',
+        heading: 'Igiena și obiceiurile sănătoase',
         paragraphs: [
-          'Controalele regulate permit depistarea timpurie a problemelor și îi ajută pe cei mici să se obișnuiască într-un mod pozitiv cu mediul stomatologic.',
-          'O experiență bună în cabinet contribuie la reducerea anxietății pe termen lung.',
+          'Periajul adaptat vârstei, supravegherea de către părinte și obiceiurile alimentare corecte sunt esențiale. Nu este vorba doar despre evitarea dulciurilor, ci și despre ritmul gustărilor, băuturile consumate și consecvența rutinei zilnice.',
+          'Copiii învață prin repetiție și exemplu. O experiență pozitivă și constantă în jurul igienei orale are efect pe termen lung.',
+        ],
+      },
+      {
+        heading: 'Rolul controalelor stomatologice',
+        paragraphs: [
+          'Vizitele regulate la stomatolog ajută la depistarea timpurie a cariilor, a problemelor de erupție și a altor dezechilibre. În plus, copilul se familiarizează cu mediul din cabinet într-un mod calm, fără a asocia mersul la dentist doar cu durerea.',
+          'Un control periodic este și o ocazie bună pentru părinți să primească recomandări clare despre igienă, erupție, dietă și nevoile specifice vârstei.',
+        ],
+      },
+      {
+        heading: 'Când este bine să ceri evaluare mai repede',
+        paragraphs: [
+          'Durerea, sensibilitatea, petele pe dinți, sângerarea gingiilor, dificultățile la masticație sau orice modificare observată de părinte merită evaluate. De multe ori, problemele descoperite la timp se rezolvă mai simplu și cu mai puțin stres pentru copil.',
+          'Scopul stomatologiei pediatrice nu este doar tratamentul, ci și construirea unei relații sănătoase cu prevenția și cu mediul medical.',
         ],
       },
     ],
-    related: ['intelegerea-cariilor-dentare'],
+    faq: [
+      {
+        question: 'Când este bine să meargă copilul prima dată la stomatolog?',
+        answer:
+          'Momentul exact se stabilește în funcție de vârstă și context, dar vizitele timpurii ajută la prevenție și acomodare.',
+      },
+      {
+        question: 'Dinții de lapte trebuie tratați?',
+        answer:
+          'Da. Dinții temporari au rol important și problemele lor netratate pot afecta confortul și dezvoltarea orală.',
+      },
+      {
+        question: 'Cum fac vizita la dentist mai ușoară pentru copil?',
+        answer:
+          'Prin calm, explicații simple, evitarea amenințărilor și alegerea unui mediu prietenos pentru copii.',
+      },
+    ],
+    related: ['intelegerea-cariilor-dentare', 'aparat-dentar-bucuresti', 'inainte-de-tratament'],
   },
   {
     slug: 'implant-dentar-bucuresti',
     title: 'Implant dentar în București: preț, etape, vindecare și când ai nevoie',
-    description: 'Află când este recomandat implantul dentar, cum decurge tratamentul și ce factori pot influența costul final.',
-    excerpt: 'Un ghid complet despre implantul dentar în București: indicații, etape, recuperare și întrebări frecvente.',
+    description:
+      'Află când este recomandat implantul dentar, cum decurge tratamentul și ce factori pot influența costul final.',
+    excerpt:
+      'Un ghid complet despre implantul dentar în București: indicații, etape, recuperare și întrebări frecvente.',
     category: 'tratamente',
     categoryTitle: resourceCategoryMeta.tratamente.title,
     seoTitle: 'Implant dentar în București: preț, etape și vindecare | DrDent',
-    metaDescription: 'Implant dentar în București: vezi când este recomandat, care sunt etapele tratamentului, cum decurge vindecarea și ce influențează prețul.',
-    seoKeywords: ['implant dentar bucuresti', 'pret implant dentar bucuresti', 'etape implant dentar', 'vindecare dupa implant dentar'],
-    readTime: '8 min',
-    lastUpdated: '2026-03-16',
+    metaDescription:
+      'Implant dentar în București: vezi când este recomandat, care sunt etapele tratamentului, cum decurge vindecarea și ce influențează prețul.',
+    seoKeywords: [
+      'implant dentar bucuresti',
+      'pret implant dentar bucuresti',
+      'etape implant dentar',
+      'vindecare dupa implant dentar',
+      'consult implant dentar bucuresti',
+    ],
+    readTime: '9 min',
+    lastUpdated: '2026-03-17',
     primaryRoute: '/servicii',
     primaryRouteLabel: 'Vezi serviciile DrDent',
     content: [
       {
         heading: 'Când este recomandat implantul dentar',
         paragraphs: [
-          'Implantul dentar este una dintre cele mai moderne și stabile soluții pentru înlocuirea unui dinte lipsă sau a mai multor dinți lipsă. Este luat în calcul atunci când pacientul dorește o variantă fixă, funcțională și estetică, fără a compromite dinții vecini prin șlefuire inutilă.',
-          'În practică, implantul dentar poate fi recomandat după pierderea unui dinte din cauza cariei, a unei fracturi, a bolii parodontale sau a unei extracții. Medicul stabilește indicația după evaluarea clinică și radiologică, pentru a verifica volumul de os disponibil, starea gingiilor și contextul general al cazului.',
-          'Pentru pacienții care caută un implant dentar în București, cea mai importantă etapă este consultația inițială. O decizie corectă se ia doar după analizarea structurii osoase, a ocluziei și a istoricului medical.',
+          'Implantul dentar este una dintre cele mai moderne și stabile soluții pentru înlocuirea unui dinte lipsă sau a mai multor dinți lipsă. Este recomandat atunci când pacientul are nevoie de o variantă fixă, funcțională și estetică, fără a compromite inutil dinții vecini.',
+          'În practică, implantul poate fi luat în calcul după extracții, fracturi, carii extinse, boală parodontală controlată sau alte situații în care dintele nu mai poate fi păstrat. Indicația reală se stabilește însă după evaluare clinică și imagistică.',
+          'Pentru pacienții care caută implant dentar în București, consultația inițială rămâne etapa cea mai importantă. Acolo se vede dacă există suficient os, dacă gingiile sunt sănătoase și ce variante de tratament au sens în contextul fiecărui caz.',
         ],
       },
       {
         heading: 'Cum decurge tratamentul pas cu pas',
         paragraphs: [
-          'Tratamentul cu implant dentar începe de obicei cu consultația, investigațiile imagistice și planificarea. În această etapă, medicul explică dacă este nevoie doar de inserarea implantului sau și de proceduri suplimentare, precum adiție osoasă, sinus lift ori tratament parodontal prealabil.',
-          'Urmează etapa chirurgicală, în care implantul este inserat în os. După această intervenție, începe perioada de vindecare și osteointegrare. Durata ei variază de la caz la caz și depinde de zona tratată, de calitatea osului și de respectarea indicațiilor postoperatorii.',
-          'După integrarea implantului, se trece la partea protetică: bontul protetic și coroana dentară. În această etapă contează nu doar funcția, ci și estetica, în special în zona frontală.',
+          'Tratamentul începe cu consultația, investigațiile imagistice și planificarea. Uneori este nevoie doar de inserarea implantului, alteori de tratamente pregătitoare precum extracții, regenerare osoasă sau alte intervenții complementare.',
+          'După inserare urmează etapa de vindecare și osteointegrare. Abia după această fază se continuă cu restaurarea protetică, atunci când medicul confirmă că baza biologică este stabilă.',
+          'Durata totală diferă de la caz la caz. De aceea, un răspuns generic despre cât durează implantul dentar este mai puțin util decât un plan personalizat, explicat clar în urma consultației.',
         ],
       },
       {
-        heading: 'Cât durează vindecarea după implant dentar',
+        heading: 'Cum decurge recuperarea și ce recomandări contează',
         paragraphs: [
-          'Una dintre cele mai frecvente întrebări este legată de perioada de vindecare. În general, primele zile sunt dedicate recuperării postoperatorii imediate, când pot apărea ușoare inflamații sau sensibilitate. Pe termen mediu și lung, importantă este osteointegrarea, adică fixarea biologică a implantului în os.',
-          'Vindecarea nu este identică la toți pacienții. Fumatul, igiena orală deficitară, bruxismul, afecțiunile gingivale active sau nerespectarea indicațiilor postoperatorii pot influența negativ evoluția.',
-          'Controalele periodice și igiena riguroasă sunt esențiale pentru succesul implantului. Pacientul trebuie să înțeleagă faptul că implantul dentar nu înseamnă doar inserarea unui șurub dentar, ci un tratament complet care trebuie monitorizat corect.',
+          'Perioada imediat următoare procedurii poate include sensibilitate, umflare moderată și disconfort controlabil. Respectarea indicațiilor privind igiena, alimentația și controalele este esențială pentru o vindecare bună.',
+          'Pacientul trebuie să înțeleagă că succesul implantului nu depinde doar de procedura chirurgicală, ci și de perioada postoperatorie. Fumatul, lipsa igienei sau amânarea controalelor pot afecta rezultatul.',
+          'În multe cazuri, recuperarea este mai simplă decât se așteaptă pacientul, însă evoluția exactă este influențată de complexitatea intervenției și de contextul biologic individual.',
         ],
       },
       {
-        heading: 'Ce poate influența prețul unui implant dentar în București',
+        heading: 'Ce poate influența costul implantului dentar',
         paragraphs: [
-          'Prețul final al unui implant dentar în București poate varia în funcție de complexitatea cazului, materialele folosite și etapele incluse în planul de tratament. Uneori se vorbește doar despre prețul implantului propriu-zis, însă costul total poate include și consultația, investigațiile, procedura chirurgicală, bontul protetic și coroana.',
-          'În plus, anumite cazuri necesită proceduri suplimentare precum adiție de os, tratamente decontaminante sau managementul țesuturilor moi. De aceea, o estimare realistă se poate face doar după consultație.',
-          'Pentru pacient, este util să înțeleagă nu doar costul, ci și ce este inclus în plan: etapele, controalele, materialele și recomandările de întreținere pe termen lung.',
+          'Prețul final depinde de complexitatea cazului, de numărul de implanturi, de necesitatea procedurilor pregătitoare, de componenta protetică și de etapele implicate în planul complet. Nu există un singur cost universal valabil pentru toate cazurile.',
+          'Din acest motiv, este mai corect să discuți despre estimare după evaluare, nu doar despre un preț izolat văzut online. Pentru pacient, contează planul complet, predictibilitatea și calitatea etapelor incluse.',
+          'În București, mulți pacienți caută rapid informații despre cost și recuperare, însă o consultație bine făcută clarifică atât partea financiară, cât și șansele reale de succes.',
         ],
       },
       {
-        heading: 'Ce trebuie să faci după tratament',
+        heading: 'Când merită să ceri consultația',
         paragraphs: [
-          'După inserarea implantului, igiena orală atentă și prezentarea la controale sunt obligatorii. În primele zile pot exista recomandări legate de alimentație, de evitarea efortului intens și de limitarea presiunii în zona tratată.',
-          'Pe termen lung, implantul dentar are nevoie de întreținere la fel de serioasă ca dinții naturali. Periajul corect, mijloacele auxiliare de igienă și controalele regulate ajută la menținerea rezultatului funcțional și estetic.',
-          'Dacă aveți semne precum mobilitate, disconfort persistent, sângerare gingivală în jurul implantului sau dificultate la masticație, este indicat să cereți un control cât mai repede.',
+          'Dacă ai unul sau mai mulți dinți lipsă, dacă ai o lucrare veche instabilă sau dacă vrei să înțelegi ce variante există pentru reabilitare, consultația de implantologie este punctul de plecare potrivit.',
+          'Scopul nu este să primești automat recomandarea de implant, ci să înțelegi dacă este soluția potrivită pentru cazul tău, ce alternative există și care este ordinea corectă a tratamentului.',
+          'Un plan bun este realist, explicat clar și adaptat nevoilor funcționale, estetice și financiare ale pacientului.',
         ],
       },
     ],
     faq: [
       {
-        question: 'Cât durează un implant dentar?',
-        answer: 'Durata de viață a unui implant dentar depinde de igiena orală, controalele periodice, calitatea tratamentului și obiceiurile pacientului. Cu întreținere corectă, rezultatul poate fi foarte stabil pe termen lung.',
+        question: 'Implantul dentar este dureros?',
+        answer:
+          'Procedura se face cu anestezie, iar disconfortul postoperator depinde de complexitatea cazului. Medicul explică din timp la ce să vă așteptați.',
       },
       {
-        question: 'Este dureroasă procedura de implant dentar?',
-        answer: 'Inserarea implantului se realizează cu anestezie, iar nivelul de disconfort diferă de la pacient la pacient. În mod obișnuit, disconfortul postoperator este controlabil dacă sunt respectate recomandările medicului.',
+        question: 'Cât durează până primesc dintele definitiv?',
+        answer:
+          'Durata diferă în funcție de vindecare, osteointegrare și planul protetic. Nu există același calendar pentru toate cazurile.',
       },
       {
-        question: 'Se poate face implant imediat după extracție?',
-        answer: 'În unele cazuri, da. Decizia depinde de starea osului, de tipul dintelui extras, de prezența infecției și de evaluarea clinică și imagistică.',
+        question: 'Se poate face implant dacă lipsește os?',
+        answer:
+          'În unele situații, da, cu proceduri pregătitoare. Decizia se ia doar după evaluare clinică și imagistică.',
       },
     ],
-    related: ['dupa-implant-dentar', 'implanturile-dentare-explicate', 'maseaua-de-minte'],
+    related: ['implanturile-dentare-explicate', 'dupa-implant-dentar', 'inainte-de-tratament'],
   },
   {
     slug: 'aparat-dentar-bucuresti',
-    title: 'Aparat dentar în București: tipuri, prețuri, durată și cum alegi varianta potrivită',
-    description: 'Un ghid clar despre aparatul dentar: când este recomandat, ce tipuri există și ce influențează alegerea tratamentului ortodontic.',
-    excerpt: 'Tot ce trebuie să știi despre aparat dentar în București: tipuri, durată, costuri și criterii de alegere.',
+    title: 'Aparat dentar în București: tipuri, preț, durată și cum alegi varianta potrivită',
+    description:
+      'Ghid util pentru pacienții care caută informații clare despre tratamentul ortodontic și variantele disponibile.',
+    excerpt:
+      'Ce trebuie să știi despre aparatul dentar: tipuri, durată, costuri și adaptarea la stilul tău de viață.',
     category: 'tratamente',
     categoryTitle: resourceCategoryMeta.tratamente.title,
-    seoTitle: 'Aparat dentar în București: tipuri, prețuri și durată | DrDent',
-    metaDescription: 'Aparat dentar în București: vezi ce tipuri există, cât poate dura tratamentul și ce factori influențează costul și alegerea aparatului.',
-    seoKeywords: ['aparat dentar bucuresti', 'pret aparat dentar bucuresti', 'tipuri aparat dentar', 'durata tratament ortodontic'],
-    readTime: '8 min',
-    lastUpdated: '2026-03-16',
+    seoTitle: 'Aparat dentar în București: tipuri, preț și durată | DrDent',
+    metaDescription:
+      'Află când este recomandat aparatul dentar, ce tipuri există, cât poate dura tratamentul și ce factori influențează costul și alegerea aparatului.',
+    seoKeywords: [
+      'aparat dentar bucuresti',
+      'pret aparat dentar bucuresti',
+      'tipuri aparat dentar',
+      'durata tratament ortodontic',
+      'consult ortodontie bucuresti',
+    ],
+    readTime: '9 min',
+    lastUpdated: '2026-03-17',
     primaryRoute: '/servicii',
     primaryRouteLabel: 'Vezi serviciile ortodontice',
     content: [
       {
         heading: 'Când este recomandat aparatul dentar',
         paragraphs: [
-          'Aparatul dentar este recomandat atunci când dinții nu sunt aliniați corect, când mușcătura este dezechilibrată sau când spațiile și înghesuirile afectează atât estetica, cât și funcția. Tratamentul ortodontic nu este doar despre aspectul zâmbetului, ci și despre igienizare mai ușoară, distribuirea corectă a forțelor și protejarea dinților pe termen lung.',
-          'Mulți pacienți caută aparat dentar în București pentru motive estetice, însă consultația ortodontică poate evidenția și motive funcționale: ocluzie incorectă, migrarea dinților, poziții care favorizează uzura sau dificultatea în igienizare.',
-          'Tratamentul poate fi recomandat atât adolescenților, cât și adulților. Important este ca planul să fie personalizat în funcție de vârstă, obiectiv și particularitățile cazului.',
+          'Aparatul dentar este recomandat atunci când dinții nu sunt aliniați corect, când mușcătura este dezechilibrată sau când spațiile și înghesuirile afectează estetica, igiena și funcția. Tratamentul ortodontic nu este doar despre zâmbet, ci și despre distribuirea corectă a forțelor și protejarea dinților pe termen lung.',
+          'Mulți pacienți caută aparat dentar în București pentru motive estetice, însă consultul ortodontic evidențiază adesea și motive funcționale: mușcătură incorectă, migrarea dinților, uzură inegală sau dificultate de igienizare.',
+          'Tratamentul poate fi recomandat atât adolescenților, cât și adulților. Important este ca planul să fie personalizat și realist în raport cu vârsta, obiectivele și particularitățile cazului.',
         ],
       },
       {
         heading: 'Ce tipuri de aparat dentar există',
         paragraphs: [
-          'În linii mari, pacienții aleg între variante metalice, estetice și alte soluții moderne adaptate nevoilor clinice și preferințelor vizuale. Aparatul dentar metalic rămâne una dintre cele mai folosite opțiuni datorită eficienței și controlului bun asupra mișcărilor dentare.',
-          'Aparatele dentare ceramice sau din safir sunt preferate de pacienții care doresc o prezență vizuală mai discretă. În anumite situații, medicul poate discuta și despre variante aproape invizibile, dacă acestea sunt potrivite clinic.',
-          'Alegerea nu trebuie făcută doar în funcție de aspect. Contează complexitatea cazului, disciplina pacientului, durata estimată și recomandarea ortodontului.',
+          'În practică, pacienții aleg între variante metalice, estetice și alte soluții moderne, în funcție de indicație și preferințe. Aparatul metalic rămâne una dintre cele mai eficiente și predictibile opțiuni, mai ales în cazurile care cer control bun asupra mișcărilor dentare.',
+          'Aparatele ceramice sau alte variante mai discrete sunt preferate de pacienții care pun accent și pe aspectul vizual în timpul tratamentului. În anumite situații, medicul poate discuta și alte soluții, dacă ele sunt potrivite clinic.',
+          'Alegerea nu se face doar după aparență. Contează complexitatea cazului, disciplina pacientului, durata estimată și recomandarea ortodontului.',
         ],
       },
       {
-        heading: 'Cât durează tratamentul ortodontic',
+        heading: 'Cât poate dura tratamentul ortodontic',
         paragraphs: [
-          'Durata tratamentului diferă în funcție de severitatea înghesuirii, tipul mușcăturii, vârsta pacientului și complianța la recomandări. Unele cazuri simple pot avea un parcurs mai scurt, în timp ce cazurile complexe necesită planificare și monitorizare îndelungată.',
-          'Controalele regulate sunt importante pentru ajustări și pentru menținerea direcției corecte a tratamentului. În plus, după încheierea tratamentului activ, etapa de contenție este esențială pentru stabilitatea rezultatului.',
-          'Pacienții trebuie să știe că un aparat dentar nu înseamnă doar montaj, ci un proces complet care include diagnostic, activări, reevaluări și retenție.',
+          'Durata tratamentului variază în funcție de severitatea înghesuirii, tipul mușcăturii, vârsta pacientului și complianța la recomandări. Unele cazuri sunt mai simple, altele au nevoie de monitorizare îndelungată și ajustări atente.',
+          'Pacientul trebuie să știe că aparatul dentar nu înseamnă doar montaj, ci un proces complet: diagnostic, planificare, activări, reevaluări și retenție. Etapa de contenție este esențială pentru stabilitatea rezultatului.',
+          'De aceea, durata se discută realist în cabinet, după ce medicul înțelege exact tipul de problemă și răspunsul așteptat la tratament.',
         ],
       },
       {
-        heading: 'Ce poate influența costul unui aparat dentar în București',
+        heading: 'Ce influențează costul aparatului dentar',
         paragraphs: [
-          'Costul tratamentului ortodontic depinde de tipul aparatului, de durata estimată și de complexitatea cazului. Uneori sunt necesare investigații suplimentare, igienizare profesională, tratamente dentare înainte de montaj sau alte etape complementare.',
-          'Din acest motiv, este util ca pacientul să ceară o estimare clară după consultație, cu prezentarea etapelor și a costurilor asociate pe parcurs.',
-          'În mod practic, alegerea aparatului trebuie să țină cont de echilibrul dintre obiectivul estetic, eficiența clinică și buget.',
+          'Costul depinde de tipul aparatului, complexitatea cazului, durata estimată, investigațiile necesare și eventualele tratamente pregătitoare. Uneori, înainte de montaj, sunt indicate igienizări, tratamente carioase sau alte corecții.',
+          'Din acest motiv, o estimare serioasă se face după consult ortodontic, nu doar pe baza unei liste de prețuri. Pentru pacient, este important să înțeleagă costul etapizat și ce include planul recomandat.',
+          'Alegerea corectă ține cont de echilibrul dintre obiectivul estetic, eficiența clinică și buget.',
         ],
       },
       {
         heading: 'Cum alegi varianta potrivită',
         paragraphs: [
-          'Varianta potrivită se alege după consult ortodontic și discuție deschisă despre obiective. Pentru unii pacienți, prioritară este discreția estetică. Pentru alții, rezistența, eficiența sau predictibilitatea contează mai mult.',
-          'Un plan bun ține cont și de stilul de viață al pacientului, de disponibilitatea pentru controale regulate și de capacitatea de a menține o igienă foarte bună în timpul tratamentului.',
-          'Dacă analiza este corect făcută de la început, șansele de a obține un rezultat stabil și armonios cresc semnificativ.',
+          'Varianta potrivită se alege după consult și discuție deschisă despre așteptări. Pentru unii pacienți contează discreția, pentru alții rezistența și eficiența, iar pentru alții important este stilul de viață și disponibilitatea pentru controale regulate.',
+          'Un plan bun ține cont și de capacitatea de a menține o igienă foarte bună pe durata tratamentului. Fără această disciplină, riscul de pete, inflamații gingivale sau complicații crește.',
+          'Când diagnosticul este corect și recomandarea este bine explicată, șansele de a obține un rezultat stabil și armonios cresc semnificativ.',
         ],
       },
     ],
     faq: [
       {
         question: 'La ce vârstă se poate purta aparat dentar?',
-        answer: 'Tratamentul ortodontic poate fi recomandat atât copiilor, cât și adulților, în funcție de diagnosticul stabilit la consultație.',
+        answer:
+          'Tratamentul ortodontic poate fi recomandat atât copiilor, cât și adulților, în funcție de diagnosticul stabilit la consultație.',
       },
       {
-        question: 'Se poate monta aparat dentar dacă am lucrări dentare?',
-        answer: 'În multe cazuri, da, dar este necesară o evaluare atentă a stării dinților, gingiilor și lucrărilor existente.',
+        question: 'Aparatul dentar este doar pentru estetică?',
+        answer:
+          'Nu. El poate corecta și probleme funcționale care afectează mușcătura, igienizarea și uzura dentară.',
       },
       {
         question: 'Cât de des sunt necesare controalele?',
-        answer: 'Frecvența controalelor depinde de tipul aparatului și de planul de tratament, însă monitorizarea regulată este esențială.',
+        answer:
+          'Frecvența controalelor depinde de tipul aparatului și de planul de tratament, iar monitorizarea regulată este esențială.',
       },
     ],
-    related: ['ingrijire-zilnica-orala', 'sanatatea-orala-la-copii'],
+    related: ['sanatatea-orala-la-copii', 'ingrijire-zilnica-orala', 'inainte-de-tratament'],
   },
   {
     slug: 'durere-de-masea',
     title: 'Durere de măsea: cauze, ce poți face acasă și când trebuie să ajungi urgent la dentist',
-    description: 'Un articol util pentru pacienții care caută rapid răspunsuri atunci când apare durerea de măsea.',
-    excerpt: 'De la sensibilitate la urgență stomatologică: ce poate însemna durerea de măsea și când trebuie evaluată.',
+    description:
+      'Un articol util pentru pacienții care caută rapid răspunsuri atunci când apare durerea de măsea.',
+    excerpt:
+      'De la sensibilitate la urgență stomatologică: ce poate însemna durerea de măsea și când trebuie evaluată.',
     category: 'tratamente',
     categoryTitle: resourceCategoryMeta.tratamente.title,
     seoTitle: 'Durere de măsea: cauze, ce faci și când mergi la dentist | DrDent',
-    metaDescription: 'Află care sunt cauzele durerii de măsea, ce poți face temporar acasă și când trebuie să mergi urgent la medicul stomatolog.',
-    seoKeywords: ['durere de masea', 'ce faci cand te doare maseaua', 'durere masea noaptea', 'urgenta stomatologica bucuresti'],
-    readTime: '7 min',
-    lastUpdated: '2026-03-16',
-    primaryRoute: '/servicii',
-    primaryRouteLabel: 'Vezi serviciile de urgență',
+    metaDescription:
+      'Află care sunt cauzele durerii de măsea, ce poți face temporar acasă și când trebuie să mergi urgent la medicul stomatolog.',
+    seoKeywords: [
+      'durere de masea',
+      'ce faci cand te doare maseaua',
+      'durere masea noaptea',
+      'urgenta stomatologica bucuresti',
+      'durere de masea tratament',
+    ],
+    readTime: '8 min',
+    lastUpdated: '2026-03-17',
+    primaryRoute: '/contact',
+    primaryRouteLabel: 'Solicită evaluare rapidă',
     content: [
       {
         heading: 'De ce apare durerea de măsea',
         paragraphs: [
-          'Durerea de măsea poate avea multiple cauze: carie profundă, inflamație a nervului dentar, infecție, fisură dentară, lucrare compromisă, erupție dificilă a măselei de minte sau probleme gingivale. Intensitatea durerii nu indică întotdeauna singură gravitatea, dar este un semnal clar că zona trebuie evaluată.',
-          'Unii pacienți resimt durere ascuțită la rece sau dulce, alții o presiune constantă, pulsații sau durere care iradiază către ureche, mandibulă ori cap. Tiparul simptomelor îl ajută pe medic să orienteze diagnosticul, dar nu înlocuiește consultația.',
-          'Când durerea de măsea apare noaptea sau se agravează progresiv, de obicei există deja o problemă dentară sau inflamatorie care nu ar trebui amânată.',
+          'Durerea de măsea poate avea multiple cauze: carie profundă, inflamație a nervului dentar, infecție, fisură dentară, lucrare compromisă, erupție dificilă a măselei de minte sau probleme gingivale. Intensitatea durerii nu arată singură gravitatea, dar este un semnal clar că zona trebuie evaluată.',
+          'Unii pacienți resimt durere ascuțită la rece sau dulce, alții o presiune constantă, pulsații sau durere care iradiază către ureche, mandibulă sau cap. Tiparul simptomelor poate orienta diagnosticul, dar nu înlocuiește consultația.',
+          'Când durerea apare noaptea sau se agravează progresiv, de obicei există deja o problemă dentară sau inflamatorie care nu ar trebui amânată.',
         ],
       },
       {
         heading: 'Ce poți face temporar acasă',
         paragraphs: [
-          'Acasă, obiectivul este doar controlul temporar al disconfortului, nu tratarea cauzei. Puteți evita alimentele foarte reci, foarte fierbinți sau dure și este bine să păstrați o igienă blândă, dar corectă, pentru a nu lăsa resturi alimentare în zona dureroasă.',
-          'În funcție de recomandările medicale generale pe care le puteți urma în mod sigur, un calmant uzual poate ajuta temporar. Totuși, automedicația nu trebuie să înlocuiască prezentarea la stomatolog.',
+          'Acasă, scopul este doar controlul temporar al disconfortului, nu tratarea cauzei. Poți evita alimentele foarte reci, foarte fierbinți sau dure și este bine să păstrezi o igienă blândă, dar corectă, pentru a nu lăsa resturi alimentare în zona dureroasă.',
+          'În funcție de recomandările medicale generale pe care le poți urma în siguranță, un calmant uzual poate ajuta temporar. Totuși, automedicația nu trebuie să înlocuiască prezentarea la stomatolog.',
           'Aplicarea unor soluții improvizate direct pe dinte sau gingie poate irita suplimentar țesuturile și nu rezolvă infecția sau inflamația.',
         ],
       },
       {
         heading: 'Ce să nu faci',
         paragraphs: [
-          'Nu ignorați durerea care se repetă, nu aplicați substanțe agresive pe dinte și nu amânați consultația doar pentru că durerea a cedat temporar. Uneori, calmarea simptomelor poate fi urmată de o agravare bruscă a infecției.',
-          'De asemenea, nu este recomandat să folosiți antibiotice fără indicație. Ele nu sunt soluția universală pentru durerea de măsea și pot întârzia diagnosticul corect.',
-          'Ceea ce tratează cu adevărat problema este identificarea cauzei: carie, infecție, fractură, afectare pulpară sau altă complicație.',
+          'Nu ignora durerea care se repetă, nu aplica substanțe agresive pe dinte și nu amâna consultația doar pentru că durerea a cedat temporar. Uneori, calmarea simptomelor poate fi urmată de o agravare bruscă a infecției.',
+          'Nu lua antibiotice fără indicație și nu presupune că problema se va rezolva de la sine. Ceea ce tratează cu adevărat situația este identificarea cauzei: carie, infecție, fractură, afectare pulpară sau altă complicație.',
         ],
       },
       {
-        heading: 'Când trebuie să mergi urgent la dentist',
+        heading: 'Când este nevoie de evaluare urgentă',
         paragraphs: [
-          'Durerea intensă, umflătura, febra, dificultatea la masticație, sensibilitatea accentuată la atingere sau apariția unui gust neplăcut în gură sunt semne care justifică evaluarea rapidă.',
-          'Dacă durerea de măsea este însoțită de inflamație mare sau de dificultate la deschiderea gurii, situația poate necesita atenție promptă.',
-          'În București, mulți pacienți caută întâi informații online înainte de a se programa. Totuși, atunci când durerea persistă, consultul stomatologic este pasul care face diferența între un tratament simplu și o complicație mai dificilă.',
+          'Durerea intensă, umflătura, febra, dificultatea la masticație, sensibilitatea accentuată la atingere sau apariția unui gust neplăcut în gură sunt semne care justifică evaluarea rapidă. Dacă durerea este însoțită de dificultate la deschiderea gurii, situația trebuie tratată cu și mai multă atenție.',
+          'În București, mulți pacienți caută mai întâi informații online înainte de programare. Totuși, atunci când durerea persistă, consultul stomatologic este pasul care face diferența între un tratament simplu și o complicație mai dificilă.',
         ],
       },
       {
         heading: 'Ce tratamente poate recomanda medicul',
         paragraphs: [
-          'Tratamentul depinde de cauză. Uneori este suficientă o obturație dacă leziunea este depistată la timp. În alte situații, poate fi necesar un tratament de canal, refacerea unei lucrări, managementul unei infecții sau chiar extracția dacă dintele nu mai poate fi salvat.',
-          'Scopul consultației este nu doar calmarea durerii, ci și păstrarea pe cât posibil a dintelui și a funcției.',
-          'Cu cât pacientul ajunge mai devreme la medic, cu atât cresc șansele unui tratament mai simplu și mai conservator.',
+          'Tratamentul depinde de cauză. Uneori este suficientă o obturație dacă problema este depistată la timp. În alte situații poate fi necesar un tratament de canal, refacerea unei lucrări, managementul unei infecții sau chiar extracția dacă dintele nu mai poate fi salvat.',
+          'Scopul nu este doar calmarea durerii, ci păstrarea pe cât posibil a dintelui și a funcției. Cu cât pacientul ajunge mai devreme la medic, cu atât cresc șansele unui tratament mai simplu și mai conservator.',
         ],
       },
     ],
     faq: [
       {
         question: 'Durerea de măsea poate trece singură?',
-        answer: 'Uneori simptomul se poate diminua temporar, dar cauza rămâne. De aceea este important consultul stomatologic, mai ales dacă durerea revine.',
+        answer:
+          'Uneori simptomul se poate diminua temporar, dar cauza rămâne. De aceea este important consultul stomatologic, mai ales dacă durerea revine.',
       },
       {
         question: 'Când este durerea de măsea o urgență?',
-        answer: 'Durerea severă, umflătura, febra, secrețiile sau dificultatea la masticație și deschiderea gurii sunt semne care justifică evaluarea rapidă.',
+        answer:
+          'Durerea severă, umflătura, febra, secrețiile sau dificultatea la masticație și deschiderea gurii sunt semne care justifică evaluarea rapidă.',
       },
       {
-        question: 'Pot lua antibiotic pentru durerea de măsea?',
-        answer: 'Nu fără recomandarea medicului. Antibioticul nu este soluția standard pentru orice durere dentară și nu înlocuiește tratamentul cauzei.',
+        question: 'Pot să iau antibiotic dacă mă doare măseaua?',
+        answer:
+          'Nu fără indicație medicală. Antibioticele nu sunt soluția universală și pot întârzia diagnosticul corect.',
       },
     ],
-    related: ['maseaua-de-minte', 'intelegerea-cariilor-dentare', 'gingii-care-sangereaza'],
+    related: ['intelegerea-cariilor-dentare', 'maseaua-de-minte', 'gingii-care-sangereaza'],
   },
   {
     slug: 'maseaua-de-minte',
-    title: 'Măseaua de minte: când trebuie scoasă, simptome, riscuri și recuperare',
-    description: 'Ghid pentru pacienții care au dureri, inflamație sau întrebări despre extracția măselei de minte.',
-    excerpt: 'Când se recomandă extracția măselei de minte și cum decurge recuperarea.',
+    title: 'Măseaua de minte: când trebuie monitorizată, tratată sau extrasă',
+    description:
+      'Un ghid clar pentru pacienții care vor să înțeleagă când măseaua de minte creează probleme și când extracția este luată în calcul.',
+    excerpt:
+      'Semne, riscuri și indicații privind măseaua de minte: când o urmărești și când este nevoie de intervenție.',
     category: 'tratamente',
     categoryTitle: resourceCategoryMeta.tratamente.title,
-    seoTitle: 'Măseaua de minte: când se scoate și cum te recuperezi | DrDent',
-    metaDescription: 'Vezi când trebuie scoasă măseaua de minte, ce simptome pot apărea și ce recomandări sunt utile după extracție.',
-    seoKeywords: ['cand se scoate maseaua de minte', 'extractie masea de minte bucuresti', 'durere masea de minte', 'recuperare dupa extractie masea de minte'],
-    readTime: '7 min',
-    lastUpdated: '2026-03-16',
+    seoTitle: 'Măseaua de minte: când se tratează sau se extrage | DrDent',
+    metaDescription:
+      'Află când măseaua de minte poate fi păstrată, când trebuie monitorizată și în ce situații extracția este recomandată.',
+    seoKeywords: [
+      'maseaua de minte',
+      'extractie masea de minte',
+      'durere masea de minte',
+      'cand se scoate maseaua de minte',
+      'chirurgie orala bucuresti',
+    ],
+    readTime: '8 min',
+    lastUpdated: '2026-03-17',
     primaryRoute: '/servicii',
     primaryRouteLabel: 'Vezi serviciile de chirurgie orală',
     content: [
       {
-        heading: 'Ce este măseaua de minte și de ce poate crea probleme',
+        heading: 'De ce creează probleme măseaua de minte',
         paragraphs: [
-          'Măseaua de minte este ultimul molar care erupe, de obicei la vârsta adultă tânără. În multe cazuri, spațiul disponibil pe arcadă este insuficient, iar erupția poate fi incompletă, dificilă sau într-o poziție nefavorabilă.',
-          'De aici pot apărea durere, presiune, inflamație gingivală, dificultăți de igienizare sau episoade repetate de infecție locală.',
-          'Nu orice măsea de minte trebuie extrasă, dar cele simptomatice sau cu risc crescut de complicații au nevoie de evaluare stomatologică.',
+          'Măseaua de minte poate erupe complet, parțial sau poate rămâne inclusă. Problemele apar frecvent atunci când nu are suficient spațiu, când erupția este parțială sau când poziția ei face dificilă igienizarea și afectează dintele vecin.',
+          'Unii pacienți nu au niciun simptom și descoperă problema la control sau pe radiografie. Alții resimt durere, presiune, inflamație gingivală, dificultate la deschiderea gurii sau episoade repetate de infecție locală.',
         ],
       },
       {
-        heading: 'Semne că trebuie evaluată',
+        heading: 'Când este suficientă monitorizarea',
         paragraphs: [
-          'Semnele frecvente includ durere în spatele arcadei, umflare, dificultate la deschiderea gurii, disconfort la masticație, inflamație gingivală sau episoade repetate de pericoronarită.',
-          'Uneori, măseaua de minte poate afecta și dintele vecin, favorizând carii, retenție de resturi alimentare sau resorbție locală.',
-          'Radiografia și consultul clinic ajută la stabilirea poziției dintelui și la aprecierea riscurilor asociate.',
+          'Nu orice măsea de minte trebuie extrasă automat. Dacă este poziționată favorabil, poate fi curățată corect și nu produce leziuni, medicul poate recomanda monitorizare periodică.',
+          'Monitorizarea este importantă mai ales când măseaua are potențial să creeze probleme în timp. Scopul este identificarea schimbărilor înainte ca ele să ducă la durere, infecție sau afectarea dintelui vecin.',
         ],
       },
       {
-        heading: 'Când se recomandă extracția',
+        heading: 'Când extracția devine o opțiune',
         paragraphs: [
-          'Extracția este luată în calcul atunci când măseaua de minte provoacă durere, inflamație, infecții repetate, afectarea dintelui vecin, imposibilitate de igienizare sau alte complicații. În unele cazuri, indicația poate exista și profilactic, dacă medicul anticipează probleme viitoare clare.',
-          'Decizia se ia în funcție de poziția dintelui, de simptome, de relația cu structurile anatomice și de starea generală a pacientului.',
-          'Pentru pacienții care caută informații despre extracția măselei de minte în București, important este să înțeleagă că planul trebuie individualizat, nu decis doar pe baza durerii resimțite temporar.',
+          'Extracția este luată în calcul când apar dureri repetate, inflamație, lipsă de spațiu, carii greu de tratat, afectarea dintelui vecin, infecții sau alte riscuri locale. În anumite cazuri, măseaua de minte inclusă este evaluată și din perspectivă ortodontică sau protetică.',
+          'Decizia nu se bazează doar pe simptome, ci și pe poziție, acces, risc și imagine radiologică. O evaluare bună clarifică dacă este vorba despre monitorizare, tratament local sau extracție.',
         ],
       },
       {
-        heading: 'Cum decurge recuperarea',
+        heading: 'Cum te pregătești și ce urmează după extracție',
         paragraphs: [
-          'După extracție, recuperarea diferă de la caz la caz. În primele zile pot exista inflamație, sensibilitate și un disconfort moderat. Respectarea recomandărilor privind alimentația, igiena și repausul local este esențială.',
-          'Fumatul, clătirea energică și alimentele foarte fierbinți pot întârzia vindecarea sau pot irita zona tratată.',
-          'Dacă apar dureri accentuate după câteva zile, febră, sângerare persistentă sau inflamație care se agravează, este indicat un control.',
+          'Înainte de extracție, medicul explică procedura, investigațiile necesare și recomandările postoperatorii. După intervenție, perioada de recuperare depinde de complexitatea cazului și de respectarea indicațiilor primite.',
+          'Pacientul trebuie să urmărească semnele normale și semnalele de alarmă. O bună comunicare cu echipa medicală reduce anxietatea și contribuie la o recuperare mai predictibilă.',
         ],
       },
       {
-        heading: 'Ce este util să știi înainte de programare',
+        heading: 'Când trebuie să ceri consultația',
         paragraphs: [
-          'Consultația este momentul în care se stabilește dacă măseaua de minte trebuie monitorizată sau extrasă. Investigațiile imagistice și examenul clinic permit o planificare corectă și reduc riscul surprizelor intraoperatorii.',
-          'Pacientul trebuie să primească explicații clare despre complexitatea intervenției, pașii de recuperare și semnele care impun reevaluare.',
-          'Atunci când decizia este luată corect și recomandările sunt respectate, recuperarea este de obicei previzibilă.',
+          'Dacă ai episoade de durere în spatele arcadei, inflamație gingivală, miros neplăcut, dificultate la mestecat sau ai primit pe radiografie observația că măseaua de minte este inclusă, merită o consultație de chirurgie orală.',
+          'Scopul consultației este să afli dacă trebuie doar urmărită, tratată sau extrasă. Decizia corectă se ia în cabinet, nu doar pe baza simptomelor ocazionale sau a părerilor din jur.',
         ],
       },
     ],
     faq: [
       {
-        question: 'Toate măselele de minte trebuie scoase?',
-        answer: 'Nu. Extracția este recomandată în funcție de poziția dintelui, simptome, igienizare și riscul de complicații.',
+        question: 'Trebuie scoasă orice măsea de minte?',
+        answer:
+          'Nu. Unele măsele de minte pot fi doar monitorizate, dacă sunt poziționate favorabil și nu creează probleme.',
       },
       {
-        question: 'Cât durează recuperarea după extracția măselei de minte?',
-        answer: 'Recuperarea diferă de la caz la caz, însă primele zile sunt cele mai sensibile. Respectarea indicațiilor postoperatorii este foarte importantă.',
+        question: 'Cum știu dacă măseaua de minte este inclusă?',
+        answer:
+          'De regulă, acest lucru se confirmă clinic și imagistic, în urma unui consult stomatologic sau de chirurgie orală.',
       },
       {
-        question: 'Este normal să doară măseaua de minte când erupe?',
-        answer: 'Poate exista disconfort la erupție, dar durerea persistentă, inflamația sau dificultatea la masticație justifică evaluarea medicală.',
+        question: 'Durerea în spatele arcadei înseamnă automat extracție?',
+        answer:
+          'Nu automat. Poate fi nevoie de evaluare, monitorizare sau tratament local, în funcție de cauza reală.',
       },
     ],
-    related: ['dupa-extractie-dentara', 'durere-de-masea'],
+    related: ['dupa-extractie-dentara', 'durere-de-masea', 'inainte-de-tratament'],
   },
   {
     slug: 'gingii-care-sangereaza',
-    title: 'Gingiile sângerează? Cauze, gingivită, parodontoză și ce tratamente există',
-    description: 'Un articol esențial pentru pacienții care observă sângerări gingivale la periaj sau spontan.',
-    excerpt: 'De ce sângerează gingiile, ce poate ascunde acest simptom și când este indicat consultul stomatologic.',
+    title: 'Gingii care sângerează: cauze, diferența dintre gingivită și parodontoză și când trebuie să te programezi',
+    description:
+      'Explicații clare pentru pacienții care observă sângerare gingivală și vor să înțeleagă cât de gravă poate fi.',
+    excerpt:
+      'De la gingivită la parodontoză: ce înseamnă sângerarea gingiilor și când este cazul să mergi la medic.',
     category: 'tratamente',
     categoryTitle: resourceCategoryMeta.tratamente.title,
     seoTitle: 'Gingii care sângerează: cauze și tratament | DrDent',
-    metaDescription: 'Află de ce sângerează gingiile, care este diferența dintre gingivită și parodontoză și ce opțiuni de tratament există.',
-    seoKeywords: ['gingii care sangereaza', 'sangerari gingivale', 'gingivita tratament', 'parodontoza simptome'],
-    readTime: '7 min',
-    lastUpdated: '2026-03-16',
+    metaDescription:
+      'Află de ce sângerează gingiile, care este diferența dintre gingivită și parodontoză și când este recomandat consultul stomatologic.',
+    seoKeywords: [
+      'gingii care sangereaza',
+      'gingivita tratament',
+      'parodontoza simptome',
+      'de ce imi sangereaza gingiile',
+      'tratament gingii bucuresti',
+    ],
+    readTime: '8 min',
+    lastUpdated: '2026-03-17',
     primaryRoute: '/servicii',
     primaryRouteLabel: 'Vezi tratamentele parodontale',
     content: [
       {
-        heading: 'Este normal să sângereze gingiile?',
+        heading: 'Este normal să sângereze gingiile',
         paragraphs: [
           'Sângerarea gingiilor nu ar trebui considerată normală, chiar dacă mulți pacienți o observă doar la periaj și o ignoră. De cele mai multe ori, ea este un semn de inflamație locală produsă de placa bacteriană, tartru sau igienizare incorectă.',
           'În unele situații, sângerarea poate fi însoțită de gingii roșii, sensibile, umflate sau de respirație neplăcută. Aceste semne indică faptul că țesuturile gingivale au nevoie de evaluare și tratament.',
-          'Ignorată pe termen lung, inflamația gingivală poate evolua și poate afecta structurile de susținere ale dinților.',
         ],
       },
       {
         heading: 'Cele mai frecvente cauze',
         paragraphs: [
-          'Cauzele frecvente includ placa bacteriană, tartrul, igiena orală deficitară, tehnica incorectă de periaj, fumatul și anumite dezechilibre generale. Uneori, sângerarea apare și în jurul lucrărilor protetice sau al dinților greu de curățat.',
-          'Pacienții observă adesea simptomul la periaj sau la folosirea aței dentare. Faptul că gingia sângerează nu înseamnă că trebuie evitată igienizarea, ci că trebuie evaluată și făcută corect.',
-          'Cu cât cauza este identificată mai devreme, cu atât tratamentul este mai simplu.',
+          'Cauzele frecvente includ placa bacteriană, tartrul, tehnica incorectă de periaj, lucrările greu de igienizat, fumatul și anumite dezechilibre generale. Uneori, sângerarea apare în jurul zonelor unde pacientul evită periajul tocmai pentru că simte sensibilitate.',
+          'Faptul că gingia sângerează nu înseamnă că trebuie oprită igienizarea. Din contră, este nevoie de o evaluare corectă și de instrucțiuni personalizate de igienă.',
         ],
       },
       {
         heading: 'Diferența dintre gingivită și parodontoză',
         paragraphs: [
-          'Gingivita este inflamația gingiei și poate fi reversibilă dacă este tratată la timp. Parodontoza sau boala parodontală implică afectarea țesuturilor și a osului care susțin dintele, fiind o problemă mai complexă.',
+          'Gingivita este inflamația gingiei și poate fi reversibilă dacă este tratată la timp. Parodontoza sau boala parodontală implică afectarea structurilor de susținere ale dintelui și reprezintă o problemă mai complexă.',
           'Practic, gingivita este un semnal de alarmă. Dacă este ignorată, în anumite cazuri poate evolua către forme mai severe de afectare parodontală.',
-          'De aceea, pacienții care caută informații despre gingii care sângerează ar trebui să înțeleagă că nu este vorba doar de un disconfort minor, ci de un simptom relevant clinic.',
+          'Pacienții care caută informații despre gingii care sângerează trebuie să înțeleagă că nu este vorba doar despre un disconfort minor, ci despre un simptom relevant clinic.',
         ],
       },
       {
         heading: 'Ce tratamente există',
         paragraphs: [
-          'Tratamentul depinde de cauză și de stadiul problemei. Poate include igienizare profesională, detartraj, air-flow, instrucțiuni personalizate de igienă și reevaluare. În cazurile mai avansate, planul poate include tratamente parodontale specifice.',
-          'Scopul este reducerea inflamației, controlul plăcii bacteriene și stabilizarea țesuturilor.',
-          'Pacientul are și un rol important: igiena de acasă, controalele regulate și respectarea recomandărilor primite în cabinet influențează direct evoluția.',
+          'Tratamentul depinde de cauză și de stadiu. Poate include igienizare profesională, detartraj, air-flow, instrucțiuni personalizate de igienă și reevaluare. În cazurile mai avansate, planul poate include tratamente parodontale specifice.',
+          'Scopul este reducerea inflamației, controlul plăcii bacteriene și stabilizarea țesuturilor. Pacientul are și un rol important, pentru că igiena de acasă și controalele regulate influențează direct evoluția.',
         ],
       },
       {
         heading: 'Când trebuie să te programezi',
         paragraphs: [
           'Dacă sângerarea este repetată, apare spontan, este însoțită de sensibilitate, respirație neplăcută sau retracție gingivală, este indicat un consult stomatologic.',
-          'În București, mulți pacienți caută întâi online informații despre gingivită sau parodontoză, însă diferența reală o face evaluarea clinică. Un diagnostic corect permite tratamentul potrivit și poate preveni pierderea suportului dentar.',
-          'Cu intervenție la timp, multe probleme gingivale pot fi controlate eficient.',
+          'În București, mulți pacienți caută mai întâi online informații despre gingivită sau parodontoză, însă diferența reală o face evaluarea clinică. Un diagnostic corect permite tratamentul potrivit și poate preveni pierderea suportului dentar.',
         ],
       },
     ],
     faq: [
       {
         question: 'De ce îmi sângerează gingiile la periaj?',
-        answer: 'Cel mai frecvent, cauza este inflamația gingivală produsă de placa bacteriană și tartru, dar este importantă evaluarea medicală pentru confirmare.',
+        answer:
+          'Cel mai frecvent, cauza este inflamația gingivală produsă de placa bacteriană și tartru, dar este importantă evaluarea medicală pentru confirmare.',
       },
       {
         question: 'Sângerarea gingiilor înseamnă automat parodontoză?',
-        answer: 'Nu automat. Poate fi gingivită sau altă problemă locală, dar simptomul nu trebuie ignorat pentru că poate evolua.',
+        answer:
+          'Nu automat. Poate fi gingivită sau altă problemă locală, dar simptomul nu trebuie ignorat pentru că poate evolua.',
       },
       {
         question: 'Se vindecă gingivita?',
-        answer: 'În multe situații, da, dacă este depistată la timp și tratată corect, împreună cu o igienă orală bună.',
+        answer:
+          'În multe situații, da, dacă este depistată la timp și tratată corect, împreună cu o igienă orală bună.',
       },
     ],
     related: ['boala-parodontala', 'ingrijire-zilnica-orala', 'durere-de-masea'],
