@@ -217,7 +217,7 @@ function ResourceArticle() {
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-primary-600 text-primary-600 rounded-xl font-semibold hover:bg-primary-50 transition-colors"
                 >
                   <Calendar className="w-5 h-5" />
-                  Programează o consultație
+                  Programează o vizită
                 </Link>
 
                 <Link
