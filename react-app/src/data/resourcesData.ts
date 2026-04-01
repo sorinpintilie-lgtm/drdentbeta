@@ -681,7 +681,7 @@ export const resourcesData: ResourceArticle[] = [
     ],
     faq: [
       {
-        question: 'Implantul dentar este aceeași lucru cu dintele definitiv?',
+        question: 'Implantul dentar este același lucru cu dintele definitiv?',
         answer:
           'Implantul este suportul inserat în os. Peste el se realizează ulterior partea protetică, în funcție de planul de tratament.',
       },
@@ -1247,6 +1247,83 @@ export const resourcesData: ResourceArticle[] = [
       },
     ],
     related: ['boala-parodontala', 'ingrijire-zilnica-orala', 'durere-de-masea'],
+  },
+  {
+    slug: 'sensibilitate-dentara',
+    title: 'Sensibilitate dentară: de ce apare la rece, cald sau dulce și când trebuie să mergi la dentist',
+    description: 'Explicații clare despre sensibilitatea dentară, cauze frecvente și momentele în care este indicat un consult stomatologic.',
+    excerpt: 'De ce apar dinții sensibili, ce poate însemna acest simptom și când nu mai este bine să îl ignori.',
+    category: 'educatie',
+    categoryTitle: resourceCategoryMeta.educatie.title,
+    seoTitle: 'Sensibilitate dentară: cauze, simptome și când mergi la dentist | DrDent',
+    metaDescription: 'Află de ce apare sensibilitatea dentară la rece, cald sau dulce, ce cauze pot exista și când este recomandat un consult stomatologic.',
+    seoKeywords: [
+      'sensibilitate dentara',
+      'dinti sensibili la rece',
+      'durere la rece dinti',
+      'sensibilitate dentara cauze',
+      'dinti sensibili la cald sau dulce',
+    ],
+    readTime: '7 min',
+    lastUpdated: '2026-04-01',
+    primaryRoute: '/contact',
+    primaryRouteLabel: 'Programează un consult stomatologic',
+    content: [
+      {
+        heading: 'Ce înseamnă sensibilitatea dentară',
+        paragraphs: [
+          'Sensibilitatea dentară este un disconfort scurt, ascuțit sau repetitiv care apare atunci când dinții intră în contact cu stimuli precum rece, cald, dulce, acru sau chiar aer rece. Pentru unii pacienți, senzația apare doar ocazional. Pentru alții, devine suficient de frecventă încât începe să afecteze alimentația, periajul sau confortul de zi cu zi.',
+          'Important este că sensibilitatea dentară nu reprezintă un diagnostic în sine, ci un simptom. Ea poate avea cauze simple și ușor de controlat, dar poate semnala și probleme care au nevoie de evaluare stomatologică.'
+        ],
+      },
+      {
+        heading: 'De ce apare la rece, cald sau dulce',
+        paragraphs: [
+          'În mod normal, smalțul și gingia protejează zonele sensibile ale dintelui. Atunci când această protecție scade, stimulii termici sau chimici pot ajunge mai ușor la structurile interne ale dintelui și pot provoca durere sau disconfort.',
+          'De aceea, unii pacienți simt o reacție puternică atunci când beau apă rece, consumă alimente dulci sau respiră aer rece. Uneori sensibilitatea apare doar într-un anumit dinte, iar alteori afectează mai mulți dinți în același timp.'
+        ],
+      },
+      {
+        heading: 'Cauze frecvente ale sensibilității dentare',
+        paragraphs: [
+          'Printre cauzele frecvente se numără retracția gingivală, periajul prea agresiv, uzura smalțului, consumul frecvent de alimente și băuturi acide, cariile incipiente, fisurile dentare, lucrările dentare care trebuie verificate sau inflamațiile gingivale. Uneori, sensibilitatea poate apărea și după anumite proceduri stomatologice, fără să însemne automat o complicație.',
+          'Există și situații în care pacientul crede că are doar dinți sensibili, dar în realitate este vorba despre o carie, o problemă la nivelul gingiei, un contact incorect între dinți sau o altă cauză care trebuie diferențiată clinic. Tocmai de aceea, sensibilitatea care persistă nu este bine să fie tratată doar empiric, fără evaluare.'
+        ],
+      },
+      {
+        heading: 'Când poate apărea după albire, igienizare sau periaj',
+        paragraphs: [
+          'După unele proceduri estetice sau de igienizare, sensibilitatea poate apărea temporar și se poate reduce treptat în zilele următoare. Intensitatea și durata depind de sensibilitatea individuală, de starea inițială a dinților și de particularitățile fiecărui caz clinic.',
+          'Pe de altă parte, dacă disconfortul apare frecvent după periaj, în timpul masticației sau la contactul cu alimente obișnuite, este util să fie analizată tehnica de periaj, tipul de periuță folosit, existența retracției gingivale sau a altor cauze locale. Nu orice sensibilitate este „normală”, chiar dacă pare ușor de suportat.'
+        ],
+      },
+      {
+        heading: 'Ce poți face și când trebuie să mergi la dentist',
+        paragraphs: [
+          'Dacă sensibilitatea este ușoară și recent apărută, poate ajuta evitarea temporară a alimentelor foarte reci sau acide, folosirea unei tehnici de periaj blânde și alegerea produselor recomandate de medic pentru dinți sensibili. Totuși, aceste măsuri nu înlocuiesc evaluarea atunci când simptomul persistă sau reapare.',
+          'Este recomandat să mergi la dentist dacă sensibilitatea durează, se agravează, apare într-un singur dinte, este însoțită de durere spontană, sângerare gingivală, disconfort la masticație sau dacă ai observat retracție gingivală, fisuri ori modificări vizibile la nivelul dintelui. Un consult corect poate stabili cauza reală și soluția potrivită pentru cazul tău.'
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Este normal să mă doară dinții la rece din când în când?',
+        answer: 'O sensibilitate scurtă poate apărea ocazional, dar dacă se repetă frecvent, se intensifică sau afectează alimentația și periajul, este bine să fie evaluată stomatologic.',
+      },
+      {
+        question: 'Sensibilitatea dentară înseamnă automat carie?',
+        answer: 'Nu automat. Poate avea mai multe cauze, de la retracție gingivală și uzură de smalț până la carii, fisuri sau inflamații locale. Diferența se face prin consult clinic.',
+      },
+      {
+        question: 'Ce fac dacă sensibilitatea a apărut după albire dentară?',
+        answer: 'În unele cazuri, sensibilitatea după albire poate fi temporară. Dacă persistă, este intensă sau nu se reduce treptat, merită să discuți cu medicul stomatolog pentru reevaluare și recomandări adaptate.',
+      },
+    ],
+    related: [
+      'albirea-dentara-optiuni-rezultate',
+      'boala-parodontala',
+      'ingrijire-zilnica-orala',
+    ],
   },
 ];
 
